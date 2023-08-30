@@ -1,0 +1,5 @@
+baseURL = 'http://goodboylqs.github.io/'
+languageCode = 'zh-cn'
+title = '庙街'
+author = 'lqs'
+theme = 'vinyl-records-collection-theme'
