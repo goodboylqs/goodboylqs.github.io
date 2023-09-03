@@ -1,0 +1,35 @@
++++
+title = "在手机上使用org-agenda进行日程管理"
+author = ["553912917@qq.com"]
+date = 2023-09-03T15:16:00+08:00
+draft = false
++++
+
+## org-agenda手机端同步的难点 {#org-agenda手机端同步的难点}
+
+作为Emacs的重度使用者,org-mode已经成为我日常工作生活不可或缺的重要工具。作为Emac的日程管理插件，org-agenda一直是我用来进行日常管理的重要辅助，其自动添加日期、设置优先级、设置状态等功能为日程管理提供了非常方便的特性。但Emacs作为一款桌面软件，其所有的插件都是为PC使用环境设计的，Emacs各种快捷键的使用可以在电脑键盘下按出来，但在手机键盘上显然就很不方便，同时许多插件依赖操作系统提供的各种依赖库文件，安卓手机也无法提供相关的运行环境。因此在手机上使用Emacs从可操作性、可实现性来说都是不太现实的。虽然Emacs官方已经开发了Emacs app，但是很多功能还是只能在PC上实现，包括org-agenda。时下流行的日程管理软件，包括滴答清单、Todo清单等，都能做到手机、电脑多平台同步，对于日程管理来说，这基本上是最最重要的特性，在手机上随时随地查看日程是大部分人的刚需，如果不能做到多平台同步，只能在PC上查看日程，那日程管理就会非常不方便。通过几天研究，利用了坚果云的自动同步、orgzly APP，我基本上实现了org-agenda的多平台同步，orgzyl提供了App端的org agenda功能，坚果云提供了agenda files的多平台同步，可以在App端显示日程的内容、状态、优先级，并使用App新增日程、修改日程内容等，免费、高效，大大提升了日程管理效率。下面就如何实现手机同步org-agenda简要说明做法。
+
+
+## 原理 {#原理}
+
+-   文件同步。org-agenda是对agenda files内容的显示，而日程的内容都是记录在agenda files中的，因此只要实现agenda files的手机同步，就可以查看日程相关内容，这点使用坚果云很容易实现。
+-   日程显示。orgzly可以将agenda files 中的日程识别出来，产生类似于PC端Emacs org-agenda的显示效果。
+
+
+## 操作 {#操作}
+
+1.  注册坚果云账号，免费版即可，免费版提供每月1GB的上传和下载流量，对于日程管理文件，这些流量足够了。 在手机上安装坚果云App和orgzly App，其中orgzly App是从FDroid上下载的，需要梯子,为了方便我把安装包分享在这里链接: <https://pan.baidu.com/s/1w-maN_MwuivDV8MJIYZY3A> 提取码: je4u。在电脑上安装坚果云客户端，Windows和Linux下坚果云都有相关客户端，官方的支持还是很完善的。
+2.  打开电脑端坚果云，创建同步文件夹，将你的agenda files放到这个文件夹中。例如我的同步文件夹是org-agenda-files，然后agenda files是life.org和work.org。打开Emacs，C-x C-f打开life.org和work.org，然后C-c [将这两个文件夹加入你的init.el中的org-agenda-files列表，这样在Emacs org-agenda中就会显示这两个文件包含的日程了。
+3.  打开orgzly右上角的设置--&gt;同步--&gt;存储库，存储库要求你输入dav地址。打开坚果云网页版并登录，点击右上角账户信息--&gt;安全选项，里面有第三方应用管理，按照教程添加应用，会生成一个应用密码。在orgzly中输入对应的服务器地址和应用密码，就可以实现orgzly对agenda files的同步。
+
+    {{< figure src="/ox-hugo/2023-09-03_15-00-18_screenshot.png" >}}
+4.  同步完成后，打开orgzly左上角，点Agenda即可看到类似于Emacs org-agenda的显示效果。
+
+    {{< figure src="/ox-hugo/2023-09-03_15-03-03_screenshot.png" >}}
+
+
+## 实现Windows、Linux、手机的同步 {#实现windows-linux-手机的同步}
+
+-   我自己在Windows、Linux用的emacs配置是同一套，因此也希望能实现Windows、Linux下日程的同步，但难点在于同一个agenda file在Windows和Linux下文件的路径不同，Emacs在寻找agenda files时发现给定路径下找不到对应文件的时会提示你是否要Remove或Abort对应的agenda file。要解决这个问题，只需要设置变量org-agenda-skip-unavailable-files的值为t，即可将Windows和Linux下的agenda files路径同时加入你的init.el中，Emacs会跳过找不到的agenda file并不会提示你，只会将找到的agenda files加入到org agenda中。只需要将Windows和Linux下坚果云同步的agenda files的路径用C-c [加入init.el即可。下图是我的org agenda files的配置。
+
+{{< figure src="/ox-hugo/2023-09-03_15-10-37_screenshot.png" >}}

@@ -6,19 +6,65 @@
     <description>Recent content on 庙街</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 30 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 Sep 2023 15:16:00 +0800</lastBuildDate>
     
         <atom:link href="http://goodboylqs.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
-        <title>《熵增定律》读书笔记.org</title>
-        <link>http://goodboylqs.github.io/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E7%86%B5%E5%A2%9E%E5%AE%9A%E5%BE%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
-        <pubDate>Wed, 30 Aug 2023 00:00:00 +0000</pubDate>
+        <title>在手机上使用org-agenda进行日程管理</title>
+        <link>http://goodboylqs.github.io/posts/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8org-agenda%E8%BF%9B%E8%A1%8C%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86/</link>
+        <pubDate>Sun, 03 Sep 2023 15:16:00 +0800</pubDate>
         
-        <guid>http://goodboylqs.github.io/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E7%86%B5%E5%A2%9E%E5%AE%9A%E5%BE%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
-        <description>庙街 http://goodboylqs.github.io/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E7%86%B5%E5%A2%9E%E5%AE%9A%E5%BE%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/ -&lt;p&gt;timestamps :: &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-28 一 17:41&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+        <guid>http://goodboylqs.github.io/posts/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8org-agenda%E8%BF%9B%E8%A1%8C%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86/</guid>
+        <description>庙街 http://goodboylqs.github.io/posts/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8org-agenda%E8%BF%9B%E8%A1%8C%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86/ -&lt;h2 id=&#34;org-agenda手机端同步的难点&#34;&gt;org-agenda手机端同步的难点&lt;/h2&gt;
+&lt;p&gt;作为Emacs的重度使用者,org-mode已经成为我日常工作生活不可或缺的重要工具。作为Emac的日程管理插件，org-agenda一直是我用来进行日常管理的重要辅助，其自动添加日期、设置优先级、设置状态等功能为日程管理提供了非常方便的特性。但Emacs作为一款桌面软件，其所有的插件都是为PC使用环境设计的，Emacs各种快捷键的使用可以在电脑键盘下按出来，但在手机键盘上显然就很不方便，同时许多插件依赖操作系统提供的各种依赖库文件，安卓手机也无法提供相关的运行环境。因此在手机上使用Emacs从可操作性、可实现性来说都是不太现实的。虽然Emacs官方已经开发了Emacs app，但是很多功能还是只能在PC上实现，包括org-agenda。时下流行的日程管理软件，包括滴答清单、Todo清单等，都能做到手机、电脑多平台同步，对于日程管理来说，这基本上是最最重要的特性，在手机上随时随地查看日程是大部分人的刚需，如果不能做到多平台同步，只能在PC上查看日程，那日程管理就会非常不方便。通过几天研究，利用了坚果云的自动同步、orgzly APP，我基本上实现了org-agenda的多平台同步，orgzyl提供了App端的org agenda功能，坚果云提供了agenda files的多平台同步，可以在App端显示日程的内容、状态、优先级，并使用App新增日程、修改日程内容等，免费、高效，大大提升了日程管理效率。下面就如何实现手机同步org-agenda简要说明做法。&lt;/p&gt;
+&lt;h2 id=&#34;原理&#34;&gt;原理&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;文件同步。org-agenda是对agenda files内容的显示，而日程的内容都是记录在agenda files中的，因此只要实现agenda files的手机同步，就可以查看日程相关内容，这点使用坚果云很容易实现。&lt;/li&gt;
+&lt;li&gt;日程显示。orgzly可以将agenda files 中的日程识别出来，产生类似于PC端Emacs org-agenda的显示效果。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;操作&#34;&gt;操作&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;注册坚果云账号，免费版即可，免费版提供每月1GB的上传和下载流量，对于日程管理文件，这些流量足够了。 在手机上安装坚果云App和orgzly App，其中orgzly App是从FDroid上下载的，需要梯子,为了方便我把安装包分享在这里链接: &lt;a href=&#34;https://pan.baidu.com/s/1w-maN_MwuivDV8MJIYZY3A&#34;&gt;https://pan.baidu.com/s/1w-maN_MwuivDV8MJIYZY3A&lt;/a&gt; 提取码: je4u。在电脑上安装坚果云客户端，Windows和Linux下坚果云都有相关客户端，官方的支持还是很完善的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开电脑端坚果云，创建同步文件夹，将你的agenda files放到这个文件夹中。例如我的同步文件夹是org-agenda-files，然后agenda files是life.org和work.org。打开Emacs，C-x C-f打开life.org和work.org，然后C-c [将这两个文件夹加入你的init.el中的org-agenda-files列表，这样在Emacs org-agenda中就会显示这两个文件包含的日程了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开orgzly右上角的设置&amp;ndash;&amp;gt;同步&amp;ndash;&amp;gt;存储库，存储库要求你输入dav地址。打开坚果云网页版并登录，点击右上角账户信息&amp;ndash;&amp;gt;安全选项，里面有第三方应用管理，按照教程添加应用，会生成一个应用密码。在orgzly中输入对应的服务器地址和应用密码，就可以实现orgzly对agenda files的同步。&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;http://goodboylqs.github.io/ox-hugo/2023-09-03_15-00-18_screenshot.png&#34;/&gt;
+    &lt;/figure&gt;
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;同步完成后，打开orgzly左上角，点Agenda即可看到类似于Emacs org-agenda的显示效果。&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;http://goodboylqs.github.io/ox-hugo/2023-09-03_15-03-03_screenshot.png&#34;/&gt;
+    &lt;/figure&gt;
+
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;实现windows-linux-手机的同步&#34;&gt;实现Windows、Linux、手机的同步&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;我自己在Windows、Linux用的emacs配置是同一套，因此也希望能实现Windows、Linux下日程的同步，但难点在于同一个agenda file在Windows和Linux下文件的路径不同，Emacs在寻找agenda files时发现给定路径下找不到对应文件的时会提示你是否要Remove或Abort对应的agenda file。要解决这个问题，只需要设置变量org-agenda-skip-unavailable-files的值为t，即可将Windows和Linux下的agenda files路径同时加入你的init.el中，Emacs会跳过找不到的agenda file并不会提示你，只会将找到的agenda files加入到org agenda中。只需要将Windows和Linux下坚果云同步的agenda files的路径用C-c [加入init.el即可。下图是我的org agenda files的配置。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure&gt;&lt;img src=&#34;http://goodboylqs.github.io/ox-hugo/2023-09-03_15-10-37_screenshot.png&#34;/&gt;
+&lt;/figure&gt;
+
+- http://goodboylqs.github.io/posts/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8org-agenda%E8%BF%9B%E8%A1%8C%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>《熵增定律》读书笔记</title>
+        <link>http://goodboylqs.github.io/posts/%E7%86%B5%E5%A2%9E%E5%AE%9A%E5%BE%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
+        <pubDate>Wed, 30 Aug 2023 12:40:00 +0800</pubDate>
+        
+        <guid>http://goodboylqs.github.io/posts/%E7%86%B5%E5%A2%9E%E5%AE%9A%E5%BE%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
+        <description>庙街 http://goodboylqs.github.io/posts/%E7%86%B5%E5%A2%9E%E5%AE%9A%E5%BE%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/ -&lt;p&gt;timestamps :: &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-28 一 17:41&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;h2 id=&#34;摘抄&#34;&gt;摘抄&lt;/h2&gt;
 &lt;h3 id=&#34;第一章前言-and-第二章熵增定律&#34;&gt;第一章前言&amp;amp;第二章熵增定律&lt;/h3&gt;
 &lt;ul&gt;
@@ -89,10 +135,40 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;固定型思维的人会觉得“江山易改、本性难移”，人的特质是天生的，是后天无法改变的。他们害怕被否定被嘲笑，所以面对挑战他们会把自己封闭起来，拒绝挑战。 &lt;strong&gt;固定型思维者长期处于一个封闭系统，很少有外力做功，所以发展空间受到制约。&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;固定型思维的人会觉得“江山易改、本性难移”，人的特质是天生的，是后天无法改变的。他们害怕被否定被嘲笑，所以面对挑战他们会把自己封闭起来，拒绝挑战。 &lt;strong&gt;固定型思维者长期处于一个封闭系统，很少有外力做功。&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;在面对选择时，她们往往偏向于挑选自己擅长的事情，遇到困难也会过早放弃。他们因为害怕失败，所以忽略了努力会有好结果的可能，从而限制了自己的成长。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;成长型思维不意味着仅仅只需要努力，成长型思维是针对包括努力以及后续的策略、反思、迭代，以及再次行动这整个过程————真正的成长型思维者一定懂得听取、学习不同的策略，然后用不同的策略在一个难题上反复推敲，找到更好的解决办法，用有效、高效的方式去解决各类卡点&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;比如，有些职场人不善言辞，觉得领导不喜欢自己，怎么办？那就可以尝试通过写一封邮件，总结自己每个月所做的事情、本月的反思以及下个月的计划并发给领导，尽量让自己的工作被领导看到&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;成长型思维不意味着只盯着目标，目标不是结果，达成目标还需要设法找到路径和资源&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;比如每一个单身青年如果希望找到伴侣，那么平时就要多参加有许多异性在场的社交活动。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;构建成长型思维&#34;&gt;构建成长型思维&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;阻碍成长的四座监狱：成功的监狱、过去的监狱、表现的监狱和恐惧的监狱
+&lt;ul&gt;
+&lt;li&gt;成功的监狱————害怕失败，心态因虚名而发生改变&lt;/li&gt;
+&lt;li&gt;过去的监狱————陷入对过去的怀念，屈服于身体的衰老，放弃探索尝试新事物&lt;/li&gt;
+&lt;li&gt;表现的监狱————也是为了虚名，只注重表面文章不做实事&lt;/li&gt;
+&lt;li&gt;恐惧的监狱————害怕失败丢面子、完美主义、害怕与别人冲突导致拖延、踟蹰不前
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;拖延会导致失去稍纵即逝的机会，害怕与别人冲突并不能消灭冲突。想要获得成长型思维，必须要勇敢，敢于直面恐惧&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;感悟&#34;&gt;感悟&lt;/h2&gt;
-- http://goodboylqs.github.io/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E7%86%B5%E5%A2%9E%E5%AE%9A%E5%BE%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/ - </description>
+- http://goodboylqs.github.io/posts/%E7%86%B5%E5%A2%9E%E5%AE%9A%E5%BE%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/ - </description>
         </item>
     
     
@@ -100,11 +176,10 @@
         <item>
         <title>看凭证时注意问题(持续更新)</title>
         <link>http://goodboylqs.github.io/posts/%E7%9C%8B%E5%87%AD%E8%AF%81%E6%97%B6%E6%B3%A8%E6%84%8F%E9%97%AE%E9%A2%98%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</link>
-        <pubDate>Wed, 30 Aug 2023 00:00:00 +0000</pubDate>
+        <pubDate>Wed, 30 Aug 2023 12:26:00 +0800</pubDate>
         
         <guid>http://goodboylqs.github.io/posts/%E7%9C%8B%E5%87%AD%E8%AF%81%E6%97%B6%E6%B3%A8%E6%84%8F%E9%97%AE%E9%A2%98%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</guid>
-        <description>庙街 http://goodboylqs.github.io/posts/%E7%9C%8B%E5%87%AD%E8%AF%81%E6%97%B6%E6%B3%A8%E6%84%8F%E9%97%AE%E9%A2%98%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/ -&lt;h2 id=&#34;看凭证时注意的问题（持续更新）&#34;&gt;看凭证时注意问题(持续更新)&lt;/h2&gt;
-&lt;h3 id=&#34;审计通知书等文书要求&#34;&gt;审计通知书等文书要求&lt;/h3&gt;
+        <description>庙街 http://goodboylqs.github.io/posts/%E7%9C%8B%E5%87%AD%E8%AF%81%E6%97%B6%E6%B3%A8%E6%84%8F%E9%97%AE%E9%A2%98%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/ -&lt;h2 id=&#34;审计通知书等文书要求&#34;&gt;审计通知书等文书要求&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-24 四&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;审计通知书的需要资料清单，不同单位是不一样的！根据单位性质进行修改！&lt;/strong&gt;&lt;/li&gt;
@@ -116,9 +191,9 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;d9fd44&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-24 四&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;d9fd44&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-24 四&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;必须学习各种规章制度，例如财政局的制度文件，这样才能有的放矢，知道什么是合法的什么是违规的&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&#34;756d36&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-07-24 一&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;756d36&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-07-24 一&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;白条入账&lt;/li&gt;
 &lt;li&gt;重大支出是否开会研究&lt;/li&gt;
@@ -148,7 +223,7 @@
 &lt;li&gt;公车是否定点维修加油&lt;/li&gt;
 &lt;li&gt;现金支出1万元以上的，如果收款方是个人是可以的，非个人不可以&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;f99f38&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-07-31 一&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;f99f38&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-07-31 一&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;违规向个人借款、转账（ &lt;strong&gt;注意必须是采购，不是公务活动，采购不允许，公务活动允许&lt;/strong&gt; ）
 &lt;ul&gt;
@@ -157,12 +232,12 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;de8b33&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-01 二&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;de8b33&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-01 二&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;中央专项资金一般不需要关心为什么发放给这个人 不发放个那个人，即不需要关心怎么发放，只需要关心是否发放&lt;/li&gt;
 &lt;li&gt;【疑】公车是否需要使用登记台账&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;c201cc&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-03 四&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;c201cc&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-03 四&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;问题：未走招投标
 &lt;ul&gt;
@@ -185,7 +260,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;22614d&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-07 一&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;22614d&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-07 一&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;问题：挤占专项资金
 &lt;ul&gt;
@@ -200,7 +275,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;4bce34&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-09 三&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;4bce34&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-09 三&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;问题：租金未上交财政
 &lt;ul&gt;
@@ -208,7 +283,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;934141&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-16 三&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;934141&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-16 三&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;关于过节福利
 &lt;ul&gt;
@@ -216,7 +291,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;934141&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-16 三&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;934141&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-16 三&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;凭证必须要有发票&lt;/strong&gt;
 &lt;ul&gt;
@@ -224,7 +299,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;固定资产折旧&#34;&gt;固定资产折旧(&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-24 四&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;)&lt;/h3&gt;
+&lt;h2 id=&#34;固定资产折旧&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-24 四&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;固定资产折旧&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;关于固定资产折旧要了解的点：
 &lt;ul&gt;
@@ -258,7 +333,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;长期应付款&#34;&gt;长期应付款(&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-24 四&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;)&lt;/h3&gt;
+&lt;h2 id=&#34;长期应付款&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-24 四&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;长期应付款&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;看“长期应付款”科目下的内容，像是汶城中学的长期应付款科目下基本都是工程款&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;拖欠工程款和拖欠账款不一样，要分别写取证单&lt;/strong&gt;
@@ -267,13 +342,13 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;拖欠工程款和拖欠民营企业账款要写两个取证单-后者可能包含前者&#34;&gt;拖欠工程款和拖欠民营企业账款要写两个取证单，后者可能包含前者(&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-24 四&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;)&lt;/h3&gt;
+&lt;h2 id=&#34;拖欠工程款和拖欠民营企业账款要写两个取证单-后者可能包含前者&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-24 四&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;拖欠工程款和拖欠民营企业账款要写两个取证单，后者可能包含前者&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;拖欠工程款是专指工程完工结算后未付清欠款&lt;/li&gt;
 &lt;li&gt;拖欠民营企业账款是包括所有欠企业的钱，包括工程企业的工程款&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;拖欠企业账款其他应付款、应付账款、长期应付款都要看，所有的欠款加起来&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;应缴未缴财政收入&#34;&gt;应缴未缴财政收入(&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-24 四&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;)&lt;/h3&gt;
+&lt;h2 id=&#34;应缴未缴财政收入&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-24 四&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;应缴未缴财政收入&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;看应缴财政款科目是否有余额&lt;/strong&gt;
 &lt;ul&gt;

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html><head>
+<title>在手机上使用org-agenda进行日程管理</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+      <script src="/js/toc.js"></script>
+    
+    <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="/scss/dark-mode.min.cb53f1bee2b8900cb4f082afbf00175d6618f281cf9a2fe8619e3b52d20b5721.css" integrity="sha256-y1PxvuK4kAy08IKvvwAXXWYY8oHPmi/oYZ47UtILVyE=" media="screen">
+
+
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Material+Icons">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#org-agenda%e6%89%8b%e6%9c%ba%e7%ab%af%e5%90%8c%e6%ad%a5%e7%9a%84%e9%9a%be%e7%82%b9" class="nav-org-agenda手机端同步的难点">
+									org-agenda手机端同步的难点
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%8e%9f%e7%90%86" class="nav-原理">
+									原理
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%93%8d%e4%bd%9c" class="nav-操作">
+									操作
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%ae%9e%e7%8e%b0windows-linux-%e6%89%8b%e6%9c%ba%e7%9a%84%e5%90%8c%e6%ad%a5" class="nav-实现windows-linux-手机的同步">
+									实现Windows、Linux、手机的同步
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="http://goodboylqs.github.io/">
+            庙街
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="http://goodboylqs.github.io/">
+        <div class="single-column-header-title">庙街</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    在手机上使用org-agenda进行日程管理
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2023-09-03 15:16
+                        </time>
+                        
+
+                        
+
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h2 id="org-agenda手机端同步的难点">org-agenda手机端同步的难点</h2>
+<p>作为Emacs的重度使用者,org-mode已经成为我日常工作生活不可或缺的重要工具。作为Emac的日程管理插件，org-agenda一直是我用来进行日常管理的重要辅助，其自动添加日期、设置优先级、设置状态等功能为日程管理提供了非常方便的特性。但Emacs作为一款桌面软件，其所有的插件都是为PC使用环境设计的，Emacs各种快捷键的使用可以在电脑键盘下按出来，但在手机键盘上显然就很不方便，同时许多插件依赖操作系统提供的各种依赖库文件，安卓手机也无法提供相关的运行环境。因此在手机上使用Emacs从可操作性、可实现性来说都是不太现实的。虽然Emacs官方已经开发了Emacs app，但是很多功能还是只能在PC上实现，包括org-agenda。时下流行的日程管理软件，包括滴答清单、Todo清单等，都能做到手机、电脑多平台同步，对于日程管理来说，这基本上是最最重要的特性，在手机上随时随地查看日程是大部分人的刚需，如果不能做到多平台同步，只能在PC上查看日程，那日程管理就会非常不方便。通过几天研究，利用了坚果云的自动同步、orgzly APP，我基本上实现了org-agenda的多平台同步，orgzyl提供了App端的org agenda功能，坚果云提供了agenda files的多平台同步，可以在App端显示日程的内容、状态、优先级，并使用App新增日程、修改日程内容等，免费、高效，大大提升了日程管理效率。下面就如何实现手机同步org-agenda简要说明做法。</p>
+<h2 id="原理">原理</h2>
+<ul>
+<li>文件同步。org-agenda是对agenda files内容的显示，而日程的内容都是记录在agenda files中的，因此只要实现agenda files的手机同步，就可以查看日程相关内容，这点使用坚果云很容易实现。</li>
+<li>日程显示。orgzly可以将agenda files 中的日程识别出来，产生类似于PC端Emacs org-agenda的显示效果。</li>
+</ul>
+<h2 id="操作">操作</h2>
+<ol>
+<li>
+<p>注册坚果云账号，免费版即可，免费版提供每月1GB的上传和下载流量，对于日程管理文件，这些流量足够了。 在手机上安装坚果云App和orgzly App，其中orgzly App是从FDroid上下载的，需要梯子,为了方便我把安装包分享在这里链接: <a href="https://pan.baidu.com/s/1w-maN_MwuivDV8MJIYZY3A">https://pan.baidu.com/s/1w-maN_MwuivDV8MJIYZY3A</a> 提取码: je4u。在电脑上安装坚果云客户端，Windows和Linux下坚果云都有相关客户端，官方的支持还是很完善的。</p>
+</li>
+<li>
+<p>打开电脑端坚果云，创建同步文件夹，将你的agenda files放到这个文件夹中。例如我的同步文件夹是org-agenda-files，然后agenda files是life.org和work.org。打开Emacs，C-x C-f打开life.org和work.org，然后C-c [将这两个文件夹加入你的init.el中的org-agenda-files列表，这样在Emacs org-agenda中就会显示这两个文件包含的日程了。</p>
+</li>
+<li>
+<p>打开orgzly右上角的设置&ndash;&gt;同步&ndash;&gt;存储库，存储库要求你输入dav地址。打开坚果云网页版并登录，点击右上角账户信息&ndash;&gt;安全选项，里面有第三方应用管理，按照教程添加应用，会生成一个应用密码。在orgzly中输入对应的服务器地址和应用密码，就可以实现orgzly对agenda files的同步。</p>
+<figure><img src="/ox-hugo/2023-09-03_15-00-18_screenshot.png"/>
+    </figure>
+
+</li>
+<li>
+<p>同步完成后，打开orgzly左上角，点Agenda即可看到类似于Emacs org-agenda的显示效果。</p>
+<figure><img src="/ox-hugo/2023-09-03_15-03-03_screenshot.png"/>
+    </figure>
+
+</li>
+</ol>
+<h2 id="实现windows-linux-手机的同步">实现Windows、Linux、手机的同步</h2>
+<ul>
+<li>我自己在Windows、Linux用的emacs配置是同一套，因此也希望能实现Windows、Linux下日程的同步，但难点在于同一个agenda file在Windows和Linux下文件的路径不同，Emacs在寻找agenda files时发现给定路径下找不到对应文件的时会提示你是否要Remove或Abort对应的agenda file。要解决这个问题，只需要设置变量org-agenda-skip-unavailable-files的值为t，即可将Windows和Linux下的agenda files路径同时加入你的init.el中，Emacs会跳过找不到的agenda file并不会提示你，只会将找到的agenda files加入到org agenda中。只需要将Windows和Linux下坚果云同步的agenda files的路径用C-c [加入init.el即可。下图是我的org agenda files的配置。</li>
+</ul>
+<figure><img src="/ox-hugo/2023-09-03_15-10-37_screenshot.png"/>
+</figure>
+
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2023-09-03</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts">
+			Next<br>No newer posts.
+                </a>
+                
+                
+                
+                <a class="older-posts" href="/posts/%E7%86%B5%E5%A2%9E%E5%AE%9A%E5%BE%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
+			Previous<br>《熵增定律》读书笔记
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="http://goodboylqs.github.io/">
+    
+        <div class="nav-title">
+            庙街
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2023 庙街
+	
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    <div class="toc-wrapper">
+        
+
+        
+        <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#org-agenda%e6%89%8b%e6%9c%ba%e7%ab%af%e5%90%8c%e6%ad%a5%e7%9a%84%e9%9a%be%e7%82%b9" class="nav-org-agenda手机端同步的难点">
+									org-agenda手机端同步的难点
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%8e%9f%e7%90%86" class="nav-原理">
+									原理
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%93%8d%e4%bd%9c" class="nav-操作">
+									操作
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%ae%9e%e7%8e%b0windows-linux-%e6%89%8b%e6%9c%ba%e7%9a%84%e5%90%8c%e6%ad%a5" class="nav-实现windows-linux-手机的同步">
+									实现Windows、Linux、手机的同步
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+        
+    </div>
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top"
+            :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2023 庙街
+	
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script></body>
+</html>
