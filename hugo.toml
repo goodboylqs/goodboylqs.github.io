@@ -5,14 +5,15 @@ author = 'lqs'
 theme = 'hugo-theme-diary'
 
 [taxonomies]
+   category = "categories"
    tag = "tags"
 
 [[menu.main]]
-url = "/booknotes"
+url = "/categories/booknotes"
 name = "读书笔记"
 weight = 2
 [[menu.main]]
-url = "/program"
+url = "/categories/program"
 name = "编程"
 weight = 3
 
