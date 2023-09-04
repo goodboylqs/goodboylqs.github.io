@@ -1,9 +1,10 @@
 +++
 title = "在手机上使用org-agenda进行日程管理"
 author = ["553912917@qq.com"]
-lastmod = 2023-09-04T13:29:22+08:00
+date = 2023-09-03T13:30:00
+lastmod = 2023-09-04T13:42:30+08:00
 tags = ["Emacs", "org-mode", "org-agenda"]
-categories = ["program"]
+categories = ["编程"]
 draft = false
 +++
 

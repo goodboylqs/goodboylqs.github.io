@@ -9,13 +9,18 @@ theme = 'hugo-theme-diary'
    tag = "tags"
 
 [[menu.main]]
-url = "/categories/booknotes"
+url = "/categories/读书笔记"
 name = "读书笔记"
 weight = 2
 [[menu.main]]
-url = "/categories/program"
+url = "/categories/编程"
 name = "编程"
 weight = 3
+[[menu.main]]
+url = "/categories/会计"
+name = "会计"
+weight = 4
+
 
 
 [[menu.main]]

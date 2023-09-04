@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Emacs on 庙街</title>
-    <link>http://goodboylqs.github.io/tags/emacs/</link>
-    <description>Recent content in Emacs on 庙街</description>
+    <title>编程 on 庙街</title>
+    <link>http://goodboylqs.github.io/categories/%E7%BC%96%E7%A8%8B/</link>
+    <description>Recent content in 编程 on 庙街</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 03 Sep 2023 13:30:00 +0000</lastBuildDate><atom:link href="http://goodboylqs.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Sep 2023 13:30:00 +0000</lastBuildDate><atom:link href="http://goodboylqs.github.io/categories/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在手机上使用org-agenda进行日程管理</title>
       <link>http://goodboylqs.github.io/posts/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8org-agenda%E8%BF%9B%E8%A1%8C%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86/</link>
