@@ -6,7 +6,7 @@
     <description>Recent content on 庙街</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 04 Sep 2023 18:18:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 04 Sep 2023 18:18:00 +0800</lastBuildDate>
     
         <atom:link href="http://goodboylqs.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
         <item>
         <title>docker基础&#43;docker安装sqlserver、oracle</title>
         <link>http://goodboylqs.github.io/posts/deepin%E5%AE%89%E8%A3%85docker/</link>
-        <pubDate>Mon, 04 Sep 2023 18:18:00 +0000</pubDate>
+        <pubDate>Mon, 04 Sep 2023 18:18:00 +0800</pubDate>
         
         <guid>http://goodboylqs.github.io/posts/deepin%E5%AE%89%E8%A3%85docker/</guid>
         <description>庙街 http://goodboylqs.github.io/posts/deepin%E5%AE%89%E8%A3%85docker/ -&lt;h2 id=&#34;docker介绍&#34;&gt;docker介绍&lt;/h2&gt;
@@ -261,7 +261,7 @@ export PATH=$ORACLE_HOME/bin:$PATH
         <item>
         <title>在手机上使用org-agenda进行日程管理</title>
         <link>http://goodboylqs.github.io/posts/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8org-agenda%E8%BF%9B%E8%A1%8C%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86/</link>
-        <pubDate>Sun, 03 Sep 2023 13:30:00 +0000</pubDate>
+        <pubDate>Sun, 03 Sep 2023 13:30:00 +0800</pubDate>
         
         <guid>http://goodboylqs.github.io/posts/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8org-agenda%E8%BF%9B%E8%A1%8C%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86/</guid>
         <description>庙街 http://goodboylqs.github.io/posts/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8org-agenda%E8%BF%9B%E8%A1%8C%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86/ -&lt;h2 id=&#34;org-agenda手机端同步的难点&#34;&gt;org-agenda手机端同步的难点&lt;/h2&gt;
@@ -307,7 +307,7 @@ export PATH=$ORACLE_HOME/bin:$PATH
         <item>
         <title>《熵增定律》读书笔记</title>
         <link>http://goodboylqs.github.io/posts/%E7%86%B5%E5%A2%9E%E5%AE%9A%E5%BE%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
-        <pubDate>Wed, 30 Aug 2023 14:32:00 +0000</pubDate>
+        <pubDate>Wed, 30 Aug 2023 14:32:00 +0800</pubDate>
         
         <guid>http://goodboylqs.github.io/posts/%E7%86%B5%E5%A2%9E%E5%AE%9A%E5%BE%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
         <description>庙街 http://goodboylqs.github.io/posts/%E7%86%B5%E5%A2%9E%E5%AE%9A%E5%BE%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/ -&lt;h2 id=&#34;摘抄&#34;&gt;摘抄&lt;/h2&gt;
