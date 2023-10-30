@@ -13,7 +13,10 @@ tags
 ## Use-Package {#2023Usepackage}
 
 
-### after关键字：指定包c在包a加载之后再加载 {#after关键字-指定包c在包a加载之后再加载}
+### 关于指定包的加载顺序 {#关于指定包的加载顺序}
+
+
+#### after关键字：指定包c在包a加载之后再加载 {#after关键字-指定包c在包a加载之后再加载}
 
 > (use-package ivy-hydra
 > :after (ivy hydra))
@@ -81,3 +84,84 @@ tags
       ((rubycop . "gem install rubocop"))    ;;自定义执行的安装命令是gem install rubycop
       )
     ```
+
+
+### 关于包加载前/后在执行的命令 {#关于包加载前-后在执行的命令}
+
+
+#### init关键字：在加载包之前执行的命令 {#init关键字-在加载包之前执行的命令}
+
+\`\`Use the :init keyword to execute code before a package is loaded.''
+
+```elisp
+(use-package foo
+  :init
+  (setq foo-variable t))
+```
+
+
+#### config关键字：在加载包之后执行的命令 {#config关键字-在加载包之后执行的命令}
+
+\`\`Similarly, :config can be used to execute code after a package is loaded.''
+
+```elisp
+(use-package foo
+  :init
+  (setq foo-variable t)
+  :config
+  (foo-mode 1))
+```
+
+
+### 关于快捷键的绑定 {#关于快捷键的绑定}
+
+
+#### bind关键字：全局绑定和mode-map绑定 {#bind关键字-全局绑定和mode-map绑定}
+
+> :bind (("M-s O" . moccur)
+> :map isearch-mode-map
+> ("M-o" . isearch-moccur)
+> ("M-O" . isearch-moccur-all))
+
+```elisp
+:bind (("M-s O" . moccur)  ;;绑定全局的快捷键
+       :map isearch-mode-map
+       ("M-o" . isearch-moccur)  ;;绑定只在isearch-mode下适用的快捷键
+       ("M-O" . isearch-moccur-all))
+```
+
+
+### mode和interpreter关键字：打开某类型文件后执行的命令 {#mode和interpreter关键字-打开某类型文件后执行的命令}
+
+> Similar to :bind , you can use :mode and :interpreter to establish a deferred binding
+> within the auto-mode-alist and interpreter-mode-alist variables.
+
+```elisp
+  ;; The package is "python" but the mode is "python-mode":
+(use-package python
+  :mode ("\\.py\\'" . python-mode)
+  :interpreter ("python" . python-mode))
+```
+
+
+### hook关键字：为package的hooks添加上要执行的命令 {#hook关键字-为package的hooks添加上要执行的命令}
+
+\`\`The :hook keyword allows adding functions onto package hooks.''
+
+-   package的hook，例如prog-mode-hook，即编程的hook。以下两种写法的效用是等价的
+    ```elisp
+    ;;写法一：用hook
+    (use-package company
+         :hook ((prog-mode text-mode) . company-mode)) ;;写法二：用command和init
+    (use-package company
+         :commands company-mode   ;;再运行一下company-mode
+         :init
+         (add-hook 'prog-mode-hook #'company-mode)  ;;用init在加载company-mode前线将company-mode与到prog-mode联系起来，确保prog-mode打开的时候company-mode也打开，
+         (add-hook 'text-mode-hook #'company-mode)
+         )
+    ```
+
+
+### custom关键字：自定义package所带的变量的值 {#custom关键字-自定义package所带的变量的值}
+
+\`\`The :custom keyword allows customization of package custom variables.''
