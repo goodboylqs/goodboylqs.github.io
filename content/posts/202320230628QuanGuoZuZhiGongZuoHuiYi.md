@@ -1,19 +1,17 @@
 +++
 title = "2023-06-28-全国组织工作会议"
 author = ["553912917@qq.com"]
-date = 2023-10-31
+date = 2023-11-02
 tags = ["遴选", "遴选热点周周讲"]
 categories = ["遴选", "遴选热点周周讲"]
 draft = false
 +++
 
 tags
-:
+: 遴选
 
 
-## 全国组织工作会议 {#2023QuanGuoZuZhiGongZuoHuiYi}
-
-
+## 2023-06-28-全国组织工作会议 {#202320230628QuanGuoZuZhiGongZuoHuiYi}
 
 
 ### 习近平总书记重要批示精神 {#习近平总书记重要批示精神}
