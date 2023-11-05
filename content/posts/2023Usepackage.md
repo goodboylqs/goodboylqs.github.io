@@ -1,6 +1,8 @@
 +++
 title = "Emacs的Use-Package用法"
 author = ["553912917@qq.com"]
+date = 2023-10-30T23:03:00+08:00
+lastmod = 2023-11-05T12:41:49+08:00
 tags = ["emacs", "use-package"]
 categories = ["emacs", "编程"]
 draft = false
