@@ -1,8 +1,8 @@
 +++
 title = "一只特立独行的猪"
 author = ["553912917@qq.com"]
-tags = ["小说", "文学"]
-categories = ["文学"]
+tags = ["小说", "文学", "读书笔记"]
+categories = ["文学", "读书笔记"]
 draft = false
 +++
 
