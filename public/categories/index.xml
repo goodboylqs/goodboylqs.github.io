@@ -6,12 +6,19 @@
     <description>Recent content in Categories on 庙街</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 05 Nov 2023 12:36:51 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 11 Nov 2023 09:23:00 +0800</lastBuildDate>
     <atom:link href="http://goodboylqs.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>综艺</title>
+      <link>http://goodboylqs.github.io/categories/%E7%BB%BC%E8%89%BA/</link>
+      <pubDate>Sat, 11 Nov 2023 09:23:00 +0800</pubDate>
+      <guid>http://goodboylqs.github.io/categories/%E7%BB%BC%E8%89%BA/</guid>
+      <description></description>
+    </item>
     <item>
       <title>会计</title>
       <link>http://goodboylqs.github.io/categories/%E4%BC%9A%E8%AE%A1/</link>
-      <pubDate>Sun, 05 Nov 2023 12:36:51 +0800</pubDate>
+      <pubDate>Sun, 05 Nov 2023 11:01:00 +0800</pubDate>
       <guid>http://goodboylqs.github.io/categories/%E4%BC%9A%E8%AE%A1/</guid>
       <description></description>
     </item>
@@ -30,16 +37,30 @@
       <description></description>
     </item>
     <item>
+      <title>文学</title>
+      <link>http://goodboylqs.github.io/categories/%E6%96%87%E5%AD%A6/</link>
+      <pubDate>Wed, 01 Nov 2023 11:12:00 +0800</pubDate>
+      <guid>http://goodboylqs.github.io/categories/%E6%96%87%E5%AD%A6/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>读书笔记</title>
       <link>http://goodboylqs.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Mon, 23 Oct 2023 09:32:00 +0800</pubDate>
+      <pubDate>Wed, 01 Nov 2023 11:12:00 +0800</pubDate>
       <guid>http://goodboylqs.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>emacs</title>
+      <link>http://goodboylqs.github.io/categories/emacs/</link>
+      <pubDate>Mon, 30 Oct 2023 23:03:00 +0800</pubDate>
+      <guid>http://goodboylqs.github.io/categories/emacs/</guid>
       <description></description>
     </item>
     <item>
       <title>编程</title>
       <link>http://goodboylqs.github.io/categories/%E7%BC%96%E7%A8%8B/</link>
-      <pubDate>Mon, 04 Sep 2023 18:18:00 +0800</pubDate>
+      <pubDate>Mon, 30 Oct 2023 23:03:00 +0800</pubDate>
       <guid>http://goodboylqs.github.io/categories/%E7%BC%96%E7%A8%8B/</guid>
       <description></description>
     </item>
@@ -48,20 +69,6 @@
       <link>http://goodboylqs.github.io/categories/%E5%BF%83%E7%90%86%E5%AD%A6/</link>
       <pubDate>Wed, 30 Aug 2023 14:32:00 +0800</pubDate>
       <guid>http://goodboylqs.github.io/categories/%E5%BF%83%E7%90%86%E5%AD%A6/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>emacs</title>
-      <link>http://goodboylqs.github.io/categories/emacs/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://goodboylqs.github.io/categories/emacs/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>文学</title>
-      <link>http://goodboylqs.github.io/categories/%E6%96%87%E5%AD%A6/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://goodboylqs.github.io/categories/%E6%96%87%E5%AD%A6/</guid>
       <description></description>
     </item>
   </channel>
