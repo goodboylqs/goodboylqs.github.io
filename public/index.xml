@@ -6,9 +6,81 @@
     <description>Recent content on 庙街</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 11 Nov 2023 09:23:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 15 Nov 2023 23:43:00 +0800</lastBuildDate>
     
         <atom:link href="http://goodboylqs.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>elisp学习</title>
+        <link>http://goodboylqs.github.io/posts/2023111523-elisp%E5%AD%A6%E4%B9%A0/</link>
+        <pubDate>Wed, 15 Nov 2023 23:43:00 +0800</pubDate>
+        
+        <guid>http://goodboylqs.github.io/posts/2023111523-elisp%E5%AD%A6%E4%B9%A0/</guid>
+        <description>庙街 http://goodboylqs.github.io/posts/2023111523-elisp%E5%AD%A6%E4%B9%A0/ -&lt;dl&gt;
+&lt;dt&gt;tags&lt;/dt&gt;
+&lt;dd&gt;编程 emacs&lt;/dd&gt;
+&lt;dt&gt;source&lt;/dt&gt;
+&lt;dd&gt;&lt;a href=&#34;http://smacs.github.io/elisp/01-hello-world.html&#34;&gt;http://smacs.github.io/elisp/01-hello-world.html&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;date&lt;/dt&gt;
+&lt;dd&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-11-15 周三 23:41&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;h2 id=&#34;elisp的运行环境&#34;&gt;elisp的运行环境&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;只有在lisp-interaction-mode下，才能执行elisp代码
+&lt;ul&gt;
+&lt;li&gt;M-x lisp-interaction-mode&lt;/li&gt;
+&lt;li&gt;在行尾右括号后面按C-j&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;elisp不好作为可执行方式来来运行，所有的elisp都是在emacs的环境下&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;在org-mode中插入src代码块&#34;&gt;在org-mode中插入src代码块&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;C-c C-,(org-insert-structure-template)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;在org-mode中的src区域运行代码&#34;&gt;在org-mode中的src区域运行代码&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;将光标移动到src区域，按C-c C-c即可运行代码&lt;/li&gt;
+&lt;li&gt;将光标移动到src区域，按C-c &amp;lsquo;可对代码进行编辑&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;elisp表达式&#34;&gt;elisp表达式&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;elisp的表达式是一个括号括起来，成为一个S-表达式&lt;/li&gt;
+&lt;li&gt;执行一个S-表达式的方法有2个
+&lt;ul&gt;
+&lt;li&gt;用C-j&lt;/li&gt;
+&lt;li&gt;用C-x C-e————C-x C-e是一个全局按键，几乎在任何地方都可以使用。也就是说哪怕是没有打开lisp-interaction-mode的情况下使用C-x C-e也可以运行代码，运行结果会在minibuffer中显示&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;elisp表达式的作用 ≠ elisp表达式的返回值&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;(message &amp;ldquo;hello world&amp;rdquo;)中message函数的作用是在minibuffer中显示一个字符串，但它的返回值是&amp;quot;hello world&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;message&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;hello world&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;elisp的函数和变量&#34;&gt;elisp的函数和变量&lt;/h2&gt;
+&lt;h3 id=&#34;elisp函数&#34;&gt;elisp函数&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;定义一个函数
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;;    (defun 函数名(参数列表)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;;      函数文档  //可省略&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;;      函数体)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(defun hello-world(name)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;对name说hello&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#a6e22e&#34;&gt;message&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;hello,%s&amp;#34;&lt;/span&gt; name))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(hello-world &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;emacser&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;elisp变量&#34;&gt;elisp变量&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;elisp变量无需像c语言变量一样声明，可以直接赋值&lt;/li&gt;
+&lt;/ul&gt;
+- http://goodboylqs.github.io/posts/2023111523-elisp%E5%AD%A6%E4%B9%A0/ - </description>
+        </item>
     
     
     
@@ -969,6 +1041,60 @@ export PATH=$ORACLE_HOME/bin:$PATH
 &lt;ul&gt;
 &lt;li&gt;如果有人打破了一幢房子的窗户，那么接下来极有可能会出现更多的窗户破坏。&lt;/li&gt;
 &lt;li&gt;从本质上来说， &lt;strong&gt;破窗效应相当于爹加了时间维度的从众效应————因为看到有人率先违反了规则而并未受到惩罚，这种混乱的情况就会产生更多的混乱，相当于有外力做了负功，让系统里的熵增越来越多&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;如何应对
+&lt;ul&gt;
+&lt;li&gt;第一时间处理&lt;/li&gt;
+&lt;li&gt;绝不包容&lt;/li&gt;
+&lt;li&gt;小题大做&lt;/li&gt;
+&lt;li&gt;总之就是对产生错误示范的从众行为，应当及时高调地处理，从而产生威慑避免不良行为的蔓延&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;第六章-路径依赖效应&#34;&gt;第六章：路径依赖效应&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;火箭推进器的尺寸为什么跟铁轨尺寸一样？——————在不得不依靠铁路来进行运输的时代，为了兼顾运输效率和运输安全，推进器的尺寸就和铁轨尺寸一样了
+&lt;ul&gt;
+&lt;li&gt;铁轨的尺寸跟英国马车的尺寸一样，英国马车的尺寸跟2000多年前古罗马战车的尺寸一样，2000多年前古罗马战车的尺寸和两匹马屁股的宽度叠加在一起一样&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;路径依赖：历史是重要的，其重要性不仅在于向过去取经，而且由于现在和未来是通过社会制度的连续性与过去连接起来的，所以今天和明天的选择也都是由过去决定的，就如同英国马车的尺寸与火箭推进器的尺寸相同&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;宏观上，路径依赖认为人类社会中的制度变迁或技术演进类似于物理学中的惯性，会对路径产生依赖性&lt;/li&gt;
+&lt;li&gt;微观上，个人或者团队如果做了选择，惯性的力量会让这种选择不断强化，让个人或团队轻易走不出去&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;沉没成本与路径依赖
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;路径依赖之所以会产生市因为在这个原理背后存在着对于利益以及所付出成本的考虑。&lt;/strong&gt; 对于一个组织，当某种制度形成后，就会形成一个既得利益团体，由于得益于当前制度，他们就会不断要求强化当前制度。就算新制度的确可能带来更大的效益，他们也不会轻易改变。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;对于个人来说，因为任何一种方法、技能的形成都伴随着精力、时间和资源的投入，所以就算哪天发现旧方法、旧技能已经不再适用，也不会轻易地放下或改变。因为这样会导致前期付出的努力化为乌有。&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;沉默成本是路径依赖产生存在的主要原因&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;路径依赖的好处和反噬
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;在过去，路径依赖并非坏事————过去信息传输速度慢，很多路径可以被多次重复依赖并不担心这条路径被别人抄袭然后失效————现在由于信息太容易传播、创新速度快，路径可以被依赖的周期越来越短&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;个人路径依赖的反噬
+&lt;ul&gt;
+&lt;li&gt;以前班上的学霸发展并不很好，因为以前只需要懂得埋头努力学习就好了，依赖着学习这条路经，不去发展沟通技巧，在职场中就没法做好“向上管理”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;如何打破路径依赖
+&lt;ol&gt;
+&lt;li&gt;找到自己的人生目标
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;个人的路径依赖往往是因为失去了一个人本身的内在动力，而内在动力的缺失又是因为他始终找不到自己的人生目标&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;尝试最小闭环
+&lt;ul&gt;
+&lt;li&gt;走一条岔道看看，如果这条道不合适就马上跳回来&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;持续做功，等待复利回报&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;我的感悟&#34;&gt;我的感悟&lt;/h4&gt;
 &lt;ul&gt;
@@ -981,248 +1107,6 @@ export PATH=$ORACLE_HOME/bin:$PATH
 &lt;/ul&gt;
 &lt;h2 id=&#34;感悟&#34;&gt;感悟&lt;/h2&gt;
 - http://goodboylqs.github.io/posts/%E7%86%B5%E5%A2%9E%E5%AE%9A%E5%BE%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>看凭证时注意问题(持续更新)</title>
-        <link>http://goodboylqs.github.io/posts/%E7%9C%8B%E5%87%AD%E8%AF%81%E6%97%B6%E6%B3%A8%E6%84%8F%E9%97%AE%E9%A2%98%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</link>
-        <pubDate>Wed, 30 Aug 2023 12:26:00 +0800</pubDate>
-        
-        <guid>http://goodboylqs.github.io/posts/%E7%9C%8B%E5%87%AD%E8%AF%81%E6%97%B6%E6%B3%A8%E6%84%8F%E9%97%AE%E9%A2%98%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</guid>
-        <description>庙街 http://goodboylqs.github.io/posts/%E7%9C%8B%E5%87%AD%E8%AF%81%E6%97%B6%E6%B3%A8%E6%84%8F%E9%97%AE%E9%A2%98%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/ -&lt;h2 id=&#34;审计通知书等文书要求&#34;&gt;审计通知书等文书要求&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-24 四&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;审计通知书的需要资料清单，不同单位是不一样的！根据单位性质进行修改！&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;收集资料
-&lt;ul&gt;
-&lt;li&gt;人员名单&lt;/li&gt;
-&lt;li&gt;内部规章制度&lt;/li&gt;
-&lt;li&gt;述职报告（要本人签字）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;d9fd44&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-24 四&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;必须学习各种规章制度，例如财政局的制度文件，这样才能有的放矢，知道什么是合法的什么是违规的&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;756d36&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-07-24 一&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;白条入账&lt;/li&gt;
-&lt;li&gt;重大支出是否开会研究&lt;/li&gt;
-&lt;li&gt;库存现金是否存在借条抵顶&lt;/li&gt;
-&lt;li&gt;竣工项目决算是否及时&lt;/li&gt;
-&lt;li&gt;是否存在大额现金支付&lt;/li&gt;
-&lt;li&gt;租金是否及时上缴财政&lt;/li&gt;
-&lt;li&gt;专项资金是否及时花出去（不能滞留）&lt;/li&gt;
-&lt;li&gt;挤占专项资金（ &lt;strong&gt;&lt;strong&gt;本质上就是科目A应有资金大于实际资金&lt;/strong&gt;&lt;/strong&gt; ）
-&lt;ul&gt;
-&lt;li&gt;截 至 2022 年 12 月 底 ， 东 都 镇 总 预 算 其 他 应 付 款 未 付 专 款9661188.29 元 （ 未 付 上 级 补 助 1329282.1 元 ， 地 上 附 着 物 补 偿646822.15 元，欠补偿款 7194641.04 元，欠村补助款 350443 元，欠敬老院专款 80000 元等）。总预算银行账户余额 1113418.80 元，两者相比，挤占专项资金 8547769.49 元。上述行为违反《中华人民共和国预算法》第五十七条“各级政府财政部门必须依照法律、行政法规和国务院财政部门的规定，及时、足额地拨付预算支出资金，加强对预算支出的管理和监督。各级政府、各部门、各单位的支出必须按照预算执行……”的规定。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;拖欠工程款
-&lt;ul&gt;
-&lt;li&gt;竣工价款结算一般应当在项目竣工验收后 2 个月内完成，大型项目一般不得超过 3 个月&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;违规向个人账户转款&lt;/li&gt;
-&lt;li&gt;拖欠中小企业账款&lt;/li&gt;
-&lt;li&gt;扶贫项目资金闲置
-&lt;ul&gt;
-&lt;li&gt;2019 年东都镇东牛村使用产业扶贫项目款 160000 元，委托新泰市建筑安装工程公司经营并签订合同，合同期限 3 年，每年收益 12800元，于 2022 年 10 月份收回该投资款，存放在镇财政，由于该村暂时没有村书记，目前还没有制定新的产业项目方案，造成资金闲置 6 个月。上述行为违反了《山东省财政专项扶贫资金和项目管理办法》第十&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;报销的时候款项不能打给经办人&lt;/li&gt;
-&lt;li&gt;公车是否定点维修加油&lt;/li&gt;
-&lt;li&gt;现金支出1万元以上的，如果收款方是个人是可以的，非个人不可以&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;f99f38&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-07-31 一&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;违规向个人借款、转账（ &lt;strong&gt;注意必须是采购，不是公务活动，采购不允许，公务活动允许&lt;/strong&gt; ）
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;如果是使用信用卡即公务卡也是允许的&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;此处的个人专指单位内部人员，不包括外部人员&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;de8b33&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-01 二&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;中央专项资金一般不需要关心为什么发放给这个人 不发放个那个人，即不需要关心怎么发放，只需要关心是否发放&lt;/li&gt;
-&lt;li&gt;【疑】公车是否需要使用登记台账&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;c201cc&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-03 四&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;问题：未走招投标
-&lt;ul&gt;
-&lt;li&gt;签订的合同日期要在审计期间内&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;问题：工作计划没有上会研究
-&lt;ul&gt;
-&lt;li&gt;该单位内部管理制度上规定了工作计划要上会研究，但是会议纪要上并无相关记录&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;问题：固定资产未入账
-&lt;ul&gt;
-&lt;li&gt;购买办公桌椅、打印机等资产，在凭证的借方要写固定资产，否则就是未入固定资产账&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;问题：往来款未及时清理
-&lt;ul&gt;
-&lt;li&gt;期末的应收款、应付款金额较大就是往来款未及时清理&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;22614d&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-07 一&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;问题：挤占专项资金
-&lt;ul&gt;
-&lt;li&gt;看专项资金在是否挂账，例如石莱镇的专项资金很多挂在其他应付款科目下，只需要看其他应付款科目下的专项资金是否依然存在尚未支付&lt;/li&gt;
-&lt;li&gt;行政事业单位的货币资金包括库存现金、银行存款、零余额账户用款额度和其他货币资金。
-&lt;ul&gt;
-&lt;li&gt;比对的是，应付资金和货币资金之间的差额。“截至2021年12月底，石莱镇总预算其他应付款未付专款14777665.55元，货币资金1082786.05元，两者相比，挤占专项资金13694879.5元。”&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&amp;ldquo;零余额账户&amp;rdquo; 和 &amp;ldquo;零余额账户用款额度&amp;rdquo; 不是一个东西&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;4bce34&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-09 三&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;问题：租金未上交财政
-&lt;ul&gt;
-&lt;li&gt;看租金收入是否借方记上缴财政，未记上交财政，则违反规定&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;934141&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-16 三&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;关于过节福利
-&lt;ul&gt;
-&lt;li&gt;金额的上限：不能超过 &lt;strong&gt;工会收的钱+预算的钱&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;934141&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-16 三&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;凭证必须要有发票&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;例如学校虚列教育经费&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;固定资产折旧&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-24 四&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;固定资产折旧&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;关于固定资产折旧要了解的点：
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;1️⃣固定资产折旧怎么算&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;固定资产折旧有最低年限规定
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;(一)房屋、建筑物，为20年;&lt;/p&gt;
-&lt;p&gt;(二)飞机、火车、轮船、机器、机械和其他生产设备，为10年;&lt;/p&gt;
-&lt;p&gt;(三)与生产经营活动有关的器具、工具、家具等，为5年;&lt;/p&gt;
-&lt;p&gt;(四)飞机、火车、轮船以外的运输工具，为4年;&lt;/p&gt;
-&lt;p&gt;(五)电子设备，为3年。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;2️⃣固定资产折旧摊销的时间怎么规定的&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;开始折旧时间：固定资产投入使用的次月&lt;/li&gt;
-&lt;li&gt;停止折旧的时间：固定资产停止使用的次月&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;3️⃣哪些行业可以享受加速折旧政策&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;关于“一次性折旧政策”
-&lt;ul&gt;
-&lt;li&gt;价值低于5000元的，可以一次性计入当期成本费用在计算应纳税所得额时扣除，不再分年度计算折旧&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;长期应付款&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-24 四&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;长期应付款&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;看“长期应付款”科目下的内容，像是汶城中学的长期应付款科目下基本都是工程款&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;拖欠工程款和拖欠账款不一样，要分别写取证单&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;其他应付款和长期应付款也不一样&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;拖欠工程款和拖欠民营企业账款要写两个取证单-后者可能包含前者&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-24 四&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;拖欠工程款和拖欠民营企业账款要写两个取证单，后者可能包含前者&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;拖欠工程款是专指工程完工结算后未付清欠款&lt;/li&gt;
-&lt;li&gt;拖欠民营企业账款是包括所有欠企业的钱，包括工程企业的工程款&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;拖欠企业账款其他应付款、应付账款、长期应付款都要看，所有的欠款加起来&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;应缴未缴财政收入&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-24 四&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;应缴未缴财政收入&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;看应缴财政款科目是否有余额&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;只有有收费任务的单位才有此科目&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;不论何种单位归根结底是要先看资产负债表对科目进行分析&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;每个单位都要写的底稿&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-09-06 三&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;每个单位都要写的底稿&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;审计期间最后一个完整年度的预算决算情况&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;审计期间工作计划完成情况&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;三重一大决策制度执行情况&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;内部控制制度建立执行情况&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&#34;%3c2023-09-06_%e4%b8%89%3e%e6%af%8f%e4%b8%aa%e5%8d%95%e4%bd%8d%e9%83%bd%e8%a6%81%e5%86%99%e7%9a%84%e5%ba%95%e7%a8%bf/2023-09-06_17-04-33_screenshot.png&#34;/&gt;
-    &lt;/figure&gt;
-
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;差旅费报了100包干-就不能报其他的吃饭的费用&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-09-07 四&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;差旅费报了100包干，就不能报其他的吃饭的费用&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;银行业务回单包含付款和收款两种，注意区分，不要混淆&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;租车的费用-租车的类型也要注意&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-09-13 三&amp;gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; 租车的费用、租车的类型也要注意&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;租车的类型：两个人不能大车&lt;/li&gt;
-&lt;li&gt;租车的费用：定点租车中规定费用上线&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;查看会议签到和出差日期-是否存在同一个人既出差又开会&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-09-13 三&amp;gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;strong&gt;查看会议签到和出差日期，是否存在同一个人既出差又开会&lt;/strong&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;看信访局的时候主要看这个&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;注意发票上的单位和小票-收据上的单位要对应&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-09-13 三&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;注意发票上的单位和小票、收据上的单位要对应&lt;/h2&gt;
-&lt;h2 id=&#34;惠泰建设集团&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-10-24 二&amp;gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; 惠泰建设集团&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;看派车单、差旅审批单等单据上是否存在非本单位人员&lt;/li&gt;
-&lt;li&gt;看集团及其子公司所有的贷款合同（只看担保合同不看抵押合同），是否存在互为担保的情况&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;看贷款合同的抵押资产中是否包括国有资产、河流、湖泊等，不能将这些资产用作贷款抵押&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;什么时候走政府采购-政府采购包含什么文件&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-11-04 六&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;什么时候走政府采购？政府采购包含什么文件？&lt;/h2&gt;
-&lt;h2 id=&#34;注意购置空调桌椅等物品是否入固定资产账&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-11-04 六&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;注意购置空调桌椅等物品是否入固定资产账&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;存在4月份空调已经投入使用，但9月份才进行采购招标的情况
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;会议纪要和凭证要配合着看，在会议纪要中发现4月份空调已经投入使用， 凭证中发现9月份才走招标手续&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;差旅费-办公费有没有使用公务卡&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-11-04 六&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;差旅费、办公费有没有使用公务卡&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;如果银行回单中，收款账户不是单位账户而是个人户，就说明没用公务卡而是个人自己刷卡的&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;看是否有信访件-有的话关注信访内容&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-11-06 一&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;看是否有信访件，有的话关注信访内容&lt;/h2&gt;
-&lt;h2 id=&#34;看是否没有水电费-如果没有关注水电费去哪了&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-11-06 一&amp;gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; 看是否没有水电费，如果没有关注水电费去哪了&lt;/h2&gt;
-- http://goodboylqs.github.io/posts/%E7%9C%8B%E5%87%AD%E8%AF%81%E6%97%B6%E6%B3%A8%E6%84%8F%E9%97%AE%E9%A2%98%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/ - </description>
         </item>
     
     
