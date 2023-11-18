@@ -6,14 +6,16 @@
     <description>Recent content in elisp学习 on 庙街</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 15 Nov 2023 23:43:00 +0800</lastBuildDate>
-    <atom:link href="http://goodboylqs.github.io/tags/elisp%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Nov 2023 23:43:00 +0800</lastBuildDate><atom:link href="http://goodboylqs.github.io/tags/elisp%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>elisp学习</title>
       <link>http://goodboylqs.github.io/posts/2023111523-elisp%E5%AD%A6%E4%B9%A0/</link>
       <pubDate>Wed, 15 Nov 2023 23:43:00 +0800</pubDate>
+      
       <guid>http://goodboylqs.github.io/posts/2023111523-elisp%E5%AD%A6%E4%B9%A0/</guid>
-      <description> tags 编程 emacs source http://smacs.github.io/elisp/ date &amp;lt;2023-11-15 周三 23:41&amp;gt; elisp的运行环境 只有在lisp-interaction-mode下，才能执行elisp代码 M-x lisp-interaction-mode 在行尾右括号后面按C-j elisp不好作为可执行方式来来运行，所有的elisp都是在emacs的环境下 在org-mode中插入src代码块 C-c C-,(org-insert-structure-template) 在org-mode中的src区域运行代码 将光标移动到src区域，按C-c C-c即可运行代码 将光标移动到src区域，按C-c &amp;lsquo;可对代码进行编辑 elisp表达式 elisp的表达式是一个括号括起来，成为一个S-表达式 执行一个S-表达式的方法有2个 用C-j 用C-x C-e————C-x C-e是一个全局按键，几乎在任何地方都可以使用。也就是说哪怕是没有打开lisp-interaction-mode的情况下使用C-x C-e也可以运行代码，运行结果会在minibuffer中显示 elisp表达式的作用 ≠ elisp表达式的返回值 (message &amp;ldquo;hello world&amp;rdquo;)中message函数的作用是在minibuffer中显示一个字符串，但它的返回值是&amp;quot;hello world&amp;quot; (message &amp;#34;hello world&amp;#34;) elisp的函数和变量 elisp函数 定义一个函数 ;; (defun 函数名(参数列表) ;; 函数文档 //可省略 ;; 函数体) (defun hello-world(name) &amp;#34;对name说hello&amp;#34; (message &amp;#34;hello,%s&amp;#34; name)) (hello-world &amp;#34;emacser&amp;#34;) elisp变量 elisp变量无需像c语言变量一样声明，可以直接赋值 </description>
+      <description>tags 编程 emacs source http://smacs.github.io/elisp/ date &amp;lt;2023-11-15 周三 23:41&amp;gt; elisp的运行环境 只有在lisp-interaction-mode下，才能执行elisp代码 M-x lisp-interaction-mode 在行尾右括号后面按C-j elisp不好作为可执行方式来来运行，所有的elisp都是在emacs的环境下 在org-mode中插入src代码块 C-c C-,(org-insert-structure-template) 在org-mode中的src区域运行代码 将光标移动到src区域，按C-c C-c即可运行代码 将光标移动到src区域，按C-c &amp;lsquo;可对代码进行编辑 elisp表达式 elisp的表达式是一个括号括起来，成为一个S-表达式 执行一个S-表达式的方法有2个 用C-j 用C-x C-e————C-x C-e是一个全局按键，几乎在任何地方都可以使用。也就是说哪怕是没有打开lisp-interaction-mode的情况下使用C-x C-e也可以运行代码，运行结果会在minibuffer中显示 elisp表达式的作用 ≠ elisp表达式的返回值 (message &amp;ldquo;hello world&amp;rdquo;)中message函数的作用是在minibuffer中显示一个字符串，但它的返回值是&amp;quot;hello world&amp;quot; (message &amp;#34;hello world&amp;#34;) elisp的函数和变量 elisp函数 定义一个函数 ;; (defun 函数名(参数列表) ;; 函数文档 //可省略 *如果添加了函数文档，那么使用C-h f查看该函数的时候会显示函数文档的内容* ;; 函数体) (defun helloworld(name) &amp;#34;对name说hello&amp;#34; (message &amp;#34;hello,%s&amp;#34; name)) (helloworld &amp;#34;emacser&amp;#34;) elisp中的函数是全局的，变量也很容易成为全局变量（因为全局变量和局部变量的赋值都是使用setq），所以名字互相不冲突是很关键的 elisp变量 elisp变量无需像c语言变量一样声明，可以直接赋值
+也就是说elisp变量没有类型（存疑） (setq foo &amp;#34;I&amp;#39;m, foo&amp;#34;) (message foo) 使用defvar声明变量 ;; (defvar 变量名 变量值 ;; 变量文档) //可省略 *如果添加了变量文档，使用C-h v查看该变量的时候会显示变量文档的内容* (defvar foo &amp;#34;Did I have a value?</description>
     </item>
+    
   </channel>
 </rss>
