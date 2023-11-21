@@ -522,7 +522,7 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>(let (bindings)        <span style="color:#75715e">;;bindings可以使(var value)这样对var赋初始值的形式，也可以是直接var声明一个初始值为nil的变量</span>
 </span></span><span style="display:flex;"><span>  body)
 </span></span></code></pre></div></li>
-<li>eg1.我写的，有错误，错在①没有使用setq对变量进行赋值②变量乘法的表达式不对</li>
+<li>eg1.我写的，有错误，错在①没有使用setq对变量进行赋值②变量乘法的表达式不对③对let的用法部队，bindings部分没有使用括号括起来</li>
 </ul>
 <!-- raw HTML omitted -->
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>(defun circle-area(radix)
