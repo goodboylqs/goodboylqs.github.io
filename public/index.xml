@@ -6,7 +6,7 @@
     <description>Recent content on 庙街</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 21 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Nov 2023 22:32:00 +0800</lastBuildDate>
     
         <atom:link href="http://goodboylqs.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
         <item>
         <title>Org-Roam-Bibtex的使用</title>
         <link>http://goodboylqs.github.io/posts/2023orgroambibtexdeshiyong/</link>
-        <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
+        <pubDate>Tue, 21 Nov 2023 22:32:00 +0800</pubDate>
         
         <guid>http://goodboylqs.github.io/posts/2023orgroambibtexdeshiyong/</guid>
         <description>庙街 http://goodboylqs.github.io/posts/2023orgroambibtexdeshiyong/ -&lt;p&gt;tags
@@ -97,7 +97,7 @@
 &lt;p&gt;❻发⽂机关签署，三号仿宋字体，距最后⼀⾏正⽂内容三个空⾏位置。&lt;/p&gt;
 &lt;p&gt;❼成⽂⽇期为居中编排，三号仿宋字体，发⽂机关下⽅右空4个汉字。&lt;/p&gt;
 &lt;h3 id=&#34;页边距-页眉页脚边界-文档网格-每行28共22行&#34;&gt;页边距、页眉页脚边界、文档网格（每行28共22行）&lt;/h3&gt;
-&lt;p&gt;``1、Word⻚⾯设置要求&amp;rsquo;&amp;rsquo;
+&lt;p&gt;``1、Word⻚⾯设置要求&amp;rsquo;&#39;
 ❶⻚⾯边距上下左右分别为：3.7cm、3.5cm、2.8cm、2.6cm（ &lt;strong&gt;要求是这样，但实际有差异，看下面。具体用哪一组数字看情况&lt;/strong&gt; ），纸张⽅向为纵向，⼤⼩为A4（21*29.7）。&lt;/p&gt;
 &lt;p&gt;❷字体设置仿宋，字号三号常规，⻚眉和⻚脚设置奇偶⻚不同，⻚眉距边界1.5cm，⻚脚距边界2.5cm。&lt;/p&gt;
 &lt;p&gt;❸进⼊⽂档⽹格，选中指定⾏和字符⽹格，每⾏设置28个字符，每⻚设置22⾏。&lt;/p&gt;
@@ -110,7 +110,7 @@
 &lt;/ul&gt;
 &lt;p&gt;这样，就将版⾯设置成了以三号仿宋字体为标准、每⻚22⾏每⾏28个汉字的国家标准。&lt;/p&gt;
 &lt;h3 id=&#34;页码字体字号-对齐方式-奇数页偶数页设置&#34;&gt;页码字体字号、对齐方式、奇数页偶数页设置&lt;/h3&gt;
-&lt;p&gt;``2、插⼊⻚码要求&amp;rsquo;&amp;rsquo;
+&lt;p&gt;``2、插⼊⻚码要求&amp;rsquo;&#39;
 ❶⻚码位置在⻚⾯底端，即⻚脚处，对⻬⽅式为“外侧”。&lt;/p&gt;
 &lt;p&gt;❷⻚码数字格式为-1-、-2-……⻚码字号设置四号，字体为宋体的阿拉伯数字。&lt;/p&gt;
 &lt;p&gt;❸奇数⻚的⻚码设置成右空⼀个汉字，偶数⻚的⻚码设置成左空⼀个汉字。&lt;/p&gt;
