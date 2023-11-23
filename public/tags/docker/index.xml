@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>docker on 庙街</title>
-    <link>http://goodboylqs.github.io/tags/docker/</link>
+    <link>https://goodboylqs.github.io/tags/docker/</link>
     <description>Recent content in docker on 庙街</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 04 Sep 2023 18:18:00 +0800</lastBuildDate>
-    <atom:link href="http://goodboylqs.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://goodboylqs.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>docker基础&#43;docker安装sqlserver、oracle</title>
-      <link>http://goodboylqs.github.io/posts/deepin%E5%AE%89%E8%A3%85docker/</link>
+      <link>https://goodboylqs.github.io/posts/deepin%E5%AE%89%E8%A3%85docker/</link>
       <pubDate>Mon, 04 Sep 2023 18:18:00 +0800</pubDate>
-      <guid>http://goodboylqs.github.io/posts/deepin%E5%AE%89%E8%A3%85docker/</guid>
+      <guid>https://goodboylqs.github.io/posts/deepin%E5%AE%89%E8%A3%85docker/</guid>
       <description>docker介绍 docker是什么
 docker是一个开源的 应用容器引擎 docker能发挥什么作用———— 一次创建或配置，可以在任意地方正常运行。
 docker可以让开发者打包他们的应用和依赖包，到一个轻量级、可移植的容器中，然后发布到任何流行的Linux机器上，也可以实现虚拟化。 Docker镜像中包含了运行环境和配置，所以Docker可以简化部署多种应用实例工作。比如Web应用、后台应用、数据库应用、大数据应用比如Hadoop集群、消息队列等等都可以打包成==一个镜像(类)==部署。 Docker确保了执行环境的一致性，使得应用的迁移更加容易 docker和虚拟机的区别

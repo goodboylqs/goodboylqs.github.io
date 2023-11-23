@@ -2,23 +2,269 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>庙街</title>
-    <link>http://goodboylqs.github.io/</link>
+    <link>https://goodboylqs.github.io/</link>
     <description>Recent content on 庙街</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 21 Nov 2023 22:32:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 23 Nov 2023 10:07:00 +0800</lastBuildDate>
     
-        <atom:link href="http://goodboylqs.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://goodboylqs.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>docker基础&#43;docker安装sqlserver、oracle</title>
+        <link>https://goodboylqs.github.io/posts/deepin%E5%AE%89%E8%A3%85docker/</link>
+        <pubDate>Mon, 04 Sep 2023 18:18:00 +0800</pubDate>
+        
+        <guid>https://goodboylqs.github.io/posts/deepin%E5%AE%89%E8%A3%85docker/</guid>
+        <description>庙街 https://goodboylqs.github.io/posts/deepin%E5%AE%89%E8%A3%85docker/ -&lt;h2 id=&#34;docker介绍&#34;&gt;docker介绍&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;docker是什么&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;docker是一个开源的 &lt;strong&gt;应用容器引擎&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;docker能发挥什么作用———— &lt;strong&gt;一次创建或配置，可以在任意地方正常运行。&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;docker可以让开发者打包他们的应用和依赖包，到一个轻量级、可移植的容器中，然后发布到任何流行的Linux机器上，也可以实现虚拟化。&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Docker镜像中包含了运行环境和配置，所以Docker可以简化部署多种应用实例工作。比如Web应用、后台应用、数据库应用、大数据应用比如Hadoop集群、消息队列等等都可以打包成==一个镜像(类)==部署。&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Docker确保了执行环境的一致性，使得应用的迁移更加容易&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;docker和虚拟机的区别&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;https://goodboylqs.github.io/ox-hugo/2023-09-05_15-56-01_screenshot.png&#34;/&gt;
+    &lt;/figure&gt;
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;docker的组成&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;docker通过镜像（类）创建容器（实例）&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Image（镜像）：相当于类&lt;/li&gt;
+&lt;li&gt;Container（容器）：相当于实例&lt;/li&gt;
+&lt;li&gt;Repository（仓库）：Docker存放Images的地方&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;安装docker&#34;&gt;安装docker&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/430652941&#34;&gt;https://zhuanlan.zhihu.com/p/430652941&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;删除旧版本docker
+sudo apt-get remove docker docker-engine docker.io containerd runc
+sudo rm -rf /var/lib/docker
+sudo rm -rf /var/lib/containerd&lt;/li&gt;
+&lt;li&gt;安装docker
+curl -fsSL &lt;a href=&#34;https://get.docker.com&#34;&gt;https://get.docker.com&lt;/a&gt; | bash -s docker &amp;ndash;mirror Aliyun&lt;/li&gt;
+&lt;li&gt;测试是否安装成功
+sudo systemctl start hello-world
+sudo docker run hello-world&lt;/li&gt;
+&lt;li&gt;配置加速器
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在 &lt;code&gt;/etc/docker/daemon.json&lt;/code&gt; 中写入如下内容（如果文件不存在请新建该文件）&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;#可以使用下面这个，比较快一些
+{
+    &amp;#34;registry-mirrors&amp;#34;: [&amp;#34;https://docker.mirrors.ustc.edu.cn/&amp;#34;,&amp;#34;https://hub-mirror.c.163.com&amp;#34;,&amp;#34;https://registry.docker-cn.com&amp;#34;],
+    &amp;#34;insecure-registries&amp;#34;: [&amp;#34;10.0.0.12:5000&amp;#34;]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;配置完成后需要重启Docker服务&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;sudo systemctl daemon-reload
+# daemon-reload: 重新加载某个服务的配置文件，使修改的配置文件生效
+sudo systemctl restart docker
+
+docker info
+# 查看镜像地址与所配置的镜像地址是否匹配，如过匹配，则说明配置成功
+&lt;/code&gt;&lt;/pre&gt;&lt;figure&gt;&lt;img src=&#34;https://goodboylqs.github.io/ox-hugo/2023-09-05_16-06-37_screenshot.png&#34;/&gt;
+        &lt;/figure&gt;
+
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;docker命令&#34;&gt;docker命令&lt;/h2&gt;
+&lt;h3 id=&#34;镜像&#34;&gt;镜像&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;查看镜像
+&lt;ul&gt;
+&lt;li&gt;sudo docker image ls -a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;删除镜像
+&lt;ul&gt;
+&lt;li&gt;sudo docker image rm imageid&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;重命名镜像
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo docker image tag 镜像id 镜像名&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;容器&#34;&gt;容器&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;查看docker容器
+&lt;ul&gt;
+&lt;li&gt;docker container ls -a&lt;/li&gt;
+&lt;li&gt;如果STATUS显示为UP，则说明映像正在容器中运行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;重命名容器
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo docker rename 容器id 容器名&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;创建并启动容器：docker run
+&lt;ul&gt;
+&lt;li&gt;注意该只能用于启动未创建的容器，如果启动已经创建的容器，用docker start&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;进入容器：docker exec -it 容器名 脚本名
+&lt;ul&gt;
+&lt;li&gt;docker exec -it oracle11g bash&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;前面的docker介绍中已经用图示说明了docker包含要运行的应用程序(app)以及应用程序的运行环境(bin、lib)，因此当你进入容器后，实际上就是进入了包含app、bin、lib的环境&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;例如进入oracle的container，就包含要运行的oracle程序以及oracle的命令行sqlplus等辅助工具，在容器中运行sqlplus，连接oracle主程序，就可以在sqlplus中使用oracle的功能了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;docker安装sqlsrver&#34;&gt;docker安装sqlsrver&lt;/h2&gt;
+&lt;h3 id=&#34;下载sqlserver映像&#34;&gt;下载sqlserver映像&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;sudo docker pull mcr.microsoft.com/mssql/server:2017-latest&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;运行sqlserver映像&#34;&gt;运行sqlserver映像&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;- sudo docker run -e &amp;#34;ACCEPT_EULA=Y&amp;#34; -e &amp;#34;MSSQL_SA_PASSWORD=553912917@qq.com&amp;#34; \
+   -p 1433:1433 --name sqlserver2017 --hostname sqlserver2017 \
+   -d \
+   mcr.microsoft.com/mssql/server:2017-latest
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;一定要注意 &lt;strong&gt;sqlserver的密码一定要包含特殊字符，否则容器无法启动&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;参数&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;-e &amp;ldquo;ACCEPT_EULA=Y&amp;rdquo;&lt;/td&gt;
+&lt;td&gt;将 ACCEPT_EULA 变量设置为任意值，以确认接受最终用户许可协议。 SQL Server 映像的必需设置。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-e &amp;ldquo;MSSQL_SA_PASSWORD=&amp;lt;YourStrong@Passw0rd&amp;gt;&amp;rdquo;&lt;/td&gt;
+&lt;td&gt;指定至少包含 8 个字符且符合 SQL Server 密码要求的强密码。 SQL Server 映像的必需设置。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-e &amp;ldquo;MSSQL_COLLATION=&amp;lt;SQL_Server_collation&amp;gt;&amp;rdquo;&lt;/td&gt;
+&lt;td&gt;指定自定义 SQL Server 排序规则，而不使用默认值 SQL_Latin1_General_CP1_CI_AS。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-p 1433:1433&lt;/td&gt;
+&lt;td&gt;将主机环境中的 TCP 端口（第一个值）映射到容器中的 TCP 端口（第二个值）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;在此示例中，SQL Server 侦听容器中的 TCP 1433，此容器端口随后会对主机上的 TCP 端口 1433 公开。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;ndash;name sql1&lt;/td&gt;
+&lt;td&gt;为容器指定一个自定义名称，而不是使用随机生成的名称。 如果运行多个容器，则无法重复使用相同的名称。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;ndash;hostname sql1&lt;/td&gt;
+&lt;td&gt;用于显式设置容器主机名。 如果未指定主机名，则主机名默认为容器 ID，这是随机生成的系统 GUID。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-d&lt;/td&gt;
+&lt;td&gt;在后台运行容器（守护程序）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;mcr.microsoft.com/mssql/server:2017-latest&lt;/td&gt;
+&lt;td&gt;SQL Server Linux 容器映像。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;使用命令行连接sqlserver容器
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo docker exec -it sqlserver2017 bash&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;在容器内使用sqlcmd连接sqlserver
+&lt;ul&gt;
+&lt;li&gt;先创建软链接 &lt;code&gt;ln -s /opt/mssql-tools/bin/sqlcmd /usr/bin/sqlcmd&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P &amp;quot;553912917@qq.com&amp;quot;&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;-S：[-S server or Dsn if -D is provided]&lt;/li&gt;
+&lt;li&gt;-U：[-U login id]&lt;/li&gt;
+&lt;li&gt;-P：[-P password]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;docker安装oracle&#34;&gt;docker安装oracle&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;查看已经安装的images&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;https://goodboylqs.github.io/ox-hugo/2023-09-05_16-54-14_screenshot.png&#34;/&gt;
+    &lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;发现其中有名为 &lt;code&gt;oracle_11g&lt;/code&gt; 的image，我们的目标就是以这个image为蓝本，生成一个container&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第一次创建并启动container用docker run&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo docker run -d -it -p 1521:1521 --name oracle_11g --restart=always oracle_11g&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;-p：指定端口号&lt;/li&gt;
+&lt;li&gt;&amp;ndash;name：指定生成的container的name&lt;/li&gt;
+&lt;li&gt;-d：Run container in background and print container ID&lt;/li&gt;
+&lt;li&gt;-it：Allocate a pseudo-TTY、Keep STDIN open even if not attached&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;阿里的镜像密码都是helowin&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;进入容器后要执行su root命令切换为管理员权限才能修改/etc/profile，这个/etc/profile不是你本机的/etc/profile而是oracle镜像的/etc/profile&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;vi /etc/profile&lt;/code&gt;
+把下面的内容加入到文件中
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;export ORACLE_HOME=/home/oracle/app/oracle/product/11.2.0/dbhome_2
+export ORACLE_SID=helowin
+export PATH=$ORACLE_HOME/bin:$PATH
+&lt;/code&gt;&lt;/pre&gt;保存后执行 &lt;code&gt;source /etc/profile&lt;/code&gt; 加载环境变量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+- https://goodboylqs.github.io/posts/deepin%E5%AE%89%E8%A3%85docker/ - </description>
+        </item>
     
     
     
         <item>
         <title>在手机上使用org-agenda进行日程管理</title>
-        <link>http://goodboylqs.github.io/posts/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8org-agenda%E8%BF%9B%E8%A1%8C%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86/</link>
+        <link>https://goodboylqs.github.io/posts/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8org-agenda%E8%BF%9B%E8%A1%8C%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86/</link>
         <pubDate>Sun, 03 Sep 2023 13:30:00 +0800</pubDate>
         
-        <guid>http://goodboylqs.github.io/posts/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8org-agenda%E8%BF%9B%E8%A1%8C%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86/</guid>
-        <description>庙街 http://goodboylqs.github.io/posts/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8org-agenda%E8%BF%9B%E8%A1%8C%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86/ -&lt;h2 id=&#34;org-agenda手机端同步的难点&#34;&gt;org-agenda手机端同步的难点&lt;/h2&gt;
+        <guid>https://goodboylqs.github.io/posts/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8org-agenda%E8%BF%9B%E8%A1%8C%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86/</guid>
+        <description>庙街 https://goodboylqs.github.io/posts/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8org-agenda%E8%BF%9B%E8%A1%8C%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86/ -&lt;h2 id=&#34;org-agenda手机端同步的难点&#34;&gt;org-agenda手机端同步的难点&lt;/h2&gt;
 &lt;p&gt;作为Emacs的重度使用者,org-mode已经成为我日常工作生活不可或缺的重要工具。作为Emac的日程管理插件，org-agenda一直是我用来进行日常管理的重要辅助，其自动添加日期、设置优先级、设置状态等功能为日程管理提供了非常方便的特性。但Emacs作为一款桌面软件，其所有的插件都是为PC使用环境设计的，Emacs各种快捷键的使用可以在电脑键盘下按出来，但在手机键盘上显然就很不方便，同时许多插件依赖操作系统提供的各种依赖库文件，安卓手机也无法提供相关的运行环境。因此在手机上使用Emacs从可操作性、可实现性来说都是不太现实的。虽然Emacs官方已经开发了Emacs app，但是很多功能还是只能在PC上实现，包括org-agenda。时下流行的日程管理软件，包括滴答清单、Todo清单等，都能做到手机、电脑多平台同步，对于日程管理来说，这基本上是最最重要的特性，在手机上随时随地查看日程是大部分人的刚需，如果不能做到多平台同步，只能在PC上查看日程，那日程管理就会非常不方便。通过几天研究，利用了坚果云的自动同步、orgzly APP，我基本上实现了org-agenda的多平台同步，orgzyl提供了App端的org agenda功能，坚果云提供了agenda files的多平台同步，可以在App端显示日程的内容、状态、优先级，并使用App新增日程、修改日程内容等，免费、高效，大大提升了日程管理效率。下面就如何实现手机同步org-agenda简要说明做法。&lt;/p&gt;
 &lt;h2 id=&#34;原理&#34;&gt;原理&lt;/h2&gt;
 &lt;ul&gt;
@@ -35,13 +281,13 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;打开orgzly右上角的设置&amp;ndash;&amp;gt;同步&amp;ndash;&amp;gt;存储库，存储库要求你输入dav地址。打开坚果云网页版并登录，点击右上角账户信息&amp;ndash;&amp;gt;安全选项，里面有第三方应用管理，按照教程添加应用，会生成一个应用密码。在orgzly中输入对应的服务器地址和应用密码，就可以实现orgzly对agenda files的同步。&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&#34;http://goodboylqs.github.io/ox-hugo/2023-09-03_15-00-18_screenshot.png&#34;/&gt;
+&lt;figure&gt;&lt;img src=&#34;https://goodboylqs.github.io/ox-hugo/2023-09-03_15-00-18_screenshot.png&#34;/&gt;
     &lt;/figure&gt;
 
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;同步完成后，打开orgzly左上角，点Agenda即可看到类似于Emacs org-agenda的显示效果。&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&#34;http://goodboylqs.github.io/ox-hugo/2023-09-03_15-03-03_screenshot.png&#34;/&gt;
+&lt;figure&gt;&lt;img src=&#34;https://goodboylqs.github.io/ox-hugo/2023-09-03_15-03-03_screenshot.png&#34;/&gt;
     &lt;/figure&gt;
 
 &lt;/li&gt;
@@ -50,21 +296,21 @@
 &lt;ul&gt;
 &lt;li&gt;我自己在Windows、Linux用的emacs配置是同一套，因此也希望能实现Windows、Linux下日程的同步，但难点在于同一个agenda file在Windows和Linux下文件的路径不同，Emacs在寻找agenda files时发现给定路径下找不到对应文件的时会提示你是否要Remove或Abort对应的agenda file。要解决这个问题，只需要设置变量org-agenda-skip-unavailable-files的值为t，即可将Windows和Linux下的agenda files路径同时加入你的init.el中，Emacs会跳过找不到的agenda file并不会提示你，只会将找到的agenda files加入到org agenda中。只需要将Windows和Linux下坚果云同步的agenda files的路径用C-c [加入init.el即可。下图是我的org agenda files的配置。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;figure&gt;&lt;img src=&#34;http://goodboylqs.github.io/ox-hugo/2023-09-03_15-10-37_screenshot.png&#34;/&gt;
+&lt;figure&gt;&lt;img src=&#34;https://goodboylqs.github.io/ox-hugo/2023-09-03_15-10-37_screenshot.png&#34;/&gt;
 &lt;/figure&gt;
 
-- http://goodboylqs.github.io/posts/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8org-agenda%E8%BF%9B%E8%A1%8C%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86/ - </description>
+- https://goodboylqs.github.io/posts/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8org-agenda%E8%BF%9B%E8%A1%8C%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86/ - </description>
         </item>
     
     
     
         <item>
         <title>《熵增定律》读书笔记</title>
-        <link>http://goodboylqs.github.io/posts/%E7%86%B5%E5%A2%9E%E5%AE%9A%E5%BE%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
+        <link>https://goodboylqs.github.io/posts/%E7%86%B5%E5%A2%9E%E5%AE%9A%E5%BE%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
         <pubDate>Wed, 30 Aug 2023 14:32:00 +0800</pubDate>
         
-        <guid>http://goodboylqs.github.io/posts/%E7%86%B5%E5%A2%9E%E5%AE%9A%E5%BE%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
-        <description>庙街 http://goodboylqs.github.io/posts/%E7%86%B5%E5%A2%9E%E5%AE%9A%E5%BE%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/ -&lt;p&gt;&lt;a href=&#34;https://weread.qq.com/web/reader/7e232ed0724d0d907e20866&#34;&gt;https://weread.qq.com/web/reader/7e232ed0724d0d907e20866&lt;/a&gt;&lt;/p&gt;
+        <guid>https://goodboylqs.github.io/posts/%E7%86%B5%E5%A2%9E%E5%AE%9A%E5%BE%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
+        <description>庙街 https://goodboylqs.github.io/posts/%E7%86%B5%E5%A2%9E%E5%AE%9A%E5%BE%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/ -&lt;p&gt;&lt;a href=&#34;https://weread.qq.com/web/reader/7e232ed0724d0d907e20866&#34;&gt;https://weread.qq.com/web/reader/7e232ed0724d0d907e20866&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;摘抄&#34;&gt;摘抄&lt;/h2&gt;
 &lt;h3 id=&#34;第一章前言-and-第二章熵增定律&#34;&gt;第一章前言&amp;amp;第二章熵增定律&lt;/h3&gt;
 &lt;ul&gt;
@@ -494,18 +740,18 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;感悟&#34;&gt;感悟&lt;/h2&gt;
-- http://goodboylqs.github.io/posts/%E7%86%B5%E5%A2%9E%E5%AE%9A%E5%BE%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/ - </description>
+- https://goodboylqs.github.io/posts/%E7%86%B5%E5%A2%9E%E5%AE%9A%E5%BE%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/ - </description>
         </item>
     
     
     
         <item>
         <title>看凭证时注意问题(持续更新)</title>
-        <link>http://goodboylqs.github.io/posts/%E7%9C%8B%E5%87%AD%E8%AF%81%E6%97%B6%E6%B3%A8%E6%84%8F%E9%97%AE%E9%A2%98%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</link>
+        <link>https://goodboylqs.github.io/posts/%E7%9C%8B%E5%87%AD%E8%AF%81%E6%97%B6%E6%B3%A8%E6%84%8F%E9%97%AE%E9%A2%98%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</link>
         <pubDate>Wed, 30 Aug 2023 12:26:00 +0800</pubDate>
         
-        <guid>http://goodboylqs.github.io/posts/%E7%9C%8B%E5%87%AD%E8%AF%81%E6%97%B6%E6%B3%A8%E6%84%8F%E9%97%AE%E9%A2%98%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</guid>
-        <description>庙街 http://goodboylqs.github.io/posts/%E7%9C%8B%E5%87%AD%E8%AF%81%E6%97%B6%E6%B3%A8%E6%84%8F%E9%97%AE%E9%A2%98%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/ -&lt;h2 id=&#34;审计通知书等文书要求&#34;&gt;审计通知书等文书要求&lt;/h2&gt;
+        <guid>https://goodboylqs.github.io/posts/%E7%9C%8B%E5%87%AD%E8%AF%81%E6%97%B6%E6%B3%A8%E6%84%8F%E9%97%AE%E9%A2%98%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</guid>
+        <description>庙街 https://goodboylqs.github.io/posts/%E7%9C%8B%E5%87%AD%E8%AF%81%E6%97%B6%E6%B3%A8%E6%84%8F%E9%97%AE%E9%A2%98%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/ -&lt;h2 id=&#34;审计通知书等文书要求&#34;&gt;审计通知书等文书要求&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-08-24 四&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;审计通知书的需要资料清单，不同单位是不一样的！根据单位性质进行修改！&lt;/strong&gt;&lt;/li&gt;
@@ -832,7 +1078,7 @@
 &lt;ul&gt;
 &lt;li&gt;所有工程都需要验收，都要有结算报告（找第三方来出），没有验收就是问题&lt;/li&gt;
 &lt;/ul&gt;
-- http://goodboylqs.github.io/posts/%E7%9C%8B%E5%87%AD%E8%AF%81%E6%97%B6%E6%B3%A8%E6%84%8F%E9%97%AE%E9%A2%98%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/ - </description>
+- https://goodboylqs.github.io/posts/%E7%9C%8B%E5%87%AD%E8%AF%81%E6%97%B6%E6%B3%A8%E6%84%8F%E9%97%AE%E9%A2%98%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/ - </description>
         </item>
     
     
