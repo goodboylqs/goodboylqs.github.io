@@ -40,10 +40,13 @@ url = "/tags"
 name = "按标签搜索"
 weight = 7
 
+
+
+[params]
 enableGiscus = true
 [params.giscus]
     data_repo="goodboylqs/goodboylqs.github.io"
-    data-repo-id="R_kgDOKNKQHA"    
+    data_repo_id="R_kgDOKNKQHA"    
     data_category="Announcements"
     data_category_id="DIC_kwDOKNKQHM4CbOPJ"
     data_mapping="pathname"
@@ -52,5 +55,5 @@ enableGiscus = true
     data_emit_metadata="0"
     data_input_position="bottom"
     data_theme="preferred_color_scheme"
-    data_lang="zh-CN"
+    data_lang="en"
     crossorigin="anonymous"
