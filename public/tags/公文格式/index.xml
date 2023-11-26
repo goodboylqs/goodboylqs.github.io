@@ -6,12 +6,12 @@
     <description>Recent content in 公文格式 on 饮冰十年，难凉热血</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 16 Nov 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://goodboylqs.github.io/tags/%E5%85%AC%E6%96%87%E6%A0%BC%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://goodboylqs.github.io/tags/%E5%85%AC%E6%96%87%E6%A0%BC%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>公文格式设置</title>
       <link>https://goodboylqs.github.io/posts/gongwengeshishezhi/</link>
       <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
+      
       <guid>https://goodboylqs.github.io/posts/gongwengeshishezhi/</guid>
       <description>tags :
 公文格式设置 公⽂字体字号、序号格式、成文日期、发文机关 ❶标题，⼆号⼩标宋字体，居中显⽰，编排与红⾊分割线下空⼆⾏位置。
@@ -21,6 +21,7 @@
 ❺附件，三号仿宋字体，编排在正⽂下空⼀⾏位置，左空两个汉字，“附件”⼆字后全⻆冒号和附件名称，附件名称后不标注标点符号。
 ❻发⽂机关签署，三号仿宋字体，距最后⼀⾏正⽂内容三个空⾏位置。
 ❼成⽂⽇期为居中编排，三号仿宋字体，发⽂机关下⽅右空4个汉字。
+<<<<<<< HEAD
 页边距、页眉页脚边界、文档网格（每行28共22行） ``1、Word⻚⾯设置要求&#39;&#39;
 ❶⻚⾯边距上下左右分别为：3.7cm、3.5cm、2.8cm、2.6cm（ 要求是这样，但实际有差异，看下面。具体用哪一组数字看情况 ），纸张⽅向为纵向，⼤⼩为A4（21*29.7）。
 ❷字体设置仿宋，字号三号常规，⻚眉和⻚脚设置奇偶⻚不同，⻚眉距边界1.5cm，⻚脚距边界2.5cm。
@@ -28,9 +29,17 @@
 wps中设置文档网格：页面&amp;ndash;&amp;gt;页边距&amp;ndash;&amp;gt;自定义页边距&amp;ndash;&amp;gt;文档网格 但一定要注意wps设置每行个数的时候要设置42，只有这样实际效果才是每行28个字 这样，就将版⾯设置成了以三号仿宋字体为标准、每⻚22⾏每⾏28个汉字的国家标准。
 页码字体字号、对齐方式、奇数页偶数页设置 ``2、插⼊⻚码要求&#39;&#39;
 ❶⻚码位置在⻚⾯底端，即⻚脚处，对⻬⽅式为“外侧”。
+=======
+页边距、页眉页脚边界、文档网格（每行28共22行） ``1、Word⻚⾯设置要求&amp;rsquo;&amp;rsquo; ❶⻚⾯边距上下左右分别为：3.7cm、3.5cm、2.8cm、2.6cm（ 要求是这样，但实际有差异，看下面。具体用哪一组数字看情况 ），纸张⽅向为纵向，⼤⼩为A4（21*29.7）。
+❷字体设置仿宋，字号三号常规，⻚眉和⻚脚设置奇偶⻚不同，⻚眉距边界1.5cm，⻚脚距边界2.5cm。
+❸进⼊⽂档⽹格，选中指定⾏和字符⽹格，每⾏设置28个字符，每⻚设置22⾏。
+wps中设置文档网格：页面&amp;ndash;&amp;gt;页边距&amp;ndash;&amp;gt;自定义页边距&amp;ndash;&amp;gt;文档网格 但一定要注意wps设置每行个数的时候要设置42，只有这样实际效果才是每行28个字 这样，就将版⾯设置成了以三号仿宋字体为标准、每⻚22⾏每⾏28个汉字的国家标准。
+页码字体字号、对齐方式、奇数页偶数页设置 ``2、插⼊⻚码要求&amp;rsquo;&amp;rsquo; ❶⻚码位置在⻚⾯底端，即⻚脚处，对⻬⽅式为“外侧”。
+>>>>>>> refs/remotes/origin/main
 ❷⻚码数字格式为-1-、-2-……⻚码字号设置四号，字体为宋体的阿拉伯数字。
 ❸奇数⻚的⻚码设置成右空⼀个汉字，偶数⻚的⻚码设置成左空⼀个汉字。
 页边距设置 页面边距 公文的行间距设置为多少才是正确的？ 34.58 32.58 28 26</description>
     </item>
+    
   </channel>
 </rss>

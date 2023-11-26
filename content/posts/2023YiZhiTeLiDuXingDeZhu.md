@@ -2,7 +2,11 @@
 title = "一只特立独行的猪"
 author = ["553912917@qq.com"]
 date = 2023-11-01T11:12:00+08:00
+<<<<<<< HEAD
 lastmod = 2023-11-24T15:18:11+08:00
+=======
+lastmod = 2023-11-25T10:22:14+08:00
+>>>>>>> refs/remotes/origin/main
 tags = ["小说", "文学", "读书笔记"]
 categories = ["文学", "读书笔记"]
 draft = false

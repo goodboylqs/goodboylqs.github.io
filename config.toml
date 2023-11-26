@@ -40,3 +40,23 @@ url = "/tags"
 name = "按标签搜索"
 weight = 7
 
+<<<<<<< HEAD:hugo.toml
+=======
+
+
+[params]
+enableGiscus = true
+[params.giscus]
+    data_repo="goodboylqs/goodboylqs.github.io"
+    data_repo_id="R_kgDOKNKQHA"    
+    data_category="Announcements"
+    data_category_id="DIC_kwDOKNKQHM4CbOPJ"
+    data_mapping="pathname"
+    data_strict="0"
+    data_reactions_enabled="1"
+    data_emit_metadata="0"
+    data_input_position="bottom"
+    data_theme="preferred_color_scheme"
+    data_lang="en"
+    crossorigin="anonymous"
+>>>>>>> refs/remotes/origin/main:config.toml
