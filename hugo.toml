@@ -40,8 +40,6 @@ url = "/tags"
 name = "按标签搜索"
 weight = 7
 
-<<<<<<< HEAD:hugo.toml
-=======
 
 
 [params]
@@ -59,4 +57,3 @@ enableGiscus = true
     data_theme="preferred_color_scheme"
     data_lang="en"
     crossorigin="anonymous"
->>>>>>> refs/remotes/origin/main:config.toml
