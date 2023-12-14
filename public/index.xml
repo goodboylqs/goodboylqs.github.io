@@ -303,58 +303,6 @@
     
     
         <item>
-        <title>令人心动的offer</title>
-        <link>https://goodboylqs.github.io/posts/2023lingrenxindongdeoffer/</link>
-        <pubDate>Sat, 11 Nov 2023 09:23:00 +0800</pubDate>
-        
-        <guid>https://goodboylqs.github.io/posts/2023lingrenxindongdeoffer/</guid>
-        <description>饮冰十年，难凉热血 https://goodboylqs.github.io/posts/2023lingrenxindongdeoffer/ -&lt;p&gt;tags
-:&lt;/p&gt;
-&lt;h2 id=&#34;2023LingRenXinDongDeoffer&#34;&gt;令人心动的offer&lt;/h2&gt;
-&lt;h3 id=&#34;主持人&#34;&gt;主持人&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;陈铭&lt;/li&gt;
-&lt;li&gt;黄晓明&lt;/li&gt;
-&lt;li&gt;毛晓彤&lt;/li&gt;
-&lt;li&gt;大张伟&lt;/li&gt;
-&lt;li&gt;张纯烨
-&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-11-08 三 22:38&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;第一集&#34;&gt;第一集&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;律所：竞天公诚（红圈所、2w元俱乐部）&lt;/li&gt;
-&lt;li&gt;实习生
-&lt;ul&gt;
-&lt;li&gt;梁崴 苏州大学 山东人 本科 江苏扬州人&lt;/li&gt;
-&lt;li&gt;朱绰盈 港大 港姐 期望薪资最高（6w）
-&lt;ul&gt;
-&lt;li&gt;不熬夜，很直接，中文不好，原则最晚八点做不完也要回家&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;胡明昊 北大国际法学院 研究生 山东潍坊人&lt;/li&gt;
-&lt;li&gt;许文婷 天津人 中国政法研究生&lt;/li&gt;
-&lt;li&gt;汪雨橦 华东政法大学本科 开学港大研究生&lt;/li&gt;
-&lt;li&gt;黄凯 福建人 清华法硕在读 工作后离职考研&lt;/li&gt;
-&lt;li&gt;张雅琪 波士顿大学研究生&lt;/li&gt;
-&lt;li&gt;肖扬 武汉大学、牛津大学&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;尴尬的广告趣多多曲奇:&lt;/li&gt;
-&lt;li&gt;案例分析
-&lt;ul&gt;
-&lt;li&gt;案例： 林某夫妇独生女日前失踪，国道旁车内死亡，初步认定为自杀不予立案，林某夫妇不相信自杀，因为不知道为什么会无缘无故跑到废弃的国道自杀，林某女儿生前作为投保人为自己作为被投保人购买大额意外身亡险保单，保险收益金几千万，林某夫妇发现女儿日记发现女婿婚内出轨，事发前女婿维修过车子，保险公司告知林某夫妇女婿向保险公司申请理赔，林某夫妇找到律所希望重启案件&lt;/li&gt;
-&lt;li&gt;题目：假定是非自杀而是他杀的前提下，如何帮助林某夫妇获得赔偿，要求做成一份法律分析报告，要求在尽可能短的时间内覆盖以上案例最多的要点，任何实习生完成报告后就可以向带教律师当面评议，只有前两位符合条件的法律报告才能得分，一旦前两位评议通过，后面的就不审了。&lt;/li&gt;
-&lt;li&gt;提示：全局性、准确性、完整性&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;第二集&#34;&gt;第二集&lt;/h3&gt;
-- https://goodboylqs.github.io/posts/2023lingrenxindongdeoffer/ - </description>
-        </item>
-    
-    
-    
-        <item>
         <title>基础会计（第6版）</title>
         <link>https://goodboylqs.github.io/posts/2023jichuhuijidi6ban/</link>
         <pubDate>Sun, 05 Nov 2023 11:01:00 +0800</pubDate>
@@ -691,6 +639,252 @@ This takes a symbol, a function, a string or a list of strings.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(use-package ess-site
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  :load-path &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/load-path&amp;#34;&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://goodboylqs.github.io/posts/2023usepackage/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>docker基础&#43;docker安装sqlserver、oracle</title>
+        <link>https://goodboylqs.github.io/posts/deepin%E5%AE%89%E8%A3%85docker/</link>
+        <pubDate>Mon, 04 Sep 2023 18:18:00 +0800</pubDate>
+        
+        <guid>https://goodboylqs.github.io/posts/deepin%E5%AE%89%E8%A3%85docker/</guid>
+        <description>饮冰十年，难凉热血 https://goodboylqs.github.io/posts/deepin%E5%AE%89%E8%A3%85docker/ -&lt;h2 id=&#34;docker介绍&#34;&gt;docker介绍&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;docker是什么&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;docker是一个开源的 &lt;strong&gt;应用容器引擎&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;docker能发挥什么作用———— &lt;strong&gt;一次创建或配置，可以在任意地方正常运行。&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;docker可以让开发者打包他们的应用和依赖包，到一个轻量级、可移植的容器中，然后发布到任何流行的Linux机器上，也可以实现虚拟化。&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Docker镜像中包含了运行环境和配置，所以Docker可以简化部署多种应用实例工作。比如Web应用、后台应用、数据库应用、大数据应用比如Hadoop集群、消息队列等等都可以打包成==一个镜像(类)==部署。&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Docker确保了执行环境的一致性，使得应用的迁移更加容易&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;docker和虚拟机的区别&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;https://goodboylqs.github.io/ox-hugo/2023-09-05_15-56-01_screenshot.png&#34;/&gt;
+    &lt;/figure&gt;
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;docker的组成&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;docker通过镜像（类）创建容器（实例）&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Image（镜像）：相当于类&lt;/li&gt;
+&lt;li&gt;Container（容器）：相当于实例&lt;/li&gt;
+&lt;li&gt;Repository（仓库）：Docker存放Images的地方&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;安装docker&#34;&gt;安装docker&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/430652941&#34;&gt;https://zhuanlan.zhihu.com/p/430652941&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;删除旧版本docker
+sudo apt-get remove docker docker-engine docker.io containerd runc
+sudo rm -rf /var/lib/docker
+sudo rm -rf /var/lib/containerd&lt;/li&gt;
+&lt;li&gt;安装docker
+curl -fsSL &lt;a href=&#34;https://get.docker.com&#34;&gt;https://get.docker.com&lt;/a&gt; | bash -s docker &amp;ndash;mirror Aliyun&lt;/li&gt;
+&lt;li&gt;测试是否安装成功
+sudo systemctl start hello-world
+sudo docker run hello-world&lt;/li&gt;
+&lt;li&gt;配置加速器
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在 &lt;code&gt;/etc/docker/daemon.json&lt;/code&gt; 中写入如下内容（如果文件不存在请新建该文件）&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;#可以使用下面这个，比较快一些
+{
+    &amp;#34;registry-mirrors&amp;#34;: [&amp;#34;https://docker.mirrors.ustc.edu.cn/&amp;#34;,&amp;#34;https://hub-mirror.c.163.com&amp;#34;,&amp;#34;https://registry.docker-cn.com&amp;#34;],
+    &amp;#34;insecure-registries&amp;#34;: [&amp;#34;10.0.0.12:5000&amp;#34;]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;配置完成后需要重启Docker服务&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;sudo systemctl daemon-reload
+# daemon-reload: 重新加载某个服务的配置文件，使修改的配置文件生效
+sudo systemctl restart docker
+
+docker info
+# 查看镜像地址与所配置的镜像地址是否匹配，如过匹配，则说明配置成功
+&lt;/code&gt;&lt;/pre&gt;&lt;figure&gt;&lt;img src=&#34;https://goodboylqs.github.io/ox-hugo/2023-09-05_16-06-37_screenshot.png&#34;/&gt;
+        &lt;/figure&gt;
+
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;docker命令&#34;&gt;docker命令&lt;/h2&gt;
+&lt;h3 id=&#34;镜像&#34;&gt;镜像&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;查看镜像
+&lt;ul&gt;
+&lt;li&gt;sudo docker image ls -a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;删除镜像
+&lt;ul&gt;
+&lt;li&gt;sudo docker image rm imageid&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;重命名镜像
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo docker image tag 镜像id 镜像名&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;容器&#34;&gt;容器&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;查看docker容器
+&lt;ul&gt;
+&lt;li&gt;docker container ls -a&lt;/li&gt;
+&lt;li&gt;如果STATUS显示为UP，则说明映像正在容器中运行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;重命名容器
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo docker rename 容器id 容器名&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;创建并启动容器：docker run
+&lt;ul&gt;
+&lt;li&gt;注意该只能用于启动未创建的容器，如果启动已经创建的容器，用docker start&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;进入容器：docker exec -it 容器名 脚本名
+&lt;ul&gt;
+&lt;li&gt;docker exec -it oracle11g bash&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;前面的docker介绍中已经用图示说明了docker包含要运行的应用程序(app)以及应用程序的运行环境(bin、lib)，因此当你进入容器后，实际上就是进入了包含app、bin、lib的环境&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;例如进入oracle的container，就包含要运行的oracle程序以及oracle的命令行sqlplus等辅助工具，在容器中运行sqlplus，连接oracle主程序，就可以在sqlplus中使用oracle的功能了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;docker安装sqlsrver&#34;&gt;docker安装sqlsrver&lt;/h2&gt;
+&lt;h3 id=&#34;下载sqlserver映像&#34;&gt;下载sqlserver映像&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;sudo docker pull mcr.microsoft.com/mssql/server:2017-latest&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;运行sqlserver映像&#34;&gt;运行sqlserver映像&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;- sudo docker run -e &amp;#34;ACCEPT_EULA=Y&amp;#34; -e &amp;#34;MSSQL_SA_PASSWORD=553912917@qq.com&amp;#34; \
+   -p 1433:1433 --name sqlserver2017 --hostname sqlserver2017 \
+   -d \
+   mcr.microsoft.com/mssql/server:2017-latest
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;一定要注意 &lt;strong&gt;sqlserver的密码一定要包含特殊字符，否则容器无法启动&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;参数&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;-e &amp;ldquo;ACCEPT_EULA=Y&amp;rdquo;&lt;/td&gt;
+&lt;td&gt;将 ACCEPT_EULA 变量设置为任意值，以确认接受最终用户许可协议。 SQL Server 映像的必需设置。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-e &amp;ldquo;MSSQL_SA_PASSWORD=&amp;lt;YourStrong@Passw0rd&amp;gt;&amp;rdquo;&lt;/td&gt;
+&lt;td&gt;指定至少包含 8 个字符且符合 SQL Server 密码要求的强密码。 SQL Server 映像的必需设置。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-e &amp;ldquo;MSSQL_COLLATION=&amp;lt;SQL_Server_collation&amp;gt;&amp;rdquo;&lt;/td&gt;
+&lt;td&gt;指定自定义 SQL Server 排序规则，而不使用默认值 SQL_Latin1_General_CP1_CI_AS。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-p 1433:1433&lt;/td&gt;
+&lt;td&gt;将主机环境中的 TCP 端口（第一个值）映射到容器中的 TCP 端口（第二个值）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;在此示例中，SQL Server 侦听容器中的 TCP 1433，此容器端口随后会对主机上的 TCP 端口 1433 公开。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;ndash;name sql1&lt;/td&gt;
+&lt;td&gt;为容器指定一个自定义名称，而不是使用随机生成的名称。 如果运行多个容器，则无法重复使用相同的名称。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;ndash;hostname sql1&lt;/td&gt;
+&lt;td&gt;用于显式设置容器主机名。 如果未指定主机名，则主机名默认为容器 ID，这是随机生成的系统 GUID。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-d&lt;/td&gt;
+&lt;td&gt;在后台运行容器（守护程序）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;mcr.microsoft.com/mssql/server:2017-latest&lt;/td&gt;
+&lt;td&gt;SQL Server Linux 容器映像。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;使用命令行连接sqlserver容器
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo docker exec -it sqlserver2017 bash&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;在容器内使用sqlcmd连接sqlserver
+&lt;ul&gt;
+&lt;li&gt;先创建软链接 &lt;code&gt;ln -s /opt/mssql-tools/bin/sqlcmd /usr/bin/sqlcmd&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P &amp;quot;553912917@qq.com&amp;quot;&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;-S：[-S server or Dsn if -D is provided]&lt;/li&gt;
+&lt;li&gt;-U：[-U login id]&lt;/li&gt;
+&lt;li&gt;-P：[-P password]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;docker安装oracle&#34;&gt;docker安装oracle&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;查看已经安装的images&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;https://goodboylqs.github.io/ox-hugo/2023-09-05_16-54-14_screenshot.png&#34;/&gt;
+    &lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;发现其中有名为 &lt;code&gt;oracle_11g&lt;/code&gt; 的image，我们的目标就是以这个image为蓝本，生成一个container&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第一次创建并启动container用docker run&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo docker run -d -it -p 1521:1521 --name oracle_11g --restart=always oracle_11g&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;-p：指定端口号&lt;/li&gt;
+&lt;li&gt;&amp;ndash;name：指定生成的container的name&lt;/li&gt;
+&lt;li&gt;-d：Run container in background and print container ID&lt;/li&gt;
+&lt;li&gt;-it：Allocate a pseudo-TTY、Keep STDIN open even if not attached&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;阿里的镜像密码都是helowin&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;进入容器后要执行su root命令切换为管理员权限才能修改/etc/profile，这个/etc/profile不是你本机的/etc/profile而是oracle镜像的/etc/profile&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;vi /etc/profile&lt;/code&gt;
+把下面的内容加入到文件中
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;export ORACLE_HOME=/home/oracle/app/oracle/product/11.2.0/dbhome_2
+export ORACLE_SID=helowin
+export PATH=$ORACLE_HOME/bin:$PATH
+&lt;/code&gt;&lt;/pre&gt;保存后执行 &lt;code&gt;source /etc/profile&lt;/code&gt; 加载环境变量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+- https://goodboylqs.github.io/posts/deepin%E5%AE%89%E8%A3%85docker/ - </description>
         </item>
     
     
