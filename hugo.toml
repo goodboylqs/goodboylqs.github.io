@@ -1,6 +1,6 @@
-baseURL = 'http://goodboylqs.github.io/'
+baseURL = 'https://goodboylqs.github.io/'
 languageCode = 'zh-cn'
-title = '庙街'
+title = '饮冰十年，难凉热血'
 author = 'lqs'
 theme = 'hugo-theme-diary'
 
@@ -31,11 +31,25 @@ weight = 5
 
 
 
-
-
 [[menu.main]]
 url = "/tags"
 name = "按标签搜索"
 weight = 6
 
 
+
+[params]
+enableGiscus = true
+[params.giscus]
+    data_repo="goodboylqs/goodboylqs.github.io"
+    data_repo_id="R_kgDOKNKQHA"    
+    data_category="Announcements"
+    data_category_id="DIC_kwDOKNKQHM4CbOPJ"
+    data_mapping="pathname"
+    data_strict="0"
+    data_reactions_enabled="1"
+    data_emit_metadata="0"
+    data_input_position="bottom"
+    data_theme="preferred_color_scheme"
+    data_lang="en"
+    crossorigin="anonymous"

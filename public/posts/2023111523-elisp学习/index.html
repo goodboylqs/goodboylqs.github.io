@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html><head>
+<title>elisp学习</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+      <script src="/js/toc.js"></script>
+    
+    <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="/scss/dark-mode.min.cb53f1bee2b8900cb4f082afbf00175d6618f281cf9a2fe8619e3b52d20b5721.css" integrity="sha256-y1PxvuK4kAy08IKvvwAXXWYY8oHPmi/oYZ47UtILVyE=" media="screen">
+
+
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Material+Icons">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0">
+                    读书笔记
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories/%E7%BC%96%E7%A8%8B">
+                    编程
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories/%E4%BC%9A%E8%AE%A1">
+                    会计
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories/%E5%BF%83%E7%90%86%E5%AD%A6">
+                    心理学
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories/%E9%81%B4%E9%80%89">
+                    遴选
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    按标签搜索
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#elisp%e7%9a%84%e8%bf%90%e8%a1%8c%e7%8e%af%e5%a2%83" class="nav-elisp的运行环境">
+									elisp的运行环境
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%9c%a8org-mode%e4%b8%ad%e6%8f%92%e5%85%a5src%e4%bb%a3%e7%a0%81%e5%9d%97" class="nav-在org-mode中插入src代码块">
+									在org-mode中插入src代码块
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%9c%a8org-mode%e4%b8%ad%e7%9a%84src%e5%8c%ba%e5%9f%9f%e8%bf%90%e8%a1%8c%e4%bb%a3%e7%a0%81" class="nav-在org-mode中的src区域运行代码">
+									在org-mode中的src区域运行代码
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#elisp%e8%a1%a8%e8%be%be%e5%bc%8f" class="nav-elisp表达式">
+									elisp表达式
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#elisp%e7%9a%84%e5%87%bd%e6%95%b0%e5%92%8c%e5%8f%98%e9%87%8f" class="nav-elisp的函数和变量">
+									elisp的函数和变量
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#elisp%e5%87%bd%e6%95%b0" class="nav-elisp函数">
+									elisp函数
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#elisp%e5%8f%98%e9%87%8f" class="nav-elisp变量">
+									elisp变量
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e4%bd%bf%e7%94%a8defvar%e5%a3%b0%e6%98%8e%e5%8f%98%e9%87%8f" class="nav-使用defvar声明变量">
+									使用defvar声明变量
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%85%a8%e5%b1%80%e5%8f%98%e9%87%8f%e5%92%8c%e5%b1%80%e9%83%a8%e5%8f%98%e9%87%8f" class="nav-全局变量和局部变量">
+									全局变量和局部变量
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://goodboylqs.github.io/">
+            饮冰十年，难凉热血
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://goodboylqs.github.io/">
+        <div class="single-column-header-title">饮冰十年，难凉热血</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    elisp学习
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2023-11-15 23:43
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/">[编程]</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/elisp%E5%AD%A6%E4%B9%A0">elisp学习</a>
+                                &nbsp;
+                            
+                                <a href="/tags/emacs">emacs</a>
+                                &nbsp;
+                            
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <dl>
+<dt>tags</dt>
+<dd>编程 emacs</dd>
+<dt>source</dt>
+<dd><a href="http://smacs.github.io/elisp/">http://smacs.github.io/elisp/</a></dd>
+<dt>date</dt>
+<dd><!-- raw HTML omitted --><!-- raw HTML omitted -->&lt;2023-11-15 周三 23:41&gt;<!-- raw HTML omitted --><!-- raw HTML omitted --></dd>
+</dl>
+<h2 id="elisp的运行环境">elisp的运行环境</h2>
+<ul>
+<li>只有在lisp-interaction-mode下，才能执行elisp代码
+<ul>
+<li>M-x lisp-interaction-mode</li>
+<li>在行尾右括号后面按C-j</li>
+</ul>
+</li>
+<li>elisp不好作为可执行方式来来运行，所有的elisp都是在emacs的环境下</li>
+</ul>
+<h2 id="在org-mode中插入src代码块">在org-mode中插入src代码块</h2>
+<ul>
+<li>C-c C-,(org-insert-structure-template)</li>
+</ul>
+<h2 id="在org-mode中的src区域运行代码">在org-mode中的src区域运行代码</h2>
+<ul>
+<li>将光标移动到src区域，按C-c C-c即可运行代码</li>
+<li>将光标移动到src区域，按C-c &lsquo;可对代码进行编辑</li>
+</ul>
+<h2 id="elisp表达式">elisp表达式</h2>
+<ul>
+<li>elisp的表达式是一个括号括起来，成为一个S-表达式</li>
+<li>执行一个S-表达式的方法有2个
+<ul>
+<li>用C-j</li>
+<li>用C-x C-e————C-x C-e是一个全局按键，几乎在任何地方都可以使用。也就是说哪怕是没有打开lisp-interaction-mode的情况下使用C-x C-e也可以运行代码，运行结果会在minibuffer中显示</li>
+</ul>
+</li>
+<li><strong>elisp表达式的作用 ≠ elisp表达式的返回值</strong>
+<ul>
+<li>(message &ldquo;hello world&rdquo;)中message函数的作用是在minibuffer中显示一个字符串，但它的返回值是&quot;hello world&quot;</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>(<span style="color:#a6e22e">message</span> <span style="color:#e6db74">&#34;hello world&#34;</span>)
+</span></span></code></pre></div><h2 id="elisp的函数和变量">elisp的函数和变量</h2>
+<h3 id="elisp函数">elisp函数</h3>
+<ul>
+<li>定义一个函数
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span><span style="color:#75715e">;;    (defun 函数名(参数列表)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;;      函数文档  //可省略 *如果添加了函数文档，那么使用C-h f查看该函数的时候会显示函数文档的内容*</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;;      函数体)</span>
+</span></span><span style="display:flex;"><span>(defun helloworld(name)
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;对name说hello&#34;</span>
+</span></span><span style="display:flex;"><span>  (<span style="color:#a6e22e">message</span> <span style="color:#e6db74">&#34;hello,%s&#34;</span> name))
+</span></span><span style="display:flex;"><span>(helloworld <span style="color:#e6db74">&#34;emacser&#34;</span>)
+</span></span></code></pre></div></li>
+<li><strong>elisp中的函数是全局的，变量也很容易成为全局变量（因为全局变量和局部变量的赋值都是使用setq），所以名字互相不冲突是很关键的</strong></li>
+</ul>
+<h3 id="elisp变量">elisp变量</h3>
+<ul>
+<li>
+<p>elisp变量无需像c语言变量一样声明，可以直接赋值</p>
+<ul>
+<li><strong>也就是说elisp变量没有类型（存疑）</strong></li>
+</ul>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>(setq foo <span style="color:#e6db74">&#34;I&#39;m, foo&#34;</span>)
+</span></span><span style="display:flex;"><span>(<span style="color:#a6e22e">message</span> foo)
+</span></span></code></pre></div></li>
+</ul>
+<h4 id="使用defvar声明变量">使用defvar声明变量</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span><span style="color:#75715e">;; (defvar 变量名 变量值</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;;   变量文档)      //可省略 *如果添加了变量文档，使用C-h v查看该变量的时候会显示变量文档的内容*</span>
+</span></span><span style="display:flex;"><span>(defvar foo <span style="color:#e6db74">&#34;Did I have a value?&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;A demo variable&#34;</span>)
+</span></span><span style="display:flex;"><span>foo
+</span></span></code></pre></div><ul>
+<li><strong>defvar 与 setq的区别</strong>
+<ul>
+<li>defvar可以为变量提供文档</li>
+<li>de</li>
+</ul>
+</li>
+</ul>
+<h4 id="全局变量和局部变量">全局变量和局部变量</h4>
+<ul>
+<li>
+<p><strong>elisp中的函数是全局的，变量也很容易成为全局变量（因为全局变量和局部变量的赋值都是使用setq），所以名字互相不冲突是很关键的</strong></p>
+<ul>
+<li>所以局部变量很重要</li>
+</ul>
+</li>
+<li>
+<p>elisp里可以用let和let* 进行局部变量的绑定</p>
+<ul>
+<li>let的语法
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>(let (bindings)        <span style="color:#75715e">;;bindings可以使(var value)这样对var赋初始值的形式，也可以是直接var声明一个初始值为nil的变量</span>
+</span></span><span style="display:flex;"><span>  body)
+</span></span></code></pre></div></li>
+<li>eg1.我写的，有错误，错在①没有使用setq对变量进行赋值②变量乘法的表达式不对③对let的用法部队，bindings部分没有使用括号括起来</li>
+</ul>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>(defun circle-area(radix)
+</span></span><span style="display:flex;"><span>  (let pi <span style="color:#ae81ff">3.14</span>)
+</span></span><span style="display:flex;"><span>  (let area pi*radix*radix)
+</span></span><span style="display:flex;"><span>  (<span style="color:#a6e22e">message</span> <span style="color:#e6db74">&#34;radix is %.2f,circle&#39;s area is %.2f&#34;</span> radix area))
+</span></span><span style="display:flex;"><span>(circle-area <span style="color:#ae81ff">2</span>)  <span style="color:#75715e">;;提示wrong type argument,listp 3.1415</span>
+</span></span></code></pre></div><ul>
+<li>eg2.有错误: <strong>let中不能再包含let声明，对变量area的声明利用第一个let进行即可。而且对let声明的变量的使用，一定要再let的body部分，不能在let的括号外</strong>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>(defun circle-area(radix)
+</span></span><span style="display:flex;"><span>  (let (pi <span style="color:#ae81ff">3.14</span>)    <span style="color:#75715e">;;bindings为(var value)的形式</span>
+</span></span><span style="display:flex;"><span>    (let  area)          <span style="color:#75715e">;;bindings为(var)的形式，var的初始值为nil</span>
+</span></span><span style="display:flex;"><span>    (setq area (<span style="color:#a6e22e">*</span> pi radix radix))
+</span></span><span style="display:flex;"><span>    (<span style="color:#a6e22e">message</span> <span style="color:#e6db74">&#34;直径为%.2f的圆面积是%.2f&#34;</span> radix area))
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>(circle-area <span style="color:#ae81ff">3</span>)  <span style="color:#75715e">;;提示wrong type argument,listp 3.1415</span>
+</span></span></code></pre></div></li>
+<li>eg3.有错误：对let的使用方式错误，bindings部分没有使用括号阔气来
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>(defun circle-area(radix)
+</span></span><span style="display:flex;"><span>  (let (pi <span style="color:#ae81ff">3.1415926</span>) area)
+</span></span><span style="display:flex;"><span>  (setq area (<span style="color:#a6e22e">*</span> pi radix radix))
+</span></span><span style="display:flex;"><span>  (<span style="color:#a6e22e">message</span> <span style="color:#e6db74">&#34;直径为%.2f的圆面积是％.2f&#34;</span> radix area))
+</span></span><span style="display:flex;"><span>(circle-area <span style="color:#ae81ff">3</span>)          <span style="color:#75715e">;;提示wrong type argument,listp 3.1415</span>
+</span></span></code></pre></div></li>
+<li>eg.4.正确的： <strong>一定要注意，let声明的变量的使用，一定要在let的body部分，例如对area的赋值、输出message都是在let的body部分</strong>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>(defun circle-area(radix)
+</span></span><span style="display:flex;"><span>  (let ((pi <span style="color:#ae81ff">3.1415926</span>) area)    <span style="color:#75715e">;;bindings部分</span>
+</span></span><span style="display:flex;"><span>       (setq area (<span style="color:#a6e22e">*</span> pi radix radix))
+</span></span><span style="display:flex;"><span>       (<span style="color:#a6e22e">message</span> <span style="color:#e6db74">&#34;直径为%.2f的圆面积是%.2f&#34;</span> radix area))   <span style="color:#75715e">;;body部分</span>
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>(circle-area <span style="color:#ae81ff">3</span>)
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ul>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2023-11-18</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="/posts/gongwengeshishezhi/">
+			Next<br>公文格式设置
+                </a>
+                
+                
+                
+                <a class="older-posts" href="/posts/2023jichuhuijidi6ban/">
+			Previous<br>基础会计（第6版）
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://giscus.app/client.js"
+        data-repo="goodboylqs/goodboylqs.github.io"
+        data-repo-id="R_kgDOKNKQHA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOKNKQHM4CbOPJ"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://goodboylqs.github.io/">
+    
+        <div class="nav-title">
+            饮冰十年，难凉热血
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0">
+                读书笔记
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories/%E7%BC%96%E7%A8%8B">
+                编程
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories/%E4%BC%9A%E8%AE%A1">
+                会计
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories/%E5%BF%83%E7%90%86%E5%AD%A6">
+                心理学
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories/%E9%81%B4%E9%80%89">
+                遴选
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                按标签搜索
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2023 饮冰十年，难凉热血
+	
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    <div class="toc-wrapper">
+        
+
+        
+        <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#elisp%e7%9a%84%e8%bf%90%e8%a1%8c%e7%8e%af%e5%a2%83" class="nav-elisp的运行环境">
+									elisp的运行环境
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%9c%a8org-mode%e4%b8%ad%e6%8f%92%e5%85%a5src%e4%bb%a3%e7%a0%81%e5%9d%97" class="nav-在org-mode中插入src代码块">
+									在org-mode中插入src代码块
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%9c%a8org-mode%e4%b8%ad%e7%9a%84src%e5%8c%ba%e5%9f%9f%e8%bf%90%e8%a1%8c%e4%bb%a3%e7%a0%81" class="nav-在org-mode中的src区域运行代码">
+									在org-mode中的src区域运行代码
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#elisp%e8%a1%a8%e8%be%be%e5%bc%8f" class="nav-elisp表达式">
+									elisp表达式
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#elisp%e7%9a%84%e5%87%bd%e6%95%b0%e5%92%8c%e5%8f%98%e9%87%8f" class="nav-elisp的函数和变量">
+									elisp的函数和变量
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#elisp%e5%87%bd%e6%95%b0" class="nav-elisp函数">
+									elisp函数
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#elisp%e5%8f%98%e9%87%8f" class="nav-elisp变量">
+									elisp变量
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e4%bd%bf%e7%94%a8defvar%e5%a3%b0%e6%98%8e%e5%8f%98%e9%87%8f" class="nav-使用defvar声明变量">
+									使用defvar声明变量
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%85%a8%e5%b1%80%e5%8f%98%e9%87%8f%e5%92%8c%e5%b1%80%e9%83%a8%e5%8f%98%e9%87%8f" class="nav-全局变量和局部变量">
+									全局变量和局部变量
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+        
+    </div>
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top"
+            :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2023 饮冰十年，难凉热血
+	
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script></body>
+</html>

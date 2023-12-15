@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html><head>
+<title>Emacs的Use-Package用法</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+      <script src="/js/toc.js"></script>
+    
+    <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="/scss/dark-mode.min.cb53f1bee2b8900cb4f082afbf00175d6618f281cf9a2fe8619e3b52d20b5721.css" integrity="sha256-y1PxvuK4kAy08IKvvwAXXWYY8oHPmi/oYZ47UtILVyE=" media="screen">
+
+
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Material+Icons">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0">
+                    读书笔记
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories/%E7%BC%96%E7%A8%8B">
+                    编程
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories/%E4%BC%9A%E8%AE%A1">
+                    会计
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories/%E5%BF%83%E7%90%86%E5%AD%A6">
+                    心理学
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories/%E9%81%B4%E9%80%89">
+                    遴选
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    按标签搜索
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#2023Usepackage" class="nav-2023Usepackage">
+									Use-Package
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%85%b3%e4%ba%8e%e6%8c%87%e5%ae%9a%e5%8c%85%e7%9a%84%e5%8a%a0%e8%bd%bd%e9%a1%ba%e5%ba%8f" class="nav-关于指定包的加载顺序">
+									关于指定包的加载顺序
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#after%e5%85%b3%e9%94%ae%e5%ad%97-%e6%8c%87%e5%ae%9a%e5%8c%85c%e5%9c%a8%e5%8c%85a%e5%8a%a0%e8%bd%bd%e4%b9%8b%e5%90%8e%e5%86%8d%e5%8a%a0%e8%bd%bd" class="nav-after关键字-指定包c在包a加载之后再加载">
+									after关键字：指定包c在包a加载之后再加载
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#require%e5%85%b3%e9%94%ae%e5%ad%97-%e5%a6%82%e6%9e%9c%e5%8c%85a%e7%9a%84%e4%be%9d%e8%b5%96%e9%a1%b9%e4%b8%8d%e6%bb%a1%e8%b6%b3%e5%88%99%e9%98%bb%e6%ad%a2%e5%8c%85a%e7%9a%84%e5%8a%a0%e8%bd%bd" class="nav-require关键字-如果包a的依赖项不满足则阻止包a的加载">
+									require关键字：如果包a的依赖项不满足则阻止包a的加载
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#pin%e5%85%b3%e9%94%ae%e5%ad%97-%e6%8c%87%e5%ae%9a%e4%bd%a0%e7%9a%84package%e6%9d%a5%e8%87%aa%e5%93%aa%e4%b8%aa%e6%b1%a0%e5%ad%90-melpa-gnu-%e5%85%b6%e4%bb%96" class="nav-pin关键字-指定你的package来自哪个池子-melpa-gnu-其他">
+									pin关键字：指定你的package来自哪个池子（melpa、gnu、其他）
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#ensure-system-package%e5%85%b3%e9%94%ae%e5%ad%97-%e5%85%81%e8%ae%b8%e4%bd%a0%e5%ae%89%e8%a3%85package%e7%9a%84%e6%97%b6%e5%80%99%e8%87%aa%e5%8a%a8%e5%ae%89%e8%a3%85package%e4%be%9d%e8%b5%96%e7%9a%84%e7%b3%bb%e7%bb%9f%e8%bd%af%e4%bb%b6" class="nav-ensure-system-package关键字-允许你安装package的时候自动安装package依赖的系统软件">
+									ensure-system-package关键字：允许你安装package的时候自动安装package依赖的系统软件
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%85%b3%e4%ba%8e%e5%8c%85%e5%8a%a0%e8%bd%bd%e5%89%8d-%e5%90%8e%e5%9c%a8%e6%89%a7%e8%a1%8c%e7%9a%84%e5%91%bd%e4%bb%a4" class="nav-关于包加载前-后在执行的命令">
+									关于包加载前/后在执行的命令
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#init%e5%85%b3%e9%94%ae%e5%ad%97-%e5%9c%a8%e5%8a%a0%e8%bd%bd%e5%8c%85%e4%b9%8b%e5%89%8d%e6%89%a7%e8%a1%8c%e7%9a%84%e5%91%bd%e4%bb%a4" class="nav-init关键字-在加载包之前执行的命令">
+									init关键字：在加载包之前执行的命令
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#config%e5%85%b3%e9%94%ae%e5%ad%97-%e5%9c%a8%e5%8a%a0%e8%bd%bd%e5%8c%85%e4%b9%8b%e5%90%8e%e6%89%a7%e8%a1%8c%e7%9a%84%e5%91%bd%e4%bb%a4" class="nav-config关键字-在加载包之后执行的命令">
+									config关键字：在加载包之后执行的命令
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e5%85%b3%e4%ba%8e%e5%bf%ab%e6%8d%b7%e9%94%ae%e7%9a%84%e7%bb%91%e5%ae%9a" class="nav-关于快捷键的绑定">
+									关于快捷键的绑定
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#bind%e5%85%b3%e9%94%ae%e5%ad%97-%e5%85%a8%e5%b1%80%e7%bb%91%e5%ae%9a%e5%92%8cmode-map%e7%bb%91%e5%ae%9a" class="nav-bind关键字-全局绑定和mode-map绑定">
+									bind关键字：全局绑定和mode-map绑定
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#mode%e5%92%8cinterpreter%e5%85%b3%e9%94%ae%e5%ad%97-%e6%89%93%e5%bc%80%e6%9f%90%e7%b1%bb%e5%9e%8b%e6%96%87%e4%bb%b6%e5%90%8e%e6%89%a7%e8%a1%8c%e7%9a%84%e5%91%bd%e4%bb%a4" class="nav-mode和interpreter关键字-打开某类型文件后执行的命令">
+									mode和interpreter关键字：打开某类型文件后执行的命令
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#hook%e5%85%b3%e9%94%ae%e5%ad%97-%e4%b8%bapackage%e7%9a%84hooks%e6%b7%bb%e5%8a%a0%e4%b8%8a%e8%a6%81%e6%89%a7%e8%a1%8c%e7%9a%84%e5%91%bd%e4%bb%a4" class="nav-hook关键字-为package的hooks添加上要执行的命令">
+									hook关键字：为package的hooks添加上要执行的命令
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#custom%e5%85%b3%e9%94%ae%e5%ad%97-%e8%87%aa%e5%ae%9a%e4%b9%89package%e6%89%80%e5%b8%a6%e7%9a%84%e5%8f%98%e9%87%8f%e7%9a%84%e5%80%bc" class="nav-custom关键字-自定义package所带的变量的值">
+									custom关键字：自定义package所带的变量的值
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#load-path%e5%85%b3%e9%94%ae%e5%ad%97-%e4%b8%ba%e5%8a%a0%e8%bd%bd%e7%9a%84package%e6%8c%87%e6%98%8eload-path" class="nav-load-path关键字-为加载的package指明load-path">
+									load-path关键字：为加载的package指明load-path
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://goodboylqs.github.io/">
+            饮冰十年，难凉热血
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://goodboylqs.github.io/">
+        <div class="single-column-header-title">饮冰十年，难凉热血</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Emacs的Use-Package用法
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2023-10-30 23:03
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/">[emacs 编程]</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/emacs">emacs</a>
+                                &nbsp;
+                            
+                                <a href="/tags/use-package">use-package</a>
+                                &nbsp;
+                            
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <dl>
+<dt>tags</dt>
+<dd>autoload,deferred-loading,emacs,emacs-lisp,handler,keymap,keyword,melpa,ues-package</dd>
+</dl>
+<h2 id="2023Usepackage">Use-Package</h2>
+<h3 id="关于指定包的加载顺序">关于指定包的加载顺序</h3>
+<h4 id="after关键字-指定包c在包a加载之后再加载">after关键字：指定包c在包a加载之后再加载</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>(use-package ivy-hydra
+</span></span><span style="display:flex;"><span>:after (ivy hydra))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>In this case, because all of these packages are demand-loaded in the order they occur, the
+</span></span><span style="display:flex;"><span>use of :after is not strictly necessary.
+</span></span></code></pre></div><p>为了让ivy-hydra在ivy和hydra加载之后再加载，就需要用到:after关键字。注意对于ivy和hydra的加载语句还是必要的，只是使用了after关键字之后，就不需要必须把加载ivy和hydra的语句放在加载ivy-hydra的语句之前了</p>
+<h4 id="require关键字-如果包a的依赖项不满足则阻止包a的加载">require关键字：如果包a的依赖项不满足则阻止包a的加载</h4>
+<p>``Prevent loading if dependencies are missing&rsquo;&rsquo;
+当包a需要的加载需要依赖包c时，如org-roam-bibtex的加载需要依赖Org-roam和ivy-bibtex，则需要通过require关键字来指定</p>
+<h3 id="pin关键字-指定你的package来自哪个池子-melpa-gnu-其他">pin关键字：指定你的package来自哪个池子（melpa、gnu、其他）</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>(use-package company
+</span></span><span style="display:flex;"><span>:ensure <span style="color:#66d9ef">t</span>
+</span></span><span style="display:flex;"><span>:pin gnu)
+</span></span><span style="display:flex;"><span>(use-package evil
+</span></span><span style="display:flex;"><span>:ensure <span style="color:#66d9ef">t</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;; no :pin needed, as package.el will choose the version in melpa</span>
+</span></span><span style="display:flex;"><span>(use-package adaptive-wrap
+</span></span><span style="display:flex;"><span>:ensure <span style="color:#66d9ef">t</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;; as this package is available only in the gnu archive, this is</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;; technically not needed, but it helps to highlight where it</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;; comes from</span>
+</span></span><span style="display:flex;"><span>:pin gnu)
+</span></span></code></pre></div><ul>
+<li>默认情况下，不使用pin特定指明，默认所有的包来自melpa</li>
+<li>可以使用pin来指定包来自gnu</li>
+</ul>
+<h3 id="ensure-system-package关键字-允许你安装package的时候自动安装package依赖的系统软件">ensure-system-package关键字：允许你安装package的时候自动安装package依赖的系统软件</h3>
+<blockquote>
+<p>The :ensure-system-package keyword allows you to ensure system binaries exist alongside
+your package declarations.</p>
+</blockquote>
+<ul>
+<li>
+<p>从use-package的version 2.0开始，use-package的一些关键字可以视为use-package这个框架的extension， <strong>想使用这些关键字要先安装对应的extension</strong></p>
+<ul>
+<li>想使用关键字use-package-ensure-system-package，先安装对应的extension————
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>(use-package use-package-ensure-system-package
+</span></span><span style="display:flex;"><span>:ensure <span style="color:#66d9ef">t</span>)
+</span></span></code></pre></div></li>
+<li>安装package rg的时候想要安装系统软件rg
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>(use-package rg
+</span></span><span style="display:flex;"><span>  :ensure-system-package rg)   <span style="color:#75715e">;;相当于执行了apt install rg</span>
+</span></span></code></pre></div>当要安装的软件的包名和二进制软件名不一致的时候
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>(use-package rg
+</span></span><span style="display:flex;"><span>  :ensure-system-package (binary <span style="color:#f92672">.</span> package-name))
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>可以自定义要执行的软件安装命令</strong></p>
+<ul>
+<li>如果自定义了要执行的命令就执行自定义的命令，如果只写了要安装的包，并没有指定安装命令，那么use-package会执行默认的安装命令</li>
+</ul>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>(use-package ruby-mode
+</span></span><span style="display:flex;"><span>  :ensure-system-package
+</span></span><span style="display:flex;"><span>  ((rubycop <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;gem install rubocop&#34;</span>))    <span style="color:#75715e">;;自定义执行的安装命令是gem install rubycop</span>
+</span></span><span style="display:flex;"><span>  )
+</span></span></code></pre></div></li>
+</ul>
+<h3 id="关于包加载前-后在执行的命令">关于包加载前/后在执行的命令</h3>
+<h4 id="init关键字-在加载包之前执行的命令">init关键字：在加载包之前执行的命令</h4>
+<p>``Use the :init keyword to execute code before a package is loaded.''</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>(use-package foo
+</span></span><span style="display:flex;"><span>  :init
+</span></span><span style="display:flex;"><span>  (setq foo-variable <span style="color:#66d9ef">t</span>))
+</span></span></code></pre></div><h4 id="config关键字-在加载包之后执行的命令">config关键字：在加载包之后执行的命令</h4>
+<p>``Similarly, :config can be used to execute code after a package is loaded.''</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>(use-package foo
+</span></span><span style="display:flex;"><span>  :init
+</span></span><span style="display:flex;"><span>  (setq foo-variable <span style="color:#66d9ef">t</span>)
+</span></span><span style="display:flex;"><span>  :config
+</span></span><span style="display:flex;"><span>  (foo-mode <span style="color:#ae81ff">1</span>))
+</span></span></code></pre></div><h3 id="关于快捷键的绑定">关于快捷键的绑定</h3>
+<h4 id="bind关键字-全局绑定和mode-map绑定">bind关键字：全局绑定和mode-map绑定</h4>
+<blockquote>
+<p>:bind ((&ldquo;M-s O&rdquo; . moccur)
+:map isearch-mode-map
+(&ldquo;M-o&rdquo; . isearch-moccur)
+(&ldquo;M-O&rdquo; . isearch-moccur-all))</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>:bind ((<span style="color:#e6db74">&#34;M-s O&#34;</span> <span style="color:#f92672">.</span> moccur)  <span style="color:#75715e">;;绑定全局的快捷键</span>
+</span></span><span style="display:flex;"><span>       :map isearch-mode-map
+</span></span><span style="display:flex;"><span>       (<span style="color:#e6db74">&#34;M-o&#34;</span> <span style="color:#f92672">.</span> isearch-moccur)  <span style="color:#75715e">;;绑定只在isearch-mode下适用的快捷键</span>
+</span></span><span style="display:flex;"><span>       (<span style="color:#e6db74">&#34;M-O&#34;</span> <span style="color:#f92672">.</span> isearch-moccur-all))
+</span></span></code></pre></div><h3 id="mode和interpreter关键字-打开某类型文件后执行的命令">mode和interpreter关键字：打开某类型文件后执行的命令</h3>
+<blockquote>
+<p>Similar to :bind , you can use :mode and :interpreter to establish a deferred binding
+within the auto-mode-alist and interpreter-mode-alist variables.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>  <span style="color:#75715e">;; The package is &#34;python&#34; but the mode is &#34;python-mode&#34;:</span>
+</span></span><span style="display:flex;"><span>(use-package python
+</span></span><span style="display:flex;"><span>  :mode (<span style="color:#e6db74">&#34;\\.py\\&#39;&#34;</span> <span style="color:#f92672">.</span> python-mode)
+</span></span><span style="display:flex;"><span>  :interpreter (<span style="color:#e6db74">&#34;python&#34;</span> <span style="color:#f92672">.</span> python-mode))
+</span></span></code></pre></div><h3 id="hook关键字-为package的hooks添加上要执行的命令">hook关键字：为package的hooks添加上要执行的命令</h3>
+<p>``The :hook keyword allows adding functions onto package hooks.''</p>
+<ul>
+<li>package的hook，例如prog-mode-hook，即编程的hook。以下两种写法的效用是等价的
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span><span style="color:#75715e">;;写法一：用hook</span>
+</span></span><span style="display:flex;"><span>(use-package company
+</span></span><span style="display:flex;"><span>     :hook ((prog-mode text-mode) <span style="color:#f92672">.</span> company-mode)) <span style="color:#75715e">;;写法二：用command和init</span>
+</span></span><span style="display:flex;"><span>(use-package company
+</span></span><span style="display:flex;"><span>     :commands company-mode   <span style="color:#75715e">;;再运行一下company-mode</span>
+</span></span><span style="display:flex;"><span>     :init
+</span></span><span style="display:flex;"><span>     (add-hook <span style="color:#e6db74">&#39;prog-mode-hook</span> <span style="color:#a6e22e">#&#39;</span>company-mode)  <span style="color:#75715e">;;用init在加载company-mode前线将company-mode与到prog-mode联系起来，确保prog-mode打开的时候company-mode也打开，</span>
+</span></span><span style="display:flex;"><span>     (add-hook <span style="color:#e6db74">&#39;text-mode-hook</span> <span style="color:#a6e22e">#&#39;</span>company-mode)
+</span></span><span style="display:flex;"><span>     )
+</span></span></code></pre></div></li>
+</ul>
+<h3 id="custom关键字-自定义package所带的变量的值">custom关键字：自定义package所带的变量的值</h3>
+<p>``The :custom keyword allows customization of package custom variables.''</p>
+<h3 id="load-path关键字-为加载的package指明load-path">load-path关键字：为加载的package指明load-path</h3>
+<blockquote>
+<p>If your package needs a directory added to the load-path in order to load, use :load-path
+This takes a symbol, a function, a string or a list of strings.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>(use-package ess-site
+</span></span><span style="display:flex;"><span>  :load-path <span style="color:#e6db74">&#34;/load-path&#34;</span>)
+</span></span></code></pre></div>
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2023-11-05</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="/posts/2023xijinpingxinshidaizhongguoteseshehuizhuyisixianggailun/">
+			Next<br>习近平新时代中国特色社会主义思想概论
+                </a>
+                
+                
+                
+                <a class="older-posts" href="/posts/deepin%E5%AE%89%E8%A3%85docker/">
+			Previous<br>docker基础&#43;docker安装sqlserver、oracle
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://giscus.app/client.js"
+        data-repo="goodboylqs/goodboylqs.github.io"
+        data-repo-id="R_kgDOKNKQHA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOKNKQHM4CbOPJ"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://goodboylqs.github.io/">
+    
+        <div class="nav-title">
+            饮冰十年，难凉热血
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0">
+                读书笔记
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories/%E7%BC%96%E7%A8%8B">
+                编程
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories/%E4%BC%9A%E8%AE%A1">
+                会计
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories/%E5%BF%83%E7%90%86%E5%AD%A6">
+                心理学
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories/%E9%81%B4%E9%80%89">
+                遴选
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                按标签搜索
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2023 饮冰十年，难凉热血
+	
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    <div class="toc-wrapper">
+        
+
+        
+        <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#2023Usepackage" class="nav-2023Usepackage">
+									Use-Package
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%85%b3%e4%ba%8e%e6%8c%87%e5%ae%9a%e5%8c%85%e7%9a%84%e5%8a%a0%e8%bd%bd%e9%a1%ba%e5%ba%8f" class="nav-关于指定包的加载顺序">
+									关于指定包的加载顺序
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#after%e5%85%b3%e9%94%ae%e5%ad%97-%e6%8c%87%e5%ae%9a%e5%8c%85c%e5%9c%a8%e5%8c%85a%e5%8a%a0%e8%bd%bd%e4%b9%8b%e5%90%8e%e5%86%8d%e5%8a%a0%e8%bd%bd" class="nav-after关键字-指定包c在包a加载之后再加载">
+									after关键字：指定包c在包a加载之后再加载
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#require%e5%85%b3%e9%94%ae%e5%ad%97-%e5%a6%82%e6%9e%9c%e5%8c%85a%e7%9a%84%e4%be%9d%e8%b5%96%e9%a1%b9%e4%b8%8d%e6%bb%a1%e8%b6%b3%e5%88%99%e9%98%bb%e6%ad%a2%e5%8c%85a%e7%9a%84%e5%8a%a0%e8%bd%bd" class="nav-require关键字-如果包a的依赖项不满足则阻止包a的加载">
+									require关键字：如果包a的依赖项不满足则阻止包a的加载
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#pin%e5%85%b3%e9%94%ae%e5%ad%97-%e6%8c%87%e5%ae%9a%e4%bd%a0%e7%9a%84package%e6%9d%a5%e8%87%aa%e5%93%aa%e4%b8%aa%e6%b1%a0%e5%ad%90-melpa-gnu-%e5%85%b6%e4%bb%96" class="nav-pin关键字-指定你的package来自哪个池子-melpa-gnu-其他">
+									pin关键字：指定你的package来自哪个池子（melpa、gnu、其他）
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#ensure-system-package%e5%85%b3%e9%94%ae%e5%ad%97-%e5%85%81%e8%ae%b8%e4%bd%a0%e5%ae%89%e8%a3%85package%e7%9a%84%e6%97%b6%e5%80%99%e8%87%aa%e5%8a%a8%e5%ae%89%e8%a3%85package%e4%be%9d%e8%b5%96%e7%9a%84%e7%b3%bb%e7%bb%9f%e8%bd%af%e4%bb%b6" class="nav-ensure-system-package关键字-允许你安装package的时候自动安装package依赖的系统软件">
+									ensure-system-package关键字：允许你安装package的时候自动安装package依赖的系统软件
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%85%b3%e4%ba%8e%e5%8c%85%e5%8a%a0%e8%bd%bd%e5%89%8d-%e5%90%8e%e5%9c%a8%e6%89%a7%e8%a1%8c%e7%9a%84%e5%91%bd%e4%bb%a4" class="nav-关于包加载前-后在执行的命令">
+									关于包加载前/后在执行的命令
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#init%e5%85%b3%e9%94%ae%e5%ad%97-%e5%9c%a8%e5%8a%a0%e8%bd%bd%e5%8c%85%e4%b9%8b%e5%89%8d%e6%89%a7%e8%a1%8c%e7%9a%84%e5%91%bd%e4%bb%a4" class="nav-init关键字-在加载包之前执行的命令">
+									init关键字：在加载包之前执行的命令
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#config%e5%85%b3%e9%94%ae%e5%ad%97-%e5%9c%a8%e5%8a%a0%e8%bd%bd%e5%8c%85%e4%b9%8b%e5%90%8e%e6%89%a7%e8%a1%8c%e7%9a%84%e5%91%bd%e4%bb%a4" class="nav-config关键字-在加载包之后执行的命令">
+									config关键字：在加载包之后执行的命令
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e5%85%b3%e4%ba%8e%e5%bf%ab%e6%8d%b7%e9%94%ae%e7%9a%84%e7%bb%91%e5%ae%9a" class="nav-关于快捷键的绑定">
+									关于快捷键的绑定
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#bind%e5%85%b3%e9%94%ae%e5%ad%97-%e5%85%a8%e5%b1%80%e7%bb%91%e5%ae%9a%e5%92%8cmode-map%e7%bb%91%e5%ae%9a" class="nav-bind关键字-全局绑定和mode-map绑定">
+									bind关键字：全局绑定和mode-map绑定
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#mode%e5%92%8cinterpreter%e5%85%b3%e9%94%ae%e5%ad%97-%e6%89%93%e5%bc%80%e6%9f%90%e7%b1%bb%e5%9e%8b%e6%96%87%e4%bb%b6%e5%90%8e%e6%89%a7%e8%a1%8c%e7%9a%84%e5%91%bd%e4%bb%a4" class="nav-mode和interpreter关键字-打开某类型文件后执行的命令">
+									mode和interpreter关键字：打开某类型文件后执行的命令
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#hook%e5%85%b3%e9%94%ae%e5%ad%97-%e4%b8%bapackage%e7%9a%84hooks%e6%b7%bb%e5%8a%a0%e4%b8%8a%e8%a6%81%e6%89%a7%e8%a1%8c%e7%9a%84%e5%91%bd%e4%bb%a4" class="nav-hook关键字-为package的hooks添加上要执行的命令">
+									hook关键字：为package的hooks添加上要执行的命令
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#custom%e5%85%b3%e9%94%ae%e5%ad%97-%e8%87%aa%e5%ae%9a%e4%b9%89package%e6%89%80%e5%b8%a6%e7%9a%84%e5%8f%98%e9%87%8f%e7%9a%84%e5%80%bc" class="nav-custom关键字-自定义package所带的变量的值">
+									custom关键字：自定义package所带的变量的值
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#load-path%e5%85%b3%e9%94%ae%e5%ad%97-%e4%b8%ba%e5%8a%a0%e8%bd%bd%e7%9a%84package%e6%8c%87%e6%98%8eload-path" class="nav-load-path关键字-为加载的package指明load-path">
+									load-path关键字：为加载的package指明load-path
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+        
+    </div>
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top"
+            :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2023 饮冰十年，难凉热血
+	
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script></body>
+</html>

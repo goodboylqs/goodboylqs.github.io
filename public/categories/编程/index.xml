@@ -1,33 +1,68 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>编程 on 庙街</title>
-    <link>http://goodboylqs.github.io/categories/%E7%BC%96%E7%A8%8B/</link>
-    <description>Recent content in 编程 on 庙街</description>
+    <title>编程 on 饮冰十年，难凉热血</title>
+    <link>https://goodboylqs.github.io/categories/%E7%BC%96%E7%A8%8B/</link>
+    <description>Recent content in 编程 on 饮冰十年，难凉热血</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 04 Sep 2023 18:18:00 +0800</lastBuildDate><atom:link href="http://goodboylqs.github.io/categories/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Nov 2023 22:32:00 +0800</lastBuildDate><atom:link href="https://goodboylqs.github.io/categories/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Org-Roam-Bibtex的使用</title>
+      <link>https://goodboylqs.github.io/posts/2023orgroambibtexdeshiyong/</link>
+      <pubDate>Tue, 21 Nov 2023 22:32:00 +0800</pubDate>
+      
+      <guid>https://goodboylqs.github.io/posts/2023orgroambibtexdeshiyong/</guid>
+      <description>tags :
+Org-Roam-Bibtex的使用 配置方法：https://www.bilibili.com/video/BV1Mg4y1j75u/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=90a44733b775f9f2aeec92b479575071 使用Zotero实现对文献的综合管理，包括文献的命名、文献附件的存储、文献导出格式的规定等 使用Betterbibtex来对导出的bib文件的格式进行规定，包括规定bib文件中没一个条目包含的内容
+@book{2023JiChuHuiJiDi6Ban,title = {基础会计（第6版）},author = {陈国辉，迟旭升},year = {2023},month = nov,publisher = {{东北财经大学出版社}},file = {/home/goodboylqs/Nutstore Files/Zotero-Library/2023JiChuHuiJiDi6Ban.pdf}} 注意事项 编辑引用格式为year+shorttitle(3,3)，这样每个条目的citekey就会被设置为year+shorttitle(3,3)，例如上述的2023JiChuHuiJiDi6Ban
+在添加条目的时候，一定要注意标题和日期是必填的
+使用Zotfile来规定条目对应的pdf的命名格式和存储路径，实现pdf文件的云端备份
+renaming rules设置为%b，含义是将pdf的命名格式设置成与Betterbibtex导出的bib文件的citekey一样，例如上述的file = {/home/goodboylqs/Nutstore Files/Zotero-Library/2023JiChuHuiJiDi6Ban.pdf}中的2023JiChuHuiJiDi6Ban.pdf custom locatios设置pdf的存储路径，这个要与坚果云的同步文件夹路径协同，利用好坚果云的备份实现pdf文件的云端备份 使用方法 先打开Zotero，新建一个条目，编辑条目的标题、摘要、链接等内容。注意标题和日期是必填的，这关系到后面的文件引用格式 右键点击Zotero中新建的条目，添加添加附件&amp;ndash;文件副本，然后对应的文献附件就会按照配置好的命名格式和存储路径进行存储 右键包含所有文献的文件夹，点导出，选择保持更新 打开Emacs，M-x helm-bibtex，就能看到已经有的文献。 但是在该条目没有笔记的时候，不能选中该条目然后tab然后f8编辑笔记。在该条目没有笔记的时候，要C-c n k(orb-insert-link)来为该条目添加笔记，这样才会调出你配置好的zotero文献模板。 当你为条目添加了笔记后，可以①使用helm-bibtex②C-x n f(org-roam-node-find)来查看已经建立的笔记 打开一条笔记后，在对应的org headline下面，使用org-noter，既可以调出文献对应的pdf附件并做笔记 </description>
+    </item>
+    
+    <item>
+      <title>elisp学习</title>
+      <link>https://goodboylqs.github.io/posts/2023111523-elisp%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Wed, 15 Nov 2023 23:43:00 +0800</pubDate>
+      
+      <guid>https://goodboylqs.github.io/posts/2023111523-elisp%E5%AD%A6%E4%B9%A0/</guid>
+      <description>tags 编程 emacs source http://smacs.github.io/elisp/ date &amp;lt;2023-11-15 周三 23:41&amp;gt; elisp的运行环境 只有在lisp-interaction-mode下，才能执行elisp代码 M-x lisp-interaction-mode 在行尾右括号后面按C-j elisp不好作为可执行方式来来运行，所有的elisp都是在emacs的环境下 在org-mode中插入src代码块 C-c C-,(org-insert-structure-template) 在org-mode中的src区域运行代码 将光标移动到src区域，按C-c C-c即可运行代码 将光标移动到src区域，按C-c &amp;lsquo;可对代码进行编辑 elisp表达式 elisp的表达式是一个括号括起来，成为一个S-表达式 执行一个S-表达式的方法有2个 用C-j 用C-x C-e————C-x C-e是一个全局按键，几乎在任何地方都可以使用。也就是说哪怕是没有打开lisp-interaction-mode的情况下使用C-x C-e也可以运行代码，运行结果会在minibuffer中显示 elisp表达式的作用 ≠ elisp表达式的返回值 (message &amp;ldquo;hello world&amp;rdquo;)中message函数的作用是在minibuffer中显示一个字符串，但它的返回值是&amp;quot;hello world&amp;quot; (message &amp;#34;hello world&amp;#34;) elisp的函数和变量 elisp函数 定义一个函数 ;; (defun 函数名(参数列表) ;; 函数文档 //可省略 *如果添加了函数文档，那么使用C-h f查看该函数的时候会显示函数文档的内容* ;; 函数体) (defun helloworld(name) &amp;#34;对name说hello&amp;#34; (message &amp;#34;hello,%s&amp;#34; name)) (helloworld &amp;#34;emacser&amp;#34;) elisp中的函数是全局的，变量也很容易成为全局变量（因为全局变量和局部变量的赋值都是使用setq），所以名字互相不冲突是很关键的 elisp变量 elisp变量无需像c语言变量一样声明，可以直接赋值
+也就是说elisp变量没有类型（存疑） (setq foo &amp;#34;I&amp;#39;m, foo&amp;#34;) (message foo) 使用defvar声明变量 ;; (defvar 变量名 变量值 ;; 变量文档) //可省略 *如果添加了变量文档，使用C-h v查看该变量的时候会显示变量文档的内容* (defvar foo &amp;#34;Did I have a value?</description>
+    </item>
+    
+    <item>
+      <title>Emacs的Use-Package用法</title>
+      <link>https://goodboylqs.github.io/posts/2023usepackage/</link>
+      <pubDate>Mon, 30 Oct 2023 23:03:00 +0800</pubDate>
+      
+      <guid>https://goodboylqs.github.io/posts/2023usepackage/</guid>
+      <description>tags autoload,deferred-loading,emacs,emacs-lisp,handler,keymap,keyword,melpa,ues-package Use-Package 关于指定包的加载顺序 after关键字：指定包c在包a加载之后再加载 (use-package ivy-hydra :after (ivy hydra)) In this case, because all of these packages are demand-loaded in the order they occur, the use of :after is not strictly necessary. 为了让ivy-hydra在ivy和hydra加载之后再加载，就需要用到:after关键字。注意对于ivy和hydra的加载语句还是必要的，只是使用了after关键字之后，就不需要必须把加载ivy和hydra的语句放在加载ivy-hydra的语句之前了
+require关键字：如果包a的依赖项不满足则阻止包a的加载 ``Prevent loading if dependencies are missing&amp;rsquo;&amp;rsquo; 当包a需要的加载需要依赖包c时，如org-roam-bibtex的加载需要依赖Org-roam和ivy-bibtex，则需要通过require关键字来指定
+pin关键字：指定你的package来自哪个池子（melpa、gnu、其他） (use-package company :ensure t :pin gnu) (use-package evil :ensure t) ;; no :pin needed, as package.el will choose the version in melpa (use-package adaptive-wrap :ensure t ;; as this package is available only in the gnu archive, this is ;; technically not needed, but it helps to highlight where it ;; comes from :pin gnu) 默认情况下，不使用pin特定指明，默认所有的包来自melpa 可以使用pin来指定包来自gnu ensure-system-package关键字：允许你安装package的时候自动安装package依赖的系统软件 The :ensure-system-package keyword allows you to ensure system binaries exist alongside your package declarations.</description>
+    </item>
+    
     <item>
       <title>docker基础&#43;docker安装sqlserver、oracle</title>
-      <link>http://goodboylqs.github.io/posts/deepin%E5%AE%89%E8%A3%85docker/</link>
+      <link>https://goodboylqs.github.io/posts/deepin%E5%AE%89%E8%A3%85docker/</link>
       <pubDate>Mon, 04 Sep 2023 18:18:00 +0800</pubDate>
       
-      <guid>http://goodboylqs.github.io/posts/deepin%E5%AE%89%E8%A3%85docker/</guid>
+      <guid>https://goodboylqs.github.io/posts/deepin%E5%AE%89%E8%A3%85docker/</guid>
       <description>docker介绍 docker是什么
 docker是一个开源的 应用容器引擎 docker能发挥什么作用———— 一次创建或配置，可以在任意地方正常运行。
 docker可以让开发者打包他们的应用和依赖包，到一个轻量级、可移植的容器中，然后发布到任何流行的Linux机器上，也可以实现虚拟化。 Docker镜像中包含了运行环境和配置，所以Docker可以简化部署多种应用实例工作。比如Web应用、后台应用、数据库应用、大数据应用比如Hadoop集群、消息队列等等都可以打包成==一个镜像(类)==部署。 Docker确保了执行环境的一致性，使得应用的迁移更加容易 docker和虚拟机的区别
 docker的组成
 docker通过镜像（类）创建容器（实例） Image（镜像）：相当于类 Container（容器）：相当于实例 Repository（仓库）：Docker存放Images的地方 安装docker https://zhuanlan.zhihu.com/p/430652941 删除旧版本docker sudo apt-get remove docker docker-engine docker.io containerd runc sudo rm -rf /var/lib/docker sudo rm -rf /var/lib/containerd 安装docker curl -fsSL https://get.docker.com | bash -s docker &amp;ndash;mirror Aliyun 测试是否安装成功 sudo systemctl start hello-world sudo docker run hello-world 配置加速器 在 /etc/docker/daemon.json 中写入如下内容（如果文件不存在请新建该文件）
-#可以使用下面这个，比较快一些 { &amp;#34;registry-mirrors&amp;#34;: [&amp;#34;https://docker.mirrors.ustc.edu.cn/&amp;#34;,&amp;#34;https://hub-mirror.c.163.com&amp;#34;,&amp;#34;https://registry.docker-cn.com&amp;#34;], &amp;#34;insecure-registries&amp;#34;: [&amp;#34;10.0.0.12:5000&amp;#34;] } 配置完成后需要重启Docker服务
-sudo systemctl daemon-reload # daemon-reload: 重新加载某个服务的配置文件，使修改的配置文件生效 sudo systemctl restart docker docker info # 查看镜像地址与所配置的镜像地址是否匹配，如过匹配，则说明配置成功 docker命令 镜像 查看镜像 sudo docker image ls -a 删除镜像 sudo docker image rm imageid 重命名镜像 sudo docker image tag 镜像id 镜像名 容器 查看docker容器 docker container ls -a 如果STATUS显示为UP，则说明映像正在容器中运行 重命名容器 sudo docker rename 容器id 容器名 创建并启动容器：docker run 注意该只能用于启动未创建的容器，如果启动已经创建的容器，用docker start 进入容器：docker exec -it 容器名 脚本名 docker exec -it oracle11g bash 前面的docker介绍中已经用图示说明了docker包含要运行的应用程序(app)以及应用程序的运行环境(bin、lib)，因此当你进入容器后，实际上就是进入了包含app、bin、lib的环境 例如进入oracle的container，就包含要运行的oracle程序以及oracle的命令行sqlplus等辅助工具，在容器中运行sqlplus，连接oracle主程序，就可以在sqlplus中使用oracle的功能了 docker安装sqlsrver 下载sqlserver映像 sudo docker pull mcr.</description>
+#可以使用下面这个，比较快一些{&amp;#34;registry-mirrors&amp;#34;: [&amp;#34;https://docker.mirrors.ustc.edu.cn/&amp;#34;,&amp;#34;https://hub-mirror.c.163.com&amp;#34;,&amp;#34;https://registry.docker-cn.com&amp;#34;],&amp;#34;insecure-registries&amp;#34;: [&amp;#34;10.0.0.12:5000&amp;#34;]} 配置完成后需要重启Docker服务
+sudo systemctl daemon-reload# daemon-reload: 重新加载某个服务的配置文件，使修改的配置文件生效sudo systemctl restart dockerdocker info# 查看镜像地址与所配置的镜像地址是否匹配，如过匹配，则说明配置成功 docker命令 镜像 查看镜像 sudo docker image ls -a 删除镜像 sudo docker image rm imageid 重命名镜像 sudo docker image tag 镜像id 镜像名 容器 查看docker容器 docker container ls -a 如果STATUS显示为UP，则说明映像正在容器中运行 重命名容器 sudo docker rename 容器id 容器名 创建并启动容器：docker run 注意该只能用于启动未创建的容器，如果启动已经创建的容器，用docker start 进入容器：docker exec -it 容器名 脚本名 docker exec -it oracle11g bash 前面的docker介绍中已经用图示说明了docker包含要运行的应用程序(app)以及应用程序的运行环境(bin、lib)，因此当你进入容器后，实际上就是进入了包含app、bin、lib的环境 例如进入oracle的container，就包含要运行的oracle程序以及oracle的命令行sqlplus等辅助工具，在容器中运行sqlplus，连接oracle主程序，就可以在sqlplus中使用oracle的功能了 docker安装sqlsrver 下载sqlserver映像 sudo docker pull mcr.</description>
     </item>
     
     <item>
       <title>在手机上使用org-agenda进行日程管理</title>
-      <link>http://goodboylqs.github.io/posts/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8org-agenda%E8%BF%9B%E8%A1%8C%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86/</link>
+      <link>https://goodboylqs.github.io/posts/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8org-agenda%E8%BF%9B%E8%A1%8C%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86/</link>
       <pubDate>Sun, 03 Sep 2023 13:30:00 +0800</pubDate>
       
-      <guid>http://goodboylqs.github.io/posts/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8org-agenda%E8%BF%9B%E8%A1%8C%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86/</guid>
+      <guid>https://goodboylqs.github.io/posts/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8org-agenda%E8%BF%9B%E8%A1%8C%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86/</guid>
       <description>org-agenda手机端同步的难点 作为Emacs的重度使用者,org-mode已经成为我日常工作生活不可或缺的重要工具。作为Emac的日程管理插件，org-agenda一直是我用来进行日常管理的重要辅助，其自动添加日期、设置优先级、设置状态等功能为日程管理提供了非常方便的特性。但Emacs作为一款桌面软件，其所有的插件都是为PC使用环境设计的，Emacs各种快捷键的使用可以在电脑键盘下按出来，但在手机键盘上显然就很不方便，同时许多插件依赖操作系统提供的各种依赖库文件，安卓手机也无法提供相关的运行环境。因此在手机上使用Emacs从可操作性、可实现性来说都是不太现实的。虽然Emacs官方已经开发了Emacs app，但是很多功能还是只能在PC上实现，包括org-agenda。时下流行的日程管理软件，包括滴答清单、Todo清单等，都能做到手机、电脑多平台同步，对于日程管理来说，这基本上是最最重要的特性，在手机上随时随地查看日程是大部分人的刚需，如果不能做到多平台同步，只能在PC上查看日程，那日程管理就会非常不方便。通过几天研究，利用了坚果云的自动同步、orgzly APP，我基本上实现了org-agenda的多平台同步，orgzyl提供了App端的org agenda功能，坚果云提供了agenda files的多平台同步，可以在App端显示日程的内容、状态、优先级，并使用App新增日程、修改日程内容等，免费、高效，大大提升了日程管理效率。下面就如何实现手机同步org-agenda简要说明做法。
 原理 文件同步。org-agenda是对agenda files内容的显示，而日程的内容都是记录在agenda files中的，因此只要实现agenda files的手机同步，就可以查看日程相关内容，这点使用坚果云很容易实现。 日程显示。orgzly可以将agenda files 中的日程识别出来，产生类似于PC端Emacs org-agenda的显示效果。 操作 注册坚果云账号，免费版即可，免费版提供每月1GB的上传和下载流量，对于日程管理文件，这些流量足够了。 在手机上安装坚果云App和orgzly App，其中orgzly App是从FDroid上下载的，需要梯子,为了方便我把安装包分享在这里链接: https://pan.baidu.com/s/1w-maN_MwuivDV8MJIYZY3A 提取码: je4u。在电脑上安装坚果云客户端，Windows和Linux下坚果云都有相关客户端，官方的支持还是很完善的。
 打开电脑端坚果云，创建同步文件夹，将你的agenda files放到这个文件夹中。例如我的同步文件夹是org-agenda-files，然后agenda files是life.org和work.org。打开Emacs，C-x C-f打开life.org和work.org，然后C-c [将这两个文件夹加入你的init.el中的org-agenda-files列表，这样在Emacs org-agenda中就会显示这两个文件包含的日程了。
