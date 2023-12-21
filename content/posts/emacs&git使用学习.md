@@ -1,14 +1,12 @@
 +++
+title = "emacs&git使用学习"
 author = ["553912917@qq.com"]
 date = 2023-12-21T08:00:00+08:00
-lastmod = 2023-12-21T16:31:03+08:00
+lastmod = 2023-12-21T16:32:53+08:00
 tags = ["emacs", "git"]
 categories = ["编程"]
 draft = false
 +++
-
-title: emacs&amp;git使用学习
-
 
 ## Property {#property}
 
