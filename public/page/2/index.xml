@@ -6,9 +6,145 @@
     <description>Recent content on 饮冰十年，难凉热血</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 19 Dec 2023 08:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 21 Dec 2023 08:00:00 +0800</lastBuildDate>
     
         <atom:link href="https://goodboylqs.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Emacs的Use-Package用法</title>
+        <link>https://goodboylqs.github.io/posts/2023usepackage/</link>
+        <pubDate>Mon, 30 Oct 2023 23:03:00 +0800</pubDate>
+        
+        <guid>https://goodboylqs.github.io/posts/2023usepackage/</guid>
+        <description>饮冰十年，难凉热血 https://goodboylqs.github.io/posts/2023usepackage/ -&lt;dl&gt;
+&lt;dt&gt;tags&lt;/dt&gt;
+&lt;dd&gt;autoload,deferred-loading,emacs,emacs-lisp,handler,keymap,keyword,melpa,ues-package&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;h2 id=&#34;2023Usepackage&#34;&gt;Use-Package&lt;/h2&gt;
+&lt;h3 id=&#34;关于指定包的加载顺序&#34;&gt;关于指定包的加载顺序&lt;/h3&gt;
+&lt;h4 id=&#34;after关键字-指定包c在包a加载之后再加载&#34;&gt;after关键字：指定包c在包a加载之后再加载&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(use-package ivy-hydra
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;:after (ivy hydra))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;In this case, because all of these packages are demand-loaded in the order they occur, the
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;use of :after is not strictly necessary.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;为了让ivy-hydra在ivy和hydra加载之后再加载，就需要用到:after关键字。注意对于ivy和hydra的加载语句还是必要的，只是使用了after关键字之后，就不需要必须把加载ivy和hydra的语句放在加载ivy-hydra的语句之前了&lt;/p&gt;
+&lt;h4 id=&#34;require关键字-如果包a的依赖项不满足则阻止包a的加载&#34;&gt;require关键字：如果包a的依赖项不满足则阻止包a的加载&lt;/h4&gt;
+&lt;p&gt;``Prevent loading if dependencies are missing&amp;rsquo;&amp;rsquo;
+当包a需要的加载需要依赖包c时，如org-roam-bibtex的加载需要依赖Org-roam和ivy-bibtex，则需要通过require关键字来指定&lt;/p&gt;
+&lt;h3 id=&#34;pin关键字-指定你的package来自哪个池子-melpa-gnu-其他&#34;&gt;pin关键字：指定你的package来自哪个池子（melpa、gnu、其他）&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(use-package company
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;:ensure &lt;span style=&#34;color:#66d9ef&#34;&gt;t&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;:pin gnu)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(use-package evil
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;:ensure &lt;span style=&#34;color:#66d9ef&#34;&gt;t&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;; no :pin needed, as package.el will choose the version in melpa&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(use-package adaptive-wrap
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;:ensure &lt;span style=&#34;color:#66d9ef&#34;&gt;t&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;; as this package is available only in the gnu archive, this is&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;; technically not needed, but it helps to highlight where it&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;; comes from&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;:pin gnu)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;默认情况下，不使用pin特定指明，默认所有的包来自melpa&lt;/li&gt;
+&lt;li&gt;可以使用pin来指定包来自gnu&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;ensure-system-package关键字-允许你安装package的时候自动安装package依赖的系统软件&#34;&gt;ensure-system-package关键字：允许你安装package的时候自动安装package依赖的系统软件&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The :ensure-system-package keyword allows you to ensure system binaries exist alongside
+your package declarations.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;从use-package的version 2.0开始，use-package的一些关键字可以视为use-package这个框架的extension， &lt;strong&gt;想使用这些关键字要先安装对应的extension&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;想使用关键字use-package-ensure-system-package，先安装对应的extension————
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(use-package use-package-ensure-system-package
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;:ensure &lt;span style=&#34;color:#66d9ef&#34;&gt;t&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;安装package rg的时候想要安装系统软件rg
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(use-package rg
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  :ensure-system-package rg)   &lt;span style=&#34;color:#75715e&#34;&gt;;;相当于执行了apt install rg&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;当要安装的软件的包名和二进制软件名不一致的时候
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(use-package rg
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  :ensure-system-package (binary &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt; package-name))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;可以自定义要执行的软件安装命令&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果自定义了要执行的命令就执行自定义的命令，如果只写了要安装的包，并没有指定安装命令，那么use-package会执行默认的安装命令&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(use-package ruby-mode
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  :ensure-system-package
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  ((rubycop &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;gem install rubocop&amp;#34;&lt;/span&gt;))    &lt;span style=&#34;color:#75715e&#34;&gt;;;自定义执行的安装命令是gem install rubycop&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  )
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;关于包加载前-后在执行的命令&#34;&gt;关于包加载前/后在执行的命令&lt;/h3&gt;
+&lt;h4 id=&#34;init关键字-在加载包之前执行的命令&#34;&gt;init关键字：在加载包之前执行的命令&lt;/h4&gt;
+&lt;p&gt;``Use the :init keyword to execute code before a package is loaded.&#39;&#39;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(use-package foo
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  :init
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (setq foo-variable &lt;span style=&#34;color:#66d9ef&#34;&gt;t&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;config关键字-在加载包之后执行的命令&#34;&gt;config关键字：在加载包之后执行的命令&lt;/h4&gt;
+&lt;p&gt;``Similarly, :config can be used to execute code after a package is loaded.&#39;&#39;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(use-package foo
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  :init
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (setq foo-variable &lt;span style=&#34;color:#66d9ef&#34;&gt;t&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  :config
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (foo-mode &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;关于快捷键的绑定&#34;&gt;关于快捷键的绑定&lt;/h3&gt;
+&lt;h4 id=&#34;bind关键字-全局绑定和mode-map绑定&#34;&gt;bind关键字：全局绑定和mode-map绑定&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;:bind ((&amp;ldquo;M-s O&amp;rdquo; . moccur)
+:map isearch-mode-map
+(&amp;ldquo;M-o&amp;rdquo; . isearch-moccur)
+(&amp;ldquo;M-O&amp;rdquo; . isearch-moccur-all))&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;:bind ((&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;M-s O&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt; moccur)  &lt;span style=&#34;color:#75715e&#34;&gt;;;绑定全局的快捷键&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       :map isearch-mode-map
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;M-o&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt; isearch-moccur)  &lt;span style=&#34;color:#75715e&#34;&gt;;;绑定只在isearch-mode下适用的快捷键&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;M-O&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt; isearch-moccur-all))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;mode和interpreter关键字-打开某类型文件后执行的命令&#34;&gt;mode和interpreter关键字：打开某类型文件后执行的命令&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Similar to :bind , you can use :mode and :interpreter to establish a deferred binding
+within the auto-mode-alist and interpreter-mode-alist variables.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;;; The package is &amp;#34;python&amp;#34; but the mode is &amp;#34;python-mode&amp;#34;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(use-package python
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  :mode (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;\\.py\\&amp;#39;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt; python-mode)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  :interpreter (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;python&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt; python-mode))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;hook关键字-为package的hooks添加上要执行的命令&#34;&gt;hook关键字：为package的hooks添加上要执行的命令&lt;/h3&gt;
+&lt;p&gt;``The :hook keyword allows adding functions onto package hooks.&#39;&#39;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;package的hook，例如prog-mode-hook，即编程的hook。以下两种写法的效用是等价的
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;;写法一：用hook&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(use-package company
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     :hook ((prog-mode text-mode) &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt; company-mode)) &lt;span style=&#34;color:#75715e&#34;&gt;;;写法二：用command和init&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(use-package company
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     :commands company-mode   &lt;span style=&#34;color:#75715e&#34;&gt;;;再运行一下company-mode&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     :init
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     (add-hook &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;prog-mode-hook&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;#&amp;#39;&lt;/span&gt;company-mode)  &lt;span style=&#34;color:#75715e&#34;&gt;;;用init在加载company-mode前线将company-mode与到prog-mode联系起来，确保prog-mode打开的时候company-mode也打开，&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     (add-hook &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;text-mode-hook&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;#&amp;#39;&lt;/span&gt;company-mode)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     )
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;custom关键字-自定义package所带的变量的值&#34;&gt;custom关键字：自定义package所带的变量的值&lt;/h3&gt;
+&lt;p&gt;``The :custom keyword allows customization of package custom variables.&#39;&#39;&lt;/p&gt;
+&lt;h3 id=&#34;load-path关键字-为加载的package指明load-path&#34;&gt;load-path关键字：为加载的package指明load-path&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If your package needs a directory added to the load-path in order to load, use :load-path
+This takes a symbol, a function, a string or a list of strings.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(use-package ess-site
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  :load-path &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/load-path&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://goodboylqs.github.io/posts/2023usepackage/ - </description>
+        </item>
     
     
     
