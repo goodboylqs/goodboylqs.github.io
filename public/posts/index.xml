@@ -8,15 +8,6 @@
     <language>zh-cn</language>
     <lastBuildDate>Sun, 24 Dec 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://goodboylqs.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
-      <link>https://goodboylqs.github.io/posts/2023122419-hugo%E7%BD%91%E7%AB%99%E5%B5%8C%E5%85%A5bilibili%E6%92%AD%E6%94%BE%E5%99%A8%E6%92%AD%E6%94%BEb%E7%AB%99%E8%A7%86%E9%A2%91-/</link>
-      <pubDate>Sun, 24 Dec 2023 00:00:00 +0800</pubDate>
-      
-      <guid>https://goodboylqs.github.io/posts/2023122419-hugo%E7%BD%91%E7%AB%99%E5%B5%8C%E5%85%A5bilibili%E6%92%AD%E6%94%BE%E5%99%A8%E6%92%AD%E6%94%BEb%E7%AB%99%E8%A7%86%E9%A2%91-/</guid>
-      <description>&amp;lt;iframe src=&amp;quot;//player.bilibili.com/player.html?aid=371704002&amp;amp;bvid=BV1zZ4y1M7zN&amp;amp;cid=350604677&amp;amp;p=1&amp;quot; scrolling=&amp;ldquo;no&amp;rdquo; border=&amp;ldquo;0&amp;rdquo; frameborder=&amp;ldquo;no&amp;rdquo; framespacing=&amp;ldquo;0&amp;rdquo; allowfullscreen=&amp;ldquo;true&amp;rdquo;&amp;gt; &amp;lt;/iframe&amp;gt;</description>
-    </item>
-    
-    <item>
       <title>网站每日更新内容</title>
       <link>https://goodboylqs.github.io/posts/2023122413-%E7%BD%91%E7%AB%99%E6%AF%8F%E6%97%A5%E6%9B%B4%E6%96%B0%E5%86%85%E5%AE%B9/</link>
       <pubDate>Sun, 24 Dec 2023 00:00:00 +0800</pubDate>
@@ -24,7 +15,18 @@
       <guid>https://goodboylqs.github.io/posts/2023122413-%E7%BD%91%E7%AB%99%E6%AF%8F%E6%97%A5%E6%9B%B4%E6%96%B0%E5%86%85%E5%AE%B9/</guid>
       <description>tags :
 source :
-&amp;lt;2023-12-24 周日 13:58&amp;gt; 所有文章加入简介与图片介绍 《熵增定律》读书笔记 第十一章：霍桑效应 </description>
+&amp;lt;2023-12-24 ���� 13:58&amp;gt; 所有文章加入简介与图片介绍 《熵增定律》读书笔记 第十一章：霍桑效应 org-mode中插入html代码实现视频播放 </description>
+    </item>
+    
+    <item>
+      <title>org-mode嵌入html代码实现视频播放</title>
+      <link>https://goodboylqs.github.io/posts/20231224-org_mode%E5%B5%8C%E5%85%A5html%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE/</link>
+      <pubDate>Sat, 23 Dec 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://goodboylqs.github.io/posts/20231224-org_mode%E5%B5%8C%E5%85%A5html%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE/</guid>
+      <description>&amp;lt;2023-12-24 ���� 20:07&amp;gt;
+org-mode中嵌入html代码的方法 \#+BEGIN_EXPORT HTML HTML代码 \#+END_EXPORT org-mode嵌入b站播放器的html代码 黄飞鸿言：“李大人，正所谓胜者为王，败者为寇，现在，这个金牌在我黄某人手上，并非我赢了，大人为大显我民神威而办的这场狮王争霸赛，劳民伤财，死伤这么多人，其实，在世人眼里，我们都输了。以小民之见，我们不只要练武强身，以抗外敌，更重要的是广开言路，智武合一，那才是国富民强之道，区区一块牌子，能否改变国运，还望大人三思，这金牌，送给您做纪念吧。”
+\#+BEGIN_EXPORT HTML &amp;lt;iframe src=&amp;#34;//player.bilibili.com/player.html?aid=98479429&amp;amp;bvid=BV1GE411c7sd&amp;amp;cid=168113370&amp;amp;p=1&amp;#34; scrolling=&amp;#34;no&amp;#34; border=&amp;#34;0&amp;#34; frameborder=&amp;#34;no&amp;#34; framespacing=&amp;#34;0&amp;#34; allowfullscreen=&amp;#34;true&amp;#34;&amp;gt; &amp;lt;/iframe&amp;gt; \#+END_EXPORT 效果展示 iframe标签的可选属性 +title:org-mode嵌入html代码实现视频播放 </description>
     </item>
     
     <item>
