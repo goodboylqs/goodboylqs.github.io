@@ -1,11 +1,13 @@
 +++
 title = "emacs&git使用学习"
 author = ["553912917@qq.com"]
+description = "emacs的常用快捷键以及git的工作原理"
 date = 2023-12-21T08:00:00+08:00
-lastmod = 2023-12-21T16:32:53+08:00
+lastmod = 2023-12-24T13:10:52+08:00
 tags = ["emacs", "git"]
 categories = ["编程"]
 draft = false
+featured_image = "../picture/git工作区.jpg"
 +++
 
 ## Property {#property}
@@ -88,7 +90,8 @@ draft = false
         %[WIDTH]PROPERTY[(TITLE)][{SUMMARY-TYPE}]
         ```
 
-        -   SUMMARY-TYPE的可选内容‘+’	        Sum numbers in this column.
+        -   SUMMARY-TYPE的可选内容
+            ‘+’	        Sum numbers in this column.
             ‘+;%.1f’	Like ‘+’, but format result with ‘%.1f’.
             ‘$’	Currency, short for ‘+;%.2f’.
             ‘min’	Smallest number in column.
@@ -156,6 +159,9 @@ draft = false
         ```nil
         [[A]]
         ```
+-   外部链接
+    -   链接到headline
+        先用C-c l存储要链接到的headline的地址，然后C-c C-l在要插入链接的地方插入链接，粘贴已经存储好的headline的地址
 
 
 ## 表格 {#表格}
@@ -240,7 +246,8 @@ draft = false
 
 ### 操作逻辑 {#操作逻辑}
 
-当对工作区修改（或新增）的文件执行git add命令时，暂存区的目录树被更新，同时工作区修改（或新增）的文件内容被写入到对象库中的一个新的对象中，而该对象的ID被记录在暂存区的文件索引中。当执行提交操作git commit时，暂存区的目录树写到\*\*版本库（对象库）\*\*中，master 分支会做相应的更新。即 master 指向的目录树就是提交时暂存区的目录树。
+当对工作区修改（或新增）的文件执行git add命令时，暂存区的目录树被更新，同时工作区修改（或新增）的文件内容被写入到对象库中的一个新的对象中，而该对象的ID被记录在暂存区的文件索引中。
+当执行提交操作git commit时，暂存区的目录树写到\*\*版本库（对象库）\*\*中，master 分支会做相应的更新。即 master 指向的目录树就是提交时暂存区的目录树。
 
 
 ### git的工作目录下分两种情况————已跟踪和未跟踪 {#git的工作目录下分两种情况-已跟踪和未跟踪}
@@ -270,13 +277,16 @@ draft = false
         4.  暂未提交到暂存区，所有修改都在工作区。
     -   接下来就这四种情况说明下如何撤销修改。
         1.  如果push到远程仓库了，并且没有远程仓库的管理权限，那就放弃把，没救了。
-        2.  已经使用commit提交到了版本库。因为已经产生了新的提交，所以撤销修改可以使用git reset --hard HEAD^来回退到上一个版本，从而达到撤销修改的效果。
+        2.  已经使用commit提交到了版本库。
+            因为已经产生了新的提交，所以撤销修改可以使用git reset --hard HEAD^来回退到上一个版本，从而达到撤销修改的效果。
             -   git reset --hard HEAD^ //撤销之前的commit，并且舍弃之前commit的修改
             -   git reset --soft HEAD^ //撤销之前的commit，并且保留之前的commit修改
-        3.  已经使用add提交到暂存区，但是没有使用commit提交到版本库。因为已经提交到暂存区了，所以撤销修改需要先将提交到暂存区的修改拿回到工作区。
+        3.  已经使用add提交到暂存区，但是没有使用commit提交到版本库。
+            因为已经提交到暂存区了，所以撤销修改需要先将提交到暂存区的修改拿回到工作区。
             -   git reset HEAD &lt;file&gt;
                 命令git reset HEAD &lt;file&gt;可以把暂存区的修改撤销掉，重新放回工作区。==注意该命令和回退版本的命令的区别，因为很相似。==这样所有的修改就回到了工作区，丢弃工作区的修改只需执行以下命令。
-            -   git checkout -- &lt;file&gt;  # 使用 git restore &lt;file&gt; 的效果一样命令git checkout -- &lt;file&gt;会将工作区的修改撤回到最后一次git add或git commit时的状态。
+            -   git checkout -- &lt;file&gt;  # 使用 git restore &lt;file&gt; 的效果一样
+                命令git checkout -- &lt;file&gt;会将工作区的修改撤回到最后一次git add或git commit时的状态。
         4.  文件修改都在工作区，没有提交到暂存区。
             -   丢弃工作区的修改只需要执行一下命令：git checkout -- &lt;file&gt;	# 使用 git restore &lt;file&gt; 的效果一样
             -   命令git checkout -- &lt;file&gt;会将工作区的修改撤回到最后一次git add或git commit时的状态。有两种情况，即：

@@ -1,16 +1,14 @@
 +++
 title = "一只特立独行的猪"
 author = ["553912917@qq.com"]
+description = "人应该追求有趣，活着本身就是为了乐趣"
 date = 2023-11-01T11:12:00+08:00
-lastmod = 2023-11-27T16:49:20+08:00
+lastmod = 2023-12-24T14:25:26+08:00
 tags = ["小说", "文学", "读书笔记"]
 categories = ["文学", "读书笔记"]
 draft = false
+featured_image = "../picture/一只特立独行的猪.png"
 +++
-
-tags
-: 小说,文学
-
 
 ## 一只特立独行的猪 {#2023YiZhiTeLiDuXingDeZhu}
 

@@ -1,11 +1,13 @@
 +++
 title = "Org-Roam-Bibtex的使用"
-author = ["553912917@qq.com"]
+author = ["大黑"]
+description = "使用Emacs+Zotero管理文献，方便做笔记与查询"
 date = 2023-11-21T22:32:00+08:00
-lastmod = 2023-11-21T22:38:15+08:00
+lastmod = 2023-12-24T13:18:47+08:00
 tags = ["Emacs", "org-roam"]
 categories = ["编程"]
 draft = false
+featured_image = "../picture/文献界面.png"
 +++
 
 tags

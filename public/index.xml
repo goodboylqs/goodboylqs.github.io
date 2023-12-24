@@ -6,9 +6,29 @@
     <description>Recent content on 饮冰十年，难凉热血</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 21 Dec 2023 08:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 24 Dec 2023 00:00:00 +0800</lastBuildDate>
     
         <atom:link href="https://goodboylqs.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>网站每日更新内容</title>
+        <link>https://goodboylqs.github.io/posts/2023122413-%E7%BD%91%E7%AB%99%E6%AF%8F%E6%97%A5%E6%9B%B4%E6%96%B0%E5%86%85%E5%AE%B9/</link>
+        <pubDate>Sun, 24 Dec 2023 00:00:00 +0800</pubDate>
+        
+        <guid>https://goodboylqs.github.io/posts/2023122413-%E7%BD%91%E7%AB%99%E6%AF%8F%E6%97%A5%E6%9B%B4%E6%96%B0%E5%86%85%E5%AE%B9/</guid>
+        <description>饮冰十年，难凉热血 https://goodboylqs.github.io/posts/2023122413-%E7%BD%91%E7%AB%99%E6%AF%8F%E6%97%A5%E6%9B%B4%E6%96%B0%E5%86%85%E5%AE%B9/ -&lt;p&gt;tags
+:&lt;/p&gt;
+&lt;p&gt;source
+:&lt;/p&gt;
+&lt;h2 id=&#34;011149&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-12-24 周日 13:58&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;所有文章加入简介与图片介绍&lt;/li&gt;
+&lt;li&gt;《熵增定律》读书笔记 &lt;a href=&#34;https://goodboylqs.github.io/posts/2023shangzengdinglu/#第十一章-霍桑效应&#34;&gt;第十一章：霍桑效应&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+- https://goodboylqs.github.io/posts/2023122413-%E7%BD%91%E7%AB%99%E6%AF%8F%E6%97%A5%E6%9B%B4%E6%96%B0%E5%86%85%E5%AE%B9/ - </description>
+        </item>
     
     
     
@@ -95,7 +115,8 @@
 &lt;p&gt;除了%和属性名都是可选的&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;%[WIDTH]PROPERTY[(TITLE)][{SUMMARY-TYPE}]
 &lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
-&lt;li&gt;SUMMARY-TYPE的可选内容‘+’	        Sum numbers in this column.
+&lt;li&gt;SUMMARY-TYPE的可选内容
+‘+’	        Sum numbers in this column.
 ‘+;%.1f’	Like ‘+’, but format result with ‘%.1f’.
 ‘$’	Currency, short for ‘+;%.2f’.
 ‘min’	Smallest number in column.
@@ -167,6 +188,12 @@ p or S-LEFT (org-columns-previous-allowed-value)&lt;/p&gt;
 &lt;li&gt;链接
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;[[A]]
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;外部链接
+&lt;ul&gt;
+&lt;li&gt;链接到headline
+先用C-c l存储要链接到的headline的地址，然后C-c C-l在要插入链接的地方插入链接，粘贴已经存储好的headline的地址&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -326,7 +353,8 @@ p or S-LEFT (org-columns-previous-allowed-value)&lt;/p&gt;
 &lt;li&gt;版本库：工作区有一个隐藏目录 .git，这个不算工作区，而是 Git 的版本库。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;操作逻辑&#34;&gt;操作逻辑&lt;/h3&gt;
-&lt;p&gt;当对工作区修改（或新增）的文件执行git add命令时，暂存区的目录树被更新，同时工作区修改（或新增）的文件内容被写入到对象库中的一个新的对象中，而该对象的ID被记录在暂存区的文件索引中。当执行提交操作git commit时，暂存区的目录树写到**版本库（对象库）**中，master 分支会做相应的更新。即 master 指向的目录树就是提交时暂存区的目录树。&lt;/p&gt;
+&lt;p&gt;当对工作区修改（或新增）的文件执行git add命令时，暂存区的目录树被更新，同时工作区修改（或新增）的文件内容被写入到对象库中的一个新的对象中，而该对象的ID被记录在暂存区的文件索引中。
+当执行提交操作git commit时，暂存区的目录树写到**版本库（对象库）**中，master 分支会做相应的更新。即 master 指向的目录树就是提交时暂存区的目录树。&lt;/p&gt;
 &lt;h3 id=&#34;git的工作目录下分两种情况-已跟踪和未跟踪&#34;&gt;git的工作目录下分两种情况————已跟踪和未跟踪&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -360,17 +388,20 @@ p or S-LEFT (org-columns-previous-allowed-value)&lt;/p&gt;
 &lt;li&gt;接下来就这四种情况说明下如何撤销修改。
 &lt;ol&gt;
 &lt;li&gt;如果push到远程仓库了，并且没有远程仓库的管理权限，那就放弃把，没救了。&lt;/li&gt;
-&lt;li&gt;已经使用commit提交到了版本库。因为已经产生了新的提交，所以撤销修改可以使用git reset &amp;ndash;hard HEAD^来回退到上一个版本，从而达到撤销修改的效果。
+&lt;li&gt;已经使用commit提交到了版本库。
+因为已经产生了新的提交，所以撤销修改可以使用git reset &amp;ndash;hard HEAD^来回退到上一个版本，从而达到撤销修改的效果。
 &lt;ul&gt;
 &lt;li&gt;git reset &amp;ndash;hard HEAD^ //撤销之前的commit，并且舍弃之前commit的修改&lt;/li&gt;
 &lt;li&gt;git reset &amp;ndash;soft HEAD^ //撤销之前的commit，并且保留之前的commit修改&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;已经使用add提交到暂存区，但是没有使用commit提交到版本库。因为已经提交到暂存区了，所以撤销修改需要先将提交到暂存区的修改拿回到工作区。
+&lt;li&gt;已经使用add提交到暂存区，但是没有使用commit提交到版本库。
+因为已经提交到暂存区了，所以撤销修改需要先将提交到暂存区的修改拿回到工作区。
 &lt;ul&gt;
 &lt;li&gt;git reset HEAD &amp;lt;file&amp;gt;
 命令git reset HEAD &amp;lt;file&amp;gt;可以把暂存区的修改撤销掉，重新放回工作区。==注意该命令和回退版本的命令的区别，因为很相似。==这样所有的修改就回到了工作区，丢弃工作区的修改只需执行以下命令。&lt;/li&gt;
-&lt;li&gt;git checkout &amp;ndash; &amp;lt;file&amp;gt;  # 使用 git restore &amp;lt;file&amp;gt; 的效果一样命令git checkout &amp;ndash; &amp;lt;file&amp;gt;会将工作区的修改撤回到最后一次git add或git commit时的状态。&lt;/li&gt;
+&lt;li&gt;git checkout &amp;ndash; &amp;lt;file&amp;gt;  # 使用 git restore &amp;lt;file&amp;gt; 的效果一样
+命令git checkout &amp;ndash; &amp;lt;file&amp;gt;会将工作区的修改撤回到最后一次git add或git commit时的状态。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;文件修改都在工作区，没有提交到暂存区。
@@ -420,7 +451,65 @@ p or S-LEFT (org-columns-previous-allowed-value)&lt;/p&gt;
         <pubDate>Tue, 19 Dec 2023 08:00:00 +0800</pubDate>
         
         <guid>https://goodboylqs.github.io/posts/2023shangzengdinglu/</guid>
-        <description>饮冰十年，难凉热血 https://goodboylqs.github.io/posts/2023shangzengdinglu/ -&lt;p&gt;tags
+        <description>饮冰十年，难凉热血 https://goodboylqs.github.io/posts/2023shangzengdinglu/ -&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#2023ShangZengDingLu&#34;&gt;《熵增定律》读书笔记&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%AC%AC%E4%B8%80%E7%AB%A0%E5%89%8D%E8%A8%80-and-%E7%AC%AC%E4%BA%8C%E7%AB%A0%E7%86%B5%E5%A2%9E%E5%AE%9A%E5%BE%8B&#34;&gt;第一章前言&amp;amp;第二章熵增定律&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E6%88%90%E9%95%BF%E5%9E%8B%E6%80%9D%E7%BB%B4&#34;&gt;第三章：成长型思维&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#%E6%9E%84%E5%BB%BA%E6%88%90%E9%95%BF%E5%9E%8B%E6%80%9D%E7%BB%B4&#34;&gt;构建成长型思维&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E5%81%9A%E4%B8%80%E4%B8%AA%E7%BB%88%E8%BA%AB%E5%AD%A6%E4%B9%A0%E8%80%85&#34;&gt;做一个终身学习者&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E6%8D%9F%E5%A4%B1%E5%8E%8C%E6%81%B6%E5%8E%9F%E7%90%86&#34;&gt;第四章：损失厌恶原理&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#%E6%88%91%E7%9A%84%E6%84%9F%E6%82%9F&#34;&gt;我的感悟&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E4%BB%8E%E4%BC%97%E6%95%88%E5%BA%94&#34;&gt;第五章：从众效应&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%A0%B4%E7%AA%97%E6%95%88%E5%BA%94&#34;&gt;破窗效应&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E8%B7%AF%E5%BE%84%E4%BE%9D%E8%B5%96%E6%95%88%E5%BA%94&#34;&gt;第六章：路径依赖效应&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#%E6%88%91%E7%9A%84%E6%84%9F%E6%82%9F&#34;&gt;我的感悟&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E7%86%B5%E5%87%8F%E6%B3%95%E5%88%99-%E5%BF%83%E6%B5%81&#34;&gt;第七章 熵减法则：心流&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#%E5%BF%83%E6%B5%81%E4%BA%A7%E7%94%9F%E7%9A%84%E4%BA%94%E5%A4%A7%E8%B7%AF%E5%BE%84&#34;&gt;心流产生的五大路径&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%B2%BE%E5%8A%9B%E5%85%85%E6%B2%9B%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F-%E5%A6%82%E4%BD%95%E8%BF%9B%E5%85%A5%E5%B7%A5%E4%BD%9C%E4%B8%8A%E7%9A%84%E5%BF%83%E6%B5%81%E7%8A%B6%E6%80%81&#34;&gt;精力充沛的工作方式（如何进入工作上的心流状态）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E5%A6%82%E4%BD%95%E8%BF%9B%E5%85%A5%E5%AD%A6%E4%B9%A0%E4%B8%8A%E7%9A%84%E5%BF%83%E6%B5%81%E7%8A%B6%E6%80%81&#34;&gt;如何进入学习上的心流状态&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E7%BD%97%E6%A3%AE%E5%A1%94%E5%B0%94%E6%95%88%E5%BA%94-%E7%9A%AE%E9%9D%A9%E9%A9%AC%E5%88%A9%E7%BF%81%E6%95%88%E5%BA%94-%E8%B5%9E%E7%BE%8E%E5%92%8C%E6%9C%9F%E6%9C%9B%E8%83%BD%E4%BA%A7%E7%94%9F%E5%A5%87%E8%BF%B9&#34;&gt;第八章：罗森塔尔效应（皮革马利翁效应————赞美和期望能产生奇迹）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%9B%B8%E4%BF%A1%E6%98%AF%E6%9C%80%E5%A5%BD%E7%9A%84%E9%BC%93%E5%8A%B1&#34;&gt;相信是最好的鼓励&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%94%9F%E6%B4%BB%E4%B8%AD%E7%9A%84%E7%BD%97%E6%A3%AE%E5%A1%94%E5%B0%94%E6%95%88%E5%BA%94&#34;&gt;生活中的罗森塔尔效应&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E9%A9%AC%E8%9D%87%E6%95%88%E5%BA%94&#34;&gt;第九章：马蝇效应&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#%E4%B8%BA%E8%87%AA%E5%B7%B1%E6%9E%84%E5%BB%BA-%E9%A9%AC%E8%9D%87&#34;&gt;为自己构建“马蝇”&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%AC%AC%E5%8D%81%E7%AB%A0-%E5%BE%B7%E8%A5%BF%E6%95%88%E5%BA%94&#34;&gt;第十章：德西效应&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#%E4%BA%A7%E7%94%9F%E5%86%85%E9%83%A8%E5%8A%A8%E6%9C%BA%E7%9A%84%E4%B8%89%E5%A4%A7%E8%A6%81%E7%B4%A0&#34;&gt;产生内部动机的三大要素&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%A7%91%E5%AD%A6%E6%BF%80%E5%8F%91%E5%86%85%E9%83%A8%E5%8A%A8%E6%9C%BA&#34;&gt;科学激发内部动机&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E4%BF%9D%E6%8A%A4%E5%86%85%E9%83%A8%E5%8A%A8%E6%9C%BA-%E4%BF%9D%E6%8A%A4%E8%87%AA%E4%B8%BB%E6%9D%83-%E8%83%9C%E4%BB%BB%E6%84%9F-%E7%A4%BE%E4%BA%A4%E5%85%B3%E8%81%94&#34;&gt;保护内部动机————保护自主权、胜任感、社交关联&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0-%E9%9C%8D%E6%A1%91%E6%95%88%E5%BA%94&#34;&gt;第十一章：霍桑效应&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E6%84%9F%E6%82%9F&#34;&gt;感悟&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;tags
 :&lt;/p&gt;
 &lt;h2 id=&#34;2023ShangZengDingLu&#34;&gt;《熵增定律》读书笔记&lt;/h2&gt;
 &lt;h3 id=&#34;第一章前言-and-第二章熵增定律&#34;&gt;第一章前言&amp;amp;第二章熵增定律&lt;/h3&gt;
@@ -976,7 +1065,7 @@ p or S-LEFT (org-columns-previous-allowed-value)&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;马蝇效应&#34;&gt;马蝇效应&lt;/h3&gt;
+&lt;h3 id=&#34;第九章-马蝇效应&#34;&gt;第九章：马蝇效应&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;没有马蝇的叮咬，马儿慢慢腾腾消极怠工；正是因为有马蝇叮咬，马儿不敢放松才健步如飞&lt;/li&gt;
 &lt;li&gt;马蝇效应是组织里的激励因素，管理者只要能找到合适的激励因素，就可以让有能力的人发挥潜力努力工作&lt;/li&gt;
@@ -1066,7 +1155,7 @@ p or S-LEFT (org-columns-previous-allowed-value)&lt;/p&gt;
 &lt;/table&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;德西效应&#34;&gt;德西效应&lt;/h3&gt;
+&lt;h3 id=&#34;第十章-德西效应&#34;&gt;第十章：德西效应&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;爱德华德西与理查德瑞安共同创建了名为自我决定论的动机理论学说，自我决定论不仅构建了研究人类动机和人格的宏观框架，而且 &lt;strong&gt;指出了满足个体对自主权、胜任感与社交关联所需要的环境条件，更好地强化人们在内部动力、创新创造力和提升本身幸福感、工作绩效方面的应用&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;德西效应内涵
@@ -1152,7 +1241,7 @@ p or S-LEFT (org-columns-previous-allowed-value)&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;霍桑效应&#34;&gt;霍桑效应&lt;/h3&gt;
+&lt;h3 id=&#34;第十一章-霍桑效应&#34;&gt;第十一章：霍桑效应&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;霍桑效应的关键词：看见，让自己被看见，让更好的自己被看见是每个人的需求。 &lt;strong&gt;人们一旦意识到自己在“被关注”、“被观察”或者“被看见”的时候，会刻意的改变自己的行为举止、语言表达，当然也包括让自己的工作效率提升&lt;/strong&gt;
 &lt;ul&gt;
@@ -1185,16 +1274,21 @@ p or S-LEFT (org-columns-previous-allowed-value)&lt;/p&gt;
 :&lt;/p&gt;
 &lt;h2 id=&#34;ZhaiChao&#34;&gt;摘抄&lt;/h2&gt;
 &lt;h3 id=&#34;嫁人到底该选家庭还是选人&#34;&gt;嫁人到底该选家庭还是选人?&lt;/h3&gt;
-&lt;p&gt;作者：黄小禾苗链接：&lt;a href=&#34;https://www.zhihu.com/question/404538550/answer/1327673408&#34;&gt;https://www.zhihu.com/question/404538550/answer/1327673408&lt;/a&gt;
-来源：知乎著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。&lt;/p&gt;
+&lt;p&gt;作者：黄小禾苗
+链接：&lt;a href=&#34;https://www.zhihu.com/question/404538550/answer/1327673408&#34;&gt;https://www.zhihu.com/question/404538550/answer/1327673408&lt;/a&gt;
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。&lt;/p&gt;
 &lt;p&gt;很让人悲观，是不是？&lt;/p&gt;
 &lt;p&gt;但这不是我要表达的意思。&lt;/p&gt;
 &lt;p&gt;我要表达的意思是：选什么样的人，无论是家庭还是个人的品性，这确实很重要，但也没有那么重要。所有人都有优点，也有缺点，没有完美的人。如同我们要接纳自身的不完美一样，我们也要接纳对方的不完美，这就是真实的生活。&lt;/p&gt;
 &lt;p&gt;能够让婚姻成功的秘籍不是找到了一个什么样的人。选择和什么样的人结婚，不是一个终点，只是一个起点，如同马拉松一般的生活才真正开始。而能够将生活经营好的方法对谁都是一样的：热爱自己的生活，用心去感受生活的点点滴滴，去做好当前的每一件小事情；欣赏、赞美、认可对方的优点，夸奖对方，是我们应该一辈子都在做的事情；感恩，珍惜我们所拥有的，尊重对方的努力的付出，不把这一切看做理所当然；始终保持自我的成长，努力保持自信、积极、乐观，这是对自我生命负责任的态度。这对谁都是一样的。祝福你呐。&lt;/p&gt;
 &lt;h3 id=&#34;大家眼中的乖乖女-好女孩-长相中上-身材不错-一直被别人说适合做贤妻良母-可身边就是没有追求者呢&#34;&gt;大家眼中的乖乖女，好女孩，长相中上，身材不错，一直被别人说适合做贤妻良母，可身边就是没有追求者呢？&lt;/h3&gt;
-&lt;p&gt;作者：小雅么小花狸链接：&lt;a href=&#34;https://www.zhihu.com/question/35897038&#34;&gt;https://www.zhihu.com/question/35897038&lt;/a&gt;
-来源：知乎著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。&lt;/p&gt;
-&lt;p&gt;原因哪有这么复杂，就是大家都喜欢说场面话喝心灵鸡汤，大实话没和你说而已。不要错误理解性格好的定义，觉得“活了二十多年没和人有过冲突”、“周围人都挺喜欢”、“和同事同学相处和睦”就叫性格好。&lt;/p&gt;
+&lt;p&gt;作者：小雅么小花狸
+链接：&lt;a href=&#34;https://www.zhihu.com/question/35897038&#34;&gt;https://www.zhihu.com/question/35897038&lt;/a&gt;
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。&lt;/p&gt;
+&lt;p&gt;原因哪有这么复杂，就是大家都喜欢说场面话喝心灵鸡汤，大实话没和你说而已。不要错误理解性格好的定义，觉得“活了二十多年没和人有过冲突”、“周围人都挺喜欢”、“和
+同事同学相处和睦”就叫性格好。&lt;/p&gt;
 &lt;p&gt;其实不是的，可能只不过是你生活环境好，或者天生忍耐度高，导致这么长时间内周围压根儿不存在需要你去解决的矛盾而已。&lt;/p&gt;
 &lt;p&gt;真正的性格好，是本事内化成性格，因为有足够的能力去解决生活中的绝大多数冲突，所以平时看起来才是笑吟吟很好打交道的样子，所谓从心所欲不逾矩，是很难的。&lt;/p&gt;
 &lt;p&gt;比如说，性格温柔，指的是即使遇到问题也能泰然处之，尽量不和对方发生剧烈冲突，以较为温和的手段达到满意的效果。总是忍耐退让，每次结局都不满意但会劝自己吃亏是福，这可不叫温柔，乃是怂包。&lt;/p&gt;
@@ -1320,152 +1414,6 @@ p or S-LEFT (org-columns-previous-allowed-value)&lt;/p&gt;
     
     
         <item>
-        <title>elisp学习</title>
-        <link>https://goodboylqs.github.io/posts/2023111523-elisp%E5%AD%A6%E4%B9%A0/</link>
-        <pubDate>Wed, 15 Nov 2023 23:43:00 +0800</pubDate>
-        
-        <guid>https://goodboylqs.github.io/posts/2023111523-elisp%E5%AD%A6%E4%B9%A0/</guid>
-        <description>饮冰十年，难凉热血 https://goodboylqs.github.io/posts/2023111523-elisp%E5%AD%A6%E4%B9%A0/ -&lt;dl&gt;
-&lt;dt&gt;tags&lt;/dt&gt;
-&lt;dd&gt;编程 emacs&lt;/dd&gt;
-&lt;dt&gt;source&lt;/dt&gt;
-&lt;dd&gt;&lt;a href=&#34;http://smacs.github.io/elisp/&#34;&gt;http://smacs.github.io/elisp/&lt;/a&gt;&lt;/dd&gt;
-&lt;dt&gt;date&lt;/dt&gt;
-&lt;dd&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-11-15 周三 23:41&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;h2 id=&#34;elisp的运行环境&#34;&gt;elisp的运行环境&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;只有在lisp-interaction-mode下，才能执行elisp代码
-&lt;ul&gt;
-&lt;li&gt;M-x lisp-interaction-mode&lt;/li&gt;
-&lt;li&gt;在行尾右括号后面按C-j&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;elisp不好作为可执行方式来来运行，所有的elisp都是在emacs的环境下&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;在org-mode中插入src代码块&#34;&gt;在org-mode中插入src代码块&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;C-c C-,(org-insert-structure-template)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;在org-mode中的src区域运行代码&#34;&gt;在org-mode中的src区域运行代码&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;将光标移动到src区域，按C-c C-c即可运行代码&lt;/li&gt;
-&lt;li&gt;将光标移动到src区域，按C-c &amp;lsquo;可对代码进行编辑&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;elisp表达式&#34;&gt;elisp表达式&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;elisp的表达式是一个括号括起来，成为一个S-表达式&lt;/li&gt;
-&lt;li&gt;执行一个S-表达式的方法有2个
-&lt;ul&gt;
-&lt;li&gt;用C-j&lt;/li&gt;
-&lt;li&gt;用C-x C-e————C-x C-e是一个全局按键，几乎在任何地方都可以使用。也就是说哪怕是没有打开lisp-interaction-mode的情况下使用C-x C-e也可以运行代码，运行结果会在minibuffer中显示&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;elisp表达式的作用 ≠ elisp表达式的返回值&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;(message &amp;ldquo;hello world&amp;rdquo;)中message函数的作用是在minibuffer中显示一个字符串，但它的返回值是&amp;quot;hello world&amp;quot;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;message&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;hello world&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;elisp的函数和变量&#34;&gt;elisp的函数和变量&lt;/h2&gt;
-&lt;h3 id=&#34;elisp函数&#34;&gt;elisp函数&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;定义一个函数
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;;    (defun 函数名(参数列表)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;;      函数文档  //可省略 *如果添加了函数文档，那么使用C-h f查看该函数的时候会显示函数文档的内容*&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;;      函数体)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(defun helloworld(name)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;对name说hello&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#a6e22e&#34;&gt;message&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;hello,%s&amp;#34;&lt;/span&gt; name))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(helloworld &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;emacser&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;elisp中的函数是全局的，变量也很容易成为全局变量（因为全局变量和局部变量的赋值都是使用setq），所以名字互相不冲突是很关键的&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;elisp变量&#34;&gt;elisp变量&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;elisp变量无需像c语言变量一样声明，可以直接赋值&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;也就是说elisp变量没有类型（存疑）&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(setq foo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;I&amp;#39;m, foo&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;message&lt;/span&gt; foo)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;使用defvar声明变量&#34;&gt;使用defvar声明变量&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;; (defvar 变量名 变量值&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;;   变量文档)      //可省略 *如果添加了变量文档，使用C-h v查看该变量的时候会显示变量文档的内容*&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(defvar foo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Did I have a value?&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;A demo variable&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;foo
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;defvar 与 setq的区别&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;defvar可以为变量提供文档&lt;/li&gt;
-&lt;li&gt;de&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;全局变量和局部变量&#34;&gt;全局变量和局部变量&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;elisp中的函数是全局的，变量也很容易成为全局变量（因为全局变量和局部变量的赋值都是使用setq），所以名字互相不冲突是很关键的&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;所以局部变量很重要&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;elisp里可以用let和let* 进行局部变量的绑定&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;let的语法
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(let (bindings)        &lt;span style=&#34;color:#75715e&#34;&gt;;;bindings可以使(var value)这样对var赋初始值的形式，也可以是直接var声明一个初始值为nil的变量&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  body)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;eg1.我写的，有错误，错在①没有使用setq对变量进行赋值②变量乘法的表达式不对③对let的用法部队，bindings部分没有使用括号括起来&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(defun circle-area(radix)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (let pi &lt;span style=&#34;color:#ae81ff&#34;&gt;3.14&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (let area pi*radix*radix)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#a6e22e&#34;&gt;message&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;radix is %.2f,circle&amp;#39;s area is %.2f&amp;#34;&lt;/span&gt; radix area))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(circle-area &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)  &lt;span style=&#34;color:#75715e&#34;&gt;;;提示wrong type argument,listp 3.1415&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;eg2.有错误: &lt;strong&gt;let中不能再包含let声明，对变量area的声明利用第一个let进行即可。而且对let声明的变量的使用，一定要再let的body部分，不能在let的括号外&lt;/strong&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(defun circle-area(radix)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (let (pi &lt;span style=&#34;color:#ae81ff&#34;&gt;3.14&lt;/span&gt;)    &lt;span style=&#34;color:#75715e&#34;&gt;;;bindings为(var value)的形式&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (let  area)          &lt;span style=&#34;color:#75715e&#34;&gt;;;bindings为(var)的形式，var的初始值为nil&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (setq area (&lt;span style=&#34;color:#a6e22e&#34;&gt;*&lt;/span&gt; pi radix radix))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#a6e22e&#34;&gt;message&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;直径为%.2f的圆面积是%.2f&amp;#34;&lt;/span&gt; radix area))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  )
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(circle-area &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;)  &lt;span style=&#34;color:#75715e&#34;&gt;;;提示wrong type argument,listp 3.1415&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;eg3.有错误：对let的使用方式错误，bindings部分没有使用括号阔气来
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(defun circle-area(radix)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (let (pi &lt;span style=&#34;color:#ae81ff&#34;&gt;3.1415926&lt;/span&gt;) area)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (setq area (&lt;span style=&#34;color:#a6e22e&#34;&gt;*&lt;/span&gt; pi radix radix))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#a6e22e&#34;&gt;message&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;直径为%.2f的圆面积是％.2f&amp;#34;&lt;/span&gt; radix area))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(circle-area &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;)          &lt;span style=&#34;color:#75715e&#34;&gt;;;提示wrong type argument,listp 3.1415&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;eg.4.正确的： &lt;strong&gt;一定要注意，let声明的变量的使用，一定要在let的body部分，例如对area的赋值、输出message都是在let的body部分&lt;/strong&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(defun circle-area(radix)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (let ((pi &lt;span style=&#34;color:#ae81ff&#34;&gt;3.1415926&lt;/span&gt;) area)    &lt;span style=&#34;color:#75715e&#34;&gt;;;bindings部分&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       (setq area (&lt;span style=&#34;color:#a6e22e&#34;&gt;*&lt;/span&gt; pi radix radix))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       (&lt;span style=&#34;color:#a6e22e&#34;&gt;message&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;直径为%.2f的圆面积是%.2f&amp;#34;&lt;/span&gt; radix area))   &lt;span style=&#34;color:#75715e&#34;&gt;;;body部分&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  )
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(circle-area &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-- https://goodboylqs.github.io/posts/2023111523-elisp%E5%AD%A6%E4%B9%A0/ - </description>
-        </item>
-    
-    
-    
-        <item>
         <title>基础会计（第6版）</title>
         <link>https://goodboylqs.github.io/posts/2023jichuhuijidi6ban/</link>
         <pubDate>Sun, 05 Nov 2023 11:01:00 +0800</pubDate>
@@ -1554,20 +1502,6 @@ p or S-LEFT (org-columns-previous-allowed-value)&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;未决策提供正确有用的会计信息&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;会计信息的质量要求&#34;&gt;会计信息的质量要求&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;可靠性
-&lt;ul&gt;
-&lt;li&gt;以真实交易为依据&lt;/li&gt;
-&lt;li&gt;充分披露与决策者相关的信息&lt;/li&gt;
-&lt;li&gt;有可靠的凭证&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h2 id=&#34;相关性&#34;&gt;相关性&lt;/h2&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;瓦达&lt;/p&gt;
 - https://goodboylqs.github.io/posts/2023jichuhuijidi6ban/ - </description>
         </item>
     
@@ -1579,11 +1513,7 @@ p or S-LEFT (org-columns-previous-allowed-value)&lt;/p&gt;
         <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
         
         <guid>https://goodboylqs.github.io/posts/202320230628quanguozuzhigongzuohuiyi/</guid>
-        <description>饮冰十年，难凉热血 https://goodboylqs.github.io/posts/202320230628quanguozuzhigongzuohuiyi/ -&lt;dl&gt;
-&lt;dt&gt;tags&lt;/dt&gt;
-&lt;dd&gt;遴选&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;h2 id=&#34;202320230628QuanGuoZuZhiGongZuoHuiYi&#34;&gt;2023-06-28-全国组织工作会议&lt;/h2&gt;
+        <description>饮冰十年，难凉热血 https://goodboylqs.github.io/posts/202320230628quanguozuzhigongzuohuiyi/ -&lt;h2 id=&#34;202320230628QuanGuoZuZhiGongZuoHuiYi&#34;&gt;2023-06-28-全国组织工作会议&lt;/h2&gt;
 &lt;h3 id=&#34;习近平总书记重要批示精神&#34;&gt;习近平总书记重要批示精神&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;召开时间:6月28日至6月29日&lt;/li&gt;
@@ -1607,13 +1537,50 @@ p or S-LEFT (org-columns-previous-allowed-value)&lt;/p&gt;
 &lt;h3 id=&#34;新时代10年党的建设和组织工作的重大成就-党的政治建设-党的组织路线-党内法规体系-反腐败斗争&#34;&gt;新时代10年党的建设和组织工作的重大成就（党的政治建设、党的组织路线、党内法规体系、反腐败斗争）&lt;/h3&gt;
 &lt;h4 id=&#34;采取的措施&#34;&gt;采取的措施&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;党的政治建设党的十八大以来，我们党从制定和落实中央八项规定开局破题，提出和 落实新时代党的建设总要求，以党的政治建设统领党的建设各项工作，坚持和加强党的全面领导，严肃党内政治生活，持续开展党内集中教育&lt;/li&gt;
-&lt;li&gt;党的组织路线提出和坚持新时代党的组织路线，突出政治标准选贤任能&lt;/li&gt;
-&lt;li&gt;党内法规体系坚持制度治党、依规治党，形成比较完善的党内法规体系，持之以恒正风肃纪&lt;/li&gt;
-&lt;li&gt;反腐败斗争开展史无前例的反腐败斗争，刹住了一些长期没有刹住的歪风，纠治了一些多年未除的顽瘴痼疾，消除了党、国家、军队内部存在的严重隐患，从根本上扭转了管党治党宽松软状况。&lt;/li&gt;
+&lt;li&gt;党的政治建设
+党的十八大以来，我们党从制定和落实中央八项规定开局破题，提出和 落实新时代党的建设总要求，以党的政治建设统领党的建设各项工作，坚持和加强党的全面领导，严肃党内政治生活，持续开展党内集中教育&lt;/li&gt;
+&lt;li&gt;党的组织路线
+提出和坚持新时代党的组织路线，突出政治标准选贤任能&lt;/li&gt;
+&lt;li&gt;党内法规体系
+坚持制度治党、依规治党，形成比较完善的党内法规体系，持之以恒正风肃纪&lt;/li&gt;
+&lt;li&gt;反腐败斗争
+开展史无前例的反腐败斗争，刹住了一些长期没有刹住的歪风，纠治了一些多年未除的顽瘴痼疾，消除了党、国家、军队内部存在的严重隐患，从根本上扭转了管党治党宽松软状况。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;达到的效果&#34;&gt;达到的效果&lt;/h4&gt;
-&lt;p&gt;经过十年的艰苦努力，我们党成功开辟了百年大党自我革命新境界，当在革命性锻造中更加坚强有力，党的政治领导力、思想引领力、&lt;/p&gt;
+&lt;p&gt;经过十年的艰苦努力，我们党成功开辟了百年大党自我革命新境界，当在革命性锻造中更加坚强有力，党的政治领导力、思想引领力、群众组织力、社会号召力显著增强，党同人民群众始终保持血肉联系，当在世界形势深刻变化的历史进程中始终走在时代前列，在应对国内外各种风险和考验的历史进程中始终成为全国人民的主心骨，在坚持和发展中国特色社会主义的历史进程中始终成为坚强领导核心&lt;/p&gt;
+&lt;h3 id=&#34;深入学习领会习近平总书记关于党的建设的重要思想-十三个坚持&#34;&gt;深入学习领会习近平总书记关于党的建设的重要思想：十三个坚持&lt;/h3&gt;
+&lt;p&gt;第一，坚持和加强党的全面领导
+【习近平总书记指出，中国共产党领导是中国特色社会主义最本质的特征，是中国特色社会主义制
+度的最大优势，党是最高政治领导力量。】
+第二，坚持以党的自我革命引领社会革命
+【习近平总书记指出，自我革命是党跳出治乱兴衰历史周期率的第二个答案，勇于自我革命是我们
+党最鲜明的品格。】
+第三，坚持以党的政治建设统领党的建设各项工作
+【习近平总书记指出，党的政治建设是党的根本性建设，决定党的建设方向和效果。】
+第四，坚持江山就是人民、人民就是江山
+【习近平总书记指出，打江山、守江山，守的是人民的心。】
+第五，坚持思想建党、理论强党
+【习近平总书记指出，拥有马克思主义科学理论指导是我们党坚定信仰信念、把握历史主动的根本
+所在。】
+第六，坚持严密党的组织体系
+【习近平总书记指出，党的力量来自组织，党的全面领导、党的全部工作要靠党的坚强组织体系去
+实现。】
+第七，坚持造就忠诚干净担当的高素质干部队伍
+【习近平总书记指出，党的干部是党和国家事业的中坚力量。】
+第八，坚持聚天下英才而用之
+【习近平总书记指出，国家发展靠人才，民族振兴靠人才。】
+第九，坚持持之以恒正风肃纪
+【习近平总书记指出，党风问题关系执政党的生死存亡，加强纪律建设是全面从严治党的治本之
+策。】
+第十，坚持一体推进不敢腐、不能腐、不想腐
+【习近平总书记指出，腐败是危害党的生命力和战斗力的最大毒瘤，反腐败是最彻底的自我革命，反腐败斗争永远在路上。】
+第十一，坚持完善党和国家监督体系
+【习近平总书记指出，监督是治理的内在要素，在管党治党、治国理政中居于重要地位。】
+第十二，坚持制度治党、依规治党
+【习近平总书记指出，加强党内法规制度建设是全面从严治党的长远之策、根本之策，要把依规治
+党当作管党治党基本方式。】
+第十三，坚持落实全面从严治党政治责任
+【习近平总书记指出，从严治党，必须增强管党治党意识、落实管党治党责任。】&lt;/p&gt;
 - https://goodboylqs.github.io/posts/202320230628quanguozuzhigongzuohuiyi/ - </description>
         </item>
     
@@ -1625,11 +1592,7 @@ p or S-LEFT (org-columns-previous-allowed-value)&lt;/p&gt;
         <pubDate>Wed, 01 Nov 2023 11:12:00 +0800</pubDate>
         
         <guid>https://goodboylqs.github.io/posts/2023yizhiteliduxingdezhu/</guid>
-        <description>饮冰十年，难凉热血 https://goodboylqs.github.io/posts/2023yizhiteliduxingdezhu/ -&lt;dl&gt;
-&lt;dt&gt;tags&lt;/dt&gt;
-&lt;dd&gt;小说,文学&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;h2 id=&#34;2023YiZhiTeLiDuXingDeZhu&#34;&gt;一只特立独行的猪&lt;/h2&gt;
+        <description>饮冰十年，难凉热血 https://goodboylqs.github.io/posts/2023yizhiteliduxingdezhu/ -&lt;h2 id=&#34;2023YiZhiTeLiDuXingDeZhu&#34;&gt;一只特立独行的猪&lt;/h2&gt;
 &lt;h3 id=&#34;觉得生活无趣的话-那可能是读书读少了-毕竟读书是获得有趣的重要方法&#34;&gt;觉得生活无趣的话，那可能是读书读少了，毕竟读书是获得有趣的重要方法&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;作为⼀个喜欢有趣的⼈，我当然不会放弃阅读这种获得有趣的机会。结果就发现，作家⾥有些⼈拥护有趣，还有些⼈是反对有趣的。&lt;/p&gt;

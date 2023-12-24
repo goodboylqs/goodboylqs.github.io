@@ -1,6 +1,7 @@
 +++
 title = "习近平新时代中国特色社会主义思想概论"
 author = ["553912917@qq.com"]
+description = "看不下去也要看"
 date = 2023-10-31
 tags = ["遴选"]
 categories = ["遴选"]

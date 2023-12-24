@@ -20,7 +20,7 @@ C-u M-x org-insert-drawer
 C-c C-c (org-property-action)
 C-c C-c s (org-set-property) ?
 Set a property in the current entry. Both the property and the value can be inserted using completion.
-手册 大部分属性是非继承的，因为如果默认为继承的话，在属性搜索的时候会因为搜索到的内容太多超载 ，你也可以定义变量org-use-property-inheritance的值来实现继承 属性是键值对。当它们与单个条目或一棵树相关联时，需要将它们插入名为“PROPERTIES”的特殊抽屉（参见抽屉）中，该抽屉必须位于标题及其规划线的正下方（参见截止日期和调度）适用时。每个属性都在一行中指定，首先是键（用冒号括起来），然后是值。键不区分大小写。这是一个例子： * CD collection** Classic*** Goldberg Variations:PROPERTIES::Title: Goldberg Variations:Composer: J.</description>
+手册 大部分属性是非继承的，因为如果默认为继承的话，在属性搜索的时候会因为搜索到的内容太多超载 ，你也可以定义变量org-use-property-inheritance的值来实现继承 属性是键值对。当它们与单个条目或一棵树相关联时，需要将它们插入名为“PROPERTIES”的特殊抽屉（参见抽屉）中，该抽屉必须位于标题及其规划线的正下方（参见截止日期和调度）适用时。每个属性都在一行中指定，首先是键（用冒号括起来），然后是值。键不区分大小写。这是一个例子： * CD collection ** Classic *** Goldberg Variations :PROPERTIES: :Title: Goldberg Variations :Composer: J.</description>
     </item>
     
     <item>
@@ -35,16 +35,6 @@ Org-Roam-Bibtex的使用 配置方法：https://www.bilibili.com/video/BV1Mg4y1j
 在添加条目的时候，一定要注意标题和日期是必填的
 使用Zotfile来规定条目对应的pdf的命名格式和存储路径，实现pdf文件的云端备份
 renaming rules设置为%b，含义是将pdf的命名格式设置成与Betterbibtex导出的bib文件的citekey一样，例如上述的file = {/home/goodboylqs/Nutstore Files/Zotero-Library/2023JiChuHuiJiDi6Ban.pdf}中的2023JiChuHuiJiDi6Ban.pdf custom locatios设置pdf的存储路径，这个要与坚果云的同步文件夹路径协同，利用好坚果云的备份实现pdf文件的云端备份 使用方法 先打开Zotero，新建一个条目，编辑条目的标题、摘要、链接等内容。注意标题和日期是必填的，这关系到后面的文件引用格式 右键点击Zotero中新建的条目，添加添加附件&amp;ndash;文件副本，然后对应的文献附件就会按照配置好的命名格式和存储路径进行存储 右键包含所有文献的文件夹，点导出，选择保持更新 打开Emacs，M-x helm-bibtex，就能看到已经有的文献。 但是在该条目没有笔记的时候，不能选中该条目然后tab然后f8编辑笔记。在该条目没有笔记的时候，要C-c n k(orb-insert-link)来为该条目添加笔记，这样才会调出你配置好的zotero文献模板。 当你为条目添加了笔记后，可以①使用helm-bibtex②C-x n f(org-roam-node-find)来查看已经建立的笔记 打开一条笔记后，在对应的org headline下面，使用org-noter，既可以调出文献对应的pdf附件并做笔记 </description>
-    </item>
-    
-    <item>
-      <title>elisp学习</title>
-      <link>https://goodboylqs.github.io/posts/2023111523-elisp%E5%AD%A6%E4%B9%A0/</link>
-      <pubDate>Wed, 15 Nov 2023 23:43:00 +0800</pubDate>
-      
-      <guid>https://goodboylqs.github.io/posts/2023111523-elisp%E5%AD%A6%E4%B9%A0/</guid>
-      <description>tags 编程 emacs source http://smacs.github.io/elisp/ date &amp;lt;2023-11-15 周三 23:41&amp;gt; elisp的运行环境 只有在lisp-interaction-mode下，才能执行elisp代码 M-x lisp-interaction-mode 在行尾右括号后面按C-j elisp不好作为可执行方式来来运行，所有的elisp都是在emacs的环境下 在org-mode中插入src代码块 C-c C-,(org-insert-structure-template) 在org-mode中的src区域运行代码 将光标移动到src区域，按C-c C-c即可运行代码 将光标移动到src区域，按C-c &amp;lsquo;可对代码进行编辑 elisp表达式 elisp的表达式是一个括号括起来，成为一个S-表达式 执行一个S-表达式的方法有2个 用C-j 用C-x C-e————C-x C-e是一个全局按键，几乎在任何地方都可以使用。也就是说哪怕是没有打开lisp-interaction-mode的情况下使用C-x C-e也可以运行代码，运行结果会在minibuffer中显示 elisp表达式的作用 ≠ elisp表达式的返回值 (message &amp;ldquo;hello world&amp;rdquo;)中message函数的作用是在minibuffer中显示一个字符串，但它的返回值是&amp;quot;hello world&amp;quot; (message &amp;#34;hello world&amp;#34;) elisp的函数和变量 elisp函数 定义一个函数 ;; (defun 函数名(参数列表) ;; 函数文档 //可省略 *如果添加了函数文档，那么使用C-h f查看该函数的时候会显示函数文档的内容* ;; 函数体) (defun helloworld(name) &amp;#34;对name说hello&amp;#34; (message &amp;#34;hello,%s&amp;#34; name)) (helloworld &amp;#34;emacser&amp;#34;) elisp中的函数是全局的，变量也很容易成为全局变量（因为全局变量和局部变量的赋值都是使用setq），所以名字互相不冲突是很关键的 elisp变量 elisp变量无需像c语言变量一样声明，可以直接赋值
-也就是说elisp变量没有类型（存疑） (setq foo &amp;#34;I&amp;#39;m, foo&amp;#34;) (message foo) 使用defvar声明变量 ;; (defvar 变量名 变量值 ;; 变量文档) //可省略 *如果添加了变量文档，使用C-h v查看该变量的时候会显示变量文档的内容* (defvar foo &amp;#34;Did I have a value?</description>
     </item>
     
     <item>
@@ -69,8 +59,8 @@ docker是一个开源的 应用容器引擎 docker能发挥什么作用———
 docker可以让开发者打包他们的应用和依赖包，到一个轻量级、可移植的容器中，然后发布到任何流行的Linux机器上，也可以实现虚拟化。 Docker镜像中包含了运行环境和配置，所以Docker可以简化部署多种应用实例工作。比如Web应用、后台应用、数据库应用、大数据应用比如Hadoop集群、消息队列等等都可以打包成==一个镜像(类)==部署。 Docker确保了执行环境的一致性，使得应用的迁移更加容易 docker和虚拟机的区别
 docker的组成
 docker通过镜像（类）创建容器（实例） Image（镜像）：相当于类 Container（容器）：相当于实例 Repository（仓库）：Docker存放Images的地方 安装docker https://zhuanlan.zhihu.com/p/430652941 删除旧版本docker sudo apt-get remove docker docker-engine docker.io containerd runc sudo rm -rf /var/lib/docker sudo rm -rf /var/lib/containerd 安装docker curl -fsSL https://get.docker.com | bash -s docker &amp;ndash;mirror Aliyun 测试是否安装成功 sudo systemctl start hello-world sudo docker run hello-world 配置加速器 在 /etc/docker/daemon.json 中写入如下内容（如果文件不存在请新建该文件）
-#可以使用下面这个，比较快一些{&amp;#34;registry-mirrors&amp;#34;: [&amp;#34;https://docker.mirrors.ustc.edu.cn/&amp;#34;,&amp;#34;https://hub-mirror.c.163.com&amp;#34;,&amp;#34;https://registry.docker-cn.com&amp;#34;],&amp;#34;insecure-registries&amp;#34;: [&amp;#34;10.0.0.12:5000&amp;#34;]} 配置完成后需要重启Docker服务
-sudo systemctl daemon-reload# daemon-reload: 重新加载某个服务的配置文件，使修改的配置文件生效sudo systemctl restart dockerdocker info# 查看镜像地址与所配置的镜像地址是否匹配，如过匹配，则说明配置成功 docker命令 镜像 查看镜像 sudo docker image ls -a 删除镜像 sudo docker image rm imageid 重命名镜像 sudo docker image tag 镜像id 镜像名 容器 查看docker容器 docker container ls -a 如果STATUS显示为UP，则说明映像正在容器中运行 重命名容器 sudo docker rename 容器id 容器名 创建并启动容器：docker run 注意该只能用于启动未创建的容器，如果启动已经创建的容器，用docker start 进入容器：docker exec -it 容器名 脚本名 docker exec -it oracle11g bash 前面的docker介绍中已经用图示说明了docker包含要运行的应用程序(app)以及应用程序的运行环境(bin、lib)，因此当你进入容器后，实际上就是进入了包含app、bin、lib的环境 例如进入oracle的container，就包含要运行的oracle程序以及oracle的命令行sqlplus等辅助工具，在容器中运行sqlplus，连接oracle主程序，就可以在sqlplus中使用oracle的功能了 docker安装sqlsrver 下载sqlserver映像 sudo docker pull mcr.</description>
+#可以使用下面这个，比较快一些 { &amp;#34;registry-mirrors&amp;#34;: [&amp;#34;https://docker.mirrors.ustc.edu.cn/&amp;#34;,&amp;#34;https://hub-mirror.c.163.com&amp;#34;,&amp;#34;https://registry.docker-cn.com&amp;#34;], &amp;#34;insecure-registries&amp;#34;: [&amp;#34;10.0.0.12:5000&amp;#34;] } 配置完成后需要重启Docker服务
+sudo systemctl daemon-reload # daemon-reload: 重新加载某个服务的配置文件，使修改的配置文件生效 sudo systemctl restart docker docker info # 查看镜像地址与所配置的镜像地址是否匹配，如过匹配，则说明配置成功 docker命令 镜像 查看镜像 sudo docker image ls -a 删除镜像 sudo docker image rm imageid 重命名镜像 sudo docker image tag 镜像id 镜像名 容器 查看docker容器 docker container ls -a 如果STATUS显示为UP，则说明映像正在容器中运行 重命名容器 sudo docker rename 容器id 容器名 创建并启动容器：docker run 注意该只能用于启动未创建的容器，如果启动已经创建的容器，用docker start 进入容器：docker exec -it 容器名 脚本名 docker exec -it oracle11g bash 前面的docker介绍中已经用图示说明了docker包含要运行的应用程序(app)以及应用程序的运行环境(bin、lib)，因此当你进入容器后，实际上就是进入了包含app、bin、lib的环境 例如进入oracle的container，就包含要运行的oracle程序以及oracle的命令行sqlplus等辅助工具，在容器中运行sqlplus，连接oracle主程序，就可以在sqlplus中使用oracle的功能了 docker安装sqlsrver 下载sqlserver映像 sudo docker pull mcr.</description>
     </item>
     
     <item>

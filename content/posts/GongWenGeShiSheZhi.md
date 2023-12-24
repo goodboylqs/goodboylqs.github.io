@@ -1,10 +1,12 @@
 +++
 title = "公文格式设置"
 author = ["553912917@qq.com"]
+description = "公文格式设置的要求，不用再每次百度了"
 date = 2023-11-16
 tags = ["公文格式"]
 categories = ["遴选"]
 draft = false
+featured_image = "../picture/公文.png"
 +++
 
 tags

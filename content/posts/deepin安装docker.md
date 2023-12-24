@@ -1,11 +1,12 @@
 +++
 title = "docker基础+docker安装sqlserver、oracle"
 author = ["553912917@qq.com"]
+description = "在docker中安装sqlserver，下载sql的镜像，docker就自动配置好环境了，不用自己再一遍遍的配置了。"
 date = 2023-09-04T18:18:00+08:00
-lastmod = 2023-09-05T18:43:41+08:00
 tags = ["docker"]
 categories = ["编程"]
 draft = false
+featured_image = "../picture/docker架构.png"
 +++
 
 ## docker介绍 {#docker介绍}

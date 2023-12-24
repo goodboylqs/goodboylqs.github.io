@@ -1,11 +1,13 @@
 +++
 title = "Emacs的Use-Package用法"
 author = ["553912917@qq.com"]
+description = "emacs的插件，用于自动加载emacs的其他插件"
 date = 2023-10-30T23:03:00+08:00
-lastmod = 2023-11-05T12:41:49+08:00
+lastmod = 2023-12-24T14:28:33+08:00
 tags = ["emacs", "use-package"]
 categories = ["emacs", "编程"]
 draft = false
+featured_image = "../picture/use-package.png"
 +++
 
 tags

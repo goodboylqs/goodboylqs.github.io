@@ -1,11 +1,12 @@
 +++
 title = "在手机上使用org-agenda进行日程管理"
 author = ["553912917@qq.com"]
+description = "借助坚果云，实现电脑端的org agenda与手机端的angeda的同步，方便记录工作"
 date = 2023-09-03T13:30:00+08:00
-lastmod = 2023-09-05T19:30:45+08:00
 tags = ["Emacs", "org-mode", "org-agenda"]
 categories = ["编程"]
 draft = false
+featured_image = "../picture/agenda界面.png"
 +++
 
 ## org-agenda手机端同步的难点 {#org-agenda手机端同步的难点}
