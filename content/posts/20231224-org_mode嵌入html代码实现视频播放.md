@@ -3,7 +3,7 @@ title = "org-mode嵌入html代码实现视频播放"
 author = ["553912917@qq.com"]
 description = "实现网页添加b展示视频，原理就是得到b站播放器的html代码就嵌入到网页中，Hugo提供的shortcode功能是一个语法糖，本质上的原理也是一样的。"
 date = 2023-12-23T00:00:00+08:00
-lastmod = 2023-12-24T20:37:13+08:00
+lastmod = 2023-12-24T20:43:20+08:00
 draft = false
 featured_image = "../picture/狮王争霸.png"
 +++
@@ -37,6 +37,3 @@ HTML代码
 
 
 ## iframe标签的可选属性 {#iframe标签的可选属性}
-
-
-## +title:org-mode嵌入html代码实现视频播放 {#plus-title-org-mode嵌入html代码实现视频播放}
