@@ -54,3 +54,9 @@ enableReadingTime=true
     data_theme="preferred_color_scheme"
     data_lang="en"
     crossorigin="anonymous"
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

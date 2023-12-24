@@ -627,7 +627,7 @@ your package declarations.</p>
 <ul>
 <li>如果自定义了要执行的命令就执行自定义的命令，如果只写了要安装的包，并没有指定安装命令，那么use-package会执行默认的安装命令</li>
 </ul>
-<!-- raw HTML omitted -->
+<!--listend-->
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>(use-package ruby-mode
 </span></span><span style="display:flex;"><span>  :ensure-system-package
 </span></span><span style="display:flex;"><span>  ((rubycop <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;gem install rubocop&#34;</span>))    <span style="color:#75715e">;;自定义执行的安装命令是gem install rubycop</span>

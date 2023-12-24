@@ -13,6 +13,27 @@
     
     
         <item>
+        <title>习近平新时代中国特色社会主义思想概论</title>
+        <link>https://goodboylqs.github.io/posts/2023xijinpingxinshidaizhongguoteseshehuizhuyisixianggailun/</link>
+        <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://goodboylqs.github.io/posts/2023xijinpingxinshidaizhongguoteseshehuizhuyisixianggailun/</guid>
+        <description>饮冰十年，难凉热血 https://goodboylqs.github.io/posts/2023xijinpingxinshidaizhongguoteseshehuizhuyisixianggailun/ -&lt;dl&gt;
+&lt;dt&gt;tags&lt;/dt&gt;
+&lt;dd&gt;遴选&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;h2 id=&#34;2023XiJinPingXinShiDaiZhongGuoTeSeSheHuiZhuYiSiXiangGaiLun&#34;&gt;习近平新时代中国特色社会主义思想概论思维导图&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://goodboylqs.github.io/ox-hugo/2023XiJinPingXinShiDaiZhongGuoTeSeSheHuiZhuYiSiXiangGaiLun.pdf&#34;&gt;习思想思维导图&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2023XiJinPingXinShiDaiZhongGuoTeSeSheHuiZhuYiSiXiangGaiLun&#34;&gt;习近平新时代中国特色社会主义思想概论&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;十九大将习思想写入党章&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+- https://goodboylqs.github.io/posts/2023xijinpingxinshidaizhongguoteseshehuizhuyisixianggailun/ - </description>
+        </item>
+    
+    
+    
+        <item>
         <title>Emacs的Use-Package用法</title>
         <link>https://goodboylqs.github.io/posts/2023usepackage/</link>
         <pubDate>Mon, 30 Oct 2023 23:03:00 +0800</pubDate>
@@ -78,7 +99,7 @@ your package declarations.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;如果自定义了要执行的命令就执行自定义的命令，如果只写了要安装的包，并没有指定安装命令，那么use-package会执行默认的安装命令&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!--listend--&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(use-package ruby-mode
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  :ensure-system-package
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  ((rubycop &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;gem install rubocop&amp;#34;&lt;/span&gt;))    &lt;span style=&#34;color:#75715e&#34;&gt;;;自定义执行的安装命令是gem install rubycop&lt;/span&gt;

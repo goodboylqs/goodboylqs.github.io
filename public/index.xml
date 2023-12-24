@@ -13,6 +13,20 @@
     
     
         <item>
+        <title></title>
+        <link>https://goodboylqs.github.io/posts/2023122419-hugo%E7%BD%91%E7%AB%99%E5%B5%8C%E5%85%A5bilibili%E6%92%AD%E6%94%BE%E5%99%A8%E6%92%AD%E6%94%BEb%E7%AB%99%E8%A7%86%E9%A2%91-/</link>
+        <pubDate>Sun, 24 Dec 2023 00:00:00 +0800</pubDate>
+        
+        <guid>https://goodboylqs.github.io/posts/2023122419-hugo%E7%BD%91%E7%AB%99%E5%B5%8C%E5%85%A5bilibili%E6%92%AD%E6%94%BE%E5%99%A8%E6%92%AD%E6%94%BEb%E7%AB%99%E8%A7%86%E9%A2%91-/</guid>
+        <description>饮冰十年，难凉热血 https://goodboylqs.github.io/posts/2023122419-hugo%E7%BD%91%E7%AB%99%E5%B5%8C%E5%85%A5bilibili%E6%92%AD%E6%94%BE%E5%99%A8%E6%92%AD%E6%94%BEb%E7%AB%99%E8%A7%86%E9%A2%91-/ -&lt;div class=&#34;mingmingjiu&#34;&gt;
+&lt;p&gt;&amp;lt;iframe src=&amp;quot;//player.bilibili.com/player.html?aid=371704002&amp;amp;bvid=BV1zZ4y1M7zN&amp;amp;cid=350604677&amp;amp;p=1&amp;quot; scrolling=&amp;ldquo;no&amp;rdquo; border=&amp;ldquo;0&amp;rdquo; frameborder=&amp;ldquo;no&amp;rdquo; framespacing=&amp;ldquo;0&amp;rdquo; allowfullscreen=&amp;ldquo;true&amp;rdquo;&amp;gt; &amp;lt;/iframe&amp;gt;&lt;/p&gt;
+&lt;/div&gt;
+- https://goodboylqs.github.io/posts/2023122419-hugo%E7%BD%91%E7%AB%99%E5%B5%8C%E5%85%A5bilibili%E6%92%AD%E6%94%BE%E5%99%A8%E6%92%AD%E6%94%BEb%E7%AB%99%E8%A7%86%E9%A2%91-/ - </description>
+        </item>
+    
+    
+    
+        <item>
         <title>网站每日更新内容</title>
         <link>https://goodboylqs.github.io/posts/2023122413-%E7%BD%91%E7%AB%99%E6%AF%8F%E6%97%A5%E6%9B%B4%E6%96%B0%E5%86%85%E5%AE%B9/</link>
         <pubDate>Sun, 24 Dec 2023 00:00:00 +0800</pubDate>
@@ -22,7 +36,7 @@
 :&lt;/p&gt;
 &lt;p&gt;source
 :&lt;/p&gt;
-&lt;h2 id=&#34;011149&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&amp;lt;2023-12-24 周日 13:58&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;011149&#34;&gt;&lt;span class=&#34;timestamp-wrapper&#34;&gt;&lt;span class=&#34;timestamp&#34;&gt;&amp;lt;2023-12-24 周日 13:58&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;所有文章加入简介与图片介绍&lt;/li&gt;
 &lt;li&gt;《熵增定律》读书笔记 &lt;a href=&#34;https://goodboylqs.github.io/posts/2023shangzengdinglu/#第十一章-霍桑效应&#34;&gt;第十一章：霍桑效应&lt;/a&gt;&lt;/li&gt;
@@ -64,7 +78,7 @@
 &lt;li&gt;&lt;strong&gt;&lt;strong&gt;大部分属性是非继承的，因为如果默认为继承的话，在属性搜索的时候会因为搜索到的内容太多超载&lt;/strong&gt;&lt;/strong&gt; ，你也可以定义变量org-use-property-inheritance的值来实现继承&lt;/li&gt;
 &lt;li&gt;属性是键值对。当它们与单个条目或一棵树相关联时，需要将它们插入名为“PROPERTIES”的特殊抽屉（参见抽屉）中，该抽屉必须位于标题及其规划线的正下方（参见截止日期和调度）适用时。每个属性都在一行中指定，首先是键（用冒号括起来），然后是值。键不区分大小写。这是一个例子：&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!--listend--&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;* CD collection
 ** Classic
 *** Goldberg Variations
@@ -184,7 +198,7 @@ p or S-LEFT (org-columns-previous-allowed-value)&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;内部链接
 &lt;ul&gt;
-&lt;li&gt;先在要链接的地方用&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;锚定&lt;/li&gt;
+&lt;li&gt;先在要链接的地方用&lt;span class=&#34;org-target&#34; id=&#34;org-target--A&#34;&gt;&lt;/span&gt;锚定&lt;/li&gt;
 &lt;li&gt;链接
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;[[A]]
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
@@ -668,7 +682,7 @@ p or S-LEFT (org-columns-previous-allowed-value)&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;第一类：这类受试者从头到尾始终如一地坚持自己的判断，这类人占24%。第二类：在12次实验同学故意说错的场次中，他们至少会发生一次从众行为，这类被试者占71%。第三类：自始至终始终从众的受试者，占5%。 &lt;strong&gt;从总体结果来看，平均有三分之一的人会有从众行为的发生。&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!--listend--&gt;
 &lt;ul&gt;
 &lt;li&gt;此外，为了验证 &lt;strong&gt;误导者的数量和误导率&lt;/strong&gt; 的关系，阿希教授还安排了类似的实验，并得出了如下结论。1名误导者+1位受试者，从众率1%；2名误导者+1位受试者，从众率13%；3名误导者+1位受试者，从众率32%；再增加误导者数量时，从众效应的发生率的上升就会趋于平缓，不太明显了。&lt;/li&gt;
 &lt;/ul&gt;
@@ -984,7 +998,7 @@ p or S-LEFT (org-columns-previous-allowed-value)&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;罗森塔尔效应市日积月累下的潜意识力量，心理学家卡尔荣格：你的潜意识指引着你的人生，人们称其为命运。——————当潜意识被呈现时，命运就被改写了&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!--list-separator--&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;激发他人的善意&lt;/p&gt;
@@ -1134,7 +1148,7 @@ p or S-LEFT (org-columns-previous-allowed-value)&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;刘润老是是中国商业咨询家的翘楚也是写作大家，而造就刘润老是无与伦比的写作能力的，是小时候经历的一件事。小时候刘润受到报纸上的一篇文章的影响，心血来潮自己也写了一篇，为了不浪费他把这篇文章交给了语文老师，然后语文老师把这篇文章当成了范文在课堂上朗读，让刘润从此找到了写作的乐趣，产生了强有力的内部驱动力。 &lt;strong&gt;因为写作有乐趣，而且他在写作活动中获得了“胜任感”，又促使他不断写作，让他的写作水平越来越高，从而获得更多的“胜任感”，产生正向循环&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!--listend--&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;“我能做到”是贯穿胜任感驱动内部动机的核心要素，胜任感是人们感觉自己有足够的能力从事某一项行为，并且还能取得不错结果的自我认知。心理学家罗伯特怀特指出，胜任是人们渴望在与自身环境交互时感到强烈高效的感觉，它是人类的一种需求。&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;正是这种胜任感，让“这一次成功”不断地影响“下一次成功”，让人产生源源不断的内在动机，驱动自己去挑战下一个更困难更艰巨的目标&lt;/strong&gt;&lt;/li&gt;
@@ -1308,7 +1322,7 @@ p or S-LEFT (org-columns-previous-allowed-value)&lt;/p&gt;
 &lt;li&gt;使用helm-bibtex来读取Zotero导出的bib文件，得到文献的目录及其附件内容
 以下是我自己的emacs配置&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!--listend--&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;;配置使用org-roam-bibtex&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;;第一步：告诉Emacs从哪里读取Zotero的信息&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;;在Deepin下使用bib、pdf、notes的路径&lt;/span&gt;
@@ -1482,7 +1496,7 @@ p or S-LEFT (org-columns-previous-allowed-value)&lt;/p&gt;
 &lt;li&gt;会计的基本职能： &lt;strong&gt;核算（观念总结） 与 监督（过程控制）&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;会计的职能&#34;&gt;会计的职能&lt;/h4&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!--list-separator--&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;核算（记账、算账、报账）&lt;/p&gt;
@@ -1498,7 +1512,7 @@ p or S-LEFT (org-columns-previous-allowed-value)&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!--list-separator--&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;监督&lt;/p&gt;
@@ -1623,27 +1637,6 @@ p or S-LEFT (org-columns-previous-allowed-value)&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;喜欢本身也不是没代价的，真的喜欢就应该为了自己的喜欢付出努力&lt;/strong&gt;&lt;/p&gt;
 - https://goodboylqs.github.io/posts/2023yizhiteliduxingdezhu/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>习近平新时代中国特色社会主义思想概论</title>
-        <link>https://goodboylqs.github.io/posts/2023xijinpingxinshidaizhongguoteseshehuizhuyisixianggailun/</link>
-        <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
-        
-        <guid>https://goodboylqs.github.io/posts/2023xijinpingxinshidaizhongguoteseshehuizhuyisixianggailun/</guid>
-        <description>饮冰十年，难凉热血 https://goodboylqs.github.io/posts/2023xijinpingxinshidaizhongguoteseshehuizhuyisixianggailun/ -&lt;dl&gt;
-&lt;dt&gt;tags&lt;/dt&gt;
-&lt;dd&gt;遴选&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;h2 id=&#34;2023XiJinPingXinShiDaiZhongGuoTeSeSheHuiZhuYiSiXiangGaiLun&#34;&gt;习近平新时代中国特色社会主义思想概论思维导图&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://goodboylqs.github.io/ox-hugo/2023XiJinPingXinShiDaiZhongGuoTeSeSheHuiZhuYiSiXiangGaiLun.pdf&#34;&gt;习思想思维导图&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;2023XiJinPingXinShiDaiZhongGuoTeSeSheHuiZhuYiSiXiangGaiLun&#34;&gt;习近平新时代中国特色社会主义思想概论&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;十九大将习思想写入党章&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-- https://goodboylqs.github.io/posts/2023xijinpingxinshidaizhongguoteseshehuizhuyisixianggailun/ - </description>
         </item>
     
     
