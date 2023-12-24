@@ -267,9 +267,9 @@
                             
 
                             
-                            4 min
+                            8 min
                             
-                            55 s.
+                            56 s.
                         
                     </div>
                 </div>
@@ -334,8 +334,81 @@
 <li>打开一条笔记后，在对应的org headline下面，使用org-noter，既可以调出文献对应的pdf附件并做笔记</li>
 </ol>
 </li>
+<li>使用helm-bibtex来读取Zotero导出的bib文件，得到文献的目录及其附件内容
+以下是我自己的emacs配置</li>
 </ul>
-
+<!-- raw HTML omitted -->
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span><span style="color:#75715e">;;配置使用org-roam-bibtex</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;;第一步：告诉Emacs从哪里读取Zotero的信息</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;;在Deepin下使用bib、pdf、notes的路径</span>
+</span></span><span style="display:flex;"><span>(setq zot_bib <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;~/Nutstore Files/Zotero-Library/bibs/我的文献库.bib&#34;</span>)
+</span></span><span style="display:flex;"><span>      zot_pdf <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;~/Nutstore Files/Zotero-Library/&#34;</span>)
+</span></span><span style="display:flex;"><span>      )
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;; ;;在家里台式机windows下使用的bib、pdf、notes的路径</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;; (setq zot_bib &#39;(&#34;c:/Users/55391/Nutstore/1/Zotero-Library/bibs/书.bib&#34;)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;;       zot_pdf &#39;(&#34;c:/Users/55391/Nutstore/1/Zotero-Library/&#34; &#34;~/Nutstore Files/Zotero-Library/&#34;)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;;       org_refs &#39;(&#34;c:/Users/55391/Nutstore/1/Zotero-Library/notes&#34;)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;;       )</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;; ;;在单位发的电脑的windows下使用的bib、pdf、notes的路径</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;; (setq zot_bib &#39;(&#34;c:/Users/sjt/Nutstore/1/Zotero-Library/bibs/书.bib&#34;)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;;       zot_pdf &#39;(&#34;c:/Users/sjt/Nutstore/1/Zotero-Library/&#34; &#34;~/Nutstore Files/Zotero-Library/&#34;)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;;       org_refs &#39;(&#34;c:/Users/sjt/Nutstore/1/Zotero-Library/notes&#34;)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;;       )</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;;在自己买的华为笔记本windows下使用的bib、pdf、notes的路径</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;;第二步：让helm-bibtex读取Zotero的信息</span>
+</span></span><span style="display:flex;"><span>(use-package helm
+</span></span><span style="display:flex;"><span>  :ensure <span style="color:#66d9ef">t</span>)
+</span></span><span style="display:flex;"><span>(use-package helm-bibtex
+</span></span><span style="display:flex;"><span>  :ensure <span style="color:#66d9ef">t</span>
+</span></span><span style="display:flex;"><span>  :config
+</span></span><span style="display:flex;"><span>  (setq bibtex-completion-notes-path <span style="color:#e6db74">&#34;~/Nutstore Files/Zotero-Library/notes/&#34;</span>)
+</span></span><span style="display:flex;"><span>  (setq bibtex-completion-bibliography zot_bib)
+</span></span><span style="display:flex;"><span>  (setq bibtex-completion-library-path zot_pdf)
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">;;配置helm-bibtex文献搜索界面的显示样式</span>
+</span></span><span style="display:flex;"><span>  (setq bibtex-completion-display-formats
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#39;</span>((article       <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;${=has-pdf=:1}${=has-note=:3} ${=type=:10} ${year:4} {author:20} ${title:40} ${journal:20}&#34;</span>)
+</span></span><span style="display:flex;"><span>      (inbook        <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;${=has-pdf=:1}${=has-note=:1} ${=type=:10} ${year:4} ${author:20} ${title:40} Chapter ${chapter:20}&#34;</span>)
+</span></span><span style="display:flex;"><span>      (incollection  <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;${=has-pdf=:1}${=has-note=:1} ${=type=:10} ${year:4} ${author:20} ${title:40} ${booktitle:20}&#34;</span>)
+</span></span><span style="display:flex;"><span>      (inproceedings <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;${=has-pdf=:1}${=has-note=:1} ${=type=:10} ${year:4} ${author:20} ${title:40} ${booktitle:20&#34;</span>)
+</span></span><span style="display:flex;"><span>      (<span style="color:#66d9ef">t</span>             <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;${=has-pdf=:1}${=has-note=:3} ${=type=:10} ${year:4} ${author:20} ${title:40} ${journal:20}&#34;</span>)))
+</span></span><span style="display:flex;"><span>  (setq bibtex-completion-pdf-symbol <span style="color:#e6db74">&#34;⌘&#34;</span>)
+</span></span><span style="display:flex;"><span>  (setq bibtex-completion-notes-symbol <span style="color:#e6db74">&#34;⌘&#34;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">;;当一个文献条目有多个pdf附件时候会提示你选择打开哪一个</span>
+</span></span><span style="display:flex;"><span>  (setq bibtex-completion-find-additional-pdfs <span style="color:#66d9ef">t</span>)
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;; (use-package ivy-bibtex</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;;   :ensure t)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;;   (autoload &#39;ivy-bibtex &#34;ivy-bibtex&#34; &#34;&#34; t)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;;   ;; ivy-bibtex requires ivy&#39;s `ivy--regex-ignore-order` regex builder, which</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;;   ;; ignores the order of regexp tokens when searching for matching candidates.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;;   ;; Add something like this to your init file:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;;   (setq ivy-re-builders-alist</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;; 	&#39;((ivy-bibtex . ivy--regex-ignore-order)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;; 	  (t . ivy--regex-plus)))</span>
+</span></span><span style="display:flex;"><span>(use-package citar
+</span></span><span style="display:flex;"><span>  :ensure <span style="color:#66d9ef">t</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;;第三步：让org-roam-bibtex使用helm-bibtex的信息，并绑定orb的快捷键</span>
+</span></span><span style="display:flex;"><span>(use-package org-ref
+</span></span><span style="display:flex;"><span>  :ensure <span style="color:#66d9ef">t</span>)
+</span></span><span style="display:flex;"><span>(use-package org-roam-bibtex
+</span></span><span style="display:flex;"><span>  :ensure <span style="color:#66d9ef">t</span>
+</span></span><span style="display:flex;"><span>  :after org-roam
+</span></span><span style="display:flex;"><span>  :hook (org-roam-node <span style="color:#f92672">.</span> org-roam-bibtex-mode)
+</span></span><span style="display:flex;"><span>  :bind ((<span style="color:#e6db74">&#34;C-c n k&#34;</span> <span style="color:#f92672">.</span> orb-insert-link)  <span style="color:#75715e">;;插入文献笔记链接</span>
+</span></span><span style="display:flex;"><span>         (<span style="color:#e6db74">&#34;C-c n a&#34;</span> <span style="color:#f92672">.</span> orb-note-actions)  <span style="color:#75715e">;;在文献笔记界面打开其他操作</span>
+</span></span><span style="display:flex;"><span>         )
+</span></span><span style="display:flex;"><span>  :config
+</span></span><span style="display:flex;"><span>  (require <span style="color:#e6db74">&#39;org-ref</span>) <span style="color:#75715e">; optional: if using Org-ref v2 or v3 citation links</span>
+</span></span><span style="display:flex;"><span>  :custom
+</span></span><span style="display:flex;"><span>  (orb-insert-interface <span style="color:#e6db74">&#39;helm-bibtex</span>)   <span style="color:#75715e">;;与上面helm-bibtex/ivy-bibtex的选择一致</span>
+</span></span><span style="display:flex;"><span>  (orb-insert-link-description <span style="color:#e6db74">&#39;citekey</span>)  <span style="color:#75715e">;;此处的citekey是better bibtex导出的键名</span>
+</span></span><span style="display:flex;"><span>  (orb-preformat-keywords
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;citekey&#34;</span> <span style="color:#e6db74">&#34;title&#34;</span> <span style="color:#e6db74">&#34;url&#34;</span> <span style="color:#e6db74">&#34;author-or-editor&#34;</span> <span style="color:#e6db74">&#34;keywords&#34;</span> <span style="color:#e6db74">&#34;file&#34;</span>))
+</span></span><span style="display:flex;"><span>  (orb-process-file-keyword <span style="color:#66d9ef">t</span>)
+</span></span><span style="display:flex;"><span>  (orb-attached-file-extensions <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;pdf&#34;</span>))
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</span>
+</span></span></code></pre></div>
                     
                     <HR width="100%" id="EOF">
 		    <p style="color:#777;">Last modified on 2023-12-24</p>
