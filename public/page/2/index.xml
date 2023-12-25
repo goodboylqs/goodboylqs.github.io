@@ -1,9 +1,9 @@
 <?xml-stylesheet href="/rss.xsl" type="text/xsl"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>饮冰十年，难凉热血</title>
+    <title>饮冰十年，难凉热血  Having dreams is what makes life tolerable</title>
     <link>https://goodboylqs.github.io/</link>
-    <description>Recent content on 饮冰十年，难凉热血</description>
+    <description>Recent content on 饮冰十年，难凉热血  Having dreams is what makes life tolerable</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 24 Dec 2023 00:00:00 +0800</lastBuildDate>
@@ -18,7 +18,7 @@
         <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
         
         <guid>https://goodboylqs.github.io/posts/2023xijinpingxinshidaizhongguoteseshehuizhuyisixianggailun/</guid>
-        <description>饮冰十年，难凉热血 https://goodboylqs.github.io/posts/2023xijinpingxinshidaizhongguoteseshehuizhuyisixianggailun/ -&lt;dl&gt;
+        <description>饮冰十年，难凉热血  Having dreams is what makes life tolerable https://goodboylqs.github.io/posts/2023xijinpingxinshidaizhongguoteseshehuizhuyisixianggailun/ -&lt;dl&gt;
 &lt;dt&gt;tags&lt;/dt&gt;
 &lt;dd&gt;遴选&lt;/dd&gt;
 &lt;/dl&gt;
@@ -39,7 +39,7 @@
         <pubDate>Mon, 30 Oct 2023 23:03:00 +0800</pubDate>
         
         <guid>https://goodboylqs.github.io/posts/2023usepackage/</guid>
-        <description>饮冰十年，难凉热血 https://goodboylqs.github.io/posts/2023usepackage/ -&lt;dl&gt;
+        <description>饮冰十年，难凉热血  Having dreams is what makes life tolerable https://goodboylqs.github.io/posts/2023usepackage/ -&lt;dl&gt;
 &lt;dt&gt;tags&lt;/dt&gt;
 &lt;dd&gt;autoload,deferred-loading,emacs,emacs-lisp,handler,keymap,keyword,melpa,ues-package&lt;/dd&gt;
 &lt;/dl&gt;
@@ -175,7 +175,7 @@ This takes a symbol, a function, a string or a list of strings.&lt;/p&gt;
         <pubDate>Mon, 04 Sep 2023 18:18:00 +0800</pubDate>
         
         <guid>https://goodboylqs.github.io/posts/deepin%E5%AE%89%E8%A3%85docker/</guid>
-        <description>饮冰十年，难凉热血 https://goodboylqs.github.io/posts/deepin%E5%AE%89%E8%A3%85docker/ -&lt;h2 id=&#34;docker介绍&#34;&gt;docker介绍&lt;/h2&gt;
+        <description>饮冰十年，难凉热血  Having dreams is what makes life tolerable https://goodboylqs.github.io/posts/deepin%E5%AE%89%E8%A3%85docker/ -&lt;h2 id=&#34;docker介绍&#34;&gt;docker介绍&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;docker是什么&lt;/p&gt;
@@ -421,7 +421,7 @@ export PATH=$ORACLE_HOME/bin:$PATH
         <pubDate>Sun, 03 Sep 2023 13:30:00 +0800</pubDate>
         
         <guid>https://goodboylqs.github.io/posts/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8org-agenda%E8%BF%9B%E8%A1%8C%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86/</guid>
-        <description>饮冰十年，难凉热血 https://goodboylqs.github.io/posts/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8org-agenda%E8%BF%9B%E8%A1%8C%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86/ -&lt;h2 id=&#34;org-agenda手机端同步的难点&#34;&gt;org-agenda手机端同步的难点&lt;/h2&gt;
+        <description>饮冰十年，难凉热血  Having dreams is what makes life tolerable https://goodboylqs.github.io/posts/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8org-agenda%E8%BF%9B%E8%A1%8C%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86/ -&lt;h2 id=&#34;org-agenda手机端同步的难点&#34;&gt;org-agenda手机端同步的难点&lt;/h2&gt;
 &lt;p&gt;作为Emacs的重度使用者,org-mode已经成为我日常工作生活不可或缺的重要工具。作为Emac的日程管理插件，org-agenda一直是我用来进行日常管理的重要辅助，其自动添加日期、设置优先级、设置状态等功能为日程管理提供了非常方便的特性。但Emacs作为一款桌面软件，其所有的插件都是为PC使用环境设计的，Emacs各种快捷键的使用可以在电脑键盘下按出来，但在手机键盘上显然就很不方便，同时许多插件依赖操作系统提供的各种依赖库文件，安卓手机也无法提供相关的运行环境。因此在手机上使用Emacs从可操作性、可实现性来说都是不太现实的。虽然Emacs官方已经开发了Emacs app，但是很多功能还是只能在PC上实现，包括org-agenda。时下流行的日程管理软件，包括滴答清单、Todo清单等，都能做到手机、电脑多平台同步，对于日程管理来说，这基本上是最最重要的特性，在手机上随时随地查看日程是大部分人的刚需，如果不能做到多平台同步，只能在PC上查看日程，那日程管理就会非常不方便。通过几天研究，利用了坚果云的自动同步、orgzly APP，我基本上实现了org-agenda的多平台同步，orgzyl提供了App端的org agenda功能，坚果云提供了agenda files的多平台同步，可以在App端显示日程的内容、状态、优先级，并使用App新增日程、修改日程内容等，免费、高效，大大提升了日程管理效率。下面就如何实现手机同步org-agenda简要说明做法。&lt;/p&gt;
 &lt;h2 id=&#34;原理&#34;&gt;原理&lt;/h2&gt;
 &lt;ul&gt;
