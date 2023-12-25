@@ -6,12 +6,12 @@
     <description>Recent content in git on 饮冰十年，难凉热血</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 21 Dec 2023 08:00:00 +0800</lastBuildDate><atom:link href="https://goodboylqs.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 Dec 2023 08:00:00 +0800</lastBuildDate>
+    <atom:link href="https://goodboylqs.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>emacs&amp;git使用学习</title>
       <link>https://goodboylqs.github.io/posts/emacsgit%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/</link>
       <pubDate>Thu, 21 Dec 2023 08:00:00 +0800</pubDate>
-      
       <guid>https://goodboylqs.github.io/posts/emacsgit%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/</guid>
       <description>Property 快捷键 M-S-Left/Right：当前标题及其子标题的升降级
 C-c C-x p (org-set-property) ?
@@ -22,6 +22,5 @@ C-c C-c s (org-set-property) ?
 Set a property in the current entry. Both the property and the value can be inserted using completion.
 手册 大部分属性是非继承的，因为如果默认为继承的话，在属性搜索的时候会因为搜索到的内容太多超载 ，你也可以定义变量org-use-property-inheritance的值来实现继承 属性是键值对。当它们与单个条目或一棵树相关联时，需要将它们插入名为“PROPERTIES”的特殊抽屉（参见抽屉）中，该抽屉必须位于标题及其规划线的正下方（参见截止日期和调度）适用时。每个属性都在一行中指定，首先是键（用冒号括起来），然后是值。键不区分大小写。这是一个例子： * CD collection ** Classic *** Goldberg Variations :PROPERTIES: :Title: Goldberg Variations :Composer: J.</description>
     </item>
-    
   </channel>
 </rss>

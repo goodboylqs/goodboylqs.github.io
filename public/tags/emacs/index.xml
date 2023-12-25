@@ -6,12 +6,12 @@
     <description>Recent content in Emacs on 饮冰十年，难凉热血</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 21 Dec 2023 08:00:00 +0800</lastBuildDate><atom:link href="https://goodboylqs.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 Dec 2023 08:00:00 +0800</lastBuildDate>
+    <atom:link href="https://goodboylqs.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>emacs&amp;git使用学习</title>
       <link>https://goodboylqs.github.io/posts/emacsgit%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/</link>
       <pubDate>Thu, 21 Dec 2023 08:00:00 +0800</pubDate>
-      
       <guid>https://goodboylqs.github.io/posts/emacsgit%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/</guid>
       <description>Property 快捷键 M-S-Left/Right：当前标题及其子标题的升降级
 C-c C-x p (org-set-property) ?
@@ -22,37 +22,31 @@ C-c C-c s (org-set-property) ?
 Set a property in the current entry. Both the property and the value can be inserted using completion.
 手册 大部分属性是非继承的，因为如果默认为继承的话，在属性搜索的时候会因为搜索到的内容太多超载 ，你也可以定义变量org-use-property-inheritance的值来实现继承 属性是键值对。当它们与单个条目或一棵树相关联时，需要将它们插入名为“PROPERTIES”的特殊抽屉（参见抽屉）中，该抽屉必须位于标题及其规划线的正下方（参见截止日期和调度）适用时。每个属性都在一行中指定，首先是键（用冒号括起来），然后是值。键不区分大小写。这是一个例子： * CD collection ** Classic *** Goldberg Variations :PROPERTIES: :Title: Goldberg Variations :Composer: J.</description>
     </item>
-    
     <item>
       <title>Org-Roam-Bibtex的使用</title>
       <link>https://goodboylqs.github.io/posts/2023orgroambibtexdeshiyong/</link>
       <pubDate>Tue, 21 Nov 2023 22:32:00 +0800</pubDate>
-      
       <guid>https://goodboylqs.github.io/posts/2023orgroambibtexdeshiyong/</guid>
       <description>tags :
 Org-Roam-Bibtex的使用 配置方法：https://www.bilibili.com/video/BV1Mg4y1j75u/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=90a44733b775f9f2aeec92b479575071 使用Zotero实现对文献的综合管理，包括文献的命名、文献附件的存储、文献导出格式的规定等 使用Betterbibtex来对导出的bib文件的格式进行规定，包括规定bib文件中没一个条目包含的内容
-@book{2023JiChuHuiJiDi6Ban,title = {基础会计（第6版）},author = {陈国辉，迟旭升},year = {2023},month = nov,publisher = {{东北财经大学出版社}},file = {/home/goodboylqs/Nutstore Files/Zotero-Library/2023JiChuHuiJiDi6Ban.pdf}} 注意事项 编辑引用格式为year+shorttitle(3,3)，这样每个条目的citekey就会被设置为year+shorttitle(3,3)，例如上述的2023JiChuHuiJiDi6Ban
+@book{2023JiChuHuiJiDi6Ban, title = {基础会计（第6版）}, author = {陈国辉，迟旭升}, year = {2023}, month = nov, publisher = {{东北财经大学出版社}}, file = {/home/goodboylqs/Nutstore Files/Zotero-Library/2023JiChuHuiJiDi6Ban.pdf} } 注意事项 编辑引用格式为year+shorttitle(3,3)，这样每个条目的citekey就会被设置为year+shorttitle(3,3)，例如上述的2023JiChuHuiJiDi6Ban
 在添加条目的时候，一定要注意标题和日期是必填的
 使用Zotfile来规定条目对应的pdf的命名格式和存储路径，实现pdf文件的云端备份
 renaming rules设置为%b，含义是将pdf的命名格式设置成与Betterbibtex导出的bib文件的citekey一样，例如上述的file = {/home/goodboylqs/Nutstore Files/Zotero-Library/2023JiChuHuiJiDi6Ban.pdf}中的2023JiChuHuiJiDi6Ban.pdf custom locatios设置pdf的存储路径，这个要与坚果云的同步文件夹路径协同，利用好坚果云的备份实现pdf文件的云端备份 使用方法 先打开Zotero，新建一个条目，编辑条目的标题、摘要、链接等内容。注意标题和日期是必填的，这关系到后面的文件引用格式 右键点击Zotero中新建的条目，添加添加附件&amp;ndash;文件副本，然后对应的文献附件就会按照配置好的命名格式和存储路径进行存储 右键包含所有文献的文件夹，点导出，选择保持更新 打开Emacs，M-x helm-bibtex，就能看到已经有的文献。 但是在该条目没有笔记的时候，不能选中该条目然后tab然后f8编辑笔记。在该条目没有笔记的时候，要C-c n k(orb-insert-link)来为该条目添加笔记，这样才会调出你配置好的zotero文献模板。 当你为条目添加了笔记后，可以①使用helm-bibtex②C-x n f(org-roam-node-find)来查看已经建立的笔记 打开一条笔记后，在对应的org headline下面，使用org-noter，既可以调出文献对应的pdf附件并做笔记 使用helm-bibtex来读取Zotero导出的bib文件，得到文献的目录及其附件内容 以下是我自己的emacs配置 ;;配置使用org-roam-bibtex ;;第一步：告诉Emacs从哪里读取Zotero的信息 ;;在Deepin下使用bib、pdf、notes的路径 (setq zot_bib &amp;#39;(&amp;#34;~/Nutstore Files/Zotero-Library/bibs/我的文献库.bib&amp;#34;) zot_pdf &amp;#39;(&amp;#34;~/Nutstore Files/Zotero-Library/&amp;#34;) ) ;; ;;在家里台式机windows下使用的bib、pdf、notes的路径 ;; (setq zot_bib &amp;#39;(&amp;#34;c:/Users/55391/Nutstore/1/Zotero-Library/bibs/书.</description>
     </item>
-    
     <item>
       <title>Emacs的Use-Package用法</title>
       <link>https://goodboylqs.github.io/posts/2023usepackage/</link>
       <pubDate>Mon, 30 Oct 2023 23:03:00 +0800</pubDate>
-      
       <guid>https://goodboylqs.github.io/posts/2023usepackage/</guid>
       <description>tags autoload,deferred-loading,emacs,emacs-lisp,handler,keymap,keyword,melpa,ues-package Use-Package 关于指定包的加载顺序 after关键字：指定包c在包a加载之后再加载 (use-package ivy-hydra :after (ivy hydra)) In this case, because all of these packages are demand-loaded in the order they occur, the use of :after is not strictly necessary. 为了让ivy-hydra在ivy和hydra加载之后再加载，就需要用到:after关键字。注意对于ivy和hydra的加载语句还是必要的，只是使用了after关键字之后，就不需要必须把加载ivy和hydra的语句放在加载ivy-hydra的语句之前了
 require关键字：如果包a的依赖项不满足则阻止包a的加载 ``Prevent loading if dependencies are missing&amp;rsquo;&amp;rsquo; 当包a需要的加载需要依赖包c时，如org-roam-bibtex的加载需要依赖Org-roam和ivy-bibtex，则需要通过require关键字来指定
 pin关键字：指定你的package来自哪个池子（melpa、gnu、其他） (use-package company :ensure t :pin gnu) (use-package evil :ensure t) ;; no :pin needed, as package.el will choose the version in melpa (use-package adaptive-wrap :ensure t ;; as this package is available only in the gnu archive, this is ;; technically not needed, but it helps to highlight where it ;; comes from :pin gnu) 默认情况下，不使用pin特定指明，默认所有的包来自melpa 可以使用pin来指定包来自gnu ensure-system-package关键字：允许你安装package的时候自动安装package依赖的系统软件 The :ensure-system-package keyword allows you to ensure system binaries exist alongside your package declarations.</description>
     </item>
-    
     <item>
       <title>在手机上使用org-agenda进行日程管理</title>
       <link>https://goodboylqs.github.io/posts/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8org-agenda%E8%BF%9B%E8%A1%8C%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86/</link>
       <pubDate>Sun, 03 Sep 2023 13:30:00 +0800</pubDate>
-      
       <guid>https://goodboylqs.github.io/posts/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8org-agenda%E8%BF%9B%E8%A1%8C%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86/</guid>
       <description>org-agenda手机端同步的难点 作为Emacs的重度使用者,org-mode已经成为我日常工作生活不可或缺的重要工具。作为Emac的日程管理插件，org-agenda一直是我用来进行日常管理的重要辅助，其自动添加日期、设置优先级、设置状态等功能为日程管理提供了非常方便的特性。但Emacs作为一款桌面软件，其所有的插件都是为PC使用环境设计的，Emacs各种快捷键的使用可以在电脑键盘下按出来，但在手机键盘上显然就很不方便，同时许多插件依赖操作系统提供的各种依赖库文件，安卓手机也无法提供相关的运行环境。因此在手机上使用Emacs从可操作性、可实现性来说都是不太现实的。虽然Emacs官方已经开发了Emacs app，但是很多功能还是只能在PC上实现，包括org-agenda。时下流行的日程管理软件，包括滴答清单、Todo清单等，都能做到手机、电脑多平台同步，对于日程管理来说，这基本上是最最重要的特性，在手机上随时随地查看日程是大部分人的刚需，如果不能做到多平台同步，只能在PC上查看日程，那日程管理就会非常不方便。通过几天研究，利用了坚果云的自动同步、orgzly APP，我基本上实现了org-agenda的多平台同步，orgzyl提供了App端的org agenda功能，坚果云提供了agenda files的多平台同步，可以在App端显示日程的内容、状态、优先级，并使用App新增日程、修改日程内容等，免费、高效，大大提升了日程管理效率。下面就如何实现手机同步org-agenda简要说明做法。
 原理 文件同步。org-agenda是对agenda files内容的显示，而日程的内容都是记录在agenda files中的，因此只要实现agenda files的手机同步，就可以查看日程相关内容，这点使用坚果云很容易实现。 日程显示。orgzly可以将agenda files 中的日程识别出来，产生类似于PC端Emacs org-agenda的显示效果。 操作 注册坚果云账号，免费版即可，免费版提供每月1GB的上传和下载流量，对于日程管理文件，这些流量足够了。 在手机上安装坚果云App和orgzly App，其中orgzly App是从FDroid上下载的，需要梯子,为了方便我把安装包分享在这里链接: https://pan.baidu.com/s/1w-maN_MwuivDV8MJIYZY3A 提取码: je4u。在电脑上安装坚果云客户端，Windows和Linux下坚果云都有相关客户端，官方的支持还是很完善的。
@@ -61,6 +55,5 @@ pin关键字：指定你的package来自哪个池子（melpa、gnu、其他） (
 同步完成后，打开orgzly左上角，点Agenda即可看到类似于Emacs org-agenda的显示效果。
 实现Windows、Linux、手机的同步 我自己在Windows、Linux用的emacs配置是同一套，因此也希望能实现Windows、Linux下日程的同步，但难点在于同一个agenda file在Windows和Linux下文件的路径不同，Emacs在寻找agenda files时发现给定路径下找不到对应文件的时会提示你是否要Remove或Abort对应的agenda file。要解决这个问题，只需要设置变量org-agenda-skip-unavailable-files的值为t，即可将Windows和Linux下的agenda files路径同时加入你的init.el中，Emacs会跳过找不到的agenda file并不会提示你，只会将找到的agenda files加入到org agenda中。只需要将Windows和Linux下坚果云同步的agenda files的路径用C-c [加入init.el即可。下图是我的org agenda files的配置。 </description>
     </item>
-    
   </channel>
 </rss>
