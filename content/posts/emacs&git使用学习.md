@@ -3,12 +3,17 @@ title = "emacs&git使用学习"
 author = ["553912917@qq.com"]
 description = "emacs的常用快捷键以及git的工作原理"
 date = 2023-12-21T08:00:00+08:00
-lastmod = 2023-12-24T13:10:52+08:00
+lastmod = 2024-01-04T23:41:14+08:00
 tags = ["emacs", "git"]
 categories = ["编程"]
 draft = false
 featured_image = "../picture/git工作区.jpg"
 +++
+
+## 创建多个eshell buffer {#创建多个eshell-buffer}
+
+-   C-u M-x eshell
+
 
 ## Property {#property}
 
