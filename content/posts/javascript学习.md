@@ -3,7 +3,7 @@ title = "javascript学习记录"
 author = ["lqs_is_a_goodboy"]
 description = "从零开始学javascript，一个是为了使用wps的宏编程，一个是为了为自己的个人网站提供更高级的功能"
 date = 2024-01-04T08:00:00+08:00
-lastmod = 2024-01-05T00:15:49+08:00
+lastmod = 2024-01-05T10:59:37+08:00
 tags = ["编程", "javascript"]
 categories = ["编程"]
 draft = false
@@ -29,4 +29,19 @@ draft = false
     -   浏览器都会帮你实现一些 JS 可以用的工具（函数，对象什么的），你只要写一些 JS 的代码，保存在 xxx.js 里，在 html 文件中用 &lt;script&gt; 关联进来就可以用了
 
 
-##  {#d41d8c}
+## javascript的功能 {#javascript的功能}
+
+
+### 直接向HTML中写入 {#直接向html中写入}
+
+<script>
+  document.write("<h4>这是一个四级标题</h4>");
+</script>
+
+实际上用如下代码即可实现
+
+```html
+<script>
+  document.write("<h4>这是一个四级标题</h4>");
+</script>
+```
