@@ -3,7 +3,7 @@ title = "javascript&html&css学习记录"
 author = ["lqs_is_a_goodboy"]
 description = "从零开始学javascript，一个是为了使用wps的宏编程，一个是为了为自己的个人网站提供更高级的功能"
 date = 2024-01-04T08:00:00+08:00
-lastmod = 2024-01-05T23:30:46+08:00
+lastmod = 2024-01-06T22:13:25+08:00
 tags = ["编程", "javascript"]
 categories = ["编程"]
 draft = false
@@ -105,7 +105,142 @@ draft = false
         -   &lt;style&gt;:定义了html样式文件的引用地址，也可以在&lt;style&gt;中直接添加样式来渲染html文档
 
 
+#### html的div元素 {#html的div元素}
+
+-   &lt;div&gt;标签定义html中的一个分割区块或者一个区域部分
+-   **&lt;div&gt;标签常用于组合块级元素，以便通过CSS来对这些元素进行格式化**
+    ```html
+    <div style="color:#0000FF">
+      <h3>这是一个在div元素中的标题</h3>
+      <p>这是一个在div元素中的文本</p>
+    </div>
+    ```
+
+
 ## css {#css}
+
+
+### css是什么 {#css是什么}
+
+-   Cascading Style Sheets，层叠样式表
+
+
+#### css的功能 {#css的功能}
+
+-   对HTML的元素的样式进行描述， **实现了html的内容和表现的分离，可以极大提高工作效率**
+
+
+### css语法：选择器（html标签）+声明（属性：值） {#css语法-选择器-html标签-plus-声明-属性-值}
+
+-   声明：css声明总是以;结束，声明总是以{}括起来
+
+<!--listend-->
+
+```css
+p
+{
+    color:red;   /*这是一个注释*/
+    text-aligh:center;
+}
+```
+
+-   css注释：以/\*开始，以\*/结束
+
+<!--list-separator-->
+
+-  CSS的id选择器和class选择器
+
+    -   **如果想要在HTML元素中设置CSS样式，需要先在元素中设置id或class属性**
+
+    <!--list-separator-->
+
+    -  id选择器：为单一的html元素设置样式
+
+        ```css
+        /*id选择器可以为标有特定id的HTML元素指定特定的样式，HTML元素以id属性来设置id选择器，CSS中id选择器以#定义*/
+        /*以下的样式规则应用于元素属性id="para1"*/
+        #para1{
+            text-aligh:center;
+            color:yellow;
+        }
+        ```
+
+    <!--list-separator-->
+
+    -  class选择器：为一类html元素设置样式
+
+        -   以下的规则适用于所有拥有center类的html元素
+
+        <!--listend-->
+
+        ```html
+        <!--以下的规则适用于所有拥有center类的html元素-->
+          <!DOCTYPE html>
+          <html>
+          <head>
+          <meta charset="utf-8">
+          <title>菜鸟教程(runoob.com)</title>
+          <style>
+          .center
+          {
+                  text-align:center;
+          }
+          </style>
+          </head>
+
+          <body>
+          <h1 class="center">标题居中</h1>
+          <p class="center">段落居中</p>
+          </body>
+          </html>
+        ```
+
+        -   你也可以指定特定的html元素如p元素使用class，以下的规则适用于所有的使用了class="center"的p元素
+            ```html
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset="utf-8">
+            <title>菜鸟教程(runoob.com)</title>
+            <style>
+            p.center
+            {
+                    text-align:center;
+            }
+            </style>
+            </head>
+
+            <body>
+            <h1 class="center">标题不受影响</h1>
+            <p class="center">段落受影响，居中对齐</p>
+            </body>
+            </html>
+            ```
+
+
+### 创建css文件并引用的方法（外联、内联、内部） {#创建css文件并引用的方法-外联-内联-内部}
+
+
+#### 外联样式表：在外部文件中写css代码，并 **在head中使用link标签来引用外部css。其中link标签的type、href属性要用到，type="text/css"，hrer="文件地址"** {#外联样式表-在外部文件中写css代码-并-在head中使用link标签来引用外部css-其中link标签的type-href属性要用到-type-text-css-hrer-文件地址}
+
+```html
+<head>
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+  </head>
+```
+
+
+#### 内部样式表：直接在head中用style标签写css代码 {#内部样式表-直接在head中用style标签写css代码}
+
+
+#### 内联样式： **直接在相关的标签内使用style属性写css代码** {#内联样式-直接在相关的标签内使用style属性写css代码}
+
+```html
+<p style="color:sienna;margin-left:20px">这是一个段落</p>
+```
+
+
+#### 多重样式优先级：当一个元素在外部样式表、内部样式表、内联样式中都有css描述时，优先级为 **内联样式 &gt; 内部样式 &gt; 外部样式 &gt; 浏览器默认样式** {#多重样式优先级-当一个元素在外部样式表-内部样式表-内联样式中都有css描述时-优先级为-内联样式-内部样式-外部样式-浏览器默认样式}
 
 
 ## javascript {#javascript}
