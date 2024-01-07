@@ -3,7 +3,7 @@ title = "javascript&html&css学习记录"
 author = ["lqs_is_a_goodboy"]
 description = "从零开始学javascript，一个是为了使用wps的宏编程，一个是为了为自己的个人网站提供更高级的功能"
 date = 2024-01-04T08:00:00+08:00
-lastmod = 2024-01-06T22:13:25+08:00
+lastmod = 2024-01-07T15:06:10+08:00
 tags = ["编程", "javascript"]
 categories = ["编程"]
 draft = false
@@ -266,19 +266,147 @@ p
     -   浏览器都会帮你实现一些 JS 可以用的工具（函数，对象什么的），你只要写一些 JS 的代码，保存在 xxx.js 里，在 html 文件中用 &lt;script&gt; 关联进来就可以用了
 
 
+### javascript的用法（内部的javascript和外部的js文件） {#javascript的用法-内部的javascript和外部的js文件}
+
+
+#### 内部的javascript {#内部的javascript}
+
+-   **在html页面中的javascript的代码必须在标签&lt;srcipt&gt;和&lt;/script&gt;之间**
+
+<!--listend-->
+
+```html
+<!DOCTYPE html>
+<html>
+  <script>
+    document.write("<h1>这是一个标题</h1>");
+```
+
+<!--list-separator-->
+
+-  **可以通过javascript的函数来获取html的元素（如document.getElementById("demo")就是获取id="demo"的html元素），然后改变该元素的内容或样式**
+
+    ```html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script>
+          function myfunc()
+          {
+              document.getElementById("demo").innerHTML="我的第一个javascript函数";
+          }
+          </script>
+        </head>
+        <body>
+          <p id="demo">一个段落</p>
+          <button type="button" onclick="myfunc()">尝试一下</button>
+          </body>
+      </html>
+    ```
+
+
+#### 外部的JavaScript {#外部的javascript}
+
+-   **使用外部的.js文件，需要在&lt;script&gt;标签的src属性中设置该.js文件，外部脚本无需&lt;script&gt;标签**
+    ```html
+    <!DOCTYPE html>
+    <html>
+      <script src="myscript.js">
+        </script>
+      <body>
+        <p id="demo">一个段落</p>
+        </body>
+      </html>
+    ```
+
+
 ### javascript的功能 {#javascript的功能}
 
 
-#### 直接向HTML中写入 {#直接向html中写入}
+#### javascript的4种输出数据的方式 {#javascript的4种输出数据的方式}
 
-<script>
-  document.write("<h4>这是一个四级标题</h4>");
-</script>
+<!--list-separator-->
 
-实际上用如下代码即可实现
+-  使用document.write()向HTML中写入
+
+    <script>
+      document.write("<h4>这是一个四级标题</h4>");
+    </script>
+
+    实际上用如下代码即可实现
+
+    ```html
+    <script>
+      document.write("<h4>这是一个四级标题</h4>");
+    </script>
+    ```
+
+<!--list-separator-->
+
+-  使用window.alert()弹出警告框
+
+    ```html
+      <!DOCTYPE html>
+    <html>
+    <body>
+    <h1>一个页面</h1>
+    <p>一个段落</p>
+
+    <script>window.alert(5 + 6);
+    </script>
+
+    </body>
+    </html>
+    ```
+
+<!--list-separator-->
+
+-  使用document.getElementById(id)来获取某个html元素并获取或插入内容
+
+    ```html
+    <!DOCTYPE html>
+    <html>
+      <h1 id="h1">一个页面</h1>
+      <script>
+        document.getElementById("h1").innerHTML= "已修改";
+        </script>
+      </html>
+    ```
+
+<!--list-separator-->
+
+-  将javascript代码的执行结果写到控制台（方便调试）
+
+    -   **在浏览器中使用F12调试，在调试窗口中点击console**
+
+    <!--listend-->
+
+    ```html
+    <!DOCTYPE html>
+    <html>
+      <script>
+        a = 5;
+        b = 6;
+        c = a + b;
+        console.log(c);
+        </script>
+      <html>
+    ```
+
+
+#### 对鼠标点击等事件作出反应 {#对鼠标点击等事件作出反应}
 
 ```html
-<script>
-  document.write("<h4>这是一个四级标题</h4>");
-</script>
+<button type="button" onclick="alert('欢迎')">点我</button>
 ```
+
+
+#### 改变html样式 {#改变html样式}
+
+```js
+x=document.getElementById("demo");  //查找元素
+x.innerHTML="Hello JavaScript";    //改变样式
+```
+
+
+## \*直接向HTML中写入 {#直接向html中写入}
