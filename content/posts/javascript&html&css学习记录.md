@@ -3,7 +3,7 @@ title = "javascript&html&css学习记录"
 author = ["lqs_is_a_goodboy"]
 description = "从零开始学javascript，一个是为了使用wps的宏编程，一个是为了为自己的个人网站提供更高级的功能"
 date = 2024-01-04T08:00:00+08:00
-lastmod = 2024-01-07T15:06:10+08:00
+lastmod = 2024-01-09T11:36:38+08:00
 tags = ["编程", "javascript"]
 categories = ["编程"]
 draft = false
@@ -320,6 +320,52 @@ p
     ```
 
 
+#### javascript的语法 {#javascript的语法}
+
+<!--list-separator-->
+
+-  javascript变量
+
+    <!--list-separator-->
+
+    -  javascript的变量类型
+
+        <!--list-separator-->
+
+        -  数值变量
+
+            -   x = 5,y = 6;
+
+        <!--list-separator-->
+
+        -  表达式变量
+
+            -   z = x+y;
+
+        <!--list-separator-->
+
+        -  文本值变量
+
+            -   x = "goodboylqs"
+
+    <!--list-separator-->
+
+    -  声明javascript变量的方法
+
+        -   **使用var关键字**
+            var x = 3,y = "dog";
+        -   **重新声明变量不会导致变量的值丢失**
+
+        <!--listend-->
+
+        ```js
+        var car = "byd";
+        var car;    //变量car的值依然是"byd"
+        ```
+
+        -   **2015年以前使用var声明js变量，2015年以后可以用let声明一个局部变量，const声明一个常量**
+
+
 ### javascript的功能 {#javascript的功能}
 
 
@@ -409,4 +455,4 @@ x.innerHTML="Hello JavaScript";    //改变样式
 ```
 
 
-## \*直接向HTML中写入 {#直接向html中写入}
+## 直接向HTML中写入 {#直接向html中写入}
