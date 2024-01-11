@@ -3,7 +3,7 @@ title = "javascript&html&css学习记录"
 author = ["lqs_is_a_goodboy"]
 description = "从零开始学javascript，一个是为了使用wps的宏编程，一个是为了为自己的个人网站提供更高级的功能"
 date = 2024-01-04T08:00:00+08:00
-lastmod = 2024-01-09T11:36:38+08:00
+lastmod = 2024-01-11T06:45:29+08:00
 tags = ["编程", "javascript"]
 categories = ["编程"]
 draft = false
@@ -364,6 +364,105 @@ p
         ```
 
         -   **2015年以前使用var声明js变量，2015年以后可以用let声明一个局部变量，const声明一个常量**
+        -   **当声明新变量的时候，可以用new关键字来声明变量类型**
+            ```js
+            var carname = new String;
+            var x = new Number;
+            var cars = new Array;
+            var person = new Object;
+            ```
+
+    <!--list-separator-->
+
+    -  全局变量和局部变量
+
+        -   **局部变量会在函数运行完以后被删除：可以在不同函数中使用名称相同的变量，只要函数运行完毕，本地变量就会被删除**
+        -   **全局变量会在页面关闭后被删除：在函数外声明的变量是全局变量，网页上所有的脚本和函数都能访问它**
+
+<!--list-separator-->
+
+-  javascript的数据类型：值类型、对象类型
+
+    <!--list-separator-->
+
+    -  值类型
+
+        -   字符串（string）、数字、布尔（true、false）、空
+
+    <!--list-separator-->
+
+    -  对象类型
+
+        -   **对象（object）、数组（array）、函数（function）、正则（regexp）、日期（Date）**
+
+        <!--list-separator-->
+
+        -  **js数组**
+
+            ```js
+            //以下3钟方法皆可
+            var cars = new Array();
+            cars[0] = "saab";
+            cars[1] = "volvo";
+            cars[2] = "BMW";
+
+            var cars = new Array（"saab","volvo","BMW"）;
+
+            var cars = ["saab","volvo","BMW"];
+            ```
+
+        <!--list-separator-->
+
+        -  js对象
+
+            -   **javascript当中对象和函数也是变量**
+            -   **JavaScript中几乎所有的事物对是对象**
+            -   **就类似于c＋＋中的类，对象的属性以键值对的形式来定义**
+                ```js
+                //定义一个js对象
+                var person = {
+
+                firstname:"John",
+                lastname:"Tom",
+                id:556,
+                fullName()
+
+                };
+                //对象属性寻址
+                name = person.firstname;
+                name = person["firstname"];
+
+                //访问对象的方法属性
+                name = person.fullName();
+                ```
+
+    <!--list-separator-->
+
+    -  **动态类型：相同的变量可以作用不同的类型**
+
+        ```js
+        var x;
+        var x = 5;  //x现在为数字
+        var x = "John";  //现在x为字符串
+        ```
+
+<!--list-separator-->
+
+-  javascript函数
+
+    -   **javascript当中对象和函数也是变量**
+
+    <!--list-separator-->
+
+    -  定义javascript函数：使用function关键字
+
+        ```js
+          function myfunc(){
+        }
+
+        //有返回值的函数
+        var myVar = myfunc(arg1,arg2);
+        ```
 
 
 ### javascript的功能 {#javascript的功能}
@@ -453,6 +552,3 @@ p
 x=document.getElementById("demo");  //查找元素
 x.innerHTML="Hello JavaScript";    //改变样式
 ```
-
-
-## 直接向HTML中写入 {#直接向html中写入}
