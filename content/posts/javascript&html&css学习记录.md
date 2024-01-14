@@ -3,7 +3,7 @@ title = "javascript&html&css学习记录"
 author = ["lqs_is_a_goodboy"]
 description = "从零开始学javascript，一个是为了使用wps的宏编程，一个是为了为自己的个人网站提供更高级的功能"
 date = 2024-01-04T08:00:00+08:00
-lastmod = 2024-01-14T10:41:56+08:00
+lastmod = 2024-01-14T17:35:11+08:00
 tags = ["编程", "javascript"]
 categories = ["编程"]
 draft = false
@@ -462,6 +462,7 @@ p
 
         //有返回值的函数
         var myVar = myfunc(arg1,arg2);
+
         ```
 
 
@@ -539,11 +540,33 @@ p
     ```
 
 
-#### 对鼠标点击等事件作出反应 {#对鼠标点击等事件作出反应}
+#### javascript事件： **使用html元素的属性来触发事件** {#javascript事件-使用html元素的属性来触发事件}
 
-```html
-<button type="button" onclick="alert('欢迎')">点我</button>
-```
+-   **可以触发的事件类型：html页面加载完成时、input字段发生改变时、按钮点击时等**
+-   语法
+    ```html
+    <html-element event="javascript代码">
+    <button type="button" onclick="alert('欢迎')">点我</button>
+    ```
+-   **不推荐使用html元素中添加事件属性的方式：因为不符合编程高内聚、低耦合的原则**
+    ```html
+    <!->在html中关于元素的内容<-!>
+    <button id="test"></button>
+    ```
+
+    ```js
+    //在js文件中的js代码
+    var test = document.getElementById("test");
+    test.onclick = function changeContent(){
+           ………………
+    }
+    //或者为html元素添加事件
+    var test = document.getElementById("test");
+    test.addEventListener("click",myfunc1);
+    function myfunc1(){
+    alert("你好");
+    }
+    ```
 
 
 #### 改变html样式 {#改变html样式}
