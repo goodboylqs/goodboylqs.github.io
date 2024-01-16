@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>编程遇到的bug总结</title>
+<title>常用函数用法记录</title>
 
 
 
@@ -161,8 +161,8 @@
 						
 						
 							<li>
-								<a href="#%e8%a2%ab%e8%b0%83%e7%94%a8%e5%87%bd%e6%95%b0a%e4%b8%ad%e5%8a%a8%e6%80%81%e5%88%86%e9%85%8d%e7%9a%84%e5%86%85%e5%ad%98-%e4%b8%8d%e8%83%bd%e5%9c%a8%e8%b0%83%e7%94%a8%e8%af%a5%e5%87%bd%e6%95%b0a%e7%9a%84b%e5%87%bd%e6%95%b0%e4%b8%adfree-%e8%80%8c%e6%98%af%e5%ba%94%e8%af%a5%e5%9c%a8a%e4%b8%adfree" class="nav-被调用函数a中动态分配的内存-不能在调用该函数a的b函数中free-而是应该在a中free">
-									被调用函数A中动态分配的内存，不能在调用该函数A的B函数中free，而是应该在A中free
+								<a href="#malloc%e5%87%bd%e6%95%b0%e7%94%a8%e6%b3%95" class="nav-malloc函数用法">
+									malloc函数用法
 								</a>
 							</li>
 						
@@ -223,7 +223,7 @@
                 
             >
                 <div class="post-title">
-                    编程遇到的bug总结
+                    常用函数用法记录
                     
                     <div class="post-subtitle">
                         好记性不如烂笔头
@@ -262,7 +262,7 @@
                             
                             1 min
                             
-                            57 s.
+                            31 s.
                         
                     </div>
                 </div>
@@ -272,55 +272,40 @@
                 
                 <div class="post-body" v-pre>
                 
-                    <h2 id="被调用函数a中动态分配的内存-不能在调用该函数a的b函数中free-而是应该在a中free">被调用函数A中动态分配的内存，不能在调用该函数A的B函数中free，而是应该在A中free</h2>
+                    <h2 id="malloc函数用法">malloc函数用法</h2>
 <ul>
 <li><span class="timestamp-wrapper"><span class="timestamp">&lt;2024-01-02 二&gt;</span></span></li>
 </ul>
-<!--listend-->
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span>  <span style="color:#75715e">// https://leetcode.cn/problems/two-sum/
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">/*
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">target  的那 两个 整数，并返回它们的数组下标。
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">你可以按任意顺序返回答案。
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;stdio.h&#34;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;stdlib.h&#34;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">twoSum</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>nums, <span style="color:#66d9ef">int</span> numSize, <span style="color:#66d9ef">int</span> target, <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>returnSize) {
-</span></span><span style="display:flex;"><span>  returnSize <span style="color:#f92672">=</span> (<span style="color:#66d9ef">int</span><span style="color:#f92672">*</span>)<span style="color:#a6e22e">malloc</span>(<span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">int</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>);   <span style="color:#75715e">//本意是想在被调用函数twoSum中动态分配内存来存储要返回的内容，然后在调用twoSum的main函数中释放动态分配的returnSize内存，但是这样是不对的。正确的方法是，在main函数中进行动态内存的分配和释放，即把这句放到main函数中
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> numSize <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; i<span style="color:#f92672">++</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; j <span style="color:#f92672">&lt;</span> numSize; j<span style="color:#f92672">++</span>) {
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (nums[i] <span style="color:#f92672">+</span> nums[j] <span style="color:#f92672">==</span> target) {
-</span></span><span style="display:flex;"><span>        returnSize[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> nums[i];
-</span></span><span style="display:flex;"><span>        returnSize[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> nums[j];
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> returnSize;
-</span></span><span style="display:flex;"><span>      } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>        ;
-</span></span><span style="display:flex;"><span>      }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>  }
+<p>malloc内的参数是需要动态分配的字节数，而不是可以存储的元素个数！</p>
+<p>当动态分配内存时，存储的是字符型数据，每个元素1字节，所以字节数刚好等于需要存储的元素个数（字符数+1）；</p>
+<p>如果存储的是整型或浮点型数据，字节数等于“需要存储的元素个数 * 一个元素的字节数”，代码格式：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span><span style="color:#75715e">//语法：  type *var_name = (type*)malloc(sizeof(type)*num);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;string.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdlib.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>str;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#75715e">/* 最初的内存分配 */</span>
+</span></span><span style="display:flex;"><span>   str <span style="color:#f92672">=</span> (<span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>) <span style="color:#a6e22e">malloc</span>(<span style="color:#ae81ff">15</span>);
+</span></span><span style="display:flex;"><span>   <span style="color:#a6e22e">strcpy</span>(str, <span style="color:#e6db74">&#34;runoob&#34;</span>);
+</span></span><span style="display:flex;"><span>   <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;String = %s,  Address = %u</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, str, str);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#75715e">/* 重新分配内存 */</span>
+</span></span><span style="display:flex;"><span>   str <span style="color:#f92672">=</span> (<span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>) <span style="color:#a6e22e">realloc</span>(str, <span style="color:#ae81ff">25</span>);
+</span></span><span style="display:flex;"><span>   <span style="color:#a6e22e">strcat</span>(str, <span style="color:#e6db74">&#34;.com&#34;</span>);
+</span></span><span style="display:flex;"><span>   <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;String = %s,  Address = %u</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, str, str);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#a6e22e">free</span>(str);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">return</span>(<span style="color:#ae81ff">0</span>);
 </span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">main</span>() {
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> numSize <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> nums[<span style="color:#ae81ff">4</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">15</span>};
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> target <span style="color:#f92672">=</span> <span style="color:#ae81ff">9</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>returnSize;   <span style="color:#75715e">//应将这句替换为上面的int *returnSize = (int*)malloc(sizeof(int) * 2)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">twoSum</span>(nums, numSize, target, returnSize);
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;nums:&#34;</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> numSize; i<span style="color:#f92672">++</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%d&#34;</span>,nums[i]);
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (i <span style="color:#f92672">!=</span> numSize <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) {
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;,&#34;</span>);
-</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;target:%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,target);
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;returnSize:%d,%d&#34;</span>,returnSize[<span style="color:#ae81ff">0</span>],returnSize[<span style="color:#ae81ff">1</span>]);
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">free</span>(returnSize);
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div>
+</span></span></code></pre></div><p>malloc完成后要用free来释放分配的内存， <strong>在哪个函数中调用malloc就在哪个函数中对应free，而不是在A函数中malloc，然后A函数将malloc的内存的指针传递给B，然后在B中free，这样是错误的也是很容易混淆的</strong></p>
+
                     
                     <HR width="100%" id="EOF">
 		    <p style="color:#777;">Last modified on 2024-01-02</p>
@@ -332,14 +317,14 @@
             <nav class="post-pagination">
 
                 
-                <a class="newer-posts" href="/posts/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E7%94%A8%E6%B3%95%E8%AE%B0%E5%BD%95/">
-			Next<br>常用函数用法记录
+                <a class="newer-posts" href="/posts/javascripthtmlcss%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">
+			Next<br>javascript&amp;html&amp;css学习记录
                 </a>
                 
                 
                 
-                <a class="older-posts" href="/posts/20231224-org_mode%E5%B5%8C%E5%85%A5html%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE/">
-			Previous<br>org-mode嵌入html代码实现视频播放
+                <a class="older-posts" href="/posts/%E7%BC%96%E7%A8%8B%E9%81%87%E5%88%B0%E7%9A%84bug%E6%80%BB%E7%BB%93/">
+			Previous<br>编程遇到的bug总结
                 </a>
                 
             </nav>
@@ -503,8 +488,8 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 						
 						
 							<li>
-								<a href="#%e8%a2%ab%e8%b0%83%e7%94%a8%e5%87%bd%e6%95%b0a%e4%b8%ad%e5%8a%a8%e6%80%81%e5%88%86%e9%85%8d%e7%9a%84%e5%86%85%e5%ad%98-%e4%b8%8d%e8%83%bd%e5%9c%a8%e8%b0%83%e7%94%a8%e8%af%a5%e5%87%bd%e6%95%b0a%e7%9a%84b%e5%87%bd%e6%95%b0%e4%b8%adfree-%e8%80%8c%e6%98%af%e5%ba%94%e8%af%a5%e5%9c%a8a%e4%b8%adfree" class="nav-被调用函数a中动态分配的内存-不能在调用该函数a的b函数中free-而是应该在a中free">
-									被调用函数A中动态分配的内存，不能在调用该函数A的B函数中free，而是应该在A中free
+								<a href="#malloc%e5%87%bd%e6%95%b0%e7%94%a8%e6%b3%95" class="nav-malloc函数用法">
+									malloc函数用法
 								</a>
 							</li>
 						
