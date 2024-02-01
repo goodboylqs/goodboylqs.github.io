@@ -1,13 +1,67 @@
 +++
 title = "编程遇到的bug总结"
-author = ["553912917@qq.com"]
+author = ["lqs_is_a_goodboy"]
 description = "好记性不如烂笔头"
 date = 2024-01-02T08:00:00+08:00
-lastmod = 2024-01-02T16:46:35+08:00
+lastmod = 2024-01-22T23:01:42+08:00
 tags = ["编程", "c语言"]
 categories = ["编程"]
 draft = false
 +++
+
+## git连接github的时候提示connection time out {#git连接github的时候提示connection-time-out}
+
+$ git clone git@github.com:xxxxx/xxxx.git my-awesome-proj
+Cloning into 'my-awesome-proj'...
+ssh: connect to host github.com port 22: Connection timed out
+fatal: Could not read from remote repository.
+
+$ # This should also timeout
+$ ssh -T git@github.com
+ssh: connect to host github.com port 22: Connection timed out
+
+$ # but this might work
+$ ssh -T -p 443 git@ssh.github.com
+Hi xxxx! You've successfully authenticated, but GitHub does not provide shell access.
+
+$ # Override SSH settings
+
+$ vim ~/.ssh/config
+\`\`\`
+
+Host github.com
+  Hostname ssh.github.com
+  Port 443
+\`\`\`
+$ ssh -T git@github.com
+Hi xxxxx! You've successfully authenticated, but GitHub does not
+provide shell access.
+
+$ git clone git@github.com:xxxxxx/xxxxx.git my-awesome-proj
+Cloning into 'my-awesome-proj'...
+remote: Enumerating objects: 15, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (14/14), done.
+remote: Total 15 (delta 0), reused 15 (delta 0), pack-reused 0
+Receiving objects: 100% (15/15), 22.90 KiB | 4.58 MiB/s, done.
+
+
+## E: 无法获得锁 /var/lib/dpkg/lock - open (11: 资源暂时不可用) {#e-无法获得锁-var-lib-dpkg-lock-open--11-资源暂时不可用}
+
+
+### 方法一 {#方法一}
+
+已经打开的包管理程序（例如：apt-get 或 aptitude）在运行，请先关掉它。 如果不知道是哪个程序，打开终端查看与apt-get有关的程序,sudo kill 前面的数字。或者 可以重启电脑。
+
+
+### 方法二 {#方法二}
+
+打开终端,依次执行下面的命令：
+
+sudo rm /var/cache/apt/archives/lock
+sudo rm /var/lib/dpkg/lock
+sudo rm /var/lib/apt/lists/lock
+
 
 ## 被调用函数A中动态分配的内存，不能在调用该函数A的B函数中free，而是应该在A中free {#被调用函数a中动态分配的内存-不能在调用该函数a的b函数中free-而是应该在a中free}
 

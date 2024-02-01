@@ -6,16 +6,33 @@
     <description>Recent content in 编程 on 饮冰十年，难凉热血  Having dreams is what makes life tolerable</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 02 Jan 2024 16:21:59 +0800</lastBuildDate><atom:link href="https://goodboylqs.github.io/tags/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 04 Jan 2024 08:00:00 +0800</lastBuildDate>
+    <atom:link href="https://goodboylqs.github.io/tags/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
-      <link>https://goodboylqs.github.io/posts/%E7%BC%96%E7%A8%8B%E9%81%87%E5%88%B0%E7%9A%84bug%E6%80%BB%E7%BB%93/</link>
-      <pubDate>Tue, 02 Jan 2024 16:21:59 +0800</pubDate>
-      
-      <guid>https://goodboylqs.github.io/posts/%E7%BC%96%E7%A8%8B%E9%81%87%E5%88%B0%E7%9A%84bug%E6%80%BB%E7%BB%93/</guid>
-      <description>title: 编程遇到的bug总结
-被调用函数A中动态分配的内存，不能在调用该函数A的B函数中free，而是应该在A中free &amp;lt;2024-01-02 二&amp;gt; // https://leetcode.cn/problems/two-sum/ /* 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target 的那 两个 整数，并返回它们的数组下标。 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。 你可以按任意顺序返回答案。 */ #include &amp;#34;stdio.h&amp;#34; #include &amp;#34;stdlib.h&amp;#34; int *twoSum(int *nums, int numSize, int target, int *returnSize) { returnSize = (int*)malloc(sizeof(int) * 2); //本意是想在被调用函数twoSum中动态分配内存来存储要返回的内容，然后在调用twoSum的main函数中释放动态分配的returnSize内存，但是这样是不对的。正确的方法是，在main函数中进行动态内存的分配和释放，即把这句放到main函数中 for (int i = 0; i &amp;lt; numSize - 1; i++) { for (int j = i + 1; j &amp;lt; numSize; j++) { if (nums[i] + nums[j] == target) { returnSize[0] = nums[i]; returnSize[1] = nums[j]; return returnSize; } else { ; } } } } int *main() { int numSize = 4; int nums[4] = {2, 7, 11, 15}; int target = 9; int *returnSize; //应将这句替换为上面的int *returnSize = (int*)malloc(sizeof(int) * 2) twoSum(nums, numSize, target, returnSize); printf(&amp;#34;nums:&amp;#34;); for (int i = 0; i &amp;lt; numSize; i++) { printf(&amp;#34;%d&amp;#34;,nums[i]); if (i !</description>
+      <title>javascript&amp;html&amp;css学习记录</title>
+      <link>https://goodboylqs.github.io/posts/javascripthtmlcss%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Thu, 04 Jan 2024 08:00:00 +0800</pubDate>
+      <guid>https://goodboylqs.github.io/posts/javascripthtmlcss%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</guid>
+      <description>学习的目的不是为了学习，而是为了解决问题，所以遇到什么问题就去学相关的内容，时间经历有限不要啥都学 html 参考：https://www.runoob.com/html/html-tutorial.html html是什么 HyperText Markup Language，用于创建网页的一种标记语言，不是编程语言。 html使用标签来描述网页 html运行在浏览器上，由浏览器来解析 html页面的结构 &amp;lt;!DOCTYPE html&amp;gt;声明为html5文档 &amp;lt;html&amp;gt;元素是HTML页面的根元素 &amp;lt;head&amp;gt;元素包含了文档的元(meta)数据，如&amp;lt;meta charset=&amp;ldquo;utf-8&amp;rdquo;&amp;gt;定义网页编码格式为utf-8 &amp;lt;title&amp;gt;描述文档标题 &amp;lt;body&amp;gt;包含了可见的页面内容，只有&amp;lt;body&amp;gt;&amp;lt;/body&amp;gt;区域才会在浏览器中显示 &amp;lt;p&amp;gt;定义一个段落 html元素（包含一个开始标签到结束标签的所有内容）和html属性（属性是html元素提供的附加信息） 一个链接元素
+&amp;lt;a href=&amp;#34;https://baidu.com&amp;#34;&amp;gt;百度&amp;lt;/a&amp;gt; 上面从&amp;lt;a&amp;gt;开始到&amp;lt;/a&amp;gt;的内容就是一个html元素， href是元素的属性，属性总是以键值对的形式出现，如name=&amp;ldquo;value&amp;rdquo; 适用于大多数html元素的属性 属性 描述 class 为html元素定义一个或多个类名， 类名从样式文件引入 id 定义元素唯一的id style 规定元素的行内样式 title 描述了元素的额外信息（作为工具条使用） html常用元素的标签、属性 html标签列表（功能排序） html链接标签
+标签&amp;lt;a&amp;gt;，属性href， 链接可以分文字链接、图片链接、内部链接、下载链接、id链接 &amp;lt;a href=&amp;#34;https://baidu.com&amp;#34;&amp;gt;百度&amp;lt;/a&amp;gt; //图片链接 &amp;lt;a href=&amp;#34;https://baidu.com&amp;#34;&amp;gt; &amp;lt;img src=&amp;#34;wadasd.jpg&amp;#34; alt=&amp;#34;示例图片&amp;#34;&amp;gt; &amp;lt;/a&amp;gt; //内部链接 1.在想要链接到的地方创建锚点 &amp;lt;a name=&amp;#34;section2&amp;#34;&amp;gt;&amp;lt;/a&amp;gt; 2.添加到锚点的链接 &amp;lt;a href=&amp;#34;#section2&amp;#34;&amp;gt;跳转到section2&amp;lt;/a&amp;gt; //下载链接 &amp;lt;a href=&amp;#34;document.pdf&amp;#34; download&amp;gt;下载文档&amp;lt;/a&amp;gt; //id链接 1.id属性可用于创建一个html书签，先创建一个书签，然后用链接链到这个书签 &amp;lt;a id=&amp;#34;tips&amp;#34;&amp;gt;有用的提示部分&amp;lt;/a&amp;gt; 2.链接到书签 &amp;lt;a href=&amp;#34;https://page2.com/index.html#tips&amp;#34;&amp;gt;访问有用的提示部分&amp;lt;/a&amp;gt; html的head元素 &amp;lt;head&amp;gt;元素包含了所有的头部标签元素，在&amp;lt;head&amp;gt;元素中你可以插入脚本、插入样式文件、插入各种meta信息 可以在&amp;lt;head&amp;gt;元素区域添加的标签 &amp;lt;meta&amp;gt;:可添加html文档的描述、关键词、作者、字符集，meta中的数据可以用于浏览器搜索 &amp;lt;base&amp;gt;:为html文档中的所有链接标签提供了默认链接 &amp;lt;head&amp;gt; &amp;lt;base href=&amp;#34;http://www.</description>
     </item>
-    
+    <item>
+      <title>常用函数用法记录</title>
+      <link>https://goodboylqs.github.io/posts/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E7%94%A8%E6%B3%95%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Tue, 02 Jan 2024 08:00:00 +0800</pubDate>
+      <guid>https://goodboylqs.github.io/posts/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E7%94%A8%E6%B3%95%E8%AE%B0%E5%BD%95/</guid>
+      <description>malloc函数用法 &amp;lt;2024-01-02 二&amp;gt; malloc内的参数是需要动态分配的字节数，而不是可以存储的元素个数！
+当动态分配内存时，存储的是字符型数据，每个元素1字节，所以字节数刚好等于需要存储的元素个数（字符数+1）；
+如果存储的是整型或浮点型数据，字节数等于“需要存储的元素个数 * 一个元素的字节数”，代码格式：
+//语法： type *var_name = (type*)malloc(sizeof(type)*num); #include &amp;lt;stdio.h&amp;gt; #include &amp;lt;string.h&amp;gt; #include &amp;lt;stdlib.h&amp;gt; int main() { char *str; /* 最初的内存分配 */ str = (char *) malloc(15); strcpy(str, &amp;#34;runoob&amp;#34;); printf(&amp;#34;String = %s, Address = %u\n&amp;#34;, str, str); /* 重新分配内存 */ str = (char *) realloc(str, 25); strcat(str, &amp;#34;.com&amp;#34;); printf(&amp;#34;String = %s, Address = %u\n&amp;#34;, str, str); free(str); return(0); } malloc完成后要用free来释放分配的内存， 在哪个函数中调用malloc就在哪个函数中对应free，而不是在A函数中malloc，然后A函数将malloc的内存的指针传递给B，然后在B中free，这样是错误的也是很容易混淆的</description>
+    </item>
+    <item>
+      <title>编程遇到的bug总结</title>
+      <link>https://goodboylqs.github.io/posts/%E7%BC%96%E7%A8%8B%E9%81%87%E5%88%B0%E7%9A%84bug%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Tue, 02 Jan 2024 08:00:00 +0800</pubDate>
+      <guid>https://goodboylqs.github.io/posts/%E7%BC%96%E7%A8%8B%E9%81%87%E5%88%B0%E7%9A%84bug%E6%80%BB%E7%BB%93/</guid>
+      <description>被调用函数A中动态分配的内存，不能在调用该函数A的B函数中free，而是应该在A中free &amp;lt;2024-01-02 二&amp;gt; // https://leetcode.cn/problems/two-sum/ /* 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target 的那 两个 整数，并返回它们的数组下标。 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。 你可以按任意顺序返回答案。 */ #include &amp;#34;stdio.h&amp;#34; #include &amp;#34;stdlib.h&amp;#34; int *twoSum(int *nums, int numSize, int target, int *returnSize) { returnSize = (int*)malloc(sizeof(int) * 2); //本意是想在被调用函数twoSum中动态分配内存来存储要返回的内容，然后在调用twoSum的main函数中释放动态分配的returnSize内存，但是这样是不对的。正确的方法是，在main函数中进行动态内存的分配和释放，即把这句放到main函数中 for (int i = 0; i &amp;lt; numSize - 1; i++) { for (int j = i + 1; j &amp;lt; numSize; j++) { if (nums[i] + nums[j] == target) { returnSize[0] = nums[i]; returnSize[1] = nums[j]; return returnSize; } else { ; } } } } int *main() { int numSize = 4; int nums[4] = {2, 7, 11, 15}; int target = 9; int *returnSize; //应将这句替换为上面的int *returnSize = (int*)malloc(sizeof(int) * 2) twoSum(nums, numSize, target, returnSize); printf(&amp;#34;nums:&amp;#34;); for (int i = 0; i &amp;lt; numSize; i++) { printf(&amp;#34;%d&amp;#34;,nums[i]); if (i !</description>
+    </item>
   </channel>
 </rss>

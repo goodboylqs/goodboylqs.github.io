@@ -6,9 +6,427 @@
     <description>Recent content on 饮冰十年，难凉热血  Having dreams is what makes life tolerable</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 02 Jan 2024 16:21:59 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jan 2024 10:00:00 +0800</lastBuildDate>
     
         <atom:link href="https://goodboylqs.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Elisp学习</title>
+        <link>https://goodboylqs.github.io/posts/2023elispxuexi/</link>
+        <pubDate>Wed, 15 Nov 2023 23:43:00 +0800</pubDate>
+        
+        <guid>https://goodboylqs.github.io/posts/2023elispxuexi/</guid>
+        <description>饮冰十年，难凉热血  Having dreams is what makes life tolerable https://goodboylqs.github.io/posts/2023elispxuexi/ -&lt;p&gt;tags
+:&lt;/p&gt;
+&lt;h2 id=&#34;2023ElispXueXi&#34;&gt;Elisp学习&lt;/h2&gt;
+&lt;p&gt;filetags: @编程 elisp学习 emacs&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;tags&lt;/dt&gt;
+&lt;dd&gt;编程 emacs&lt;/dd&gt;
+&lt;dt&gt;source&lt;/dt&gt;
+&lt;dd&gt;&lt;a href=&#34;http://smacs.github.io/elisp/&#34;&gt;http://smacs.github.io/elisp/&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;date&lt;/dt&gt;
+&lt;dd&gt;&lt;span class=&#34;timestamp-wrapper&#34;&gt;&lt;span class=&#34;timestamp&#34;&gt;&amp;lt;2023-11-15 周三 23:41&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;h3 id=&#34;elisp的运行环境&#34;&gt;elisp的运行环境&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;只有在lisp-interaction-mode下，才能执行elisp代码
+&lt;ul&gt;
+&lt;li&gt;M-x lisp-interaction-mode&lt;/li&gt;
+&lt;li&gt;在行尾右括号后面按C-j&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;elisp不好作为可执行方式来来运行，所有的elisp都是在emacs的环境下&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;在org-mode中插入src代码块&#34;&gt;在org-mode中插入src代码块&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;C-c C-,(org-insert-structure-template)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;在org-mode中的src区域运行代码&#34;&gt;在org-mode中的src区域运行代码&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;将光标移动到src区域，按C-c C-c即可运行代码&lt;/li&gt;
+&lt;li&gt;将光标移动到src区域，按C-c &amp;lsquo;可对代码进行编辑&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;elisp表达式&#34;&gt;elisp表达式&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;elisp的表达式是一个括号括起来，成为一个S-表达式&lt;/li&gt;
+&lt;li&gt;执行一个S-表达式的方法有2个
+&lt;ul&gt;
+&lt;li&gt;用C-j&lt;/li&gt;
+&lt;li&gt;用C-x C-e————C-x C-e是一个全局按键，几乎在任何地方都可以使用。也就是说哪怕是没有打开lisp-interaction-mode的情况下使用C-x C-e也可以运行代码，运行结果会在minibuffer中显示&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;elisp表达式的作用 ≠ elisp表达式的返回值&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;(message &amp;ldquo;hello world&amp;rdquo;)中message函数的作用是在minibuffer中显示一个字符串，但它的返回值是&amp;quot;hello world&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--listend--&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;message&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;hello world&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;elisp的函数和变量&#34;&gt;elisp的函数和变量&lt;/h3&gt;
+&lt;h4 id=&#34;elisp函数&#34;&gt;elisp函数&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;定义一个函数
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;;    (defun 函数名(参数列表)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;;      函数文档  //可省略 *如果添加了函数文档，那么使用C-h f查看该函数的时候会显示函数文档的内容*&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;;      函数体)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(defun helloworld(name)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;对name说hello&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#a6e22e&#34;&gt;message&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;hello,%s&amp;#34;&lt;/span&gt; name))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(helloworld &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;emacser&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;elisp中的函数是全局的，变量也很容易成为全局变量（因为全局变量和局部变量的赋值都是使用setq），所以名字互相不冲突是很关键的&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;elisp变量&#34;&gt;elisp变量&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;elisp变量无需像c语言变量一样声明，可以直接赋值&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;也就是说elisp变量没有类型（存疑）&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--listend--&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(setq foo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;I&amp;#39;m, foo&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;message&lt;/span&gt; foo)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--list-separator--&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;使用defvar声明变量&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;; (defvar 变量名 变量值&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;;   变量文档)      //可省略 *如果添加了变量文档，使用C-h v查看该变量的时候会显示变量文档的内容*&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(defvar foo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Did I have a value?&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;A demo variable&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;foo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;defvar 与 setq的区别&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;defvar可以为变量提供文档&lt;/li&gt;
+&lt;li&gt;de&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--list-separator--&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;全局变量和局部变量&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;elisp中的函数是全局的，变量也很容易成为全局变量（因为全局变量和局部变量的赋值都是使用setq），所以名字互相不冲突是很关键的&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;所以局部变量很重要&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;elisp里可以用let和let* 进行局部变量的绑定&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;let的语法
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(let (bindings)        &lt;span style=&#34;color:#75715e&#34;&gt;;;bindings可以使(var value)这样对var赋初始值的形式，也可以是直接var声明一个初始值为nil的变量&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  body)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;eg1.我写的，有错误，错在①没有使用setq对变量进行赋值②变量乘法的表达式不对③对let的用法，bindings部分没有使用括号括起来&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--listend--&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(defun circle-area(radix)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (let pi &lt;span style=&#34;color:#ae81ff&#34;&gt;3.14&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (let area pi*radix*radix)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#a6e22e&#34;&gt;message&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;radix is %.2f,circle&amp;#39;s area is %.2f&amp;#34;&lt;/span&gt; radix area))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(circle-area &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)  &lt;span style=&#34;color:#75715e&#34;&gt;;;提示wrong type argument,listp 3.1415&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;eg2.有错误: &lt;strong&gt;let中不能再包含let声明，对变量area的声明利用第一个let进行即可。而且对let声明的变量的使用，一定要再let的body部分，不能在let的括号外&lt;/strong&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(defun circle-area(radix)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (let (pi &lt;span style=&#34;color:#ae81ff&#34;&gt;3.14&lt;/span&gt;)    &lt;span style=&#34;color:#75715e&#34;&gt;;;bindings为(var value)的形式&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (let  area)          &lt;span style=&#34;color:#75715e&#34;&gt;;;bindings为(var)的形式，var的初始值为nil&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (setq area (&lt;span style=&#34;color:#a6e22e&#34;&gt;*&lt;/span&gt; pi radix radix))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#a6e22e&#34;&gt;message&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;直径为%.2f的圆面积是%.2f&amp;#34;&lt;/span&gt; radix area))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  )
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(circle-area &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;)  &lt;span style=&#34;color:#75715e&#34;&gt;;;提示wrong type argument,listp 3.1415&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;eg3.有错误：对let的使用方式错误，bindings部分没有使用括号括起来
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(defun circle-area(radix)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (let (pi &lt;span style=&#34;color:#ae81ff&#34;&gt;3.1415926&lt;/span&gt;) area)   &lt;span style=&#34;color:#75715e&#34;&gt;;正确的应该是(let( (pi 3.14) area) )，(pi 3.14) area是bindings部分，body部分是空的&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (setq area (&lt;span style=&#34;color:#a6e22e&#34;&gt;*&lt;/span&gt; pi radix radix))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#a6e22e&#34;&gt;message&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;直径为%.2f的圆面积是％.2f&amp;#34;&lt;/span&gt; radix area))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(circle-area &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;)          &lt;span style=&#34;color:#75715e&#34;&gt;;;提示wrong type argument,listp 3.1415&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;eg.4.正确的
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(defun circle-area(radix)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (let ((pi &lt;span style=&#34;color:#ae81ff&#34;&gt;3.1415926&lt;/span&gt;) area))    &lt;span style=&#34;color:#75715e&#34;&gt;;;一个完整的(let(bindings)body)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (setq area (&lt;span style=&#34;color:#a6e22e&#34;&gt;*&lt;/span&gt; pi radix radix))  &lt;span style=&#34;color:#75715e&#34;&gt;;;和前面的let声明没有任何关系，只是用了let声明的变量&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#a6e22e&#34;&gt;message&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;直径为%.2f的圆面积是%.2f&amp;#34;&lt;/span&gt; radix area)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  )
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(circle-area &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;lambda表达式&#34;&gt;lambda表达式&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;可以把lambda表达式当成一个值，lambda表达式最常用的就是作为参数传递给其他函数&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;lambda表达式的形式和defun完全一样&lt;/strong&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(lambda (arguments-list)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;函数文档&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  body)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;调用lambda表达式与调用defun定义的函数的区别： &lt;strong&gt;用lambda定义的函数没有函数名，用defun定义的函数有函数名，所以用defun定义的函数直接用函数名调用即可，而用lambda定义的函数名需要用funcall调用&lt;/strong&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;funcall&lt;/span&gt; (lambda (name)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;           (&lt;span style=&#34;color:#a6e22e&#34;&gt;message&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello,%s!&amp;#34;&lt;/span&gt; name))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Emacser&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         ) &lt;span style=&#34;color:#75715e&#34;&gt;;; *把lambda函数看作一个整体A，A就是一个函数，实际上就是（funcall A 参数），普通的函数调用是（A 参数）*&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;可以把lambda表达式赋值给一个变量
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(setq foo (lambda (name)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            (&lt;span style=&#34;color:#a6e22e&#34;&gt;message&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello,%s!&amp;#34;&lt;/span&gt; name))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      )
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;funcall&lt;/span&gt; foo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Emacser&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;控制结构&#34;&gt;控制结构&lt;/h3&gt;
+&lt;h4 id=&#34;顺序执行&#34;&gt;顺序执行&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;; (progn A B C...)  ;;让ABC顺序执行&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(progn
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (setq foo &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#a6e22e&#34;&gt;message&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Square of %d is %d&amp;#34;&lt;/span&gt; foo (&lt;span style=&#34;color:#a6e22e&#34;&gt;*&lt;/span&gt; foo foo)))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;条件判断&#34;&gt;条件判断&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;elisp有两个最基本的条件判断表达式if 和 cond&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--listend--&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(if condition
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    then
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  else)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;; 注意if后面执行的语句如果超过1句，一定要用progn，而不是直接括号括起来&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;; 注意是(if t)而不是(if (t))，后者是错误的，例如(if (numberp 1))是正确的&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(cond
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; (case1 do-when-case1)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; (case2 do-when-case2)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;t&lt;/span&gt; do-when-none-meet))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;循环&#34;&gt;循环&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(while condition
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    body)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(while (&lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;gt;&lt;/span&gt; n &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (setq n &lt;span style=&#34;color:#a6e22e&#34;&gt;=&lt;/span&gt; n &lt;span style=&#34;color:#a6e22e&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;elisp数据类型&#34;&gt;elisp数据类型&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;elisp里的对象都是有类型的，而且你得到一个变量之后可以用很多方法来检测这个变量的类型&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;数字&#34;&gt;数字&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;emacs数字有整数和浮点数&lt;/li&gt;
+&lt;li&gt;*整数类型的检测函数intergerp、浮点数类型的检测函数floatp、数字类型的检测函数numberp&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--listend--&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;; (message &amp;#34;%s&amp;#34; (numberp 1))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(if (&lt;span style=&#34;color:#a6e22e&#34;&gt;numberp&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)    &lt;span style=&#34;color:#75715e&#34;&gt;;; *注意是(if t)而不是(if (t))，后者是错误的*&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;;; *elisp的if执行的语句如果超过1句一定要用progn，而不是直接括号括起来*&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;;; ((message &amp;#34;t&amp;#34;))    ;;错误写法&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (progn
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      (&lt;span style=&#34;color:#a6e22e&#34;&gt;message&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;(numberp 1) is t&amp;#34;&lt;/span&gt;))    &lt;span style=&#34;color:#75715e&#34;&gt;;;正确下发&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#a6e22e&#34;&gt;message&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;(numberp 1) is f&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;elisp常用函数&#34;&gt;elisp常用函数&lt;/h3&gt;
+&lt;h4 id=&#34;creating-buffers&#34;&gt;creating buffers&lt;/h4&gt;
+&lt;!--list-separator--&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;get-buffer-create:如果给定的buffer名不存在就创造一个buffer&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--list-separator--&gt;
+&lt;ul&gt;
+&lt;li&gt;generate-new-buffer:总是创造一个新buffer并给出buffer名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;check-buffer-exists&#34;&gt;check buffer exists&lt;/h4&gt;
+&lt;!--list-separator--&gt;
+&lt;ul&gt;
+&lt;li&gt;get-buffer-name:如果buffer存在，返回buffer name的字符串；如果buffer不存在，返回nil&lt;/li&gt;
+&lt;/ul&gt;
+- https://goodboylqs.github.io/posts/2023elispxuexi/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>基础会计（第6版）</title>
+        <link>https://goodboylqs.github.io/posts/2023jichuhuijidi6ban/</link>
+        <pubDate>Sun, 05 Nov 2023 11:01:00 +0800</pubDate>
+        
+        <guid>https://goodboylqs.github.io/posts/2023jichuhuijidi6ban/</guid>
+        <description>饮冰十年，难凉热血  Having dreams is what makes life tolerable https://goodboylqs.github.io/posts/2023jichuhuijidi6ban/ -&lt;p&gt;tags
+:&lt;/p&gt;
+&lt;h2 id=&#34;2023JiChuHuiJiDi6Ban&#34;&gt;基础会计（第6版）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;内部控制制度对单位的稳定起重要作用，健全制度、加强对从业人员的管理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;会计的发展&#34;&gt;会计的发展&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;对劳动耗费与劳动成果进行记录、计算，并加以比较、分析、考核，作为确认、计量、记录、报告生产过程经济活动的会计，也就随之产生了&lt;/li&gt;
+&lt;li&gt;山西商人在明末清初设计了“龙门账”，即把会计科目划分为“进、缴、存、该”，即“全部收入、全部指出、全部资产、全部负债”，它们之间的关系可以表示为“进 - 缴 = 存 - 该”
+&lt;ul&gt;
+&lt;li&gt;可以根据收入和支出计算差额，确定盈亏&lt;/li&gt;
+&lt;li&gt;另一方面根据资产和负债计算差额，确定业主权益的变动&lt;/li&gt;
+&lt;li&gt;进 - 缴 = 存 - 该&amp;mdash;&amp;gt;两者相等，即“合龙门”
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;本质上就是当收入 &amp;gt; 支出，你的资产与负债的差额应该增加，也就是说你赚钱了你的身价就要增加&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;近代会计以借贷记账法的产生和运用及英国爱丁会计师工会的成立为标志
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;借贷记账法的产生与运用，标志着会计记账法由单式记账法发展为较为科学、合理的复式记账法，标志着近代会计的最终形成&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;股份公司的出现使得会计信息使用者的范围增加了，会计要为企业服务，还要为众多的社会股东、企业债权人、证券交易所、金融机构和政府机构等负责————————要保证各股份公司会计信息真实可靠，就必须对其信息的产生及披露进行监管&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;“公认会计原则”和“执业会计师制度”是现代会计最基本的特征。奠定了现代会计理论的基础。&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;现代会计不仅要求会计记账、算账，还要求会计进行预测、决策
+&lt;ul&gt;
+&lt;li&gt;财务会计和管理会计：会计由以资金为核心的传统财务会计阶段发展到了以经济效益为核心的现代管理会计阶段&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;会计的概念&#34;&gt;会计的概念&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;企业诚信最核心的表现就是财务信息的真实和公允&lt;/li&gt;
+&lt;li&gt;会计既是经济信息系统，不断地将企业的会计信息 &lt;strong&gt;提供给信息使用者，又是一项经济管理工作&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;什么是会计
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;会计是以货币为主要计量单位，采用一系列专门方法，对单位的经济活动进行全面、连续、系统的核算和监督，并在此基础上进行分析、预测和控制，向有关各方提供会计信息，促使单位提高经济效益的一种经济管理活动&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;会计的基本职能： &lt;strong&gt;核算（观念总结） 与 监督（过程控制）&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;会计的职能&#34;&gt;会计的职能&lt;/h4&gt;
+&lt;!--list-separator--&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;核算（记账、算账、报账）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通过确认、计量、记录、报告，从价值上反映各会计主题经济搞活动的发生及完成情况，为经济管理提供信息&lt;/li&gt;
+&lt;li&gt;核算是会计的首要职能，也是会计管理经济过程的基础&lt;/li&gt;
+&lt;li&gt;会计核算的特点
+&lt;ul&gt;
+&lt;li&gt;会计核算以货币为统一计量单位，从价值量上对经济活动情况进行反映&lt;/li&gt;
+&lt;li&gt;会计核算必须以真实合法的会计凭证为依据。 &lt;strong&gt;会计反映的是经济单位过去发生的交易及其产生的结果&lt;/strong&gt; 为了保证会计信息的真实可靠，单位在发生经济业务后必须填制或取得原始凭证。会计人员对会计凭证进行审核。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--list-separator--&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;监督&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;监督经济活动的合法性和合理性&lt;/li&gt;
+&lt;li&gt;会计监督的特点
+&lt;ul&gt;
+&lt;li&gt;经常性和连续性&lt;/li&gt;
+&lt;li&gt;全过程监督（事前、事中、事后）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;会计目的&#34;&gt;会计目的&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;未决策提供正确有用的会计信息&lt;/li&gt;
+&lt;/ul&gt;
+- https://goodboylqs.github.io/posts/2023jichuhuijidi6ban/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>2023-06-28-全国组织工作会议</title>
+        <link>https://goodboylqs.github.io/posts/202320230628quanguozuzhigongzuohuiyi/</link>
+        <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://goodboylqs.github.io/posts/202320230628quanguozuzhigongzuohuiyi/</guid>
+        <description>饮冰十年，难凉热血  Having dreams is what makes life tolerable https://goodboylqs.github.io/posts/202320230628quanguozuzhigongzuohuiyi/ -&lt;h2 id=&#34;202320230628QuanGuoZuZhiGongZuoHuiYi&#34;&gt;2023-06-28-全国组织工作会议&lt;/h2&gt;
+&lt;h3 id=&#34;习近平总书记重要批示精神&#34;&gt;习近平总书记重要批示精神&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;召开时间:6月28日至6月29日&lt;/li&gt;
+&lt;li&gt;目标：全面建设社会主义现代化国家、全面推进中华民族伟大复兴
+&lt;ul&gt;
+&lt;li&gt;关键：关键在党，关键在人&lt;/li&gt;
+&lt;li&gt;方法
+&lt;ul&gt;
+&lt;li&gt;党的十八大以来，党中央加强党的全面领导，坚持党要管党、全面从严治党；各级党委及组织部门深入贯彻落实党中央决策部署，紧紧围绕全面从严治党主题主线，以党的政治建设为纲领，扎实做好理论武装、选贤任能、强基固本、育才聚才各项工作&lt;/li&gt;
+&lt;li&gt;坚持以新时代中国特色社会主义思想为指导，全面贯彻党的二十大精神，深刻领会党中央关于党的建设的重要思想，深入落实新时代党的建设总要求和新时代党的组织路线，深入推进新时代党的建设新的伟大工程&lt;/li&gt;
+&lt;li&gt;最高原则：坚持和加强党中央集中统一领导&lt;/li&gt;
+&lt;li&gt;根本使命：忠诚为党护党、全力兴党强党&lt;/li&gt;
+&lt;li&gt;重大任务：解决大党独有难题、健全全面从严治党体系&lt;/li&gt;
+&lt;li&gt;目标：统一全党思想意志行动，严密上下贯通、执行有力的组织体系，建强高素质执政队伍&lt;/li&gt;
+&lt;li&gt;举措：深化模范部门和过硬队伍建设，不断提高组织工作质量，为更好地以党的伟大自我革命引领伟大社会革命提供组织保证&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;新时代10年党的建设和组织工作的重大成就-党的政治建设-党的组织路线-党内法规体系-反腐败斗争&#34;&gt;新时代10年党的建设和组织工作的重大成就（党的政治建设、党的组织路线、党内法规体系、反腐败斗争）&lt;/h3&gt;
+&lt;h4 id=&#34;采取的措施&#34;&gt;采取的措施&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;党的政治建设
+党的十八大以来，我们党从制定和落实中央八项规定开局破题，提出和 落实新时代党的建设总要求，以党的政治建设统领党的建设各项工作，坚持和加强党的全面领导，严肃党内政治生活，持续开展党内集中教育&lt;/li&gt;
+&lt;li&gt;党的组织路线
+提出和坚持新时代党的组织路线，突出政治标准选贤任能&lt;/li&gt;
+&lt;li&gt;党内法规体系
+坚持制度治党、依规治党，形成比较完善的党内法规体系，持之以恒正风肃纪&lt;/li&gt;
+&lt;li&gt;反腐败斗争
+开展史无前例的反腐败斗争，刹住了一些长期没有刹住的歪风，纠治了一些多年未除的顽瘴痼疾，消除了党、国家、军队内部存在的严重隐患，从根本上扭转了管党治党宽松软状况。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;达到的效果&#34;&gt;达到的效果&lt;/h4&gt;
+&lt;p&gt;经过十年的艰苦努力，我们党成功开辟了百年大党自我革命新境界，当在革命性锻造中更加坚强有力，党的政治领导力、思想引领力、群众组织力、社会号召力显著增强，党同人民群众始终保持血肉联系，当在世界形势深刻变化的历史进程中始终走在时代前列，在应对国内外各种风险和考验的历史进程中始终成为全国人民的主心骨，在坚持和发展中国特色社会主义的历史进程中始终成为坚强领导核心&lt;/p&gt;
+&lt;h3 id=&#34;深入学习领会习近平总书记关于党的建设的重要思想-十三个坚持&#34;&gt;深入学习领会习近平总书记关于党的建设的重要思想：十三个坚持&lt;/h3&gt;
+&lt;p&gt;第一，坚持和加强党的全面领导
+【习近平总书记指出，中国共产党领导是中国特色社会主义最本质的特征，是中国特色社会主义制
+度的最大优势，党是最高政治领导力量。】
+第二，坚持以党的自我革命引领社会革命
+【习近平总书记指出，自我革命是党跳出治乱兴衰历史周期率的第二个答案，勇于自我革命是我们
+党最鲜明的品格。】
+第三，坚持以党的政治建设统领党的建设各项工作
+【习近平总书记指出，党的政治建设是党的根本性建设，决定党的建设方向和效果。】
+第四，坚持江山就是人民、人民就是江山
+【习近平总书记指出，打江山、守江山，守的是人民的心。】
+第五，坚持思想建党、理论强党
+【习近平总书记指出，拥有马克思主义科学理论指导是我们党坚定信仰信念、把握历史主动的根本
+所在。】
+第六，坚持严密党的组织体系
+【习近平总书记指出，党的力量来自组织，党的全面领导、党的全部工作要靠党的坚强组织体系去
+实现。】
+第七，坚持造就忠诚干净担当的高素质干部队伍
+【习近平总书记指出，党的干部是党和国家事业的中坚力量。】
+第八，坚持聚天下英才而用之
+【习近平总书记指出，国家发展靠人才，民族振兴靠人才。】
+第九，坚持持之以恒正风肃纪
+【习近平总书记指出，党风问题关系执政党的生死存亡，加强纪律建设是全面从严治党的治本之
+策。】
+第十，坚持一体推进不敢腐、不能腐、不想腐
+【习近平总书记指出，腐败是危害党的生命力和战斗力的最大毒瘤，反腐败是最彻底的自我革命，反腐败斗争永远在路上。】
+第十一，坚持完善党和国家监督体系
+【习近平总书记指出，监督是治理的内在要素，在管党治党、治国理政中居于重要地位。】
+第十二，坚持制度治党、依规治党
+【习近平总书记指出，加强党内法规制度建设是全面从严治党的长远之策、根本之策，要把依规治
+党当作管党治党基本方式。】
+第十三，坚持落实全面从严治党政治责任
+【习近平总书记指出，从严治党，必须增强管党治党意识、落实管党治党责任。】&lt;/p&gt;
+- https://goodboylqs.github.io/posts/202320230628quanguozuzhigongzuohuiyi/ - </description>
+        </item>
     
     
     
