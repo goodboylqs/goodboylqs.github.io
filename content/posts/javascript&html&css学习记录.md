@@ -3,7 +3,7 @@ title = "javascript&html&css学习记录"
 author = ["lqs_is_a_goodboy"]
 description = "从零开始学javascript，一个是为了使用wps的宏编程，一个是为了为自己的个人网站提供更高级的功能"
 date = 2024-01-04T08:00:00+08:00
-lastmod = 2024-02-03T15:03:14+08:00
+lastmod = 2024-02-03T17:29:15+08:00
 tags = ["编程", "javascript"]
 categories = ["编程"]
 draft = false
@@ -35,6 +35,16 @@ draft = false
 -   &lt;p&gt;定义一个段落
 
 {{< figure src="/ox-hugo/2024-01-05_21-40-24_1704462005161.png" >}}
+
+
+### html注释 {#html注释}
+
+```html
+<!DOCTYPE HTML>
+<html>
+  <!-- 注释 -->
+  </html>
+```
 
 
 ### **html元素（包含一个开始标签到结束标签的所有内容）和html属性（属性是html元素提供的附加信息）** {#html元素-包含一个开始标签到结束标签的所有内容-和html属性-属性是html元素提供的附加信息}
@@ -129,6 +139,30 @@ draft = false
 <h2>中标题</h2>
 <h3>小标题</h3>
 <a href="#h2">访问中标题</a>
+```
+
+
+### html DOM（Document Object Model）： **通过可编程的对象模型，获得了足够的能力来创建动态的html：改变页面中的html元素、改变html元素的属性、改变页面的css样式、对页面中的事件作出反应** {#html-dom-document-object-model-通过可编程的对象模型-获得了足够的能力来创建动态的html-改变页面中的html元素-改变html元素的属性-改变页面的css样式-对页面中的事件作出反应}
+
+-   HTML DOM是什么：当网页被加载时，浏览器会创建 **页面的文档对象模型**
+-   HTML DOM的内容（结构）： **HTML DOM被构造为对象的树**
+
+    {{< figure src="/ox-hugo/2024-02-03_15-07-35_pic_htmltree.gif" >}}
+-   HTML DOM的功能：通过可编程的对象模型，获得了足够的能力来创建动态的html：改变页面中的html元素、改变html元素的属性、改变页面的css样式、对页面中的事件作出反应
+
+<!--listend-->
+
+```html
+<!DOCTYPE html>
+<html>
+   <!-- 改变html内容document.getElementById(id).innerHTML=xxx -->
+<script>
+    document.getElementbyid("img").src = "../../xxx.jpg"       <!--改变html元素的属性document.getElementbyid(id).attribute = xxx-->
+    document.getElementById("p2").style.color="blue";  //
+    <!-- 改变html元素的css样式 -->
+
+</script>
+</html>
 ```
 
 
@@ -603,6 +637,81 @@ p
     //语法   javascript:void func() 或 javascript:void(func())
     <a href="javascript:void(alert('Warning!!!'))">点我!</a>   //注意此处的javascript不能省略
     ```
+
+<!--list-separator-->
+
+-  javascript对象（重难点）：javascript中所有事物都是对象，对象是带有属性和方法的特殊数据类型(**在javascript当中，几乎所有的对象斗士Object类型的实例，它们都会从Object.prototype继承属性和方法** **javascript是面向对象的语言，但是javascript不使用类。在javascript中，不会创建类，也不会通过创建类来创建对象，javascript的对象是基于prototype（类型）的**)
+
+    -   **javascript中所有事物都是对象：字符串、数组、函数等等**
+    -   **javascript提供内建对象，比如String、Date、Array等，对象是带有属性和方法的特殊数据类型**
+        -   布尔型可以是对象、数字型可以是对象
+
+    <!--list-separator-->
+
+    -  访问javascript对象的属性和方法
+
+        ```js
+        //访问对象的属性的语法:ObjectName.PropertyName
+        var message = "Hello World!";
+        var x = message.length;     //使用了String对象的length属性
+
+
+        //访问对象的方法:ObjectName.methodName()
+        var message = "Hello World!";
+        var x = message.toUpperCase();     //使用了String对象的toUpperCase()方法
+        ```
+
+    <!--list-separator-->
+
+    -  创建javascript对象的语法（难点）
+
+        -   **在javascript当中，几乎所有的对象斗士Object类型的实例，它们都会从Object.prototype继承属性和方法**
+        -   **javascript是面向对象的语言，但是javascript不使用类。在javascript中，不会创建类，也不会通过创建类来创建对象，javascript的对象是基于prototype（类型）的**
+
+        <!--listend-->
+
+        ```js
+        //法一：以构造函数形式生成布尔对象
+        var obj = new Object(true);   //生成新的布尔类型的对象
+
+        person = new Object();
+        person.firstname = "John";
+        person.age = 50;
+        person.eyecolor = "blue";
+
+
+        //法二：直接使用字面量来创建对象
+        /* var myobj = {
+           key1 : value1,
+           key2 : value2,
+           //……
+           }
+         */
+        var person = {
+            firstname : 'John',
+            age : 50,
+            isStudent : false,
+            greet : function(){
+                console.log("hello,I am " + this.firstname);
+            }
+        };
+
+
+
+        // *法三：为自定义类型实现构造函数*
+        function person(firstname,age,eyecolor)
+        {
+            this.firstname = firstname;
+            this.age = age;
+            this.eyecolor = eyecolor;
+
+            this.changeName = changeName;
+            function changeName(name){
+                this.firstname = name;
+            }
+        }
+        var myFather = new person("John",50,"blue");
+        ```
 
 
 ### javascript的功能 {#javascript的功能}
