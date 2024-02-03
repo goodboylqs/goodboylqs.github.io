@@ -3,7 +3,7 @@ title = "javascript&html&css学习记录"
 author = ["lqs_is_a_goodboy"]
 description = "从零开始学javascript，一个是为了使用wps的宏编程，一个是为了为自己的个人网站提供更高级的功能"
 date = 2024-01-04T08:00:00+08:00
-lastmod = 2024-01-14T17:35:11+08:00
+lastmod = 2024-02-03T15:03:14+08:00
 tags = ["编程", "javascript"]
 categories = ["编程"]
 draft = false
@@ -115,6 +115,21 @@ draft = false
       <p>这是一个在div元素中的文本</p>
     </div>
     ```
+
+
+#### html的href属性：用来访问指定链接/位置 {#html的href属性-用来访问指定链接-位置}
+
+-   **href="#"与href=javascript:void(0)的区别 ：#包含了一个位置信息，默认的是#top也就是网页的上端，而javascript:void(0)仅表示一个死链接，在页面很长的时候会用#来定位页面的具体位置，格式为#+id**
+
+<!--listend-->
+
+```html
+<a href="www.baidu.com">百度</a>
+<h1>大标题</h1>
+<h2>中标题</h2>
+<h3>小标题</h3>
+<a href="#h2">访问中标题</a>
+```
 
 
 ## css {#css}
@@ -416,7 +431,8 @@ p
         -  js对象
 
             -   **javascript当中对象和函数也是变量**
-            -   **JavaScript中几乎所有的事物对是对象**
+            -   **JavaScript中几乎所有的事物都是对象**
+            -   **javascript的字符串是原始值不是对象，原始值可以用字符串创建如var name="John"——————原始值字符串如"John"没有属性和方法（因为他们不是对象），但是原始值可以使用Javascript的属性和方法，因为javascript在执行方法和属性时可以把原始值当作对象**
             -   **就类似于c＋＋中的类，对象的属性以键值对的形式来定义**
                 ```js
                 //定义一个js对象
@@ -446,6 +462,17 @@ p
         var x = "John";  //现在x为字符串
         ```
 
+    <!--list-separator-->
+
+    -  javascript的字符串
+
+        -   字符串的位置索引和c语言的数组一样，下标从0开始
+        -   **javascript的字符串是原始值不是对象，原始值可以用字符串创建如var name="John"——————原始值字符串如"John"没有属性和方法（因为他们不是对象），但是原始值可以使用Javascript的属性和方法，因为javascript在执行方法和属性时可以把原始值当作对象**
+
+        <!--list-separator-->
+
+        -  javascript模板字符串： **允许你在字符串中嵌入表达式和变量**
+
 <!--list-separator-->
 
 -  javascript函数
@@ -464,6 +491,118 @@ p
         var myVar = myfunc(arg1,arg2);
 
         ```
+
+<!--list-separator-->
+
+-  javascript运算符
+
+    <!--list-separator-->
+
+    -  javscript字符串拼接
+
+        ```js
+        txt1 = "what a very ";
+        txt2 = "nice day";
+        txt3 = txt1 + txt2;   //txt3 = "what a very nice day"
+        txt3 = txt1 + " very " + txt2;   //txt = "what a very very nice day"
+        ```
+
+    <!--list-separator-->
+
+    -  **javascript字符串和数字相加结果为字符串**
+
+        ```js
+        x = 5+5;   //x = 10l
+        y = "5" + 5;  //y = 55，此处y为字符串
+        z = "Hello" + 5; //z = Hello5
+        ```
+
+    <!--list-separator-->
+
+    -  javscript的比较运算符（有==和===、!=和!==）
+
+        -   **等于和绝对等于：等于只需要值相等，绝对等于需要值和类型都相等——————例如x=5，则x==5为true但x==="5"为false，因为x是数值，"5"是字符串————————绝对等于在判断类型时十分好用**
+        -   !==————不绝对等于，值和类型有一个不相等或者两个都不相等
+        -   注意
+            -   "\\=="是抽象相等运算符，在比较之前，会尝试将两个操作数转换成相同的类型，然后再比较他们的值是否相等，例如 1 == "1"会返回true，因为字符串"1"会被转换成数字1，然后在比较
+            -   "\\==="是严格相等运算符，它不会进行类型转换，而是直接比较两个操作数的类型和值是否完全相同。例如1 \\=== "1"会返回false，因为数字1和字符串"1"的类型不同，就算它们的值相同也不会返回true
+            -   **一般来说，建议使用\\===来进行比较，因为它可以避免一些意想不到的结果。**
+
+<!--list-separator-->
+
+-  javascript条件语句
+
+    -   **switch的每个case后面都要跟着一个break，如果没有break那就成了按顺序执行每一个case了**
+    -   **switch语句最后一定要设一个default，为没有case匹配的情况设定操作**
+
+    <!--listend-->
+
+    ```js
+    var d = new Data().getDay();
+    switch(d)
+    {
+        case 0: x = "今天是星期日";  break;
+        case 1: x = "今天是星期一";  break;
+        default: x = "期待周末";
+    }
+    ```
+
+<!--list-separator-->
+
+-  javascript的数据类型：6种数据类型、3种对象类型、2种不包含任何值的数据类型
+
+    -   6种数据类型：string/number/boolean/object/function/symbol
+    -   3种对象类型：Object/Date/Array
+    -   2种不包含任何值的类型：null/undefined
+    -   注意
+        -   NaN的数据类型为number
+        -   数组(Array)的数据类型为Object
+        -   日期(Date)的数据类型为Object
+        -   null的数据类型为Object
+        -   未定义的变量的数据类型为undefined
+
+    <!--list-separator-->
+
+    -  javascript的变量的constructor属性： **constructor属性返回javascript变量的构造函数**
+
+        -   "John".constructor返回String()
+
+<!--list-separator-->
+
+-  javascript的typeof（null和undefined的区别）
+
+    -   typeof用来返回一个变量的数据类型
+        -   **字符串返回string（typeof "John"）、数组返回number(typeof 3)、数组返回object(typeof [1,2,3]、对象返回object)**
+    -   null和undefined的区别
+
+        -   **null和undefined的值相等，但是类型不详等，null是object类型，undefined是undefiend类型**
+        -   所有的未赋值的变量默认的值都是undefined
+
+        <!--listend-->
+
+        ```js
+        var a;   //a被自动赋值为undefined
+        ```
+
+<!--list-separator-->
+
+-  javascript和json（javascript object notation，javascript对象表示法）
+
+    -   json是什么：json是一种独立的语言（是一种数据格式），用来进行数据交换（服务器端向网页传递数据）
+    -   json和javascript对象的互相转换：利用javascript的内置函数JSON.parse()和JSON.stringify()
+        ```js
+        var text = '{"sites" : [ {"name":"baidu","url":"www.baidu.com"} ]}';
+        var obj = JSON.parse(text);
+        ```
+
+<!--list-separator-->
+
+-  javscript的void（只执行函数但不返回值）
+
+    ```html
+    //语法   javascript:void func() 或 javascript:void(func())
+    <a href="javascript:void(alert('Warning!!!'))">点我!</a>   //注意此处的javascript不能省略
+    ```
 
 
 ### javascript的功能 {#javascript的功能}
@@ -542,31 +681,47 @@ p
 
 #### javascript事件： **使用html元素的属性来触发事件** {#javascript事件-使用html元素的属性来触发事件}
 
--   **可以触发的事件类型：html页面加载完成时、input字段发生改变时、按钮点击时等**
--   语法
+<!--list-separator-->
+
+-  **可以触发的事件类型：html页面加载完成时、input字段发生改变时、按钮点击时等**
+
+    | 事件        | 描述              |
+    |-----------|-----------------|
+    | onchange    | html元素改变      |
+    | onclick     | 用户点击html元素  |
+    | onmouseover | 鼠标指针移动到指定的元素上时发生 |
+    | onmouseout  | 鼠标指针从HTML元素上移走时发生 |
+    | onkeydown   | 用户按下键盘按键  |
+    | onload      | 浏览器完成页面加载的时候 |
+
+<!--list-separator-->
+
+-  语法
+
     ```html
     <html-element event="javascript代码">
     <button type="button" onclick="alert('欢迎')">点我</button>
     ```
--   **不推荐使用html元素中添加事件属性的方式：因为不符合编程高内聚、低耦合的原则**
-    ```html
-    <!->在html中关于元素的内容<-!>
-    <button id="test"></button>
-    ```
 
-    ```js
-    //在js文件中的js代码
-    var test = document.getElementById("test");
-    test.onclick = function changeContent(){
-           ………………
-    }
-    //或者为html元素添加事件
-    var test = document.getElementById("test");
-    test.addEventListener("click",myfunc1);
-    function myfunc1(){
-    alert("你好");
-    }
-    ```
+    -   **不推荐使用html元素中添加事件属性的方式：因为不符合编程高内聚、低耦合的原则**
+        ```html
+        <!->在html中关于元素的内容<-!>
+        <button id="test"></button>
+        ```
+
+        ```js
+        //在js文件中的js代码
+        var test = document.getElementById("test");
+        test.onclick = function changeContent(){
+               ………………
+        }
+        //或者为html元素添加事件
+        var test = document.getElementById("test");
+        test.addEventListener("click",myfunc1);
+        function myfunc1(){
+        alert("你好");
+        }
+        ```
 
 
 #### 改变html样式 {#改变html样式}
