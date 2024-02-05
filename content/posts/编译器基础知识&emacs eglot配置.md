@@ -1,9 +1,15 @@
 +++
+title = "编译器基础知识&emacs eglot配置"
 author = ["lqs_is_a_goodboy"]
+description = "在emacs使用clangd作为语法分析的后台，但是配置过程中存在一些问题，主要是对clang以及编译器的知识不了解，把相关学习内容记录一下。"
+date = 2024-02-03T00:10:00+08:00
+lastmod = 2024-02-05T11:58:03+08:00
+tags = ["编程", "emacs", "eglot"]
+categories = ["编程"]
 draft = false
 +++
 
-## 编译器基础知识 {#编译器基础知识}
+## 编译器基础知识（未完成） {#编译器基础知识-未完成}
 
 
 ### compiler 和 parser 的关系 {#compiler-和-parser-的关系}
