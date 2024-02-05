@@ -30,6 +30,7 @@ draft = false
 ## eglot配置 {#eglot配置}
 
 -   <https://clangd.llvm.org/installation.html#project-setup>
+-   [clangd compile commands](https://clangd.llvm.org/design/compile-commands)
 
 
 ### 碰到丢失#include文件等错误信息的原因和解决方法 {#碰到丢失-include文件等错误信息的原因和解决方法}
