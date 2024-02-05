@@ -29,6 +29,7 @@ draft = false
 
 ## eglot配置 {#eglot配置}
 
+-   clangd:clang是一个工具集合，包含众多工具，clangd是其中一个
 -   <https://clangd.llvm.org/installation.html#project-setup>
 -   [clangd compile commands](https://clangd.llvm.org/design/compile-commands)
 
@@ -49,9 +50,54 @@ draft = false
 
 #### 解决方法 {#解决方法}
 
+-   **解释源代码需要一定数量的上下文： 例如你需要知道#include "stdio.h" 中的stdio.h文件所在位置————————c++编译器期望这些上下文通过command-line flags（命令行标志）来进行传递————————命令的形式类似于clang -x objective-c++ -I/path/headers --target=x86_64-pc-linux-gnu -DNDEBUG foo.mm————————构建系统负责为每个文件收集正确的command-line flags（命令行标志）**
+
 <!--list-separator-->
 
--  compile_commands.json
+-  **Compile command 和 clangd flags（很容易混淆）**
 
-    -   **解释源代码需要一定数量的上下文： 例如你需要知道#include "stdio.h" 中的stdio.h文件所在位置————————c++编译器期望这些上下文通过command-line flags（命令行标志）来进行传递————————命令的形式类似于clang -x objective-c++ -I/path/headers --target=x86_64-pc-linux-gnu -DNDEBUG foo.mm————————构建系统负责为每个文件收集正确的command-line flags（命令行标志）**
-    -   **Compile command 和 clangd flags（很容易混淆）**
+    -   clangd flags: 当编辑器启动的时候，clangd flags就会被传递到编辑器了。它们会在clangd 的日志非常靠前的部分显示
+    -   compile command（或者说 compile flags）:编译命令（或编译标志）是在clangd中构造和解释的虚拟命令。当文件打开时，它会被记录下来。
+
+<!--list-separator-->
+
+-  一个compile command中都有什么
+
+    -   clangd 模拟 clang 解释文件的方式。默认情况下，它的行为大致类似于 clang $FILENAME， **但实际项目通常需要设置包含路径（使用 -I 标志）、定义预处理器符号、配置警告等。通常，编译数据库指定这些编译命令。clangd 在源文件的父文件中搜索compile_commands.json。**
+    -   由于 clangd 同时嵌入了 clang 的驱动程序（用于解释编译命令）和 clang 的解析器（由标志控制），因此可以传递给 clang 的大多数标志也将与 clangd 一起使用。其中最重要的flags如下：
+        -   设置#include的搜索路径：-I，-isystem，以及其他的
+        -   控制使用的语言类型：-x,-std等
+        -   预定义预处理器宏：-D等
+        -   **没有这些flags，clangd经常会在解析源代码的时候失败，产生很多虚假的错误，例如#include 文件无法找到**
+    -   和flags一样，命名程序argv[0]也会影响编译器的行为，clang++会将原码作为C++源码进行解析，而clang则会认为源码是C源码
+
+<!--list-separator-->
+
+-  compile commands从哪来
+
+    -   通常，clangd 首先从编译数据库（compilation databases）中获取基本的编译命令，然后对其进行一些调整
+    -   compilation databases描述了代码库的编译命令，他可以是
+        -   一个名为compile_commands.json文件，该文件为每一个源码文件列举了命令，通常使用CMake作为构建系统
+        -   一个名为compile_flags.txt的文件，为每一个源码文件列举了flags，通常用于简单项目手动编写。
+        -   我们在源码文件夹、源码文件夹的父文件夹中检查有没有上述的两个文件
+    -   用于头文件的命令
+
+<!--list-separator-->
+
+-  如何设置compile flags
+
+    -   Add：追加编译选项
+    -   Remove：减少编译选项
+    -   Complier：选择使用的编译器，如clang或者clang++
+    -   complie_flags.txt内容
+        ```compile_flags.txt
+        CompileFlags:                   # Tweak the parse settings
+          Add: [-xc++, -Wall]             # treat all files as C++, enable more warnings
+          Remove: -W*                     # strip all other warning-related flags
+          Compiler: clang++               # Change argv[0] of compile flags to `clang++`
+
+        -----------------------------------------上面那个不好用用下面的------------------------
+        -xc
+        -I
+        C:\msys64\mingw64\include    //-xc表示语言是c语言，-I需要换行，第三行指定库文件的位置
+        ```
