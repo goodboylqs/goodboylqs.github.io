@@ -3,13 +3,53 @@ title = "javascript&html&css学习记录"
 author = ["lqs_is_a_goodboy"]
 description = "从零开始学javascript，一个是为了使用wps的宏编程，一个是为了为自己的个人网站提供更高级的功能"
 date = 2024-01-04T08:00:00+08:00
-lastmod = 2024-02-03T17:29:15+08:00
+lastmod = 2024-02-05T12:04:50+08:00
 tags = ["编程", "javascript"]
 categories = ["编程"]
 draft = false
 +++
 
 -   **学习的目的不是为了学习，而是为了解决问题，所以遇到什么问题就去学相关的内容，时间经历有限不要啥都学**
+
+<div class="ox-hugo-toc toc">
+
+<div class="heading">Table of Contents</div>
+
+- [html](#html)
+    - [html是什么](#html是什么)
+    - [html页面的结构](#html页面的结构)
+    - [html注释](#html注释)
+    - [**html元素（包含一个开始标签到结束标签的所有内容）和html属性（属性是html元素提供的附加信息）**](#html元素-包含一个开始标签到结束标签的所有内容-和html属性-属性是html元素提供的附加信息)
+        - [适用于大多数html元素的属性](#适用于大多数html元素的属性)
+        - [**html常用元素的标签、属性**](#html常用元素的标签-属性)
+        - [**html的head元素**](#html的head元素)
+        - [html的div元素](#html的div元素)
+        - [html的href属性：用来访问指定链接/位置](#html的href属性-用来访问指定链接-位置)
+    - [html DOM（Document Object Model）： **通过可编程的对象模型，获得了足够的能力来创建动态的html：改变页面中的html元素、改变html元素的属性、改变页面的css样式、对页面中的事件作出反应**](#html-dom-document-object-model-通过可编程的对象模型-获得了足够的能力来创建动态的html-改变页面中的html元素-改变html元素的属性-改变页面的css样式-对页面中的事件作出反应)
+- [css](#css)
+    - [css是什么](#css是什么)
+        - [css的功能](#css的功能)
+    - [css语法：选择器（html标签）+声明（属性：值）](#css语法-选择器-html标签-plus-声明-属性-值)
+    - [创建css文件并引用的方法（外联、内联、内部）](#创建css文件并引用的方法-外联-内联-内部)
+        - [外联样式表：在外部文件中写css代码，并 **在head中使用link标签来引用外部css。其中link标签的type、href属性要用到，type="text/css"，hrer="文件地址"**](#外联样式表-在外部文件中写css代码-并-在head中使用link标签来引用外部css-其中link标签的type-href属性要用到-type-text-css-hrer-文件地址)
+        - [内部样式表：直接在head中用style标签写css代码](#内部样式表-直接在head中用style标签写css代码)
+        - [内联样式： **直接在相关的标签内使用style属性写css代码**](#内联样式-直接在相关的标签内使用style属性写css代码)
+        - [多重样式优先级：当一个元素在外部样式表、内部样式表、内联样式中都有css描述时，优先级为 **内联样式 &gt; 内部样式 &gt; 外部样式 &gt; 浏览器默认样式**](#多重样式优先级-当一个元素在外部样式表-内部样式表-内联样式中都有css描述时-优先级为-内联样式-内部样式-外部样式-浏览器默认样式)
+- [javascript](#javascript)
+    - [参考](#参考)
+    - [为什么要学习javascript:JavaScript 是 web 开发人员必须学习的 3 门语言中的一门](#为什么要学习javascript-javascript-是-web-开发人员必须学习的-3-门语言中的一门)
+    - [javascript是什么](#javascript是什么)
+    - [javascript的用法（内部的javascript和外部的js文件）](#javascript的用法-内部的javascript和外部的js文件)
+        - [内部的javascript](#内部的javascript)
+        - [外部的JavaScript](#外部的javascript)
+        - [javascript的语法](#javascript的语法)
+    - [javascript的功能](#javascript的功能)
+        - [javascript的4种输出数据的方式](#javascript的4种输出数据的方式)
+        - [javascript事件： **使用html元素的属性来触发事件**](#javascript事件-使用html元素的属性来触发事件)
+        - [改变html样式](#改变html样式)
+
+</div>
+<!--endtoc-->
 
 
 ## html {#html}
