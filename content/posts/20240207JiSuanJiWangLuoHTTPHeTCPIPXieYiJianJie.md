@@ -1,8 +1,9 @@
 +++
 title = "计算机网络-HTTP和TCPIP协议简介"
 author = ["lqs_is_a_goodboy"]
-date = 2024-02-07T08:00:00+08:00
-lastmod = 2024-02-07T22:05:28+08:00
+description = "深刻理解计算机在网络上传递信息的原理和过程"
+date = 2024-02-06T08:00:00+08:00
+lastmod = 2024-02-07T22:22:34+08:00
 tags = ["编程", "http", "tcp/ip"]
 categories = ["编程"]
 draft = false
