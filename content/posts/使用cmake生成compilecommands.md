@@ -2,8 +2,8 @@
 title = "使用cmake生成c项目的compile_commands.json文件"
 author = ["lqs_is_a_goodboy"]
 description = "clang编译器需要compile_commands.json来告诉编译器所需的上下文，现在可以使用cmake工具自动生成compile_commands.json"
-date = 2024-02-12T00:00:00+08:00
-lastmod = 2024-02-12T18:07:36+08:00
+date = 2024-02-11T00:00:00+08:00
+lastmod = 2024-02-12T18:18:17+08:00
 tags = ["编程", "cmake", "make", "clang", "clangd"]
 categories = ["编程"]
 draft = false

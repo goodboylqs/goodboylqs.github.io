@@ -2,8 +2,8 @@
 title = "Cmake使用教程"
 author = ["lqs_is_a_goodboy"]
 description = "使用make和cmake工具自动构建项目"
-date = 2024-02-12T08:00:00+08:00
-lastmod = 2024-02-12T18:10:52+08:00
+date = 2024-02-11T08:00:00+08:00
+lastmod = 2024-02-12T18:18:19+08:00
 tags = ["编程", "cmake", "makefile", "make"]
 categories = ["编程"]
 draft = false
