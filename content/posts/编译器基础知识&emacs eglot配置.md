@@ -1,39 +1,45 @@
 +++
-title = "编译器基础知识&emacs eglot配置"
+title = "编译器基础知识&clang compile_commands.json"
 author = ["lqs_is_a_goodboy"]
 description = "在emacs使用clangd作为语法分析的后台，但是配置过程中存在一些问题，主要是对clang以及编译器的知识不了解，把相关学习内容记录一下。"
 date = 2024-02-03T00:10:00+08:00
-lastmod = 2024-02-05T11:58:03+08:00
-tags = ["编程", "emacs", "eglot"]
+lastmod = 2024-02-12T18:09:16+08:00
+tags = ["编程", "emacs", "clang", "lsp", "clangd"]
 categories = ["编程"]
 draft = false
 +++
 
-## 编译器基础知识（未完成） {#编译器基础知识-未完成}
-
-
-### compiler 和 parser 的关系 {#compiler-和-parser-的关系}
-
--   compiler包含parser
+## 编译器基础知识 {#编译器基础知识}
 
 
 ### 编译器一般构成 {#编译器一般构成}
 
 -   传统的编译器通常分为三个部分——————前端（frontend）、优化器（Optimizer）、后端（backend）
-    -   前端：前端主要负责词法和语法分析，将源代码转化为抽象语法树
-    -   优化器：对前端得到的代码进行优化
-    -   后端：已经优化的中间代码转化为针对各自平台的机器码
+    -   前端：检察源码、解析错误、语法分析、语义分析， **构建于一个特定于语言的抽象语法树AST**
+    -   优化器：优化前端生成的AST
+    -   后端：将代码映射到目标指令集，还负责生成利用所支持的体系结构的不寻常特性的良好代码
+-   这种前端＋优化器＋后端的设计带来的好处： **支持多种语言作为source code，支持多种目标架构如X86,powerpc，arm**
+
+    -   **比如可以使用c语言作为源码输入，选择ARM的代码生成器作为后端，如果想使用一种新的编程语言，无需改变优化器和代码生成器，只需要编写该语言的前端部分即可（我的理解：可以把优化器和后端看作一个整体，这个整体接受的代码格式是不变的，可以叫他格式A，前端对不同类型的语言都要生成格式A的代码，这样后端就不用考虑前端）**
+
+    {{< figure src="/ox-hugo/2024-02-12_10-18-35_d113e20757f87d818690097df558f60f.png" >}}
 
 
-### gcc 和 llvm 和 clang {#gcc-和-llvm-和-clang}
+### gcc 和 llvm 和 clang 和 clangd {#gcc-和-llvm-和-clang-和-clangd}
 
--   gcc————GNU compiler collection（GNU 编译工具集合），是一套由GNU开发的编程语言编译器，可处理C、C＋＋、Java等语言
--   llvm————Low level virtual machine（底层虚拟机）。简而言之，可以作为 **多种编译器的后台** 来使用
--   **clang 是 llvm的前端** ，可以用来编译支持C,C++,objective-c语言
-    -   **clang 是以 llvm为后端的高效易用的前端**
+{{< figure src="/ox-hugo/2024-02-12_10-22-31_2b3f2357317965abbaddb6f05a548049.png" >}}
+
+-   llvm：Low level virtual machine（底层虚拟机）。简而言之，可以作为 **多种编译器的后台** 来使用
+    -   广义的llvm：包含前端、优化器、后端在内的compiler
+    -   狭义的llvm：编译器的优化器和后端部分
+-   clang：编译器的前端
+
+    {{< figure src="/ox-hugo/2024-02-12_10-23-24_d23fb6324245acc1a188514cdf742432.jpeg" >}}
+-   gcc：GNU compiler collection（GNU 编译工具集合），是一套由GNU开发的编程语言编译器，可处理C、C＋＋、Java等语言
+-   clangd：一个语言服务器，向您的编辑器添加智能功能：代码完成、编译错误、去定义等
 
 
-## eglot配置 {#eglot配置}
+## compile_commands.json（官方文档翻译摘抄） {#compile-commands-dot-json-官方文档翻译摘抄}
 
 -   clangd:clang是一个工具集合，包含众多工具，clangd是其中一个
 -   <https://clangd.llvm.org/installation.html#project-setup>
