@@ -1,9 +1,9 @@
 +++
 title = "Emacs的Use-Package用法"
-author = ["553912917@qq.com"]
+author = ["lqs_is_a_goodboy"]
 description = "emacs的插件，用于自动加载emacs的其他插件"
 date = 2023-10-30T23:03:00+08:00
-lastmod = 2023-12-24T14:28:33+08:00
+lastmod = 2024-02-17T18:38:52+08:00
 tags = ["emacs", "use-package"]
 categories = ["emacs", "编程"]
 draft = false
@@ -81,18 +81,20 @@ use of :after is not strictly necessary.
         (use-package rg
           :ensure-system-package (binary . package-name))
         ```
--   **可以自定义要执行的软件安装命令**
 
-    -   如果自定义了要执行的命令就执行自定义的命令，如果只写了要安装的包，并没有指定安装命令，那么use-package会执行默认的安装命令
 
-    <!--listend-->
+#### **可以自定义要执行的软件安装命令和包管理器** {#可以自定义要执行的软件安装命令和包管理器}
 
-    ```elisp
-    (use-package ruby-mode
-      :ensure-system-package
-      ((rubycop . "gem install rubocop"))    ;;自定义执行的安装命令是gem install rubycop
-      )
-    ```
+-   如果自定义了要执行的命令就执行自定义的命令，如果只写了要安装的包，并没有指定安装命令，那么use-package会执行默认的安装命令
+
+<!--listend-->
+
+```elisp
+(use-package ruby-mode
+  :ensure-system-package
+  ((rubycop . "gem install rubocop"))    ;;自定义执行的安装命令是gem install rubycop
+  )
+```
 
 
 ### 关于包加载前/后在执行的命令 {#关于包加载前-后在执行的命令}
