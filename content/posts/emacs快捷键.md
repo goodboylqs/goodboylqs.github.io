@@ -1,25 +1,33 @@
 +++
-title = "emacs&git使用学习"
-author = ["553912917@qq.com"]
-description = "emacs的常用快捷键以及git的工作原理"
+title = "emacs快捷键"
+author = ["lqs_is_a_goodboy"]
+description = "emacs的常用快捷键"
 date = 2023-12-21T08:00:00+08:00
-lastmod = 2024-01-05T00:06:11+08:00
+lastmod = 2024-02-20T16:21:24+08:00
 tags = ["emacs", "git"]
 categories = ["编程"]
 draft = false
 featured_image = "../picture/git工作区.jpg"
 +++
 
-## 创建多个eshell buffer {#创建多个eshell-buffer}
-
--   C-u M-x eshell
+-   **使用ivy的时候，由于自动补全而导致无法创建包含已有关键字的新条目，使用C-M-j**
 
 
-## Property {#property}
+## org-noter {#org-noter}
+
+-   M-e(org-noter-insert-precise-note) : 在选中区域做精确笔记
+-   e/i(org-noter-insert-note)：可以为已经有的笔记项添加笔记
 
 
-### 快捷键 {#快捷键}
+## 属性快捷键 {#属性快捷键}
 
+-   创建多个eshell buffer
+    -   C-u M-x eshell
+-   在emacs外部打开
+    -   C-c e (centaur-tabs-open-in-external-application)
+-   **C-M-\\ (indent-region)：对齐代码**
+    -   M-h (org-mark-element)：选中代码块
+    -   可以先M-h选中要对齐的代码然后C-M-\\
 -   **M-S-Left/Right：当前标题及其子标题的升降级**
 -   C-c C-x p (org-set-property) ?
 
@@ -71,7 +79,7 @@ featured_image = "../picture/git工作区.jpg"
 -   使用全局变量 org-global-properties 设置的属性值可以被所有 Org 文件中的所有条目继承。
 
 
-### column view {#column-view}
+## column view {#column-view}
 
 
 #### 设置column view {#设置column-view}
@@ -183,14 +191,37 @@ featured_image = "../picture/git工作区.jpg"
 -   将内容转化为表格： **org-table-create-or-conver-from-region(C-c |)**,直接选中要转化为表格的区域，然后执行这个命令即可
 
 
-## emac快捷键 {#emac快捷键}
+## 代码块 {#代码块}
 
--   **使用ivy的时候，由于自动补全而导致无法创建包含已有关键字的新条目，使用C-M-j**
 -   21. C-w 剪切
+
+
+### 在org-mode中插入src代码块 {#在org-mode中插入src代码块}
+
+-   C-c C-,(org-insert-structure-template)
+
+
+### 在org-mode中的src区域运行代码 {#在org-mode中的src区域运行代码}
+
+-   将光标移动到src区域，按C-c C-c即可运行代码
+-   将光标移动到src区域，按C-c '可对代码进行编辑
+
+
+## 窗口 {#窗口}
+
 -   20. ****调整窗口大小****
     -   \`C-x ^’ makes the current window taller (‘enlarge-window’)
     -   \`C-x }’ makes it wider (‘enlarge-window-horizontally’)
     -   \`C-x {’ makes it narrower (‘shrink-window-horizontally’)
+
+
+## 时间 {#时间}
+
+-   C-u C-c . ：插入带时分的时间戳
+
+
+## 其他 {#其他}
+
 -   19. 倒计时：org-timer-set-timer，计时结束会弹出提示
 -   18. ****undo:C-/ redo:C-?****
 -   17. 在org roam buffer中
@@ -238,77 +269,3 @@ featured_image = "../picture/git工作区.jpg"
 11. C-c t 开启/关闭one window
 12. C-c right/left 切换窗口
 13. C-x C-x选中光标所在位置与上一个mark point之间的区域
-
-
-## git {#git}
-
-{{< figure src="/ox-hugo/2023-04-22_19-19-37_07c78b7d376f4c8793b53a43f0a2a7fa.jpg" >}}
-
--   工作区：就是你在电脑里能看到的目录。 （ ****注意工作区的文件 ≠≠≠ 未跟踪的文件，新建的文件是未跟踪文件，只有git add到暂存区后才算跟踪文件，对已跟踪文件的修改如果没有提交到暂存区，那就还在工作区，如果提交到暂存区就在暂存区**** ）
--   暂存区：英文叫 stage 或 index。一般存放在 .git 目录下的 index 文件（.git/index）中，所以我们把暂存区有时也叫作索引（index）。
--   版本库：工作区有一个隐藏目录 .git，这个不算工作区，而是 Git 的版本库。
-
-
-### 操作逻辑 {#操作逻辑}
-
-当对工作区修改（或新增）的文件执行git add命令时，暂存区的目录树被更新，同时工作区修改（或新增）的文件内容被写入到对象库中的一个新的对象中，而该对象的ID被记录在暂存区的文件索引中。
-当执行提交操作git commit时，暂存区的目录树写到\*\*版本库（对象库）\*\*中，master 分支会做相应的更新。即 master 指向的目录树就是提交时暂存区的目录树。
-
-
-### git的工作目录下分两种情况————已跟踪和未跟踪 {#git的工作目录下分两种情况-已跟踪和未跟踪}
-
--   未跟踪文件——————（git add）——————暂存区
-
-    {{< figure src="git/2023-04-24_09-00-28_%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE 2023-04-24 085718.png" >}}
-
--   已跟踪未修改文件（工作区）————（git add）————暂存区————（git commit）————版本库
-
-    {{< figure src="git/2023-04-24_09-00-52_%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE 2023-04-24 090008.png" >}}
-
-
-### git内目录三种状态：提交状态、暂存状 {#git内目录三种状态-提交状态-暂存状}
-
-![](/ox-hugo/2023-04-24_08-59-41_20150311223411613.png)
-态、已修改状态
-
-
-### 撤销修改 {#撤销修改}
-
--   撤销修改
-    -   撤销修改分为以下三种情况：
-        1.  已经push推送到远程仓库。
-        2.  已经commit提交到版本库。
-        3.  已经add提交到暂存区。
-        4.  暂未提交到暂存区，所有修改都在工作区。
-    -   接下来就这四种情况说明下如何撤销修改。
-        1.  如果push到远程仓库了，并且没有远程仓库的管理权限，那就放弃把，没救了。
-        2.  已经使用commit提交到了版本库。
-            因为已经产生了新的提交，所以撤销修改可以使用git reset --hard HEAD^来回退到上一个版本，从而达到撤销修改的效果。
-            -   git reset --hard HEAD^ //撤销之前的commit，并且舍弃之前commit的修改
-            -   git reset --soft HEAD^ //撤销之前的commit，并且保留之前的commit修改
-        3.  已经使用add提交到暂存区，但是没有使用commit提交到版本库。
-            因为已经提交到暂存区了，所以撤销修改需要先将提交到暂存区的修改拿回到工作区。
-            -   git reset HEAD &lt;file&gt;
-                命令git reset HEAD &lt;file&gt;可以把暂存区的修改撤销掉，重新放回工作区。==注意该命令和回退版本的命令的区别，因为很相似。==这样所有的修改就回到了工作区，丢弃工作区的修改只需执行以下命令。
-            -   git checkout -- &lt;file&gt;  # 使用 git restore &lt;file&gt; 的效果一样
-                命令git checkout -- &lt;file&gt;会将工作区的修改撤回到最后一次git add或git commit时的状态。
-        4.  文件修改都在工作区，没有提交到暂存区。
-            -   丢弃工作区的修改只需要执行一下命令：git checkout -- &lt;file&gt;	# 使用 git restore &lt;file&gt; 的效果一样
-            -   命令git checkout -- &lt;file&gt;会将工作区的修改撤回到最后一次git add或git commit时的状态。有两种情况，即：
-                -   ****一种是file自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；****
-                -   ****另一种是file已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。****
-
-
-## magit {#magit}
-
--   tab展开可以查看modified file的内容
--   s暂存
--   u取消暂存
--   c
-    -   -s 提交的时候加上签名（最好都用这个）
-    -   按完c之后选择-s等选项再按c完成选择，弹出提交消息的填写框
-    -   C-c C-c 写完提交内容提交
--   P 推送
-    -   u直接推送到origin仓库的master分支
-    -   p设置推送到哪个仓库的哪个分支
--   X reset（commit但未push的时候回退到stage）
