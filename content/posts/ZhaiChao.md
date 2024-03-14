@@ -3,7 +3,7 @@ title = "摘抄"
 author = ["lqs_is_a_goodboy"]
 description = "记录路过的风景"
 date = 2023-11-23T10:07:00+08:00
-lastmod = 2024-03-14T12:01:50+08:00
+lastmod = 2024-03-14T12:07:17+08:00
 tags = ["摘抄"]
 categories = ["读书笔记"]
 draft = false
@@ -15,6 +15,8 @@ tags
 
 
 ## <span class="timestamp-wrapper"><span class="timestamp">&lt;2024-03-14 四 11:49&gt; </span></span> 三联生活周刊 · 2024年第8期《爱情降级》 {#三联生活周刊-2024年第8期-爱情降级}
+
+[爱情降级我们时代的冷亲密](https://www.lifeweek.com.cn/article/220107?origin=6)
 
 
 ### 爱情的本质 {#爱情的本质}
