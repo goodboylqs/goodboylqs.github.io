@@ -1,8 +1,9 @@
 +++
 title = "2024遴选热点周周讲9两会：如何整治形式主义为基层减负"
 author = ["lqs_is_a_goodboy"]
+description = "整治形式主义"
 date = 2024-03-19T08:00:00+08:00
-lastmod = 2024-03-23T12:20:31+08:00
+lastmod = 2024-03-23T12:23:42+08:00
 tags = ["形式主义", "遴选"]
 categories = ["遴选"]
 draft = false
