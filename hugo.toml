@@ -28,6 +28,7 @@ weight = 4
 url = "/categories/遴选"
 name = "遴选"
 weight = 5
+[[menu.main]]
 url = "/categories/牛可"
 name = "牛可"
 weight = 6
