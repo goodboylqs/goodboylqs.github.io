@@ -28,12 +28,14 @@ weight = 4
 url = "/categories/遴选"
 name = "遴选"
 weight = 5
-
+url = "/categories/牛可"
+name = "牛可"
+weight = 6
 
 [[menu.main]]
 url = "/tags"
 name = "按标签搜索"
-weight = 6
+weight = 7
 
 
 
