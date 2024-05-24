@@ -3,7 +3,7 @@ title = "摘抄"
 author = ["lqs_is_a_goodboy"]
 description = "内心丰盈者，独行也如众。"
 date = 2023-04-12T00:07:00+08:00
-lastmod = 2024-05-24T10:46:52+08:00
+lastmod = 2024-05-24T11:08:08+08:00
 tags = ["摘抄"]
 categories = ["读书笔记"]
 draft = false
@@ -14,7 +14,7 @@ tags
 :
 
 
-## <span class="timestamp-wrapper"><span class="timestamp">&lt;2024-05-24 五 10:29&gt;</span></span>朱光潜 《谈修养》 {#朱光潜-谈修养}
+## <span class="timestamp-wrapper"><span class="timestamp">&lt;2024-05-24 五 10:29&gt;</span></span>如果中国的青年一代都选择公务员、教师等安定的工作，中国的未来靠谁呢？ {#如果中国的青年一代都选择公务员-教师等安定的工作-中国的未来靠谁呢}
 
 > 作者：千里快哉风链接：<https://www.zhihu.com/question/381411279/answer/2737761160>
 > 来源：知乎著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
