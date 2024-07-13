@@ -6,12 +6,12 @@
     <description>Recent content in 公文格式 on 饮冰十年，难凉热血  Having dreams is what makes life tolerable</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 16 Nov 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://goodboylqs.github.io/tags/%E5%85%AC%E6%96%87%E6%A0%BC%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://goodboylqs.github.io/tags/%E5%85%AC%E6%96%87%E6%A0%BC%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>公文格式设置</title>
       <link>https://goodboylqs.github.io/posts/gongwengeshishezhi/</link>
       <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
+      
       <guid>https://goodboylqs.github.io/posts/gongwengeshishezhi/</guid>
       <description>tags :
 公文格式设置 公⽂字体字号、序号格式、成文日期、发文机关 ❶标题，⼆号⼩标宋字体，居中显⽰，编排与红⾊分割线下空⼆⾏位置。
@@ -32,5 +32,6 @@ wps中设置文档网格：页面&amp;ndash;&amp;gt;页边距&amp;ndash;&amp;gt;
 ❸奇数⻚的⻚码设置成右空⼀个汉字，偶数⻚的⻚码设置成左空⼀个汉字。
 页边距设置 页面边距 公文的行间距设置为多少才是正确的？ 34.58 32.58 28 26</description>
     </item>
+    
   </channel>
 </rss>

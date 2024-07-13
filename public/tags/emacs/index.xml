@@ -6,56 +6,92 @@
     <description>Recent content in emacs on 饮冰十年，难凉热血  Having dreams is what makes life tolerable</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 21 Dec 2023 08:00:00 +0800</lastBuildDate>
-    <atom:link href="https://goodboylqs.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Feb 2024 00:00:00 +0800</lastBuildDate><atom:link href="https://goodboylqs.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>emacs&amp;git使用学习</title>
-      <link>https://goodboylqs.github.io/posts/emacsgit%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/</link>
+      <title>IRC（internet relay chat）互联网中继聊天使用教程（未完成）</title>
+      <link>https://goodboylqs.github.io/posts/2024021223-irc_internet_relay_chat_%E5%9F%BA%E4%BA%8E%E6%96%87%E6%9C%AC%E7%9A%84%E5%8D%B3%E4%BD%BF%E8%81%8A%E5%A4%A9%E7%B3%BB%E7%BB%9F_org/</link>
+      <pubDate>Thu, 15 Feb 2024 00:00:00 +0800</pubDate>
+      
+      <guid>https://goodboylqs.github.io/posts/2024021223-irc_internet_relay_chat_%E5%9F%BA%E4%BA%8E%E6%96%87%E6%9C%AC%E7%9A%84%E5%8D%B3%E4%BD%BF%E8%81%8A%E5%A4%A9%E7%B3%BB%E7%BB%9F_org/</guid>
+      <description>tags :
+source https://libera.chat/guides/basics &amp;lt;2024-02-12 周一 23:10&amp;gt;
+IRC基础知识 什么是IRC：internet relay chat（互联网中继聊天）， irc是一种聊天协议 IRC的工作原理：服务器地址是irc.libera.chat IRC使用教程 帮助 如果你迷路了，可以加入#libera频道问问题，这就是这个频道存在的意义 聊天 聊天区既可以打字聊天，也可以向服务器或客户端发送命令， 命令以/开头 对话窗口 切换到最顶上的Libera频道，你可以执行一些不想让别人看到的命令 以#开头的就是频道 频道下方的选项卡是您与网络上的人或机器人的私人对话 私人对话 可以通过双击对方的用户名开启私人对话 也可以用/query命令，如 /query john hi!就是向用户名为john的用户发送消息hi! 服务 服务是帮助网络平稳运行的机器人，他们管理用户、频道等，使用服务可以注册用户名、登陆 话题 在大部分频道的顶端可以找到对频道话题的描述，如果内容展示不全，可以使用/topic命令来展示话题 IRC命令备忘录 /join #libera ：加入频道libera /part [频道名]（如[#libera]） 消息：离开xxx频道，如果不提供频道名就默认离开当前打字的频道 /nick nickname：更改自己的昵称 /msg nickname message：向用户名为nickname的用户发送消息，并且不开启一个新的对话框 /query nickname [message] ：打开与用户nickname的信聊天框，并可以发送一条消息 这个命令对于注册昵称很有用 你的昵称是人们在libera.chat上识别你的方式，如果你注册了它，你可以多次使用同一个昵称；如果你没有注册，那么别的人也可以用你的昵称。 一些频道要求你必须注册昵称才能发言 一个账户是你永久的识别信息，但是你的昵称只是账户当前的名字，识别的含义是登陆账户，NickServ表现得像个用户一样，但它是libera.chat提供的服务 IRC使用（未完成） 注册并识别一个新的账户的步骤 第一步：注册账户：/nick 账户名 第二步：注册你的IRC 昵称：/msg NickServ REGISTER 密码 邮箱 可以看做是向用户NickServ发送REGISTRE 密码 邮箱 然后邮箱会收到一封信，可根据信中的指示完成注册 登陆账户 每次连接libera.chat服务器的时候你都要登陆你的账户 最简单的方式是使用https://libera.chat/guides/sasl 或者你可以以 account:password 的格式为NickServ提供登陆细节： /connect irc.</description>
+    </item>
+    
+    <item>
+      <title>编译器基础知识&amp;clang compile_commands.json</title>
+      <link>https://goodboylqs.github.io/posts/%E7%BC%96%E8%AF%91%E5%99%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86emacs-eglot%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sat, 03 Feb 2024 00:10:00 +0800</pubDate>
+      
+      <guid>https://goodboylqs.github.io/posts/%E7%BC%96%E8%AF%91%E5%99%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86emacs-eglot%E9%85%8D%E7%BD%AE/</guid>
+      <description>编译器基础知识 编译器一般构成 传统的编译器通常分为三个部分——————前端（frontend）、优化器（Optimizer）、后端（backend）
+前端：检察源码、解析错误、语法分析、语义分析， 构建于一个特定于语言的抽象语法树AST 优化器：优化前端生成的AST 后端：将代码映射到目标指令集，还负责生成利用所支持的体系结构的不寻常特性的良好代码 这种前端＋优化器＋后端的设计带来的好处： 支持多种语言作为source code，支持多种目标架构如X86,powerpc，arm
+比如可以使用c语言作为源码输入，选择ARM的代码生成器作为后端，如果想使用一种新的编程语言，无需改变优化器和代码生成器，只需要编写该语言的前端部分即可（我的理解：可以把优化器和后端看作一个整体，这个整体接受的代码格式是不变的，可以叫他格式A，前端对不同类型的语言都要生成格式A的代码，这样后端就不用考虑前端） gcc 和 llvm 和 clang 和 clangd llvm：Low level virtual machine（底层虚拟机）。简而言之，可以作为 多种编译器的后台 来使用
+广义的llvm：包含前端、优化器、后端在内的compiler 狭义的llvm：编译器的优化器和后端部分 clang：编译器的前端
+gcc：GNU compiler collection（GNU 编译工具集合），是一套由GNU开发的编程语言编译器，可处理C、C＋＋、Java等语言
+clangd：一个语言服务器，向您的编辑器添加智能功能：代码完成、编译错误、去定义等
+compile_commands.json（官方文档翻译摘抄） clangd:clang是一个工具集合，包含众多工具，clangd是其中一个 https://clangd.llvm.org/installation.html#project-setup clangd compile commands 碰到丢失#include文件等错误信息的原因和解决方法 原因 To understand your source code, clangd needs to know your build flags. (This is just a fact of life in C++, source files are not self-contained).
+By default, clangd will assume your code is built as clang some_file.</description>
+    </item>
+    
+    <item>
+      <title>emacs快捷键</title>
+      <link>https://goodboylqs.github.io/posts/emacs%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
       <pubDate>Thu, 21 Dec 2023 08:00:00 +0800</pubDate>
-      <guid>https://goodboylqs.github.io/posts/emacsgit%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/</guid>
-      <description>创建多个eshell buffer C-u M-x eshell Property 快捷键 M-S-Left/Right：当前标题及其子标题的升降级
+      
+      <guid>https://goodboylqs.github.io/posts/emacs%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>使用ivy的时候，由于自动补全而导致无法创建包含已有关键字的新条目，使用C-M-j org-noter M-e(org-noter-insert-precise-note) : 在选中区域做精确笔记 e/i(org-noter-insert-note)：可以为已经有的笔记项添加笔记 属性快捷键 创建多个eshell buffer
+C-u M-x eshell 在emacs外部打开
+C-c e (centaur-tabs-open-in-external-application) C-M-\ (indent-region)：对齐代码
+M-h (org-mark-element)：选中代码块 可以先M-h选中要对齐的代码然后C-M-\ M-S-Left/Right：当前标题及其子标题的升降级
 C-c C-x p (org-set-property) ?
 Set a property. This prompts for a property name and a value. If necessary, the property drawer is created as well.
 C-u M-x org-insert-drawer
 C-c C-c (org-property-action)
 C-c C-c s (org-set-property) ?
-Set a property in the current entry. Both the property and the value can be inserted using completion.
-手册 大部分属性是非继承的，因为如果默认为继承的话，在属性搜索的时候会因为搜索到的内容太多超载 ，你也可以定义变量org-use-property-inheritance的值来实现继承 属性是键值对。当它们与单个条目或一棵树相关联时，需要将它们插入名为“PROPERTIES”的特殊抽屉（参见抽屉）中，该抽屉必须位于标题及其规划线的正下方（参见截止日期和调度）适用时。每个属性都在一行中指定，首先是键（用冒号括起来），然后是值。键不区分大小写。这是一个例子： * CD collection ** Classic *** Goldberg Variations :PROPERTIES: :Title: Goldberg Variations :Composer: J.</description>
+Set a property in the current entry. Both the property and the value can be inserted using completion.</description>
     </item>
+    
     <item>
       <title>Org-Roam-Bibtex的使用</title>
       <link>https://goodboylqs.github.io/posts/2023orgroambibtexdeshiyong/</link>
       <pubDate>Tue, 21 Nov 2023 22:32:00 +0800</pubDate>
+      
       <guid>https://goodboylqs.github.io/posts/2023orgroambibtexdeshiyong/</guid>
       <description>tags :
 Org-Roam-Bibtex的使用 配置方法：https://www.bilibili.com/video/BV1Mg4y1j75u/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=90a44733b775f9f2aeec92b479575071 使用Zotero实现对文献的综合管理，包括文献的命名、文献附件的存储、文献导出格式的规定等 使用Betterbibtex来对导出的bib文件的格式进行规定，包括规定bib文件中没一个条目包含的内容
-@book{2023JiChuHuiJiDi6Ban, title = {基础会计（第6版）}, author = {陈国辉，迟旭升}, year = {2023}, month = nov, publisher = {{东北财经大学出版社}}, file = {/home/goodboylqs/Nutstore Files/Zotero-Library/2023JiChuHuiJiDi6Ban.pdf} } 注意事项 编辑引用格式为year+shorttitle(3,3)，这样每个条目的citekey就会被设置为year+shorttitle(3,3)，例如上述的2023JiChuHuiJiDi6Ban
+@book{2023JiChuHuiJiDi6Ban,title = {基础会计（第6版）},author = {陈国辉，迟旭升},year = {2023},month = nov,publisher = {{东北财经大学出版社}},file = {/home/goodboylqs/Nutstore Files/Zotero-Library/2023JiChuHuiJiDi6Ban.pdf}} 注意事项 编辑引用格式为year+shorttitle(3,3)，这样每个条目的citekey就会被设置为year+shorttitle(3,3)，例如上述的2023JiChuHuiJiDi6Ban
 在添加条目的时候，一定要注意标题和日期是必填的
 使用Zotfile来规定条目对应的pdf的命名格式和存储路径，实现pdf文件的云端备份
 renaming rules设置为%b，含义是将pdf的命名格式设置成与Betterbibtex导出的bib文件的citekey一样，例如上述的file = {/home/goodboylqs/Nutstore Files/Zotero-Library/2023JiChuHuiJiDi6Ban.pdf}中的2023JiChuHuiJiDi6Ban.pdf custom locatios设置pdf的存储路径，这个要与坚果云的同步文件夹路径协同，利用好坚果云的备份实现pdf文件的云端备份 使用方法 先打开Zotero，新建一个条目，编辑条目的标题、摘要、链接等内容。注意标题和日期是必填的，这关系到后面的文件引用格式 右键点击Zotero中新建的条目，添加添加附件&amp;ndash;文件副本，然后对应的文献附件就会按照配置好的命名格式和存储路径进行存储 右键包含所有文献的文件夹，点导出，选择保持更新 打开Emacs，M-x helm-bibtex，就能看到已经有的文献。 但是在该条目没有笔记的时候，不能选中该条目然后tab然后f8编辑笔记。在该条目没有笔记的时候，要C-c n k(orb-insert-link)来为该条目添加笔记，这样才会调出你配置好的zotero文献模板。 当你为条目添加了笔记后，可以①使用helm-bibtex②C-x n f(org-roam-node-find)来查看已经建立的笔记 打开一条笔记后，在对应的org headline下面，使用org-noter，既可以调出文献对应的pdf附件并做笔记 使用helm-bibtex来读取Zotero导出的bib文件，得到文献的目录及其附件内容 以下是我自己的emacs配置 ;;配置使用org-roam-bibtex ;;第一步：告诉Emacs从哪里读取Zotero的信息 ;;在Deepin下使用bib、pdf、notes的路径 (setq zot_bib &amp;#39;(&amp;#34;~/Nutstore Files/Zotero-Library/bibs/我的文献库.bib&amp;#34;) zot_pdf &amp;#39;(&amp;#34;~/Nutstore Files/Zotero-Library/&amp;#34;) ) ;; ;;在家里台式机windows下使用的bib、pdf、notes的路径 ;; (setq zot_bib &amp;#39;(&amp;#34;c:/Users/55391/Nutstore/1/Zotero-Library/bibs/书.</description>
     </item>
+    
     <item>
       <title>Elisp学习</title>
       <link>https://goodboylqs.github.io/posts/2023elispxuexi/</link>
       <pubDate>Wed, 15 Nov 2023 23:43:00 +0800</pubDate>
+      
       <guid>https://goodboylqs.github.io/posts/2023elispxuexi/</guid>
       <description>tags :
-Elisp学习 filetags: @编程 elisp学习 emacs
-tags 编程 emacs source http://smacs.github.io/elisp/ date &amp;lt;2023-11-15 周三 23:41&amp;gt; elisp的运行环境 只有在lisp-interaction-mode下，才能执行elisp代码 M-x lisp-interaction-mode 在行尾右括号后面按C-j elisp不好作为可执行方式来来运行，所有的elisp都是在emacs的环境下 在org-mode中插入src代码块 C-c C-,(org-insert-structure-template) 在org-mode中的src区域运行代码 将光标移动到src区域，按C-c C-c即可运行代码 将光标移动到src区域，按C-c &amp;lsquo;可对代码进行编辑 elisp表达式 elisp的表达式是一个括号括起来，成为一个S-表达式 执行一个S-表达式的方法有2个 用C-j 用C-x C-e————C-x C-e是一个全局按键，几乎在任何地方都可以使用。也就是说哪怕是没有打开lisp-interaction-mode的情况下使用C-x C-e也可以运行代码，运行结果会在minibuffer中显示 elisp表达式的作用 ≠ elisp表达式的返回值 (message &amp;ldquo;hello world&amp;rdquo;)中message函数的作用是在minibuffer中显示一个字符串，但它的返回值是&amp;quot;hello world&amp;quot; (message &amp;#34;hello world&amp;#34;) elisp的函数和变量 elisp函数 定义一个函数 ;; (defun 函数名(参数列表) ;; 函数文档 //可省略 *如果添加了函数文档，那么使用C-h f查看该函数的时候会显示函数文档的内容* ;; 函数体) (defun helloworld(name) &amp;#34;对name说hello&amp;#34; (message &amp;#34;hello,%s&amp;#34; name)) (helloworld &amp;#34;emacser&amp;#34;) elisp中的函数是全局的，变量也很容易成为全局变量（因为全局变量和局部变量的赋值都是使用setq），所以名字互相不冲突是很关键的 elisp变量 elisp变量无需像c语言变量一样声明，可以直接赋值</description>
+Elisp学习 tags 编程 emacs source http://smacs.github.io/elisp/ date &amp;lt;2023-11-15 ���� 23:41&amp;gt; elisp的运行环境 只有在lisp-interaction-mode下，才能执行elisp代码 M-x lisp-interaction-mode 在行尾右括号后面按C-j elisp不好作为可执行方式来来运行，所有的elisp都是在emacs的环境下 elisp表达式 elisp的表达式是一个括号括起来，成为一个S-表达式 执行一个S-表达式的方法有2个 用C-j 用C-x C-e————C-x C-e是一个全局按键，几乎在任何地方都可以使用。也就是说哪怕是没有打开lisp-interaction-mode的情况下使用C-x C-e也可以运行代码，运行结果会在minibuffer中显示 elisp表达式的作用 ≠ elisp表达式的返回值 (message &amp;ldquo;hello world&amp;rdquo;)中message函数的作用是在minibuffer中显示一个字符串，但它的返回值是&amp;quot;hello world&amp;quot; (message &amp;#34;hello world&amp;#34;) elisp数据类型（elisp#Lisp Data Types）(未完成) Lisp“object”是Lisp使用和操作的一段数据程序。 就我们的目的而言，“类型”或“数据类型”是一组可能的Objects。 Emacs内置了一些基础的对象类型，其他的对象类型都是由基础的对象类型构造的，这些类型包括“integer”, “float”, “cons”, “symbol”, “string”, “vector”,“hash-table”, “subr”, “byte-code function”, and “record” 每一种基础的类型都有一个与之相关的Lisp 函数来检查某个对象是否属于该类型 Lisp 的对象的类型是隐式的由对象本身指明——————例如一个 Lisp vector 对象就是 vector 类型、一个 int 对象就是 int 类型， Lisp 知道Vector是Vector、int是int，不需要像其他语言一样声明对象（变量）类型 elisp的函数和变量 elisp函数 定义一个函数 ;; (defun 函数名(参数列表) ;; 函数文档 //可省略 *如果添加了函数文档，那么使用C-h f查看该函数的时候会显示函数文档的内容* ;; 函数体) (defun helloworld(name) &amp;#34;对name说hello&amp;#34; (message &amp;#34;hello,%s&amp;#34; name)) (helloworld &amp;#34;emacser&amp;#34;) elisp中的函数是全局的，变量也很容易成为全局变量（因为全局变量和局部变量的赋值都是使用setq），所以名字互相不冲突是很关键的 `` 每个函数都有一个返回值。这个返回值一般是函数定义里的最后一个表达式的值。 &#39;&#39; elisp变量：setq、defvar、let、let* 使用setq声明变量：elisp里的变量使用无需像C语言那样需要声明，你可以用setq直接对一个变量赋值</description>
     </item>
+    
     <item>
       <title>Emacs的Use-Package用法</title>
       <link>https://goodboylqs.github.io/posts/2023usepackage/</link>
       <pubDate>Mon, 30 Oct 2023 23:03:00 +0800</pubDate>
+      
       <guid>https://goodboylqs.github.io/posts/2023usepackage/</guid>
       <description>tags autoload,deferred-loading,emacs,emacs-lisp,handler,keymap,keyword,melpa,ues-package Use-Package 关于指定包的加载顺序 after关键字：指定包c在包a加载之后再加载 (use-package ivy-hydra :after (ivy hydra)) In this case, because all of these packages are demand-loaded in the order they occur, the use of :after is not strictly necessary. 为了让ivy-hydra在ivy和hydra加载之后再加载，就需要用到:after关键字。注意对于ivy和hydra的加载语句还是必要的，只是使用了after关键字之后，就不需要必须把加载ivy和hydra的语句放在加载ivy-hydra的语句之前了
 require关键字：如果包a的依赖项不满足则阻止包a的加载 ``Prevent loading if dependencies are missing&amp;rsquo;&amp;rsquo; 当包a需要的加载需要依赖包c时，如org-roam-bibtex的加载需要依赖Org-roam和ivy-bibtex，则需要通过require关键字来指定
 pin关键字：指定你的package来自哪个池子（melpa、gnu、其他） (use-package company :ensure t :pin gnu) (use-package evil :ensure t) ;; no :pin needed, as package.el will choose the version in melpa (use-package adaptive-wrap :ensure t ;; as this package is available only in the gnu archive, this is ;; technically not needed, but it helps to highlight where it ;; comes from :pin gnu) 默认情况下，不使用pin特定指明，默认所有的包来自melpa 可以使用pin来指定包来自gnu ensure-system-package关键字：允许你安装package的时候自动安装package依赖的系统软件 The :ensure-system-package keyword allows you to ensure system binaries exist alongside your package declarations.</description>
     </item>
+    
     <item>
       <title>在手机上使用org-agenda进行日程管理</title>
       <link>https://goodboylqs.github.io/posts/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8org-agenda%E8%BF%9B%E8%A1%8C%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86/</link>
       <pubDate>Sun, 03 Sep 2023 13:30:00 +0800</pubDate>
+      
       <guid>https://goodboylqs.github.io/posts/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8org-agenda%E8%BF%9B%E8%A1%8C%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86/</guid>
       <description>org-agenda手机端同步的难点 作为Emacs的重度使用者,org-mode已经成为我日常工作生活不可或缺的重要工具。作为Emac的日程管理插件，org-agenda一直是我用来进行日常管理的重要辅助，其自动添加日期、设置优先级、设置状态等功能为日程管理提供了非常方便的特性。但Emacs作为一款桌面软件，其所有的插件都是为PC使用环境设计的，Emacs各种快捷键的使用可以在电脑键盘下按出来，但在手机键盘上显然就很不方便，同时许多插件依赖操作系统提供的各种依赖库文件，安卓手机也无法提供相关的运行环境。因此在手机上使用Emacs从可操作性、可实现性来说都是不太现实的。虽然Emacs官方已经开发了Emacs app，但是很多功能还是只能在PC上实现，包括org-agenda。时下流行的日程管理软件，包括滴答清单、Todo清单等，都能做到手机、电脑多平台同步，对于日程管理来说，这基本上是最最重要的特性，在手机上随时随地查看日程是大部分人的刚需，如果不能做到多平台同步，只能在PC上查看日程，那日程管理就会非常不方便。通过几天研究，利用了坚果云的自动同步、orgzly APP，我基本上实现了org-agenda的多平台同步，orgzyl提供了App端的org agenda功能，坚果云提供了agenda files的多平台同步，可以在App端显示日程的内容、状态、优先级，并使用App新增日程、修改日程内容等，免费、高效，大大提升了日程管理效率。下面就如何实现手机同步org-agenda简要说明做法。
 原理 文件同步。org-agenda是对agenda files内容的显示，而日程的内容都是记录在agenda files中的，因此只要实现agenda files的手机同步，就可以查看日程相关内容，这点使用坚果云很容易实现。 日程显示。orgzly可以将agenda files 中的日程识别出来，产生类似于PC端Emacs org-agenda的显示效果。 操作 注册坚果云账号，免费版即可，免费版提供每月1GB的上传和下载流量，对于日程管理文件，这些流量足够了。 在手机上安装坚果云App和orgzly App，其中orgzly App是从FDroid上下载的，需要梯子,为了方便我把安装包分享在这里链接: https://pan.baidu.com/s/1w-maN_MwuivDV8MJIYZY3A 提取码: je4u。在电脑上安装坚果云客户端，Windows和Linux下坚果云都有相关客户端，官方的支持还是很完善的。
@@ -64,5 +100,6 @@ pin关键字：指定你的package来自哪个池子（melpa、gnu、其他） (
 同步完成后，打开orgzly左上角，点Agenda即可看到类似于Emacs org-agenda的显示效果。
 实现Windows、Linux、手机的同步 我自己在Windows、Linux用的emacs配置是同一套，因此也希望能实现Windows、Linux下日程的同步，但难点在于同一个agenda file在Windows和Linux下文件的路径不同，Emacs在寻找agenda files时发现给定路径下找不到对应文件的时会提示你是否要Remove或Abort对应的agenda file。要解决这个问题，只需要设置变量org-agenda-skip-unavailable-files的值为t，即可将Windows和Linux下的agenda files路径同时加入你的init.el中，Emacs会跳过找不到的agenda file并不会提示你，只会将找到的agenda files加入到org agenda中。只需要将Windows和Linux下坚果云同步的agenda files的路径用C-c [加入init.el即可。下图是我的org agenda files的配置。 </description>
     </item>
+    
   </channel>
 </rss>

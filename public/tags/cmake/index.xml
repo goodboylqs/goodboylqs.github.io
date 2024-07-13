@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cmake on 饮冰十年，难凉热血  Having dreams is what makes life tolerable</title>
+    <link>https://goodboylqs.github.io/tags/cmake/</link>
+    <description>Recent content in cmake on 饮冰十年，难凉热血  Having dreams is what makes life tolerable</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 11 Feb 2024 08:00:00 +0800</lastBuildDate><atom:link href="https://goodboylqs.github.io/tags/cmake/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cmake使用教程</title>
+      <link>https://goodboylqs.github.io/posts/2024cmakeshiyongjiaocheng/</link>
+      <pubDate>Sun, 11 Feb 2024 08:00:00 +0800</pubDate>
+      
+      <guid>https://goodboylqs.github.io/posts/2024cmakeshiyongjiaocheng/</guid>
+      <description>tags :
+Cmake使用教程 Cmake是什么：Cmake是跨平台的构建工具
+Cmake有什么用：可以通过编写简单的配置文件生成本地的Makefile，这样就不用亲自去编写Makefile了
+Makefile是什么：在Linux环境下使用make工具构建工程的时候需要makefile，makefile描述了整个工程的编译、连接规则。makefile是一个脚本，它定义了一系列的工程文件的编译规则，例如哪些文件先编译、哪些文件需要重新编译。makefile也可以执行操作系统的命令。 Cmake和Make的区别
+Make是一个工具，它是用于具体构建工程的，执行make命令一个项目的源代码就被编译、链接城二进制代码了，Make直接调用gcc等编译器。 Cmake并不用于直接构建工程,Cmake用于生成构建工程所需要的makefile，makefile是make工作时必需的文件 make基础：编写基础的makefile makefile基础语法： gcc前面是tab不是空格，一定要注意。也要注意编译命令的时间顺序，最后执行的命令在makefile最前面 // 目标文件:依赖文件 // 编译命令 main:main.o fun0.o fun1.o fun2.o //最后执行的命令在最前面 gcc -o main.o fun0.o fun1.o fun2.o main.o:main.c gcc -c main.c fun0.o:fun0.c gcc -c fun0.c …… Cmake基础：编写基础的cmakelists.txt 然后在main.c同级⽬录下编写CMakeLists.txt，内容如下：
+cmake_minimum_required (VERSION 2.8) project (demo) add_executable(main main.c) cmakelists.txt必需的内容： cmake_minimum_required(VERSION xxx) project (项目名) add_executable(生成的可执行程序名 要编译的源文件1 2 3……) 备注 执行完cmake后要再执行make才能生成可执行程序的二进制代码，你需要找到cmake生成的makefile在哪个文件夹下，进入那个文件夹执行make 如果要重新编译项目，要先执行make clean并删除cmake生成的makefile、cmakecache.txt等中间文件，避免之前的构建文件影响当前的构建 实际使用过程中，可以使用命令指定build path和source code path，build-path中会包含构建过程中生成的中间文件如makefile、cmakecache.txt等，这样可以方便的直接删除build-path下的中间文件 cmake -B build-path -S source-path </description>
+    </item>
+    
+    <item>
+      <title>clang的compile_commands.json文件和.clangd文件</title>
+      <link>https://goodboylqs.github.io/posts/clang%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6compile_commands%E5%92%8C%E7%82%B9clangd/</link>
+      <pubDate>Sun, 11 Feb 2024 00:00:00 +0800</pubDate>
+      
+      <guid>https://goodboylqs.github.io/posts/clang%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6compile_commands%E5%92%8C%E7%82%B9clangd/</guid>
+      <description>编译器基础知识 compile_commands.json 什么是compile_commands.json：存储编译命令的数据库 参考 Compile command 和 clangd flags（很容易混淆） 要理解你的源代码，clangd需要知道你的构建标志（这只是C++中的一个事实，源文件不是独立的），而解释源代码需要一定量的上下文，例如你需要知道#include &amp;ldquo;stdio.h&amp;quot;中stdio.h文件的位置，c++编译器期望这些上下文通过command-line flags（命令行标志）来进行传递 compile_commands.json就包含了这些上下文 一个compile_commands.json中都包含哪些内容 实际项目通常需要设置包含路径（使用 -I 标志）、定义预处理器符号、配置警告等。通常，编译数据库（也就是compile_commands.json）指定这些编译命令。 clangd 在源文件的父文件中搜索compile_commands.json 由于 clangd 同时嵌入了 clang 的驱动程序（用于解释编译命令）和 clang 的解析器（由标志控制），因此可以传递给 clang 的大多数标志也将与 clangd 一起使用。 其中最重要的flags如下： 设置#include的搜索路径：-I，-isystem，以及其他的 控制使用的语言类型：-x,-std等 预定义预处理器宏：-D等 没有这些flags，clangd经常会在解析源代码的时候失败，产生很多虚假的错误，例如#include 文件无法找到 compile_commands.json的格式 编译数据库是一个JSON文件，它由一个 “命令对象command objects”数组组成，其中每个命令对象包含翻译单元的主文件、编译运行的工作目录和实际的编译命令。
+[ { &amp;#34;directory&amp;#34;: &amp;#34;/home/user/llvm/build&amp;#34;, &amp;#34;command&amp;#34;: &amp;#34;/usr/bin/clang++ -Irelative -DSOMEDEF=\&amp;#34;With spaces, quotes and \\-es.\&amp;#34; -c -o file.o file.cc&amp;#34;, &amp;#34;file&amp;#34;: &amp;#34;file.cc&amp;#34;}, ... ] directory ：编译的工作目录。 command 或 file 字段中指定的所有路径必须是绝对路径或相对于此目录的路径。 file ：此编译步骤处理的主要翻译单元源文件。这被工具用作编译数据库的键(key)。对于同一个文件可以有多个命令对象，例如，如果用 不同的配置编译同一个源文件。
+command ：执行编译命令。在JSON取消转义之后，这必须是一个有效的命令，以便在构建系统使用的环境中重新运行翻译单元的准确编译 步骤。参数使用shell引号和shell转义引号， ‘&amp;quot;’ 和 ‘\’ 是惟一的特殊字符。不支持Shell扩展。 arguments ：编译命令作为字符串列表执行。需要 arguments 或 command 。 output ：此编译步骤创建的输出的名称。这个字段是可选的。它可以用来区分同一输入文件的不同处理模式。</description>
+    </item>
+    
+  </channel>
+</rss>

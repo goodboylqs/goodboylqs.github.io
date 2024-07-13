@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>lsp on 饮冰十年，难凉热血  Having dreams is what makes life tolerable</title>
+    <link>https://goodboylqs.github.io/tags/lsp/</link>
+    <description>Recent content in lsp on 饮冰十年，难凉热血  Having dreams is what makes life tolerable</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 03 Feb 2024 00:10:00 +0800</lastBuildDate><atom:link href="https://goodboylqs.github.io/tags/lsp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>编译器基础知识&amp;clang compile_commands.json</title>
+      <link>https://goodboylqs.github.io/posts/%E7%BC%96%E8%AF%91%E5%99%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86emacs-eglot%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sat, 03 Feb 2024 00:10:00 +0800</pubDate>
+      
+      <guid>https://goodboylqs.github.io/posts/%E7%BC%96%E8%AF%91%E5%99%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86emacs-eglot%E9%85%8D%E7%BD%AE/</guid>
+      <description>编译器基础知识 编译器一般构成 传统的编译器通常分为三个部分——————前端（frontend）、优化器（Optimizer）、后端（backend）
+前端：检察源码、解析错误、语法分析、语义分析， 构建于一个特定于语言的抽象语法树AST 优化器：优化前端生成的AST 后端：将代码映射到目标指令集，还负责生成利用所支持的体系结构的不寻常特性的良好代码 这种前端＋优化器＋后端的设计带来的好处： 支持多种语言作为source code，支持多种目标架构如X86,powerpc，arm
+比如可以使用c语言作为源码输入，选择ARM的代码生成器作为后端，如果想使用一种新的编程语言，无需改变优化器和代码生成器，只需要编写该语言的前端部分即可（我的理解：可以把优化器和后端看作一个整体，这个整体接受的代码格式是不变的，可以叫他格式A，前端对不同类型的语言都要生成格式A的代码，这样后端就不用考虑前端） gcc 和 llvm 和 clang 和 clangd llvm：Low level virtual machine（底层虚拟机）。简而言之，可以作为 多种编译器的后台 来使用
+广义的llvm：包含前端、优化器、后端在内的compiler 狭义的llvm：编译器的优化器和后端部分 clang：编译器的前端
+gcc：GNU compiler collection（GNU 编译工具集合），是一套由GNU开发的编程语言编译器，可处理C、C＋＋、Java等语言
+clangd：一个语言服务器，向您的编辑器添加智能功能：代码完成、编译错误、去定义等
+compile_commands.json（官方文档翻译摘抄） clangd:clang是一个工具集合，包含众多工具，clangd是其中一个 https://clangd.llvm.org/installation.html#project-setup clangd compile commands 碰到丢失#include文件等错误信息的原因和解决方法 原因 To understand your source code, clangd needs to know your build flags. (This is just a fact of life in C++, source files are not self-contained).
+By default, clangd will assume your code is built as clang some_file.</description>
+    </item>
+    
+  </channel>
+</rss>
