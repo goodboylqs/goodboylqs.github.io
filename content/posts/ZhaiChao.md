@@ -2,8 +2,8 @@
 title = "摘抄"
 author = ["lqs_is_a_goodboy"]
 description = "内心丰盈者，独行也如众。"
-date = 2023-04-12T00:07:00+08:00
-lastmod = 2024-09-19T11:16:15+08:00
+date = 2023-09-19T00:07:00+08:00
+lastmod = 2024-09-19T11:20:39+08:00
 tags = ["摘抄"]
 categories = ["读书笔记"]
 draft = false
