@@ -8,8 +8,8 @@ var relearn_searchindex = [
     "uri": "/log/index.html"
   },
   {
-    "breadcrumb": "My New Hugo Site \u003e  Posts",
-    "content": "hugo使用 主页：content/_index.md 创建主页：hugo new –kind home _index.md 章节：content/chapter/…………………… 一个章节也是包含一个主页以及子章节 创建章节log及主页：hugo new –kind chapter log/_index.md 在章节log下面创建子章节first-day、second-day hugo new log/first-day/_index.md hugo new log/second-day/index.md hugo new log/third-day.md 2024年6月29日山东省市直遴选笔试题第一题 2024年6月29日山东省市直遴选笔试题第二题",
+    "breadcrumb": "My New Hugo Site \u003e \rPosts",
+    "content": "hugo使用 主页：content/_index.md 创建主页：hugo new –kind home _index.md 章节：content/chapter/…………………… 一个章节也是包含一个主页以及子章节 创建章节log及主页：hugo new –kind chapter log/_index.md 在章节log下面创建子章节first-day、second-day hugo new log/first-day/_index.md\rhugo new log/second-day/index.md\rhugo new log/third-day.md\r2024年6月29日山东省市直遴选笔试题第一题 2024年6月29日山东省市直遴选笔试题第二题",
     "description": "遴选笔试题（自己做的），老师讲的还没加上",
     "tags": [
       "遴选"
@@ -42,7 +42,7 @@ var relearn_searchindex = [
     "uri": "/tags/index.html"
   },
   {
-    "breadcrumb": "My New Hugo Site \u003e  Categories",
+    "breadcrumb": "My New Hugo Site \u003e \rCategories",
     "content": "",
     "description": "",
     "tags": [],
@@ -50,7 +50,7 @@ var relearn_searchindex = [
     "uri": "/categories/%E9%81%B4%E9%80%89/index.html"
   },
   {
-    "breadcrumb": "My New Hugo Site \u003e  Tags",
+    "breadcrumb": "My New Hugo Site \u003e \rTags",
     "content": "",
     "description": "",
     "tags": [],

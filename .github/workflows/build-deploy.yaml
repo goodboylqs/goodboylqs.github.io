@@ -29,7 +29,7 @@ jobs:
       # 3. 构建静态网站
       - name: Build with Hugo
         run: |
-          hugo --minify --destination ./public
+          hugo --minify
 
       # 4. 上传构建产物
       - name: Upload Artifact
@@ -44,6 +44,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           artifact_name: github-pages
+          publish_dir: ./public
         environment:
           name: github-pages
 
