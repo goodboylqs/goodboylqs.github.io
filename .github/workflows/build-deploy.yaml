@@ -42,4 +42,8 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         with:
-          artifact: github-pages  # 与上传的产物名称一致
+          token: ${{ secrets.GITHUB_TOKEN }}
+          artifact_name: github-pages
+        environment:
+          name: github-pages
+
