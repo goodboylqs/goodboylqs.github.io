@@ -1,39 +1,41 @@
-name: Deploy to GitHub Pages
+name: Deploy Hugo Site with Relearn Theme
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]  # 触发部署的分支（默认为main）
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
-      pages: write
-      id-token: write
+      contents: write  # 允许将构建结果推送至gh-pages分支
 
     steps:
-      - name: Checkout
+      # 1. 检出仓库代码（包含主题子模块）
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          submodules: recursive
+          submodules: recursive  # 递归拉取子模块（确保主题依赖被加载）
+          fetch-depth: 0  # 完整克隆历史记录（某些主题需要）
 
-      - name: Setup Hugo
+      # 2. 安装扩展版Hugo（Relearn主题依赖Sass处理）
+      - name: Install Hugo Extended
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'
-          extended: true
+          hugo-version: "latest"  # 或指定版本如 "0.125.7"
+          extended: true  # 必须启用扩展版以支持Relearn主题
 
-      - name: Build
-        run: 
-          hugo --minify --baseURL "${{ steps.deployment.outputs.page_url }}/" 
+      # 3. 构建静态网站并生成.nojekyll文件
+      - name: Build with Hugo
+        run: |
+          hugo --minify --gc --cleanDestinationDir
+          touch public/.nojekyll  # 禁用GitHub的Jekyll构建
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
+      # 4. 部署到GitHub Pages分支（gh-pages）
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          path: ./public
-          name: github-pages
-
-      - name: Deploy
-        uses: actions/deploy-pages@v4
-        id: deployment
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public  # Hugo生成的静态文件目录
+          keep_files: false  # 清理旧文件
+          force_orphan: true  # 强制仅保留最新文件
