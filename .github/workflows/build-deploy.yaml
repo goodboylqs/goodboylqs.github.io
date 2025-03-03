@@ -26,8 +26,7 @@ jobs:
 
       - name: Build
         run: 
-          hugo --minify --baseURL "${{ steps.deployment.outputs.page_url }}/" \
-          touch public/.nojekyll  # 禁用GitHub的Jekyll构建
+          hugo --minify --baseURL "${{ steps.deployment.outputs.page_url }}/" 
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
