@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux :: My New Hugo Site</title>
+    <title>Linux :: 饮冰十年 难凉热血</title>
     <link>http://localhost:1313/linux/index.html</link>
     <description>This is a new chapter.&#xA;Linux学习对Linux的学习的记录</description>
     <generator>Hugo</generator>

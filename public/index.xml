@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
+    <title>饮冰十年 难凉热血</title>
     <link>http://localhost:1313/index.html</link>
     <description>This is your new home page.</description>
     <generator>Hugo</generator>
@@ -13,7 +13,7 @@
       <link>http://localhost:1313/%E5%BF%83%E7%90%86%E5%AD%A6/index.html</link>
       <pubDate>Tue, 12 Nov 2024 00:00:00 +0800</pubDate>
       <guid>http://localhost:1313/%E5%BF%83%E7%90%86%E5%AD%A6/index.html</guid>
-      <description>This is a new chapter.</description>
+      <description>This is a new chapter.&#xA;少有人走的路人可以拒绝任何东西，但绝对不可以拒绝成熟。拒绝成熟，实际上就是在回避问题、逃避痛苦。回避问题和逃避痛苦的趋向，是人类心理疾病的根源，不及时处理，你就会为此付出沉重的代价，承受更大的痛苦。 *勇敢地面对自己的问题，不要逃避。直面问题，我们的心智就会逐渐成熟；逃避问题，心灵就会永远停滞不前。*</description>
     </item>
     <item>
       <title>Hugo</title>
@@ -39,7 +39,7 @@
     <item>
       <title>Logs</title>
       <link>http://localhost:1313/log/index.html</link>
-      <pubDate>Mon, 03 Mar 2025 19:56:01 +0800</pubDate>
+      <pubDate>Mon, 03 Mar 2025 19:56:16 +0800</pubDate>
       <guid>http://localhost:1313/log/index.html</guid>
       <description></description>
     </item>

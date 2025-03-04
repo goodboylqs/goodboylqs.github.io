@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>读书笔记 :: Category :: My New Hugo Site</title>
+    <title>读书笔记 :: Category :: 饮冰十年 难凉热血</title>
     <link>http://localhost:1313/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/index.html</link>
     <description></description>
     <generator>Hugo</generator>
@@ -10,9 +10,9 @@
     <atom:link href="http://localhost:1313/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>少有人走的路</title>
-      <link>http://localhost:1313/posts/2023shaoyourenzoudelu/index.html</link>
+      <link>http://localhost:1313/%E5%BF%83%E7%90%86%E5%AD%A6/2023shaoyourenzoudelu/index.html</link>
       <pubDate>Tue, 12 Nov 2024 00:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/posts/2023shaoyourenzoudelu/index.html</guid>
+      <guid>http://localhost:1313/%E5%BF%83%E7%90%86%E5%AD%A6/2023shaoyourenzoudelu/index.html</guid>
       <description>人可以拒绝任何东西，但绝对不可以拒绝成熟。拒绝成熟，实际上就是在回避问题、逃避痛苦。回避问题和逃避痛苦的趋向，是人类心理疾病的根源，不及时处理，你就会为此付出沉重的代价，承受更大的痛苦。 *勇敢地面对自己的问题，不要逃避。直面问题，我们的心智就会逐渐成熟；逃避问题，心灵就会永远停滞不前。*</description>
     </item>
   </channel>
