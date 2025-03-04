@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.145.0">
@@ -10,7 +10,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="hugo学习记录 :: 饮冰十年 难凉热血">
     <meta name="twitter:description" content="问题 为什么使用org-hugo-to-md将org file输出为md file后在网页上不显示 原因：没有在org file中加上title 使用 目录结构 hugo-theme-relearn一个页面对应public/posts下的一个文件夹 public/index.html对应于网站的主页 public/posts下的每一个文件夹对应于不同的页面 public/ox-hugo里面包含不同页面的图片 /static/ox-hugo也是，是org-hugo-to-md后，ox-hugo将org file中的图片放到目录/static/ox-hugo下，然后执行hugo命令后，hugo会在构建网站时将/static/ox-hugo下的图片放到public/ox-hugo下 侧边栏 如何生成一个新的侧边栏 【使用hugo命令生成侧边栏文件夹】使用hugo new –kind chapter 菜单1/_index.md，会生成“content/菜单1”文件夹 【将生成的.md文件移动到对应文件夹】将org-hugo-to-md生成的md文件移动到对应文件夹，例如将&#34;少有人走的路.md&#34;移动到“content/心理学”文件夹下 【hugo构建网站】在根目录下使用hugo命令构建网站">
-    <meta property="og:url" content="http://localhost:1313/hugo/hugo%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/index.html">
+    <meta property="og:url" content="https://goodboylqs.github.io/hugo/hugo%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/index.html">
     <meta property="og:site_name" content="饮冰十年 难凉热血">
     <meta property="og:title" content="hugo学习记录 :: 饮冰十年 难凉热血">
     <meta property="og:description" content="问题 为什么使用org-hugo-to-md将org file输出为md file后在网页上不显示 原因：没有在org file中加上title 使用 目录结构 hugo-theme-relearn一个页面对应public/posts下的一个文件夹 public/index.html对应于网站的主页 public/posts下的每一个文件夹对应于不同的页面 public/ox-hugo里面包含不同页面的图片 /static/ox-hugo也是，是org-hugo-to-md后，ox-hugo将org file中的图片放到目录/static/ox-hugo下，然后执行hugo命令后，hugo会在构建网站时将/static/ox-hugo下的图片放到public/ox-hugo下 侧边栏 如何生成一个新的侧边栏 【使用hugo命令生成侧边栏文件夹】使用hugo new –kind chapter 菜单1/_index.md，会生成“content/菜单1”文件夹 【将生成的.md文件移动到对应文件夹】将org-hugo-to-md生成的md文件移动到对应文件夹，例如将&#34;少有人走的路.md&#34;移动到“content/心理学”文件夹下 【hugo构建网站】在根目录下使用hugo命令构建网站">
@@ -23,26 +23,26 @@
     <meta itemprop="wordCount" content="23">
     <meta itemprop="keywords" content="Hugo">
     <title>hugo学习记录 :: 饮冰十年 难凉热血</title>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1741067261" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1741067261" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1741067261" rel="stylesheet">
-    <link href="/css/theme.css?1741067261" rel="stylesheet">
-    <link href="/css/format-html.css?1741067261" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1741067261" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1741067261" defer></script>
-    <script src="/js/lunr/lunr.min.js?1741067261" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1741067261" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1741067261" defer></script>
-    <script src="/js/lunr/lunr.zh.min.js?1741067261" defer></script>
-    <script src="/js/search.js?1741067261" defer></script>
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1741089629" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1741089629" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1741089629" rel="stylesheet">
+    <link href="/css/theme.min.css?1741089629" rel="stylesheet">
+    <link href="/css/format-html.min.css?1741089629" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1741089629" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1741089629" defer></script>
+    <script src="/js/lunr/lunr.min.js?1741089629" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1741089629" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1741089629" defer></script>
+    <script src="/js/lunr/lunr.zh.min.js?1741089629" defer></script>
+    <script src="/js/search.min.js?1741089629" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
-      window.relearn.min = ``;
+      window.relearn.min = `.min`;
       window.relearn.relBasePath='..\/..';
       window.relearn.relBaseUri='..\/..';
-      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.absBaseUri='https:\/\/goodboylqs.github.io';
       window.relearn.contentLangs=['zh'];
-      window.relearn.index_js_url="/searchindex.en.js?1741067261";
+      window.relearn.index_js_url="/searchindex.en.js?1741089629";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -277,8 +277,8 @@
         </div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1741067261" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1741067261" defer></script>
-    <script src="/js/theme.js?1741067261" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1741089629" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1741089629" defer></script>
+    <script src="/js/theme.min.js?1741089629" defer></script>
   </body>
 </html>
