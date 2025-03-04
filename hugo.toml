@@ -1,5 +1,5 @@
 baseURL = 'https://goodboylqs.github.io/'
-languageCode = 'en-us'
+languageCode = 'zh-cn'
 title = '饮冰十年 难凉热血'
 theme = 'hugo-theme-relearn'
 alwaysopen = true
