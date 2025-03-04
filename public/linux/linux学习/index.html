@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.145.0">
+    <meta name="generator" content="Relearn 7.4.1+521de1e32e5e1028825729e00e85cc56e078c02a">
+    <meta name="description" content="对Linux的学习的记录">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Linux学习 :: My New Hugo Site">
+    <meta name="twitter:description" content="对Linux的学习的记录">
+    <meta property="og:url" content="http://localhost:1313/linux/linux%E5%AD%A6%E4%B9%A0/index.html">
+    <meta property="og:site_name" content="My New Hugo Site">
+    <meta property="og:title" content="Linux学习 :: My New Hugo Site">
+    <meta property="og:description" content="对Linux的学习的记录">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Linux">
+    <meta property="article:tag" content="Linux">
+    <meta itemprop="name" content="Linux学习 :: My New Hugo Site">
+    <meta itemprop="description" content="对Linux的学习的记录">
+    <meta itemprop="wordCount" content="118">
+    <meta itemprop="keywords" content="Linux">
+    <title>Linux学习 :: My New Hugo Site</title>
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1741060506" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1741060506" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1741060506" rel="stylesheet">
+    <link href="/css/theme.css?1741060506" rel="stylesheet">
+    <link href="/css/format-html.css?1741060506" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1741060506" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1741060506" defer></script>
+    <script src="/js/lunr/lunr.min.js?1741060506" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1741060506" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1741060506" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1741060506" defer></script>
+    <script src="/js/search.js?1741060506" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.contentLangs=['en'];
+      window.relearn.index_js_url="/searchindex.en.js?1741060506";
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        var select = document.querySelector("#R-select-variant");
+        if (select) {
+          select.value = variant;
+        }
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/linux/linux%E5%AD%A6%E4%B9%A0/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#linux的目录结构">Linux的目录结构</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">My New Hugo Site</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/linux/index.html"><span itemprop="name">Linux</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Linux学习</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/linux/index.html" title="Linux (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/%E9%81%B4%E9%80%89/index.html" title="遴选 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable linux" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="/tags/linux/index.html">Linux</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="linux学习">Linux学习</h1>
+
+<h2 id="linux的目录结构">Linux的目录结构</h2>
+<ul>
+<li><strong>Linux 的目录结构遵循 FHS（Filesystem Hierarchy Standard，文件系统层次标准），不同文件夹有明确的用途分工。以下是常见目录的通俗解释：</strong>
+<ul>
+<li>核心目录
+<ul>
+<li>/（根目录）：所有目录的起点，类似 Windows 的 C:\。</li>
+</ul>
+</li>
+<li>/bin（基本命令）
+<ul>
+<li>存放所有用户都能用的 基础命令，如 ls、cp、rm 等。</li>
+<li>❗ 系统启动或修复时必需的工具。</li>
+</ul>
+</li>
+<li>/sbin（系统管理命令）
+<ul>
+<li>存放需要 管理员权限 的命令，如 fdisk（磁盘分区）、ifconfig（网络配置）等。</li>
+</ul>
+</li>
+<li>/etc（配置文件）
+<ul>
+<li>系统和软件的 配置文件 集中地，例如：
+<ul>
+<li>/etc/passwd（用户账户信息）</li>
+<li>/etc/nginx/（Nginx 配置）</li>
+<li>/etc/hosts（域名解析配置）。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>/usr（用户程序资源）
+<ul>
+<li>存放 用户级软件和资源，类似 Windows 的 Program Files：
+<ul>
+<li>/usr/bin：用户安装的命令（如 python、git）</li>
+<li>/usr/lib：软件依赖的库文件</li>
+<li>/usr/share：共享数据（文档、图标等）</li>
+<li>/usr/local：用户 手动编译安装 的软件（避免与系统包管理器冲突）。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>/var（动态数据）
+<ul>
+<li>存放经常变化的文件：
+<ul>
+<li>/var/log：系统日志（如 syslog、nginx/access.log）</li>
+<li>/var/www：网站文件（常见默认位置）</li>
+<li>/var/lib：数据库文件（如 MySQL 数据）。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>/home（用户家目录）
+<ul>
+<li>每个用户的私人空间，存放个人文件、配置（如 ~/.bashrc）、下载等。</li>
+<li>❗ Root 用户的家目录是 /root，而非 /home/root。</li>
+</ul>
+</li>
+<li>/tmp（临时文件）
+<ul>
+<li>所有用户都可写入的临时文件，系统重启时可能被清空。</li>
+</ul>
+</li>
+<li>其他重要目录
+<ul>
+<li>/boot（启动文件）
+<ul>
+<li>内核文件、引导加载程序（如 GRUB）的配置。</li>
+</ul>
+</li>
+<li>/dev（设备文件）
+<ul>
+<li>硬件设备的抽象文件，如 /dev/sda（磁盘）、/dev/tty（终端）。</li>
+</ul>
+</li>
+<li>/proc（内核和进程信息）
+<ul>
+<li>虚拟目录，显示系统运行时的内核和进程状态（如 CPU、内存使用）。</li>
+</ul>
+</li>
+<li>/opt（可选软件包）
+<ul>
+<li>第三方大型软件（如 IDE、商业工具）的安装目录。</li>
+</ul>
+</li>
+<li>/lib（系统库文件）
+<ul>
+<li>/bin 和 /sbin 中命令依赖的库文件，如动态链接库（.so 文件）。</li>
+</ul>
+</li>
+<li>/mnt 或 /media（挂载点）
+<ul>
+<li>临时挂载外部存储设备（U盘、光盘等）。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>设计逻辑
+<ul>
+<li>静态 vs 动态：
+<ul>
+<li>/bin、/usr 存放静态文件（安装后不变）</li>
+<li>/var、/tmp 存放动态文件（运行时变化）。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>权限隔离：
+<ul>
+<li>/bin、/sbin 区分普通用户和管理员命令。</li>
+</ul>
+</li>
+<li>兼容性与扩展性：
+<ul>
+<li>用户手动安装的软件建议放在 /usr/local 或 /opt，避免覆盖系统文件。</li>
+</ul>
+</li>
+<li>举个栗子 🌰安装一个 Python 包：通过系统包管理器（如 apt）安装 → 文件分散到 /usr/bin、/usr/lib 等。手动编译安装 → 默认到 /usr/local/bin。下载解压版软件 → 可能直接放在 /opt 下。</li>
+</ul>
+</li>
+</ul>
+
+  <footer class="footline">
+<div class="R-taxonomy taxonomy-categories cstyle" title="Categories" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/categories/linux/index.html">Linux</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+          <a id="R-logo" class="R-default" href="/index.html">
+            <div class="logo-title">My New Hugo Site</div>
+          </a>
+        </div>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <ul>
+          <li><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+        </ul>
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-shortcutmenu-home" class="R-sidebarmenu">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/hugo/index.html"><a class="padding" href="/hugo/index.html">Hugo</a><ul id="R-subsections-deefdfb1bf287f4e1b98b48eb2a674a4" class="collapsible-menu"></ul></li>
+            <li class="parent " data-nav-id="/linux/index.html"><a class="padding" href="/linux/index.html">Linux</a><ul id="R-subsections-e2509333b88222aa06f1b5fc60b020b2" class="collapsible-menu">
+            <li class="active " data-nav-id="/linux/linux%E5%AD%A6%E4%B9%A0/index.html"><a class="padding" href="/linux/linux%E5%AD%A6%E4%B9%A0/index.html">Linux学习</a></li></ul></li>
+            <li class="" data-nav-id="/%E9%81%B4%E9%80%89/index.html"><a class="padding" href="/%E9%81%B4%E9%80%89/index.html">遴选</a><ul id="R-subsections-05e505059d230efd459eca076b334be3" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/log/index.html"><a class="padding" href="/log/index.html">Logs</a></li>
+            <li class="" data-nav-id="/posts/index.html"><a class="padding" href="/posts/index.html">Posts</a><ul id="R-subsections-b4e55eb7e39db1aee6d02808a2267090" class="collapsible-menu"></ul></li>
+          </ul>
+        </div>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-language"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Language</label>
+                    <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/linux/linux%E5%AD%A6%E4%B9%A0/index.html" lang="en-us" selected></option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-paint-brush"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Theme</label>
+                    <select id="R-select-variant" onchange="window.relearn.changeVariant( this.value );">
+                      <option id="R-select-variant-auto" value="auto" selected>Auto</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.relearn.markVariant();</script>
+              </li>
+              <li class="footerVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-history"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Clear History</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter">
+            <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="/js/clipboard/clipboard.min.js?1741060506" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1741060506" defer></script>
+    <script src="/js/theme.js?1741060506" defer></script>
+  </body>
+</html>

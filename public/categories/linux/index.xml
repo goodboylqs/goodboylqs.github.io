@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux :: Category :: My New Hugo Site</title>
+    <link>http://localhost:1313/categories/linux/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux学习</title>
+      <link>http://localhost:1313/linux/linux%E5%AD%A6%E4%B9%A0/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/linux/linux%E5%AD%A6%E4%B9%A0/index.html</guid>
+      <description>对Linux的学习的记录</description>
+    </item>
+  </channel>
+</rss>
