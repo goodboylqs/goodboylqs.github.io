@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.145.0">
-    <meta name="generator" content="Relearn 7.4.1+521de1e32e5e1028825729e00e85cc56e078c02a">
+    <meta name="generator" content="Relearn 7.5.0">
     <meta name="description" content="This is a new chapter.
-hugo学习记录问题 为什么使用org-hugo-to-md将org file输出为md file后在网页上不显示 原因：没有在org file中加上title 使用 目录结构 hugo-theme-relearn一个页面对应public/posts下的一个文件夹 public/index.html对应于网站的主页 public/posts下的每一个文件夹对应于不同的页面 public/ox-hugo里面包含不同页面的图片 /static/ox-hugo也是，是org-hugo-to-md后，ox-hugo将org file中的图片放到目录/static/ox-hugo下，然后执行hugo命令后，hugo会在构建网站时将/static/ox-hugo下的图片放到public/ox-hugo下 侧边栏 如何生成一个新的侧边栏 【使用hugo命令生成侧边栏文件夹】使用hugo new –kind chapter 菜单1/_index.md，会生成“content/菜单1”文件夹 【将生成的.md文件移动到对应文件夹】将org-hugo-to-md生成的md文件移动到对应文件夹，例如将&#34;少有人走的路.md&#34;移动到“content/心理学”文件夹下 【hugo构建网站】在根目录下使用hugo命令构建网站">
+hugo学习记录使用hugo搭建网站并部署到github pages的基础知识、常见问题及解决">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Hugo :: 饮冰十年 难凉热血">
     <meta name="twitter:description" content="This is a new chapter.
-hugo学习记录问题 为什么使用org-hugo-to-md将org file输出为md file后在网页上不显示 原因：没有在org file中加上title 使用 目录结构 hugo-theme-relearn一个页面对应public/posts下的一个文件夹 public/index.html对应于网站的主页 public/posts下的每一个文件夹对应于不同的页面 public/ox-hugo里面包含不同页面的图片 /static/ox-hugo也是，是org-hugo-to-md后，ox-hugo将org file中的图片放到目录/static/ox-hugo下，然后执行hugo命令后，hugo会在构建网站时将/static/ox-hugo下的图片放到public/ox-hugo下 侧边栏 如何生成一个新的侧边栏 【使用hugo命令生成侧边栏文件夹】使用hugo new –kind chapter 菜单1/_index.md，会生成“content/菜单1”文件夹 【将生成的.md文件移动到对应文件夹】将org-hugo-to-md生成的md文件移动到对应文件夹，例如将&#34;少有人走的路.md&#34;移动到“content/心理学”文件夹下 【hugo构建网站】在根目录下使用hugo命令构建网站">
-    <meta property="og:url" content="https://goodboylqs.github.io/hugo/index.html">
+hugo学习记录使用hugo搭建网站并部署到github pages的基础知识、常见问题及解决">
+    <meta property="og:url" content="http://localhost:1313/hugo/index.html">
     <meta property="og:site_name" content="饮冰十年 难凉热血">
     <meta property="og:title" content="Hugo :: 饮冰十年 难凉热血">
     <meta property="og:description" content="This is a new chapter.
-hugo学习记录问题 为什么使用org-hugo-to-md将org file输出为md file后在网页上不显示 原因：没有在org file中加上title 使用 目录结构 hugo-theme-relearn一个页面对应public/posts下的一个文件夹 public/index.html对应于网站的主页 public/posts下的每一个文件夹对应于不同的页面 public/ox-hugo里面包含不同页面的图片 /static/ox-hugo也是，是org-hugo-to-md后，ox-hugo将org file中的图片放到目录/static/ox-hugo下，然后执行hugo命令后，hugo会在构建网站时将/static/ox-hugo下的图片放到public/ox-hugo下 侧边栏 如何生成一个新的侧边栏 【使用hugo命令生成侧边栏文件夹】使用hugo new –kind chapter 菜单1/_index.md，会生成“content/菜单1”文件夹 【将生成的.md文件移动到对应文件夹】将org-hugo-to-md生成的md文件移动到对应文件夹，例如将&#34;少有人走的路.md&#34;移动到“content/心理学”文件夹下 【hugo构建网站】在根目录下使用hugo命令构建网站">
+hugo学习记录使用hugo搭建网站并部署到github pages的基础知识、常见问题及解决">
     <meta property="og:locale" content="zh_cn">
     <meta property="og:type" content="website">
     <meta itemprop="name" content="Hugo :: 饮冰十年 难凉热血">
     <meta itemprop="description" content="This is a new chapter.
-hugo学习记录问题 为什么使用org-hugo-to-md将org file输出为md file后在网页上不显示 原因：没有在org file中加上title 使用 目录结构 hugo-theme-relearn一个页面对应public/posts下的一个文件夹 public/index.html对应于网站的主页 public/posts下的每一个文件夹对应于不同的页面 public/ox-hugo里面包含不同页面的图片 /static/ox-hugo也是，是org-hugo-to-md后，ox-hugo将org file中的图片放到目录/static/ox-hugo下，然后执行hugo命令后，hugo会在构建网站时将/static/ox-hugo下的图片放到public/ox-hugo下 侧边栏 如何生成一个新的侧边栏 【使用hugo命令生成侧边栏文件夹】使用hugo new –kind chapter 菜单1/_index.md，会生成“content/菜单1”文件夹 【将生成的.md文件移动到对应文件夹】将org-hugo-to-md生成的md文件移动到对应文件夹，例如将&#34;少有人走的路.md&#34;移动到“content/心理学”文件夹下 【hugo构建网站】在根目录下使用hugo命令构建网站">
-    <meta itemprop="wordCount" content="28">
+hugo学习记录使用hugo搭建网站并部署到github pages的基础知识、常见问题及解决">
+    <meta itemprop="wordCount" content="7">
     <title>Hugo :: 饮冰十年 难凉热血</title>
     <link href="/hugo/index.xml" rel="alternate" type="application/rss+xml" title="Hugo :: 饮冰十年 难凉热血">
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1741089629" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1741089629" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1741089629" rel="stylesheet">
-    <link href="/css/theme.min.css?1741089629" rel="stylesheet">
-    <link href="/css/format-html.min.css?1741089629" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1741089629" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1741089629" defer></script>
-    <script src="/js/lunr/lunr.min.js?1741089629" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1741089629" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1741089629" defer></script>
-    <script src="/js/lunr/lunr.zh.min.js?1741089629" defer></script>
-    <script src="/js/search.min.js?1741089629" defer></script>
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1741232598" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1741232598" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1741232598" rel="stylesheet">
+    <link href="/css/theme.css?1741232598" rel="stylesheet">
+    <link href="/css/format-html.css?1741232598" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1741232598" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1741232598" defer></script>
+    <script src="/js/lunr/lunr.min.js?1741232598" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1741232598" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1741232598" defer></script>
+    <script src="/js/lunr/lunr.zh.min.js?1741232598" defer></script>
+    <script src="/js/search.js?1741232598" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
-      window.relearn.min = `.min`;
+      window.relearn.min = ``;
       window.relearn.relBasePath='..';
       window.relearn.relBaseUri='..';
-      window.relearn.absBaseUri='https:\/\/goodboylqs.github.io';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
       window.relearn.contentLangs=['zh'];
-      window.relearn.index_js_url="/searchindex.en.js?1741089629";
+      window.relearn.index_js_url="/searchindex.en.js?1741232598";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -137,36 +137,7 @@ hugo学习记录问题 为什么使用org-hugo-to-md将org file输出为md file�
 
 <p>This is a new chapter.</p>
 <ul class="children children-li children-sort-">
-  <li class="children-title"><a href="/hugo/hugo%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/index.html">hugo学习记录</a><p><h2 id="问题">问题</h2>
-<ol>
-<li>为什么使用org-hugo-to-md将org file输出为md file后在网页上不显示
-<ul>
-<li>原因：没有在org file中加上title</li>
-</ul>
-</li>
-</ol>
-<h2 id="使用">使用</h2>
-<h3 id="目录结构">目录结构</h3>
-<ul>
-<li>hugo-theme-relearn一个页面对应public/posts下的一个文件夹</li>
-<li>public/index.html对应于网站的主页</li>
-<li>public/posts下的每一个文件夹对应于不同的页面</li>
-<li>public/ox-hugo里面包含不同页面的图片
-<ul>
-<li>/static/ox-hugo也是，是org-hugo-to-md后，ox-hugo将org file中的图片放到目录/static/ox-hugo下，然后执行hugo命令后，hugo会在构建网站时将/static/ox-hugo下的图片放到public/ox-hugo下</li>
-</ul>
-</li>
-</ul>
-<h3 id="侧边栏">侧边栏</h3>
-<ul>
-<li>如何生成一个新的侧边栏
-<ul>
-<li>【使用hugo命令生成侧边栏文件夹】使用hugo new &ndash;kind chapter 菜单1/_index.md，会生成“content/菜单1”文件夹</li>
-<li>【将生成的.md文件移动到对应文件夹】将org-hugo-to-md生成的md文件移动到对应文件夹，例如将&quot;少有人走的路.md&quot;移动到“content/心理学”文件夹下</li>
-<li>【hugo构建网站】在根目录下使用hugo命令构建网站</li>
-</ul>
-</li>
-</ul></p></li>
+  <li class="children-title"><a href="/hugo/hugo%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/index.html">hugo学习记录</a><p>使用hugo搭建网站并部署到github pages的基础知识、常见问题及解决</p></li>
 </ul>
 
   <footer class="footline">
@@ -260,8 +231,8 @@ hugo学习记录问题 为什么使用org-hugo-to-md将org file输出为md file�
         </div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1741089629" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1741089629" defer></script>
-    <script src="/js/theme.min.js?1741089629" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1741232598" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1741232598" defer></script>
+    <script src="/js/theme.js?1741232598" defer></script>
   </body>
 </html>
