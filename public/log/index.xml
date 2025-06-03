@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Logs :: 饮冰十年 难凉热血</title>
-    <link>http://localhost:1313/log/index.html</link>
+    <link>https://goodboylqs.github.io/log/index.html</link>
     <description></description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/log/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://goodboylqs.github.io/log/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

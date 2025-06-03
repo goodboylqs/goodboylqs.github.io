@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo :: 饮冰十年 难凉热血</title>
-    <link>http://localhost:1313/hugo/index.html</link>
+    <link>https://goodboylqs.github.io/hugo/index.html</link>
     <description>This is a new chapter.&#xA;hugo学习记录使用hugo搭建网站并部署到github pages的基础知识、常见问题及解决</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <atom:link href="http://localhost:1313/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://goodboylqs.github.io/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hugo学习记录</title>
-      <link>http://localhost:1313/hugo/hugo%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/index.html</link>
+      <link>https://goodboylqs.github.io/hugo/hugo%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hugo/hugo%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/index.html</guid>
+      <guid>https://goodboylqs.github.io/hugo/hugo%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/index.html</guid>
       <description>使用hugo搭建网站并部署到github pages的基础知识、常见问题及解决</description>
     </item>
   </channel>
