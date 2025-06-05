@@ -6,7 +6,15 @@
     <description></description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
+    <lastBuildDate>Thu, 05 Jun 2025 10:05:13 +0800</lastBuildDate>
     <atom:link href="https://goodboylqs.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo使用学习</title>
+      <link>https://goodboylqs.github.io/posts/hugo%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8/index.html</link>
+      <pubDate>Thu, 14 Dec 2023 08:00:00 +0800</pubDate>
+      <guid>https://goodboylqs.github.io/posts/hugo%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8/index.html</guid>
+      <description>tags emacs hugo hugo基本使用 主页：content/_index.md&#xA;创建主页：hugo new –kind home _index.md&#xA;章节：content/chapter/……………………&#xA;一个章节也是包含一个主页以及子章节创建章节log及主页：hugo new –kind chapter log/_index.md 在章节log下面创建子章节first-day、second-day&#xA;hugo new log/first-day/_index.md hugo new log/second-day/index.md hugo new log/third-day.md 为何插入了图片的org文件通过org-hugo专程.md文件并在网站部署后，图片无法正常显示？ 原因：在执行org-hugo转org文件为.md文件后，未执行hugo命令将存储在static/ox-hugo文件夹下的图片复制到public/ox-hugo文件夹中</description>
+    </item>
     <item>
       <title>hugo学习记录</title>
       <link>https://goodboylqs.github.io/hugo/hugo%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/index.html</link>

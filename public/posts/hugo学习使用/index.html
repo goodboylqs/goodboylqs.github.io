@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.145.0">
+    <meta name="generator" content="Relearn 7.6.1+e9ef53522317877bc23c72c42c8307a62b209dfb">
+    <meta name="description" content="tags emacs hugo hugo基本使用 主页：content/_index.md
+创建主页：hugo new –kind home _index.md
+章节：content/chapter/……………………
+一个章节也是包含一个主页以及子章节创建章节log及主页：hugo new –kind chapter log/_index.md 在章节log下面创建子章节first-day、second-day
+hugo new log/first-day/_index.md hugo new log/second-day/index.md hugo new log/third-day.md 为何插入了图片的org文件通过org-hugo专程.md文件并在网站部署后，图片无法正常显示？ 原因：在执行org-hugo转org文件为.md文件后，未执行hugo命令将存储在static/ox-hugo文件夹下的图片复制到public/ox-hugo文件夹中">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Hugo使用学习 :: 饮冰十年 难凉热血">
+    <meta name="twitter:description" content="tags emacs hugo hugo基本使用 主页：content/_index.md
+创建主页：hugo new –kind home _index.md
+章节：content/chapter/……………………
+一个章节也是包含一个主页以及子章节创建章节log及主页：hugo new –kind chapter log/_index.md 在章节log下面创建子章节first-day、second-day
+hugo new log/first-day/_index.md hugo new log/second-day/index.md hugo new log/third-day.md 为何插入了图片的org文件通过org-hugo专程.md文件并在网站部署后，图片无法正常显示？ 原因：在执行org-hugo转org文件为.md文件后，未执行hugo命令将存储在static/ox-hugo文件夹下的图片复制到public/ox-hugo文件夹中">
+    <meta property="og:url" content="https://goodboylqs.github.io/posts/hugo%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8/index.html">
+    <meta property="og:site_name" content="饮冰十年 难凉热血">
+    <meta property="og:title" content="Hugo使用学习 :: 饮冰十年 难凉热血">
+    <meta property="og:description" content="tags emacs hugo hugo基本使用 主页：content/_index.md
+创建主页：hugo new –kind home _index.md
+章节：content/chapter/……………………
+一个章节也是包含一个主页以及子章节创建章节log及主页：hugo new –kind chapter log/_index.md 在章节log下面创建子章节first-day、second-day
+hugo new log/first-day/_index.md hugo new log/second-day/index.md hugo new log/third-day.md 为何插入了图片的org文件通过org-hugo专程.md文件并在网站部署后，图片无法正常显示？ 原因：在执行org-hugo转org文件为.md文件后，未执行hugo命令将存储在static/ox-hugo文件夹下的图片复制到public/ox-hugo文件夹中">
+    <meta property="og:locale" content="zh_cn">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="未分类笔记">
+    <meta property="article:published_time" content="2023-12-14T08:00:00+08:00">
+    <meta property="article:modified_time" content="2025-06-05T10:05:13+08:00">
+    <meta property="article:tag" content="Emacs">
+    <meta property="article:tag" content="Hugo">
+    <meta itemprop="name" content="Hugo使用学习 :: 饮冰十年 难凉热血">
+    <meta itemprop="description" content="tags emacs hugo hugo基本使用 主页：content/_index.md
+创建主页：hugo new –kind home _index.md
+章节：content/chapter/……………………
+一个章节也是包含一个主页以及子章节创建章节log及主页：hugo new –kind chapter log/_index.md 在章节log下面创建子章节first-day、second-day
+hugo new log/first-day/_index.md hugo new log/second-day/index.md hugo new log/third-day.md 为何插入了图片的org文件通过org-hugo专程.md文件并在网站部署后，图片无法正常显示？ 原因：在执行org-hugo转org文件为.md文件后，未执行hugo命令将存储在static/ox-hugo文件夹下的图片复制到public/ox-hugo文件夹中">
+    <meta itemprop="datePublished" content="2023-12-14T08:00:00+08:00">
+    <meta itemprop="dateModified" content="2025-06-05T10:05:13+08:00">
+    <meta itemprop="wordCount" content="28">
+    <meta itemprop="keywords" content="Emacs,Hugo">
+    <title>Hugo使用学习 :: 饮冰十年 难凉热血</title>
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1749089584" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1749089584" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1749089584" rel="stylesheet">
+    <link href="/css/theme.min.css?1749089584" rel="stylesheet">
+    <link href="/css/format-html.min.css?1749089584" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1749089584" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1749089584" defer></script>
+    <script src="/js/lunr/lunr.min.js?1749089584" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1749089584" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1749089584" defer></script>
+    <script src="/js/lunr/lunr.zh.min.js?1749089584" defer></script>
+    <script src="/js/search.min.js?1749089584" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/posts\/hugo%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='https:\/\/goodboylqs.github.io';
+      window.relearn.contentLangs=['zh'];
+      window.relearn.index_js_url="/searchindex.en.js?1749089584";
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // variant stuff
+      window.relearn.themevariants = [ 'auto' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/posts/hugo%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#hugo基本使用">hugo基本使用</a></li>
+    <li><a href="#为何插入了图片的org文件通过org-hugo专程-dot-md文件并在网站部署后-图片无法正常显示">为何插入了图片的org文件通过org-hugo专程.md文件并在网站部署后，图片无法正常显示？</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">饮冰十年 难凉热血</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/posts/index.html"><span itemprop="name">未分类笔记</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Hugo使用学习</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/posts/%E9%81%B4%E9%80%89%E5%AD%A6%E4%B9%A0%E6%80%9D%E8%80%83/index.html" title="遴选备考经验+学习思考 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><span class="topbar-control"><i class="fa-fw fas fa-chevron-right"></i></span>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable posts" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="/tags/emacs/index.html">Emacs</a></li>
+    <li><a class="term-link" href="/tags/hugo/index.html">Hugo</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="hugo使用学习">Hugo使用学习</h1>
+
+<dl>
+<dt>tags</dt>
+<dd>emacs hugo</dd>
+</dl>
+<h2 id="hugo基本使用">hugo基本使用</h2>
+<ul>
+<li>
+<p>主页：content/_index.md</p>
+</li>
+<li>
+<p>创建主页：hugo new –kind home _index.md</p>
+</li>
+<li>
+<p>章节：content/chapter/……………………</p>
+</li>
+<li>
+<p>一个章节也是包含一个主页以及子章节创建章节log及主页：hugo new –kind chapter log/_index.md
+在章节log下面创建子章节first-day、second-day</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new log/first-day/_index.md
+</span></span><span style="display:flex;"><span>hugo new log/second-day/index.md
+</span></span><span style="display:flex;"><span>hugo new log/third-day.md</span></span></code></pre></div>
+</li>
+</ul>
+<h2 id="为何插入了图片的org文件通过org-hugo专程-dot-md文件并在网站部署后-图片无法正常显示">为何插入了图片的org文件通过org-hugo专程.md文件并在网站部署后，图片无法正常显示？</h2>
+<ul>
+<li>原因：在执行org-hugo转org文件为.md文件后，未执行hugo命令将存储在static/ox-hugo文件夹下的图片复制到public/ox-hugo文件夹中</li>
+</ul>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Dec 14, 2023
+<div class="R-taxonomy taxonomy-categories cstyle" title="Categories" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/categories/emacs/index.html">Emacs</a></li>
+    <li><a class="term-link" href="/categories/hugo/index.html">Hugo</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+          <a id="R-logo" class="R-default" href="/index.html">
+            <div class="logo-title">饮冰十年 难凉热血</div>
+          </a>
+        </div>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/index.html"><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/%E5%BF%83%E7%90%86%E5%AD%A6/index.html"><a class="padding" href="/%E5%BF%83%E7%90%86%E5%AD%A6/index.html">心理学</a><ul id="R-subsections-979008955b446699df39935af6fa1b77" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/hugo/index.html"><a class="padding" href="/hugo/index.html">Hugo</a><ul id="R-subsections-deefdfb1bf287f4e1b98b48eb2a674a4" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/linux/index.html"><a class="padding" href="/linux/index.html">Linux</a><ul id="R-subsections-e2509333b88222aa06f1b5fc60b020b2" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/%E9%81%B4%E9%80%89/index.html"><a class="padding" href="/%E9%81%B4%E9%80%89/index.html">遴选</a><ul id="R-subsections-05e505059d230efd459eca076b334be3" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/log/index.html"><a class="padding" href="/log/index.html">Logs</a></li>
+            <li class="parent " data-nav-id="/posts/index.html"><a class="padding" href="/posts/index.html">未分类笔记</a><ul id="R-subsections-b4e55eb7e39db1aee6d02808a2267090" class="collapsible-menu">
+            <li class="" data-nav-id="/posts/%E9%81%B4%E9%80%89%E5%AD%A6%E4%B9%A0%E6%80%9D%E8%80%83/index.html"><a class="padding" href="/posts/%E9%81%B4%E9%80%89%E5%AD%A6%E4%B9%A0%E6%80%9D%E8%80%83/index.html">遴选备考经验&#43;学习思考</a></li>
+            <li class="active " data-nav-id="/posts/hugo%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8/index.html"><a class="padding" href="/posts/hugo%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8/index.html">Hugo使用学习</a></li></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/clipboard/clipboard.min.js?1749089584" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1749089584" defer></script>
+    <script src="/js/theme.min.js?1749089584" defer></script>
+  </body>
+</html>
