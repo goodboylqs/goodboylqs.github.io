@@ -17,8 +17,8 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "饮冰十年 难凉热血",
-    "content": "This is a new chapter.\nhugo学习记录使用hugo搭建网站并部署到github pages的基础知识、常见问题及解决",
-    "description": "This is a new chapter.\nhugo学习记录使用hugo搭建网站并部署到github pages的基础知识、常见问题及解决",
+    "content": "This is a new chapter.\nHugo使用学习hugo的使用以及常见问题\nhugo学习记录使用hugo搭建网站并部署到github pages的基础知识、常见问题及解决",
+    "description": "This is a new chapter.\nHugo使用学习hugo的使用以及常见问题\nhugo学习记录使用hugo搭建网站并部署到github pages的基础知识、常见问题及解决",
     "tags": [],
     "title": "Hugo",
     "uri": "/hugo/index.html"
@@ -157,7 +157,7 @@ var relearn_searchindex = [
     "uri": "/tags/hugo/index.html"
   },
   {
-    "breadcrumb": "饮冰十年 难凉热血 \u003e  未分类笔记",
+    "breadcrumb": "饮冰十年 难凉热血 \u003e  Hugo",
     "content": "tags emacs hugo hugo基本使用 主页：content/_index.md\n创建主页：hugo new –kind home _index.md\n章节：content/chapter/……………………\n一个章节也是包含一个主页以及子章节创建章节log及主页：hugo new –kind chapter log/_index.md 在章节log下面创建子章节first-day、second-day\nhugo new log/first-day/_index.md hugo new log/second-day/index.md hugo new log/third-day.md 为何插入了图片的org文件通过org-hugo专程.md文件并在网站部署后，图片无法正常显示？ 原因：在执行org-hugo转org文件为.md文件后，未执行hugo命令将存储在static/ox-hugo文件夹下的图片复制到public/ox-hugo文件夹中",
     "description": "hugo的使用以及常见问题",
     "tags": [
@@ -165,15 +165,7 @@ var relearn_searchindex = [
       "Hugo"
     ],
     "title": "Hugo使用学习",
-    "uri": "/posts/hugo%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8/index.html"
-  },
-  {
-    "breadcrumb": "饮冰十年 难凉热血",
-    "content": "This is a new chapter.\nHugo使用学习hugo的使用以及常见问题",
-    "description": "This is a new chapter.\nHugo使用学习hugo的使用以及常见问题",
-    "tags": [],
-    "title": "未分类笔记",
-    "uri": "/posts/index.html"
+    "uri": "/hugo/hugo%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8/index.html"
   },
   {
     "breadcrumb": "饮冰十年 难凉热血 \u003e  遴选",
@@ -267,5 +259,13 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: 创新",
     "uri": "/tags/%E5%88%9B%E6%96%B0/index.html"
+  },
+  {
+    "breadcrumb": "饮冰十年 难凉热血",
+    "content": "This is a new chapter.",
+    "description": "This is a new chapter.",
+    "tags": [],
+    "title": "未分类笔记",
+    "uri": "/posts/index.html"
   }
 ]

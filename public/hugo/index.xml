@@ -3,10 +3,18 @@
   <channel>
     <title>Hugo :: 饮冰十年 难凉热血</title>
     <link>https://goodboylqs.github.io/hugo/index.html</link>
-    <description>This is a new chapter.&#xA;hugo学习记录使用hugo搭建网站并部署到github pages的基础知识、常见问题及解决</description>
+    <description>This is a new chapter.&#xA;Hugo使用学习hugo的使用以及常见问题&#xA;hugo学习记录使用hugo搭建网站并部署到github pages的基础知识、常见问题及解决</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
+    <lastBuildDate>Thu, 05 Jun 2025 10:22:59 +0800</lastBuildDate>
     <atom:link href="https://goodboylqs.github.io/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo使用学习</title>
+      <link>https://goodboylqs.github.io/hugo/hugo%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8/index.html</link>
+      <pubDate>Thu, 14 Dec 2023 08:00:00 +0800</pubDate>
+      <guid>https://goodboylqs.github.io/hugo/hugo%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8/index.html</guid>
+      <description>hugo的使用以及常见问题</description>
+    </item>
     <item>
       <title>hugo学习记录</title>
       <link>https://goodboylqs.github.io/hugo/hugo%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/index.html</link>

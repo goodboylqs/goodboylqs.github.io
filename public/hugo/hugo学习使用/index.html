@@ -5,18 +5,29 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.145.0">
     <meta name="generator" content="Relearn 7.6.1+e9ef53522317877bc23c72c42c8307a62b209dfb">
-    <meta name="description" content="">
+    <meta name="description" content="hugo的使用以及常见问题">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="创新 :: Tag :: 饮冰十年 难凉热血">
-    <meta property="og:url" content="https://goodboylqs.github.io/tags/%E5%88%9B%E6%96%B0/index.html">
+    <meta name="twitter:title" content="Hugo使用学习 :: 饮冰十年 难凉热血">
+    <meta name="twitter:description" content="hugo的使用以及常见问题">
+    <meta property="og:url" content="https://goodboylqs.github.io/hugo/hugo%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8/index.html">
     <meta property="og:site_name" content="饮冰十年 难凉热血">
-    <meta property="og:title" content="创新 :: Tag :: 饮冰十年 难凉热血">
+    <meta property="og:title" content="Hugo使用学习 :: 饮冰十年 难凉热血">
+    <meta property="og:description" content="hugo的使用以及常见问题">
     <meta property="og:locale" content="zh_cn">
-    <meta property="og:type" content="website">
-    <meta itemprop="name" content="创新 :: Tag :: 饮冰十年 难凉热血">
-    <title>创新 :: Tag :: 饮冰十年 难凉热血</title>
-    <link href="/tags/%E5%88%9B%E6%96%B0/index.xml" rel="alternate" type="application/rss+xml" title="创新 :: Tag :: 饮冰十年 难凉热血">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Hugo">
+    <meta property="article:published_time" content="2023-12-14T08:00:00+08:00">
+    <meta property="article:modified_time" content="2025-06-05T10:22:59+08:00">
+    <meta property="article:tag" content="Emacs">
+    <meta property="article:tag" content="Hugo">
+    <meta itemprop="name" content="Hugo使用学习 :: 饮冰十年 难凉热血">
+    <meta itemprop="description" content="hugo的使用以及常见问题">
+    <meta itemprop="datePublished" content="2023-12-14T08:00:00+08:00">
+    <meta itemprop="dateModified" content="2025-06-05T10:22:59+08:00">
+    <meta itemprop="wordCount" content="28">
+    <meta itemprop="keywords" content="Emacs,Hugo">
+    <title>Hugo使用学习 :: 饮冰十年 难凉热血</title>
     <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1749106592" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1749106592" rel="stylesheet"></noscript>
     <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1749106592" rel="stylesheet">
     <link href="/css/theme.min.css?1749106592" rel="stylesheet">
@@ -32,7 +43,7 @@
       window.relearn = window.relearn || {};
       // configuration
       window.relearn.min = `.min`;
-      window.relearn.path='\/tags\/%E5%88%9B%E6%96%B0\/index.html';
+      window.relearn.path='\/hugo\/hugo%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8\/index.html';
       window.relearn.relBasePath='..\/..';
       window.relearn.relBaseUri='..\/..';
       window.relearn.absBaseUri='https:\/\/goodboylqs.github.io';
@@ -84,7 +95,7 @@
       window.T_N_results_found = `{1} results found for "{0}"`;
     </script>
   </head>
-  <body class="mobile-support html" data-url="/tags/%E5%88%9B%E6%96%B0/index.html">
+  <body class="mobile-support html" data-url="/hugo/hugo%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8/index.html">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
       <nav id="R-topbar">
@@ -96,10 +107,10 @@
             <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
               <div class="topbar-content">
                 <div class="topbar-content-wrapper">
-
 <nav class="TableOfContents">
   <ul>
-    <li><a href="#">（</a></li>
+    <li><a href="#hugo基本使用">hugo基本使用</a></li>
+    <li><a href="#为何插入了图片的org文件通过org-hugo专程-dot-md文件并在网站部署后-图片无法正常显示">为何插入了图片的org文件通过org-hugo专程.md文件并在网站部署后，图片无法正常显示？</a></li>
   </ul>
 </nav>
                 </div>
@@ -108,13 +119,13 @@
           </div>
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
             <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">饮冰十年 难凉热血</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/tags/index.html"><span itemprop="name">Tags</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">创新</span><meta itemprop="position" content="3"></li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo/index.html"><span itemprop="name">Hugo</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Hugo使用学习</span><meta itemprop="position" content="3"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/tags/%E4%BA%BA%E6%89%8D/index.html" title="Tag :: 人才 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/hugo/index.html" title="Hugo (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/index.html" title="Tag :: 心理学 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/hugo/hugo%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/index.html" title="hugo学习记录 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
             <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
               <div class="topbar-content">
@@ -128,19 +139,57 @@
         </div>
       </nav>
       <div id="R-main-overlay"></div>
-      <main id="R-body-inner" class="highlightable tags" tabindex="-1">
+      <main id="R-body-inner" class="highlightable hugo" tabindex="-1">
         <div class="flex-block-wrapper">
-<article>
+<article class="default">
   <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="/tags/emacs/index.html">Emacs</a></li>
+    <li><a class="term-link" href="/tags/hugo/index.html">Hugo</a></li>
+  </ul>
+</div>
   </header>
-<h1 id="tag--创新">Tag :: 创新</h1>
 
-<h2 id="">（</h2>
-<ul class="columnize">
-  <li><a href="/%E9%81%B4%E9%80%89/%E7%BD%91%E8%AF%BE%E7%AC%94%E8%AE%B02024%E5%B9%B46%E6%9C%8829%E6%97%A5%E5%B1%B1%E4%B8%9C%E7%9C%81%E5%B8%82%E7%9B%B4%E9%81%B4%E9%80%89%E7%AC%94%E8%AF%95%E7%9C%9F%E9%A2%98%E7%AC%AC%E4%BA%8C%E9%A2%98/index.html">（网课笔记）2024年6月29日山东省市直遴选笔试真题（第二题）</a><div class="breadcrumbs highlightable" title="饮冰十年 难凉热血 &gt;  遴选">饮冰十年 难凉热血 &gt;  遴选</div></li>
+<h1 id="hugo使用学习">Hugo使用学习</h1>
+
+<dl>
+<dt>tags</dt>
+<dd>emacs hugo</dd>
+</dl>
+<h2 id="hugo基本使用">hugo基本使用</h2>
+<ul>
+<li>
+<p>主页：content/_index.md</p>
+</li>
+<li>
+<p>创建主页：hugo new –kind home _index.md</p>
+</li>
+<li>
+<p>章节：content/chapter/……………………</p>
+</li>
+<li>
+<p>一个章节也是包含一个主页以及子章节创建章节log及主页：hugo new –kind chapter log/_index.md
+在章节log下面创建子章节first-day、second-day</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new log/first-day/_index.md
+</span></span><span style="display:flex;"><span>hugo new log/second-day/index.md
+</span></span><span style="display:flex;"><span>hugo new log/third-day.md</span></span></code></pre></div>
+</li>
+</ul>
+<h2 id="为何插入了图片的org文件通过org-hugo专程-dot-md文件并在网站部署后-图片无法正常显示">为何插入了图片的org文件通过org-hugo专程.md文件并在网站部署后，图片无法正常显示？</h2>
+<ul>
+<li>原因：在执行org-hugo转org文件为.md文件后，未执行hugo命令将存储在static/ox-hugo文件夹下的图片复制到public/ox-hugo文件夹中</li>
 </ul>
 
   <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Dec 14, 2023
+<div class="R-taxonomy taxonomy-categories cstyle" title="Categories" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/categories/emacs/index.html">Emacs</a></li>
+    <li><a class="term-link" href="/categories/hugo/index.html">Hugo</a></li>
+  </ul>
+</div>
   </footer>
 </article>
         </div>
@@ -188,7 +237,9 @@
           <ul class="enlarge morespace collapsible-menu">
             <li class="" data-nav-id="/%E9%81%B4%E9%80%89/index.html"><a class="padding" href="/%E9%81%B4%E9%80%89/index.html">遴选</a><ul id="R-subsections-05e505059d230efd459eca076b334be3" class="collapsible-menu"></ul></li>
             <li class="" data-nav-id="/%E5%BF%83%E7%90%86%E5%AD%A6/index.html"><a class="padding" href="/%E5%BF%83%E7%90%86%E5%AD%A6/index.html">心理学</a><ul id="R-subsections-979008955b446699df39935af6fa1b77" class="collapsible-menu"></ul></li>
-            <li class="" data-nav-id="/hugo/index.html"><a class="padding" href="/hugo/index.html">Hugo</a><ul id="R-subsections-deefdfb1bf287f4e1b98b48eb2a674a4" class="collapsible-menu"></ul></li>
+            <li class="parent " data-nav-id="/hugo/index.html"><a class="padding" href="/hugo/index.html">Hugo</a><ul id="R-subsections-deefdfb1bf287f4e1b98b48eb2a674a4" class="collapsible-menu">
+            <li class="active " data-nav-id="/hugo/hugo%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8/index.html"><a class="padding" href="/hugo/hugo%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8/index.html">Hugo使用学习</a></li>
+            <li class="" data-nav-id="/hugo/hugo%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/index.html"><a class="padding" href="/hugo/hugo%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/index.html">hugo学习记录</a></li></ul></li>
             <li class="" data-nav-id="/linux/index.html"><a class="padding" href="/linux/index.html">Linux</a><ul id="R-subsections-e2509333b88222aa06f1b5fc60b020b2" class="collapsible-menu"></ul></li>
             <li class="" data-nav-id="/log/index.html"><a class="padding" href="/log/index.html">Logs</a></li>
             <li class="" data-nav-id="/posts/index.html"><a class="padding" href="/posts/index.html">未分类笔记</a></li>
