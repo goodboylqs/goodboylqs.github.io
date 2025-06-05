@@ -3,7 +3,7 @@
   <channel>
     <title>Linux :: 饮冰十年 难凉热血</title>
     <link>https://goodboylqs.github.io/linux/index.html</link>
-    <description>This is a new chapter.&#xA;Linux学习对Linux的学习的记录</description>
+    <description>This is a new chapter.&#xA;Linux学习对Linux的学习的记录&#xA;常用linux命令常用Linunx命令，记录一下</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <atom:link href="https://goodboylqs.github.io/linux/index.xml" rel="self" type="application/rss+xml" />
@@ -13,6 +13,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://goodboylqs.github.io/linux/linux%E5%AD%A6%E4%B9%A0/index.html</guid>
       <description>对Linux的学习的记录</description>
+    </item>
+    <item>
+      <title>常用linux命令</title>
+      <link>https://goodboylqs.github.io/linux/2024010816-%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://goodboylqs.github.io/linux/2024010816-%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4/index.html</guid>
+      <description>常用Linunx命令，记录一下</description>
     </item>
   </channel>
 </rss>

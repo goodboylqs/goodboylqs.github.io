@@ -5,20 +5,24 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.145.0">
     <meta name="generator" content="Relearn 7.6.1+e9ef53522317877bc23c72c42c8307a62b209dfb">
-    <meta name="description" content="">
+    <meta name="description" content="常用Linunx命令，记录一下">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Logs :: 饮冰十年 难凉热血">
-    <meta property="og:url" content="https://goodboylqs.github.io/log/index.html">
+    <meta name="twitter:title" content="常用linux命令 :: 饮冰十年 难凉热血">
+    <meta name="twitter:description" content="常用Linunx命令，记录一下">
+    <meta property="og:url" content="https://goodboylqs.github.io/linux/2024010816-%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4/index.html">
     <meta property="og:site_name" content="饮冰十年 难凉热血">
-    <meta property="og:title" content="Logs :: 饮冰十年 难凉热血">
+    <meta property="og:title" content="常用linux命令 :: 饮冰十年 难凉热血">
+    <meta property="og:description" content="常用Linunx命令，记录一下">
     <meta property="og:locale" content="zh_cn">
-    <meta property="og:type" content="website">
-    <meta itemprop="name" content="Logs :: 饮冰十年 难凉热血">
-    <meta itemprop="datePublished" content="2025-03-03T19:56:16+08:00">
-    <meta itemprop="dateModified" content="2025-03-03T19:56:16+08:00">
-    <title>Logs :: 饮冰十年 难凉热血</title>
-    <link href="/log/index.xml" rel="alternate" type="application/rss+xml" title="Logs :: 饮冰十年 难凉热血">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Linux">
+    <meta property="article:tag" content="Linux">
+    <meta itemprop="name" content="常用linux命令 :: 饮冰十年 难凉热血">
+    <meta itemprop="description" content="常用Linunx命令，记录一下">
+    <meta itemprop="wordCount" content="28">
+    <meta itemprop="keywords" content="Linux">
+    <title>常用linux命令 :: 饮冰十年 难凉热血</title>
     <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1749107390" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1749107390" rel="stylesheet"></noscript>
     <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1749107390" rel="stylesheet">
     <link href="/css/theme.min.css?1749107390" rel="stylesheet">
@@ -34,9 +38,9 @@
       window.relearn = window.relearn || {};
       // configuration
       window.relearn.min = `.min`;
-      window.relearn.path='\/log\/index.html';
-      window.relearn.relBasePath='..';
-      window.relearn.relBaseUri='..';
+      window.relearn.path='\/linux\/2024010816-%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
       window.relearn.absBaseUri='https:\/\/goodboylqs.github.io';
       window.relearn.contentLangs=['zh'];
       window.relearn.index_js_url="/searchindex.en.js?1749107390";
@@ -86,7 +90,7 @@
       window.T_N_results_found = `{1} results found for "{0}"`;
     </script>
   </head>
-  <body class="mobile-support html" data-url="/log/index.html">
+  <body class="mobile-support html" data-url="/linux/2024010816-%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4/index.html">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
       <nav id="R-topbar">
@@ -97,19 +101,31 @@
             </div>
             <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
               <div class="topbar-content">
-                <div class="topbar-content-wrapper"> 
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#查看ip地址">查看IP地址</a>
+      <ul>
+        <li><a href="#查看局域网内的设备的ip地址">查看局域网内的设备的ip地址</a></li>
+        <li><a href="#查看本机ip地址">查看本机ip地址</a></li>
+        <li><a href="#使用find命令删除当前文件夹下文件命中包含-conflict-的文件">使用find命令删除当前文件夹下文件命中包含&quot;Conflict&quot;的文件</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
                 </div>
               </div>
             </div>
           </div>
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
             <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">饮冰十年 难凉热血</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Logs</span><meta itemprop="position" content="2"></li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/linux/index.html"><span itemprop="name">Linux</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">常用linux命令</span><meta itemprop="position" content="3"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/linux/2024010816-%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4/index.html" title="常用linux命令 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/linux/linux%E5%AD%A6%E4%B9%A0/index.html" title="Linux学习 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/posts/index.html" title="未分类笔记 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/log/index.html" title="Logs (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
             <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
               <div class="topbar-content">
@@ -123,17 +139,44 @@
         </div>
       </nav>
       <div id="R-main-overlay"></div>
-      <main id="R-body-inner" class="highlightable log" tabindex="-1">
+      <main id="R-body-inner" class="highlightable linux" tabindex="-1">
         <div class="flex-block-wrapper">
 <article class="default">
   <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="/tags/linux/index.html">Linux</a></li>
+  </ul>
+</div>
   </header>
 
-<h1 id="logs">Logs</h1>
+<h1 id="常用linux命令">常用linux命令</h1>
 
+<p>tags
+:</p>
+<p>source
+:</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->&lt;2024-01-08 一 16:59&gt;<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="查看ip地址">查看IP地址</h2>
+<h3 id="查看局域网内的设备的ip地址">查看局域网内的设备的ip地址</h3>
+<ul>
+<li>arp -a</li>
+</ul>
+<h3 id="查看本机ip地址">查看本机ip地址</h3>
+<ul>
+<li>ifconfig</li>
+</ul>
+<h3 id="使用find命令删除当前文件夹下文件命中包含-conflict-的文件">使用find命令删除当前文件夹下文件命中包含&quot;Conflict&quot;的文件</h3>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>find /path/to/directory -type f -name <span style="color:#e6db74">&#34;*Conflict*&#34;</span> -exec rm -f <span style="color:#f92672">{}</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span><span style="color:#75715e"># f表示是文件不是目录，-exec后面表示对每个找到的文件执行rm -f，\表示命令结束</span></span></span></code></pre></div>
 
   <footer class="footline">
-              <i class='fa-fw fas fa-calendar'></i> Mar 3, 2025
+<div class="R-taxonomy taxonomy-categories cstyle" title="Categories" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/categories/linux/index.html">Linux</a></li>
+  </ul>
+</div>
   </footer>
 </article>
         </div>
@@ -182,8 +225,10 @@
             <li class="" data-nav-id="/%E9%81%B4%E9%80%89/index.html"><a class="padding" href="/%E9%81%B4%E9%80%89/index.html">遴选</a><ul id="R-subsections-05e505059d230efd459eca076b334be3" class="collapsible-menu"></ul></li>
             <li class="" data-nav-id="/%E5%BF%83%E7%90%86%E5%AD%A6/index.html"><a class="padding" href="/%E5%BF%83%E7%90%86%E5%AD%A6/index.html">心理学</a><ul id="R-subsections-979008955b446699df39935af6fa1b77" class="collapsible-menu"></ul></li>
             <li class="" data-nav-id="/hugo/index.html"><a class="padding" href="/hugo/index.html">Hugo</a><ul id="R-subsections-deefdfb1bf287f4e1b98b48eb2a674a4" class="collapsible-menu"></ul></li>
-            <li class="" data-nav-id="/linux/index.html"><a class="padding" href="/linux/index.html">Linux</a><ul id="R-subsections-e2509333b88222aa06f1b5fc60b020b2" class="collapsible-menu"></ul></li>
-            <li class="active " data-nav-id="/log/index.html"><a class="padding" href="/log/index.html">Logs</a></li>
+            <li class="parent " data-nav-id="/linux/index.html"><a class="padding" href="/linux/index.html">Linux</a><ul id="R-subsections-e2509333b88222aa06f1b5fc60b020b2" class="collapsible-menu">
+            <li class="" data-nav-id="/linux/linux%E5%AD%A6%E4%B9%A0/index.html"><a class="padding" href="/linux/linux%E5%AD%A6%E4%B9%A0/index.html">Linux学习</a></li>
+            <li class="active " data-nav-id="/linux/2024010816-%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4/index.html"><a class="padding" href="/linux/2024010816-%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4/index.html">常用linux命令</a></li></ul></li>
+            <li class="" data-nav-id="/log/index.html"><a class="padding" href="/log/index.html">Logs</a></li>
             <li class="" data-nav-id="/posts/index.html"><a class="padding" href="/posts/index.html">未分类笔记</a></li>
           </ul>
         </div>

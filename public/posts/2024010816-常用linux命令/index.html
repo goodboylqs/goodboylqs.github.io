@@ -5,45 +5,35 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.145.0">
     <meta name="generator" content="Relearn 7.6.1+e9ef53522317877bc23c72c42c8307a62b209dfb">
-    <meta name="description" content="tags :
-source :
-&lt;2024-01-08 一 16:59&gt;
-查看IP地址 查看局域网内的设备的ip地址 arp -a 查看本机ip地址 ifconfig 使用find命令删除当前文件夹下文件命中包含&#34;Conflict&#34;的文件 find /path/to/directory -type f -name &#34;*Conflict*&#34; -exec rm -f {} \ # f表示是文件不是目录，-exec后面表示对每个找到的文件执行rm -f，\表示命令结束">
+    <meta name="description" content="常用Linunx命令，记录一下">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="常用linux命令 :: 饮冰十年 难凉热血">
-    <meta name="twitter:description" content="tags :
-source :
-&lt;2024-01-08 一 16:59&gt;
-查看IP地址 查看局域网内的设备的ip地址 arp -a 查看本机ip地址 ifconfig 使用find命令删除当前文件夹下文件命中包含&#34;Conflict&#34;的文件 find /path/to/directory -type f -name &#34;*Conflict*&#34; -exec rm -f {} \ # f表示是文件不是目录，-exec后面表示对每个找到的文件执行rm -f，\表示命令结束">
+    <meta name="twitter:description" content="常用Linunx命令，记录一下">
     <meta property="og:url" content="https://goodboylqs.github.io/posts/2024010816-%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4/index.html">
     <meta property="og:site_name" content="饮冰十年 难凉热血">
     <meta property="og:title" content="常用linux命令 :: 饮冰十年 难凉热血">
-    <meta property="og:description" content="tags :
-source :
-&lt;2024-01-08 一 16:59&gt;
-查看IP地址 查看局域网内的设备的ip地址 arp -a 查看本机ip地址 ifconfig 使用find命令删除当前文件夹下文件命中包含&#34;Conflict&#34;的文件 find /path/to/directory -type f -name &#34;*Conflict*&#34; -exec rm -f {} \ # f表示是文件不是目录，-exec后面表示对每个找到的文件执行rm -f，\表示命令结束">
+    <meta property="og:description" content="常用Linunx命令，记录一下">
     <meta property="og:locale" content="zh_cn">
     <meta property="og:type" content="article">
     <meta property="article:section" content="未分类笔记">
+    <meta property="article:tag" content="Linux">
     <meta itemprop="name" content="常用linux命令 :: 饮冰十年 难凉热血">
-    <meta itemprop="description" content="tags :
-source :
-&lt;2024-01-08 一 16:59&gt;
-查看IP地址 查看局域网内的设备的ip地址 arp -a 查看本机ip地址 ifconfig 使用find命令删除当前文件夹下文件命中包含&#34;Conflict&#34;的文件 find /path/to/directory -type f -name &#34;*Conflict*&#34; -exec rm -f {} \ # f表示是文件不是目录，-exec后面表示对每个找到的文件执行rm -f，\表示命令结束">
+    <meta itemprop="description" content="常用Linunx命令，记录一下">
     <meta itemprop="wordCount" content="28">
+    <meta itemprop="keywords" content="Linux">
     <title>常用linux命令 :: 饮冰十年 难凉热血</title>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1749107279" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1749107279" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1749107279" rel="stylesheet">
-    <link href="/css/theme.min.css?1749107279" rel="stylesheet">
-    <link href="/css/format-html.min.css?1749107279" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1749107279" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1749107279" defer></script>
-    <script src="/js/lunr/lunr.min.js?1749107279" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1749107279" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1749107279" defer></script>
-    <script src="/js/lunr/lunr.zh.min.js?1749107279" defer></script>
-    <script src="/js/search.min.js?1749107279" defer></script>
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1749107358" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1749107358" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1749107358" rel="stylesheet">
+    <link href="/css/theme.min.css?1749107358" rel="stylesheet">
+    <link href="/css/format-html.min.css?1749107358" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1749107358" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1749107358" defer></script>
+    <script src="/js/lunr/lunr.min.js?1749107358" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1749107358" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1749107358" defer></script>
+    <script src="/js/lunr/lunr.zh.min.js?1749107358" defer></script>
+    <script src="/js/search.min.js?1749107358" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -53,7 +43,7 @@ source :
       window.relearn.relBaseUri='..\/..';
       window.relearn.absBaseUri='https:\/\/goodboylqs.github.io';
       window.relearn.contentLangs=['zh'];
-      window.relearn.index_js_url="/searchindex.en.js?1749107279";
+      window.relearn.index_js_url="/searchindex.en.js?1749107358";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -153,6 +143,11 @@ source :
         <div class="flex-block-wrapper">
 <article class="default">
   <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="/tags/linux/index.html">Linux</a></li>
+  </ul>
+</div>
   </header>
 
 <h1 id="常用linux命令">常用linux命令</h1>
@@ -176,6 +171,12 @@ source :
 </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span><span style="color:#75715e"># f表示是文件不是目录，-exec后面表示对每个找到的文件执行rm -f，\表示命令结束</span></span></span></code></pre></div>
 
   <footer class="footline">
+<div class="R-taxonomy taxonomy-categories cstyle" title="Categories" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/categories/linux/index.html">Linux</a></li>
+  </ul>
+</div>
   </footer>
 </article>
         </div>
@@ -245,8 +246,8 @@ source :
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1749107279" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1749107279" defer></script>
-    <script src="/js/theme.min.js?1749107279" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1749107358" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1749107358" defer></script>
+    <script src="/js/theme.min.js?1749107358" defer></script>
   </body>
 </html>

@@ -25,8 +25,8 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "饮冰十年 难凉热血",
-    "content": "This is a new chapter.\nLinux学习对Linux的学习的记录",
-    "description": "This is a new chapter.\nLinux学习对Linux的学习的记录",
+    "content": "This is a new chapter.\nLinux学习对Linux的学习的记录\n常用linux命令常用Linunx命令，记录一下",
+    "description": "This is a new chapter.\nLinux学习对Linux的学习的记录\n常用linux命令常用Linunx命令，记录一下",
     "tags": [],
     "title": "Linux",
     "uri": "/linux/index.html"
@@ -261,17 +261,19 @@ var relearn_searchindex = [
     "uri": "/tags/%E5%88%9B%E6%96%B0/index.html"
   },
   {
-    "breadcrumb": "饮冰十年 难凉热血 \u003e  未分类笔记",
+    "breadcrumb": "饮冰十年 难凉热血 \u003e  Linux",
     "content": "tags :\nsource :\n\u003c2024-01-08 一 16:59\u003e\n查看IP地址 查看局域网内的设备的ip地址 arp -a 查看本机ip地址 ifconfig 使用find命令删除当前文件夹下文件命中包含\"Conflict\"的文件 find /path/to/directory -type f -name \"*Conflict*\" -exec rm -f {} \\ # f表示是文件不是目录，-exec后面表示对每个找到的文件执行rm -f，\\表示命令结束",
-    "description": "tags :\nsource :\n\u003c2024-01-08 一 16:59\u003e\n查看IP地址 查看局域网内的设备的ip地址 arp -a 查看本机ip地址 ifconfig 使用find命令删除当前文件夹下文件命中包含\"Conflict\"的文件 find /path/to/directory -type f -name \"*Conflict*\" -exec rm -f {} \\ # f表示是文件不是目录，-exec后面表示对每个找到的文件执行rm -f，\\表示命令结束",
-    "tags": [],
+    "description": "常用Linunx命令，记录一下",
+    "tags": [
+      "Linux"
+    ],
     "title": "常用linux命令",
-    "uri": "/posts/2024010816-%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4/index.html"
+    "uri": "/linux/2024010816-%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4/index.html"
   },
   {
     "breadcrumb": "饮冰十年 难凉热血",
-    "content": "This is a new chapter.\n常用linux命令tags :\nsource :\n\u003c2024-01-08 一 16:59\u003e\n查看IP地址 查看局域网内的设备的ip地址 arp -a 查看本机ip地址 ifconfig 使用find命令删除当前文件夹下文件命中包含\"Conflict\"的文件 find /path/to/directory -type f -name \"*Conflict*\" -exec rm -f {} \\ # f表示是文件不是目录，-exec后面表示对每个找到的文件执行rm -f，\\表示命令结束",
-    "description": "This is a new chapter.\n常用linux命令tags :\nsource :\n\u003c2024-01-08 一 16:59\u003e\n查看IP地址 查看局域网内的设备的ip地址 arp -a 查看本机ip地址 ifconfig 使用find命令删除当前文件夹下文件命中包含\"Conflict\"的文件 find /path/to/directory -type f -name \"*Conflict*\" -exec rm -f {} \\ # f表示是文件不是目录，-exec后面表示对每个找到的文件执行rm -f，\\表示命令结束",
+    "content": "This is a new chapter.",
+    "description": "This is a new chapter.",
     "tags": [],
     "title": "未分类笔记",
     "uri": "/posts/index.html"
