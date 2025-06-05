@@ -3,18 +3,11 @@
   <channel>
     <title>未分类笔记 :: 饮冰十年 难凉热血</title>
     <link>https://goodboylqs.github.io/posts/index.html</link>
-    <description>This is a new chapter.&#xA;遴选备考经验+学习思考过分强调勤奋，却忽略了方法。殊不知，你所谓的勤奋就是一种路径依赖，是一种心理惰性。&#xA;Hugo使用学习hugo的使用以及常见问题</description>
+    <description>This is a new chapter.&#xA;Hugo使用学习hugo的使用以及常见问题</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 05 Jun 2025 10:22:59 +0800</lastBuildDate>
     <atom:link href="https://goodboylqs.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>遴选备考经验&#43;学习思考</title>
-      <link>https://goodboylqs.github.io/posts/%E9%81%B4%E9%80%89%E5%AD%A6%E4%B9%A0%E6%80%9D%E8%80%83/index.html</link>
-      <pubDate>Wed, 27 Nov 2024 00:00:00 +0800</pubDate>
-      <guid>https://goodboylqs.github.io/posts/%E9%81%B4%E9%80%89%E5%AD%A6%E4%B9%A0%E6%80%9D%E8%80%83/index.html</guid>
-      <description>过分强调勤奋，却忽略了方法。殊不知，你所谓的勤奋就是一种路径依赖，是一种心理惰性。</description>
-    </item>
     <item>
       <title>Hugo使用学习</title>
       <link>https://goodboylqs.github.io/posts/hugo%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8/index.html</link>
