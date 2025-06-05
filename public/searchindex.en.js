@@ -57,8 +57,8 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "饮冰十年 难凉热血",
-    "content": "This is a new chapter.\n遴选备考经验+学习思考过分强调勤奋，却忽略了方法。殊不知，你所谓的勤奋就是一种路径依赖，是一种心理惰性。\nHugo使用学习 tags emacs hugo hugo基本使用 主页：content/_index.md\n创建主页：hugo new –kind home _index.md\n章节：content/chapter/……………………\n一个章节也是包含一个主页以及子章节创建章节log及主页：hugo new –kind chapter log/_index.md 在章节log下面创建子章节first-day、second-day\nhugo new log/first-day/_index.md hugo new log/second-day/index.md hugo new log/third-day.md 为何插入了图片的org文件通过org-hugo专程.md文件并在网站部署后，图片无法正常显示？ 原因：在执行org-hugo转org文件为.md文件后，未执行hugo命令将存储在static/ox-hugo文件夹下的图片复制到public/ox-hugo文件夹中",
-    "description": "This is a new chapter.\n遴选备考经验+学习思考过分强调勤奋，却忽略了方法。殊不知，你所谓的勤奋就是一种路径依赖，是一种心理惰性。\nHugo使用学习 tags emacs hugo hugo基本使用 主页：content/_index.md\n创建主页：hugo new –kind home _index.md\n章节：content/chapter/……………………\n一个章节也是包含一个主页以及子章节创建章节log及主页：hugo new –kind chapter log/_index.md 在章节log下面创建子章节first-day、second-day\nhugo new log/first-day/_index.md hugo new log/second-day/index.md hugo new log/third-day.md 为何插入了图片的org文件通过org-hugo专程.md文件并在网站部署后，图片无法正常显示？ 原因：在执行org-hugo转org文件为.md文件后，未执行hugo命令将存储在static/ox-hugo文件夹下的图片复制到public/ox-hugo文件夹中",
+    "content": "This is a new chapter.\n遴选备考经验+学习思考过分强调勤奋，却忽略了方法。殊不知，你所谓的勤奋就是一种路径依赖，是一种心理惰性。\nHugo使用学习hugo的使用以及常见问题",
+    "description": "This is a new chapter.\n遴选备考经验+学习思考过分强调勤奋，却忽略了方法。殊不知，你所谓的勤奋就是一种路径依赖，是一种心理惰性。\nHugo使用学习hugo的使用以及常见问题",
     "tags": [],
     "title": "未分类笔记",
     "uri": "/posts/index.html"
@@ -167,7 +167,7 @@ var relearn_searchindex = [
   {
     "breadcrumb": "饮冰十年 难凉热血 \u003e  未分类笔记",
     "content": "tags emacs hugo hugo基本使用 主页：content/_index.md\n创建主页：hugo new –kind home _index.md\n章节：content/chapter/……………………\n一个章节也是包含一个主页以及子章节创建章节log及主页：hugo new –kind chapter log/_index.md 在章节log下面创建子章节first-day、second-day\nhugo new log/first-day/_index.md hugo new log/second-day/index.md hugo new log/third-day.md 为何插入了图片的org文件通过org-hugo专程.md文件并在网站部署后，图片无法正常显示？ 原因：在执行org-hugo转org文件为.md文件后，未执行hugo命令将存储在static/ox-hugo文件夹下的图片复制到public/ox-hugo文件夹中",
-    "description": "tags emacs hugo hugo基本使用 主页：content/_index.md\n创建主页：hugo new –kind home _index.md\n章节：content/chapter/……………………\n一个章节也是包含一个主页以及子章节创建章节log及主页：hugo new –kind chapter log/_index.md 在章节log下面创建子章节first-day、second-day\nhugo new log/first-day/_index.md hugo new log/second-day/index.md hugo new log/third-day.md 为何插入了图片的org文件通过org-hugo专程.md文件并在网站部署后，图片无法正常显示？ 原因：在执行org-hugo转org文件为.md文件后，未执行hugo命令将存储在static/ox-hugo文件夹下的图片复制到public/ox-hugo文件夹中",
+    "description": "hugo的使用以及常见问题",
     "tags": [
       "Emacs",
       "Hugo"

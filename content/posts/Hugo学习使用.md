@@ -1,8 +1,9 @@
 +++
 title = "Hugo使用学习"
 author = ["lqs is a goodboy"]
+description = "hugo的使用以及常见问题"
 date = 2023-12-14T08:00:00+08:00
-lastmod = 2025-06-05T10:05:13+08:00
+lastmod = 2025-06-05T10:22:59+08:00
 tags = ["emacs", "hugo"]
 categories = ["emacs", "hugo"]
 draft = false

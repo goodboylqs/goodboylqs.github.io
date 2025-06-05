@@ -5,56 +5,40 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.145.0">
     <meta name="generator" content="Relearn 7.6.1+e9ef53522317877bc23c72c42c8307a62b209dfb">
-    <meta name="description" content="tags emacs hugo hugo基本使用 主页：content/_index.md
-创建主页：hugo new –kind home _index.md
-章节：content/chapter/……………………
-一个章节也是包含一个主页以及子章节创建章节log及主页：hugo new –kind chapter log/_index.md 在章节log下面创建子章节first-day、second-day
-hugo new log/first-day/_index.md hugo new log/second-day/index.md hugo new log/third-day.md 为何插入了图片的org文件通过org-hugo专程.md文件并在网站部署后，图片无法正常显示？ 原因：在执行org-hugo转org文件为.md文件后，未执行hugo命令将存储在static/ox-hugo文件夹下的图片复制到public/ox-hugo文件夹中">
+    <meta name="description" content="hugo的使用以及常见问题">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Hugo使用学习 :: 饮冰十年 难凉热血">
-    <meta name="twitter:description" content="tags emacs hugo hugo基本使用 主页：content/_index.md
-创建主页：hugo new –kind home _index.md
-章节：content/chapter/……………………
-一个章节也是包含一个主页以及子章节创建章节log及主页：hugo new –kind chapter log/_index.md 在章节log下面创建子章节first-day、second-day
-hugo new log/first-day/_index.md hugo new log/second-day/index.md hugo new log/third-day.md 为何插入了图片的org文件通过org-hugo专程.md文件并在网站部署后，图片无法正常显示？ 原因：在执行org-hugo转org文件为.md文件后，未执行hugo命令将存储在static/ox-hugo文件夹下的图片复制到public/ox-hugo文件夹中">
+    <meta name="twitter:description" content="hugo的使用以及常见问题">
     <meta property="og:url" content="https://goodboylqs.github.io/posts/hugo%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8/index.html">
     <meta property="og:site_name" content="饮冰十年 难凉热血">
     <meta property="og:title" content="Hugo使用学习 :: 饮冰十年 难凉热血">
-    <meta property="og:description" content="tags emacs hugo hugo基本使用 主页：content/_index.md
-创建主页：hugo new –kind home _index.md
-章节：content/chapter/……………………
-一个章节也是包含一个主页以及子章节创建章节log及主页：hugo new –kind chapter log/_index.md 在章节log下面创建子章节first-day、second-day
-hugo new log/first-day/_index.md hugo new log/second-day/index.md hugo new log/third-day.md 为何插入了图片的org文件通过org-hugo专程.md文件并在网站部署后，图片无法正常显示？ 原因：在执行org-hugo转org文件为.md文件后，未执行hugo命令将存储在static/ox-hugo文件夹下的图片复制到public/ox-hugo文件夹中">
+    <meta property="og:description" content="hugo的使用以及常见问题">
     <meta property="og:locale" content="zh_cn">
     <meta property="og:type" content="article">
     <meta property="article:section" content="未分类笔记">
     <meta property="article:published_time" content="2023-12-14T08:00:00+08:00">
-    <meta property="article:modified_time" content="2025-06-05T10:05:13+08:00">
+    <meta property="article:modified_time" content="2025-06-05T10:22:59+08:00">
     <meta property="article:tag" content="Emacs">
     <meta property="article:tag" content="Hugo">
     <meta itemprop="name" content="Hugo使用学习 :: 饮冰十年 难凉热血">
-    <meta itemprop="description" content="tags emacs hugo hugo基本使用 主页：content/_index.md
-创建主页：hugo new –kind home _index.md
-章节：content/chapter/……………………
-一个章节也是包含一个主页以及子章节创建章节log及主页：hugo new –kind chapter log/_index.md 在章节log下面创建子章节first-day、second-day
-hugo new log/first-day/_index.md hugo new log/second-day/index.md hugo new log/third-day.md 为何插入了图片的org文件通过org-hugo专程.md文件并在网站部署后，图片无法正常显示？ 原因：在执行org-hugo转org文件为.md文件后，未执行hugo命令将存储在static/ox-hugo文件夹下的图片复制到public/ox-hugo文件夹中">
+    <meta itemprop="description" content="hugo的使用以及常见问题">
     <meta itemprop="datePublished" content="2023-12-14T08:00:00+08:00">
-    <meta itemprop="dateModified" content="2025-06-05T10:05:13+08:00">
+    <meta itemprop="dateModified" content="2025-06-05T10:22:59+08:00">
     <meta itemprop="wordCount" content="28">
     <meta itemprop="keywords" content="Emacs,Hugo">
     <title>Hugo使用学习 :: 饮冰十年 难凉热血</title>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1749090010" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1749090010" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1749090010" rel="stylesheet">
-    <link href="/css/theme.min.css?1749090010" rel="stylesheet">
-    <link href="/css/format-html.min.css?1749090010" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1749090010" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1749090010" defer></script>
-    <script src="/js/lunr/lunr.min.js?1749090010" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1749090010" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1749090010" defer></script>
-    <script src="/js/lunr/lunr.zh.min.js?1749090010" defer></script>
-    <script src="/js/search.min.js?1749090010" defer></script>
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1749090182" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1749090182" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1749090182" rel="stylesheet">
+    <link href="/css/theme.min.css?1749090182" rel="stylesheet">
+    <link href="/css/format-html.min.css?1749090182" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1749090182" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1749090182" defer></script>
+    <script src="/js/lunr/lunr.min.js?1749090182" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1749090182" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1749090182" defer></script>
+    <script src="/js/lunr/lunr.zh.min.js?1749090182" defer></script>
+    <script src="/js/search.min.js?1749090182" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -64,7 +48,7 @@ hugo new log/first-day/_index.md hugo new log/second-day/index.md hugo new log/t
       window.relearn.relBaseUri='..\/..';
       window.relearn.absBaseUri='https:\/\/goodboylqs.github.io';
       window.relearn.contentLangs=['zh'];
-      window.relearn.index_js_url="/searchindex.en.js?1749090010";
+      window.relearn.index_js_url="/searchindex.en.js?1749090182";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -276,8 +260,8 @@ hugo new log/first-day/_index.md hugo new log/second-day/index.md hugo new log/t
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1749090010" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1749090010" defer></script>
-    <script src="/js/theme.min.js?1749090010" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1749090182" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1749090182" defer></script>
+    <script src="/js/theme.min.js?1749090182" defer></script>
   </body>
 </html>
